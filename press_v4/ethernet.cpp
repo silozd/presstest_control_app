@@ -224,7 +224,7 @@ void PressApp::periodic_response_handler(QByteArray datagram)
     }
     static QTime time(QTime::currentTime());
     if(statu_device == 0){
-        //qDebug () << "statu device 0'e girdi" << statu ;
+        qDebug () << "deney TEMİZLENDİ" << statu ;
         time.restart();
         ui->pushButton_refreshTest->hide();
         ui->pushButton_startTest->show();
@@ -235,10 +235,9 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         ui->pushButton_pauseTest->setDisabled(true);
         ui->pushButton_pauseTest->setStyleSheet("image: url(:/icons/media_pause_dis.png); ");
         ui->label_test_date_time_main->setText(QString("Deney Tarihi : %1").arg(start_date));
-
     }
     else if (statu_device == 1){
-        //qDebug () << "statu device 1'e girdi" << statu ;
+        qDebug () << "deney BAŞLADI" << statu ;
         ui->pushButton_startTest->show();
         ui->pushButton_startTest->setDisabled(true);
         ui->pushButton_startTest->setStyleSheet("image: url(:/icons/media_play_dis.png); ");
@@ -248,7 +247,7 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         ui->pushButton_stopTest->setStyleSheet({"image: url(:/icons/media_stop.png);"});
     }
     else if (statu_device == 3){
-        //qDebug () << "statu device 3'e girdi" << statu ;
+        qDebug () << "deney SONLANDI" << statu ;
         _time->stop();
         ui->pushButton_refreshTest->show();
         ui->pushButton_refreshTest->setEnabled(true);
@@ -258,7 +257,7 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         ui->pushButton_stopTest->setStyleSheet("image: url(:/icons/media_stop_dis.png); ");
         ui->pushButton_pauseTest->setDisabled(true);
         ui->pushButton_pauseTest->setStyleSheet("image: url(:/icons/media_pause_dis.png); ");
-        ui->wdg_paramArea->setEnabled(1);
+        ui->toolBox_app->setEnabled(1);
         ui->wdg_ReadWrite->setEnabled(1);
         ui->btn_expand->setEnabled(1);
         ui->btn_expand->setStyleSheet("image: url(:/icons/fit_to_size.png);");

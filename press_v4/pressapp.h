@@ -305,6 +305,7 @@ public:
     u8 test_status;
     bool step_response_first_in;
     int signal_id;  // sila
+    int step_res_clicked = 0;
 // //////////////////////////////////////////////////////////
 
 protected :

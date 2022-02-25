@@ -1,25 +1,32 @@
 #include "pressapp.h"
 
-void PressApp::step_response_handle(void){
-    if(_start_com){
-        if(step_response_status == false){
+void PressApp::step_response_handle(void){      //BURDA
+    qDebug()<<"step_response_status"<<step_response_status;
+    if(_start_com && ui->pushButton_step_response){
+        if(step_response_status == false && test_status==TEST_STOPPED){
             step_response_status = true;
-            ui->pushButton_step_response->setText("Autotuning Durdur");
-            test_status = TEST_RUNNING;
-
-            _time->start();
             step_response_first_in = true;
-            //PLOT_first_in = true;
+            ui->pushButton_startTest->clicked();    // sila
+            ui->pushButton_step_response->setText("Autotuning Durdur");
+//            test_status = TEST_RUNNING;           // sila
+//            _time->start();
+//            PLOT_first_in = true;
+
         }
         else{
             //reset_plot();
-            if((test_status == TEST_RUNNING)||(test_status == TEST_PAUSED)){
-                auxthread->test_finished = true;
-            }
+//            if((test_status == TEST_RUNNING)||(test_status == TEST_PAUSED)){
+//                auxthread->test_finished = true;
+//            }
+//            _time->stop();
+        // sila :
+            ui->pushButton_stopTest->clicked();
+            ui->pushButton_refreshTest->clicked();
             step_response_status = false;
             ui->pushButton_step_response->setText("Autotuning Başla");
-            _time->stop();
             relay_start_stop = RELAY_OFF;
+            record_results(real_time.test_no);    // TODO : autotune kaydetsin mi?
+            // BURDA : toolbox enable et
         }
     }
 }

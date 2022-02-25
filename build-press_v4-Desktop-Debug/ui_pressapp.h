@@ -69,6 +69,10 @@ public:
     QGridLayout *gridLayout_4;
     QWidget *wdg_paramArea;
     QGridLayout *gridLayout_40;
+    QWidget *wdg_ReadWrite;
+    QGridLayout *gridLayout_41;
+    QPushButton *pushButton_read_from_device;
+    QPushButton *pushButton_write_to_device;
     QToolBox *toolBox_app;
     QWidget *page_specimen;
     QGridLayout *gridLayout_7;
@@ -336,36 +340,32 @@ public:
     QPushButton *pushButton_tare_in_calibration;
     QWidget *page_pid;
     QGridLayout *gridLayout_17;
-    QPushButton *pushButton_save_pid_to_all;
-    QPushButton *pushButton_save_pid;
-    QLabel *label_133;
-    QLabel *label_141;
     QLabel *label_135;
     QLabel *label_142;
-    QLabel *label_108;
-    QLabel *label_step_resp_CC_Kd;
-    QLabel *label_110;
-    QLabel *label_134;
-    QLabel *label_step_resp_CC_KP;
-    QLabel *label_139;
-    QLabel *label_step_resp_CC_Ki;
+    QPushButton *pushButton_save_pid_to_all;
+    QPushButton *pushButton_save_pid;
     QFrame *line_7;
     QLabel *label_132;
-    QLabel *label_109;
-    QLabel *label_111;
+    QDoubleSpinBox *doubleSpinBox_kp_pace;
     QLabel *label_140;
     QComboBox *comboBox_pid;
-    QPushButton *pushButton_step_response;
-    QSpinBox *spinBox_step_transition_time;
-    QSpinBox *spinBox_autotuning_second_speed;
-    QSpinBox *spinBox_autotuning_first_speed;
+    QLabel *label_108;
+    QLabel *label_133;
+    QLabel *label_141;
     QSpinBox *doubleSpinBox_kd_pace;
     QDoubleSpinBox *doubleSpinBox_ki_pace;
-    QDoubleSpinBox *doubleSpinBox_kp_pace;
-    QWidget *wdg_ReadWrite;
-    QGridLayout *gridLayout_41;
-    QPushButton *pushButton_read_from_device;
-    QPushButton *pushButton_write_to_device;
+    QLabel *label_110;
+    QSpinBox *spinBox_step_transition_time;
+    QSpinBox *spinBox_autotuning_second_speed;
+    QLabel *label_109;
+    QLabel *label_111;
+    QLabel *label_139;
+    QLabel *label_134;
+    QSpinBox *spinBox_autotuning_first_speed;
+    QLabel *label_step_resp_CC_KP;
+    QLabel *label_step_resp_CC_Ki;
+    QLabel *label_step_resp_CC_Kd;
+    QPushButton *pushButton_step_response;
     QLabel *label_read_write;
     QWidget *widget_plotArea;
     QGridLayout *gridLayout_39;
@@ -506,9 +506,9 @@ public:
     QSpacerItem *verticalSpacer_15;
     QLabel *label_61;
     QSpacerItem *horizontalSpacer_5;
-    QButtonGroup *settings_buttonGroup;
-    QButtonGroup *recraw_buttonGroup;
     QButtonGroup *control_buttonGroup;
+    QButtonGroup *recraw_buttonGroup;
+    QButtonGroup *settings_buttonGroup;
     QButtonGroup *frame_buttonGroup;
 
     void setupUi(QMainWindow *PressApp)
@@ -656,10 +656,34 @@ public:
         wdg_paramArea = new QWidget(tab_test);
         wdg_paramArea->setObjectName(QStringLiteral("wdg_paramArea"));
         gridLayout_40 = new QGridLayout(wdg_paramArea);
-        gridLayout_40->setSpacing(5);
+        gridLayout_40->setSpacing(6);
         gridLayout_40->setContentsMargins(11, 11, 11, 11);
         gridLayout_40->setObjectName(QStringLiteral("gridLayout_40"));
+        gridLayout_40->setHorizontalSpacing(5);
+        gridLayout_40->setVerticalSpacing(3);
         gridLayout_40->setContentsMargins(0, 0, 0, 5);
+        wdg_ReadWrite = new QWidget(wdg_paramArea);
+        wdg_ReadWrite->setObjectName(QStringLiteral("wdg_ReadWrite"));
+        gridLayout_41 = new QGridLayout(wdg_ReadWrite);
+        gridLayout_41->setSpacing(5);
+        gridLayout_41->setContentsMargins(11, 11, 11, 11);
+        gridLayout_41->setObjectName(QStringLiteral("gridLayout_41"));
+        gridLayout_41->setContentsMargins(1, 1, 1, 0);
+        pushButton_read_from_device = new QPushButton(wdg_ReadWrite);
+        pushButton_read_from_device->setObjectName(QStringLiteral("pushButton_read_from_device"));
+        pushButton_read_from_device->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_41->addWidget(pushButton_read_from_device, 0, 1, 1, 1);
+
+        pushButton_write_to_device = new QPushButton(wdg_ReadWrite);
+        pushButton_write_to_device->setObjectName(QStringLiteral("pushButton_write_to_device"));
+        pushButton_write_to_device->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_41->addWidget(pushButton_write_to_device, 0, 0, 1, 1);
+
+
+        gridLayout_40->addWidget(wdg_ReadWrite, 3, 0, 1, 1);
+
         toolBox_app = new QToolBox(wdg_paramArea);
         toolBox_app->setObjectName(QStringLiteral("toolBox_app"));
         QFont font;
@@ -670,7 +694,7 @@ public:
         toolBox_app->setLineWidth(1);
         page_specimen = new QWidget();
         page_specimen->setObjectName(QStringLiteral("page_specimen"));
-        page_specimen->setGeometry(QRect(0, 0, 384, 341));
+        page_specimen->setGeometry(QRect(0, 0, 370, 339));
         gridLayout_7 = new QGridLayout(page_specimen);
         gridLayout_7->setSpacing(6);
         gridLayout_7->setContentsMargins(11, 11, 11, 11);
@@ -1274,7 +1298,7 @@ public:
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 384, 341));
+        page_param->setGeometry(QRect(0, 0, 384, 314));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1731,7 +1755,7 @@ public:
         toolBox_app->addItem(page_channels, QStringLiteral("Kanallar"));
         page_gain = new QWidget();
         page_gain->setObjectName(QStringLiteral("page_gain"));
-        page_gain->setGeometry(QRect(0, 0, 384, 341));
+        page_gain->setGeometry(QRect(0, 0, 384, 314));
         gridLayout_18 = new QGridLayout(page_gain);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setContentsMargins(11, 11, 11, 11);
@@ -1889,7 +1913,7 @@ public:
         toolBox_app->addItem(page_gain, QString::fromUtf8("Kazan\303\247"));
         page_calib = new QWidget();
         page_calib->setObjectName(QStringLiteral("page_calib"));
-        page_calib->setGeometry(QRect(0, 0, 384, 341));
+        page_calib->setGeometry(QRect(0, 0, 384, 314));
         gridLayout_11 = new QGridLayout(page_calib);
         gridLayout_11->setSpacing(6);
         gridLayout_11->setContentsMargins(11, 11, 11, 11);
@@ -1900,7 +1924,7 @@ public:
         scrollArea_calib->setWidgetResizable(true);
         wdg_calib = new QWidget();
         wdg_calib->setObjectName(QStringLiteral("wdg_calib"));
-        wdg_calib->setGeometry(QRect(0, -183, 368, 522));
+        wdg_calib->setGeometry(QRect(0, 0, 368, 522));
         gridLayout_12 = new QGridLayout(wdg_calib);
         gridLayout_12->setSpacing(6);
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
@@ -2236,7 +2260,7 @@ public:
         toolBox_app->addItem(page_calib, QStringLiteral("Kalibrasyon"));
         page_pid = new QWidget();
         page_pid->setObjectName(QStringLiteral("page_pid"));
-        page_pid->setGeometry(QRect(0, 0, 370, 516));
+        page_pid->setGeometry(QRect(0, 0, 370, 478));
         gridLayout_17 = new QGridLayout(page_pid);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);
@@ -2244,6 +2268,18 @@ public:
         gridLayout_17->setHorizontalSpacing(6);
         gridLayout_17->setVerticalSpacing(9);
         gridLayout_17->setContentsMargins(6, 6, 6, 6);
+        label_135 = new QLabel(page_pid);
+        label_135->setObjectName(QStringLiteral("label_135"));
+        label_135->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_135->setIndent(4);
+
+        gridLayout_17->addWidget(label_135, 9, 0, 1, 1);
+
+        label_142 = new QLabel(page_pid);
+        label_142->setObjectName(QStringLiteral("label_142"));
+
+        gridLayout_17->addWidget(label_142, 6, 1, 1, 1);
+
         pushButton_save_pid_to_all = new QPushButton(page_pid);
         pushButton_save_pid_to_all->setObjectName(QStringLiteral("pushButton_save_pid_to_all"));
         pushButton_save_pid_to_all->setCursor(QCursor(Qt::PointingHandCursor));
@@ -2255,6 +2291,46 @@ public:
         pushButton_save_pid->setCursor(QCursor(Qt::PointingHandCursor));
 
         gridLayout_17->addWidget(pushButton_save_pid, 4, 1, 1, 1);
+
+        line_7 = new QFrame(page_pid);
+        line_7->setObjectName(QStringLiteral("line_7"));
+        line_7->setFrameShape(QFrame::HLine);
+        line_7->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_17->addWidget(line_7, 5, 0, 1, 4);
+
+        label_132 = new QLabel(page_pid);
+        label_132->setObjectName(QStringLiteral("label_132"));
+        label_132->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_17->addWidget(label_132, 6, 0, 1, 1);
+
+        doubleSpinBox_kp_pace = new QDoubleSpinBox(page_pid);
+        doubleSpinBox_kp_pace->setObjectName(QStringLiteral("doubleSpinBox_kp_pace"));
+        doubleSpinBox_kp_pace->setMaximum(999999);
+        doubleSpinBox_kp_pace->setSingleStep(0.1);
+
+        gridLayout_17->addWidget(doubleSpinBox_kp_pace, 1, 1, 1, 2);
+
+        label_140 = new QLabel(page_pid);
+        label_140->setObjectName(QStringLiteral("label_140"));
+        label_140->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_140->setIndent(4);
+
+        gridLayout_17->addWidget(label_140, 11, 0, 1, 1);
+
+        comboBox_pid = new QComboBox(page_pid);
+        comboBox_pid->setObjectName(QStringLiteral("comboBox_pid"));
+        comboBox_pid->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_17->addWidget(comboBox_pid, 0, 1, 1, 2);
+
+        label_108 = new QLabel(page_pid);
+        label_108->setObjectName(QStringLiteral("label_108"));
+        label_108->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_108->setIndent(4);
+
+        gridLayout_17->addWidget(label_108, 0, 0, 1, 1);
 
         label_133 = new QLabel(page_pid);
         label_133->setObjectName(QStringLiteral("label_133"));
@@ -2270,31 +2346,18 @@ public:
 
         gridLayout_17->addWidget(label_141, 12, 0, 1, 1);
 
-        label_135 = new QLabel(page_pid);
-        label_135->setObjectName(QStringLiteral("label_135"));
-        label_135->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_135->setIndent(4);
+        doubleSpinBox_kd_pace = new QSpinBox(page_pid);
+        doubleSpinBox_kd_pace->setObjectName(QStringLiteral("doubleSpinBox_kd_pace"));
+        doubleSpinBox_kd_pace->setMaximum(999999);
 
-        gridLayout_17->addWidget(label_135, 9, 0, 1, 1);
+        gridLayout_17->addWidget(doubleSpinBox_kd_pace, 3, 1, 1, 2);
 
-        label_142 = new QLabel(page_pid);
-        label_142->setObjectName(QStringLiteral("label_142"));
+        doubleSpinBox_ki_pace = new QDoubleSpinBox(page_pid);
+        doubleSpinBox_ki_pace->setObjectName(QStringLiteral("doubleSpinBox_ki_pace"));
+        doubleSpinBox_ki_pace->setMaximum(999999);
+        doubleSpinBox_ki_pace->setSingleStep(0.1);
 
-        gridLayout_17->addWidget(label_142, 6, 1, 1, 1);
-
-        label_108 = new QLabel(page_pid);
-        label_108->setObjectName(QStringLiteral("label_108"));
-        label_108->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_108->setIndent(4);
-
-        gridLayout_17->addWidget(label_108, 0, 0, 1, 1);
-
-        label_step_resp_CC_Kd = new QLabel(page_pid);
-        label_step_resp_CC_Kd->setObjectName(QStringLiteral("label_step_resp_CC_Kd"));
-        label_step_resp_CC_Kd->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_step_resp_CC_Kd->setIndent(6);
-
-        gridLayout_17->addWidget(label_step_resp_CC_Kd, 9, 1, 1, 1);
+        gridLayout_17->addWidget(doubleSpinBox_ki_pace, 2, 1, 1, 2);
 
         label_110 = new QLabel(page_pid);
         label_110->setObjectName(QStringLiteral("label_110"));
@@ -2303,46 +2366,17 @@ public:
 
         gridLayout_17->addWidget(label_110, 2, 0, 1, 1);
 
-        label_134 = new QLabel(page_pid);
-        label_134->setObjectName(QStringLiteral("label_134"));
-        label_134->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_134->setIndent(4);
+        spinBox_step_transition_time = new QSpinBox(page_pid);
+        spinBox_step_transition_time->setObjectName(QStringLiteral("spinBox_step_transition_time"));
+        spinBox_step_transition_time->setMaximum(999999);
 
-        gridLayout_17->addWidget(label_134, 8, 0, 1, 1);
+        gridLayout_17->addWidget(spinBox_step_transition_time, 12, 1, 1, 2);
 
-        label_step_resp_CC_KP = new QLabel(page_pid);
-        label_step_resp_CC_KP->setObjectName(QStringLiteral("label_step_resp_CC_KP"));
-        label_step_resp_CC_KP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_step_resp_CC_KP->setIndent(6);
+        spinBox_autotuning_second_speed = new QSpinBox(page_pid);
+        spinBox_autotuning_second_speed->setObjectName(QStringLiteral("spinBox_autotuning_second_speed"));
+        spinBox_autotuning_second_speed->setMaximum(999999);
 
-        gridLayout_17->addWidget(label_step_resp_CC_KP, 7, 1, 1, 1);
-
-        label_139 = new QLabel(page_pid);
-        label_139->setObjectName(QStringLiteral("label_139"));
-        label_139->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_139->setIndent(4);
-
-        gridLayout_17->addWidget(label_139, 10, 0, 1, 1);
-
-        label_step_resp_CC_Ki = new QLabel(page_pid);
-        label_step_resp_CC_Ki->setObjectName(QStringLiteral("label_step_resp_CC_Ki"));
-        label_step_resp_CC_Ki->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_step_resp_CC_Ki->setIndent(6);
-
-        gridLayout_17->addWidget(label_step_resp_CC_Ki, 8, 1, 1, 1);
-
-        line_7 = new QFrame(page_pid);
-        line_7->setObjectName(QStringLiteral("line_7"));
-        line_7->setFrameShape(QFrame::HLine);
-        line_7->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_17->addWidget(line_7, 5, 0, 1, 4);
-
-        label_132 = new QLabel(page_pid);
-        label_132->setObjectName(QStringLiteral("label_132"));
-        label_132->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_17->addWidget(label_132, 6, 0, 1, 1);
+        gridLayout_17->addWidget(spinBox_autotuning_second_speed, 11, 1, 1, 2);
 
         label_109 = new QLabel(page_pid);
         label_109->setObjectName(QStringLiteral("label_109"));
@@ -2358,36 +2392,19 @@ public:
 
         gridLayout_17->addWidget(label_111, 3, 0, 1, 1);
 
-        label_140 = new QLabel(page_pid);
-        label_140->setObjectName(QStringLiteral("label_140"));
-        label_140->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        label_140->setIndent(4);
+        label_139 = new QLabel(page_pid);
+        label_139->setObjectName(QStringLiteral("label_139"));
+        label_139->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_139->setIndent(4);
 
-        gridLayout_17->addWidget(label_140, 11, 0, 1, 1);
+        gridLayout_17->addWidget(label_139, 10, 0, 1, 1);
 
-        comboBox_pid = new QComboBox(page_pid);
-        comboBox_pid->setObjectName(QStringLiteral("comboBox_pid"));
-        comboBox_pid->setCursor(QCursor(Qt::PointingHandCursor));
+        label_134 = new QLabel(page_pid);
+        label_134->setObjectName(QStringLiteral("label_134"));
+        label_134->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_134->setIndent(4);
 
-        gridLayout_17->addWidget(comboBox_pid, 0, 1, 1, 2);
-
-        pushButton_step_response = new QPushButton(page_pid);
-        pushButton_step_response->setObjectName(QStringLiteral("pushButton_step_response"));
-        pushButton_step_response->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_17->addWidget(pushButton_step_response, 13, 1, 1, 2);
-
-        spinBox_step_transition_time = new QSpinBox(page_pid);
-        spinBox_step_transition_time->setObjectName(QStringLiteral("spinBox_step_transition_time"));
-        spinBox_step_transition_time->setMaximum(999999);
-
-        gridLayout_17->addWidget(spinBox_step_transition_time, 12, 1, 1, 2);
-
-        spinBox_autotuning_second_speed = new QSpinBox(page_pid);
-        spinBox_autotuning_second_speed->setObjectName(QStringLiteral("spinBox_autotuning_second_speed"));
-        spinBox_autotuning_second_speed->setMaximum(999999);
-
-        gridLayout_17->addWidget(spinBox_autotuning_second_speed, 11, 1, 1, 2);
+        gridLayout_17->addWidget(label_134, 8, 0, 1, 1);
 
         spinBox_autotuning_first_speed = new QSpinBox(page_pid);
         spinBox_autotuning_first_speed->setObjectName(QStringLiteral("spinBox_autotuning_first_speed"));
@@ -2395,54 +2412,42 @@ public:
 
         gridLayout_17->addWidget(spinBox_autotuning_first_speed, 10, 1, 1, 2);
 
-        doubleSpinBox_kd_pace = new QSpinBox(page_pid);
-        doubleSpinBox_kd_pace->setObjectName(QStringLiteral("doubleSpinBox_kd_pace"));
-        doubleSpinBox_kd_pace->setMaximum(999999);
+        label_step_resp_CC_KP = new QLabel(page_pid);
+        label_step_resp_CC_KP->setObjectName(QStringLiteral("label_step_resp_CC_KP"));
+        label_step_resp_CC_KP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_step_resp_CC_KP->setIndent(6);
 
-        gridLayout_17->addWidget(doubleSpinBox_kd_pace, 3, 1, 1, 2);
+        gridLayout_17->addWidget(label_step_resp_CC_KP, 7, 1, 1, 2);
 
-        doubleSpinBox_ki_pace = new QDoubleSpinBox(page_pid);
-        doubleSpinBox_ki_pace->setObjectName(QStringLiteral("doubleSpinBox_ki_pace"));
-        doubleSpinBox_ki_pace->setMaximum(999999);
-        doubleSpinBox_ki_pace->setSingleStep(0.1);
+        label_step_resp_CC_Ki = new QLabel(page_pid);
+        label_step_resp_CC_Ki->setObjectName(QStringLiteral("label_step_resp_CC_Ki"));
+        label_step_resp_CC_Ki->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_step_resp_CC_Ki->setIndent(6);
 
-        gridLayout_17->addWidget(doubleSpinBox_ki_pace, 2, 1, 1, 2);
+        gridLayout_17->addWidget(label_step_resp_CC_Ki, 8, 1, 1, 2);
 
-        doubleSpinBox_kp_pace = new QDoubleSpinBox(page_pid);
-        doubleSpinBox_kp_pace->setObjectName(QStringLiteral("doubleSpinBox_kp_pace"));
-        doubleSpinBox_kp_pace->setMaximum(999999);
-        doubleSpinBox_kp_pace->setSingleStep(0.1);
+        label_step_resp_CC_Kd = new QLabel(page_pid);
+        label_step_resp_CC_Kd->setObjectName(QStringLiteral("label_step_resp_CC_Kd"));
+        label_step_resp_CC_Kd->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_step_resp_CC_Kd->setIndent(6);
 
-        gridLayout_17->addWidget(doubleSpinBox_kp_pace, 1, 1, 1, 2);
+        gridLayout_17->addWidget(label_step_resp_CC_Kd, 9, 1, 1, 2);
 
         gridLayout_17->setRowStretch(0, 1);
         gridLayout_17->setColumnStretch(0, 1);
-        gridLayout_17->setColumnStretch(1, 2);
-        gridLayout_17->setColumnStretch(2, 2);
+        gridLayout_17->setColumnStretch(1, 1);
+        gridLayout_17->setColumnStretch(2, 1);
         toolBox_app->addItem(page_pid, QStringLiteral("Pid"));
 
         gridLayout_40->addWidget(toolBox_app, 0, 0, 1, 1);
 
-        wdg_ReadWrite = new QWidget(wdg_paramArea);
-        wdg_ReadWrite->setObjectName(QStringLiteral("wdg_ReadWrite"));
-        gridLayout_41 = new QGridLayout(wdg_ReadWrite);
-        gridLayout_41->setSpacing(5);
-        gridLayout_41->setContentsMargins(11, 11, 11, 11);
-        gridLayout_41->setObjectName(QStringLiteral("gridLayout_41"));
-        gridLayout_41->setContentsMargins(1, 1, 1, 0);
-        pushButton_read_from_device = new QPushButton(wdg_ReadWrite);
-        pushButton_read_from_device->setObjectName(QStringLiteral("pushButton_read_from_device"));
-        pushButton_read_from_device->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_step_response = new QPushButton(wdg_paramArea);
+        pushButton_step_response->setObjectName(QStringLiteral("pushButton_step_response"));
+        pushButton_step_response->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_41->addWidget(pushButton_read_from_device, 1, 1, 1, 1);
+        gridLayout_40->addWidget(pushButton_step_response, 2, 0, 1, 1);
 
-        pushButton_write_to_device = new QPushButton(wdg_ReadWrite);
-        pushButton_write_to_device->setObjectName(QStringLiteral("pushButton_write_to_device"));
-        pushButton_write_to_device->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_41->addWidget(pushButton_write_to_device, 1, 0, 1, 1);
-
-        label_read_write = new QLabel(wdg_ReadWrite);
+        label_read_write = new QLabel(wdg_paramArea);
         label_read_write->setObjectName(QStringLiteral("label_read_write"));
         QFont font1;
         font1.setItalic(true);
@@ -2451,10 +2456,7 @@ public:
         label_read_write->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_read_write->setIndent(14);
 
-        gridLayout_41->addWidget(label_read_write, 0, 0, 1, 2);
-
-
-        gridLayout_40->addWidget(wdg_ReadWrite, 1, 0, 1, 1);
+        gridLayout_40->addWidget(label_read_write, 1, 0, 1, 1);
 
         gridLayout_40->setRowStretch(0, 1);
 
@@ -3402,8 +3404,7 @@ public:
         QWidget::setTabOrder(pushButton_save_pid_to_all, spinBox_autotuning_first_speed);
         QWidget::setTabOrder(spinBox_autotuning_first_speed, spinBox_autotuning_second_speed);
         QWidget::setTabOrder(spinBox_autotuning_second_speed, spinBox_step_transition_time);
-        QWidget::setTabOrder(spinBox_step_transition_time, pushButton_step_response);
-        QWidget::setTabOrder(pushButton_step_response, combo_channelsSet);
+        QWidget::setTabOrder(spinBox_step_transition_time, combo_channelsSet);
         QWidget::setTabOrder(combo_channelsSet, combo_voltageSet);
         QWidget::setTabOrder(combo_voltageSet, lineEdit_ip);
         QWidget::setTabOrder(lineEdit_ip, pushButton_connect);
@@ -3458,7 +3459,7 @@ public:
 
         stackedWidget->setCurrentIndex(1);
         tabWidget_app->setCurrentIndex(0);
-        toolBox_app->setCurrentIndex(4);
+        toolBox_app->setCurrentIndex(5);
         stackedWidget_specimen->setCurrentIndex(0);
 
 
@@ -3487,6 +3488,8 @@ public:
          << QApplication::translate("PressApp", "10. TS EN 196-1 \303\207imento E\304\237ilme Dayan\304\261m\304\261", Q_NULLPTR)
          << QApplication::translate("PressApp", "11. TS EN 12504-1 Beton Karot Bas\304\261n\303\247 Dayan\304\261m\304\261", Q_NULLPTR)
         );
+        pushButton_read_from_device->setText(QApplication::translate("PressApp", "Cihazdan Oku", Q_NULLPTR));
+        pushButton_write_to_device->setText(QApplication::translate("PressApp", "Cihaza Yaz", Q_NULLPTR));
         label_5->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_3->setText(QApplication::translate("PressApp", "w :", Q_NULLPTR));
         label_7->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
@@ -3642,30 +3645,28 @@ public:
         label_adc_channel_raw_data->setText(QApplication::translate("PressApp", "###.##", Q_NULLPTR));
         pushButton_tare_in_calibration->setText(QApplication::translate("PressApp", "Dara", Q_NULLPTR));
         toolBox_app->setItemText(toolBox_app->indexOf(page_calib), QApplication::translate("PressApp", "Kalibrasyon", Q_NULLPTR));
+        label_135->setText(QApplication::translate("PressApp", "Kd :", Q_NULLPTR));
+        label_142->setText(QApplication::translate("PressApp", "Coon :", Q_NULLPTR));
         pushButton_save_pid_to_all->setText(QApplication::translate("PressApp", "Hepsine Kaydet", Q_NULLPTR));
         pushButton_save_pid->setText(QApplication::translate("PressApp", "Kaydet", Q_NULLPTR));
+        label_132->setText(QApplication::translate("PressApp", "Cohen ", Q_NULLPTR));
+        label_140->setText(QApplication::translate("PressApp", "\304\260kinci\n"
+"H\304\261z", Q_NULLPTR));
+        label_108->setText(QApplication::translate("PressApp", "Pid :", Q_NULLPTR));
         label_133->setText(QApplication::translate("PressApp", "Kp :", Q_NULLPTR));
         label_141->setText(QApplication::translate("PressApp", "Switch\n"
 "Time", Q_NULLPTR));
-        label_135->setText(QApplication::translate("PressApp", "Kd :", Q_NULLPTR));
-        label_142->setText(QApplication::translate("PressApp", "Coon :", Q_NULLPTR));
-        label_108->setText(QApplication::translate("PressApp", "Pid :", Q_NULLPTR));
-        label_step_resp_CC_Kd->setText(QApplication::translate("PressApp", "---", Q_NULLPTR));
         label_110->setText(QApplication::translate("PressApp", "Ki :", Q_NULLPTR));
-        label_134->setText(QApplication::translate("PressApp", "Ki :", Q_NULLPTR));
-        label_step_resp_CC_KP->setText(QApplication::translate("PressApp", "---", Q_NULLPTR));
-        label_139->setText(QApplication::translate("PressApp", "\304\260lk\n"
-"H\304\261z", Q_NULLPTR));
-        label_step_resp_CC_Ki->setText(QApplication::translate("PressApp", "---", Q_NULLPTR));
-        label_132->setText(QApplication::translate("PressApp", "Cohen ", Q_NULLPTR));
         label_109->setText(QApplication::translate("PressApp", "Kp :", Q_NULLPTR));
         label_111->setText(QApplication::translate("PressApp", "Kd :", Q_NULLPTR));
-        label_140->setText(QApplication::translate("PressApp", "\304\260kinci\n"
+        label_139->setText(QApplication::translate("PressApp", "\304\260lk\n"
 "H\304\261z", Q_NULLPTR));
-        pushButton_step_response->setText(QApplication::translate("PressApp", "> Autotuning", Q_NULLPTR));
+        label_134->setText(QApplication::translate("PressApp", "Ki :", Q_NULLPTR));
+        label_step_resp_CC_KP->setText(QApplication::translate("PressApp", "---", Q_NULLPTR));
+        label_step_resp_CC_Ki->setText(QApplication::translate("PressApp", "---", Q_NULLPTR));
+        label_step_resp_CC_Kd->setText(QApplication::translate("PressApp", "---", Q_NULLPTR));
         toolBox_app->setItemText(toolBox_app->indexOf(page_pid), QApplication::translate("PressApp", "Pid", Q_NULLPTR));
-        pushButton_read_from_device->setText(QApplication::translate("PressApp", "Cihazdan Oku", Q_NULLPTR));
-        pushButton_write_to_device->setText(QApplication::translate("PressApp", "Cihaza Yaz", Q_NULLPTR));
+        pushButton_step_response->setText(QApplication::translate("PressApp", "> Autotuning", Q_NULLPTR));
         label_read_write->setText(QApplication::translate("PressApp", "parametreler editlenirse burada uyar\304\261 yazacak", Q_NULLPTR));
         label_pace_rate->setText(QApplication::translate("PressApp", "Y\303\274kleme H\304\261z\304\261 :", Q_NULLPTR));
         label_test_date_time_main->setText(QApplication::translate("PressApp", "Deney Tarihi :", Q_NULLPTR));

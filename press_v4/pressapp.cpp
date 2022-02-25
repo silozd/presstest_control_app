@@ -232,6 +232,7 @@ void PressApp::setup_GUI()
     ui->wdg_adminSetting->setDisabled(1);
     ui->spinBox_load_invisible->hide();
     ui->label_read_write->hide();
+    ui->pushButton_step_response->hide();
 
     ui->dateEdit->setDate(QDate::currentDate());
     ui->timeEdit->setTime(QTime::currentTime());
@@ -501,14 +502,14 @@ void PressApp::usart_signalmapper(void){
     connect(this->ui->pushButton_tare_ch2,           SIGNAL(clicked()), signalMapper_usart, SLOT (map()));
     connect(this->ui->pushButton_tare_ch3,           SIGNAL(clicked()), signalMapper_usart, SLOT (map()));
     connect(this->ui->pushButton_tare_ch4,           SIGNAL(clicked()), signalMapper_usart, SLOT (map()));
-    connect(this->ui->pushButton_save_all_cal_data,  SIGNAL(clicked()), signalMapper_usart, SLOT (map()));       // BURDA : qlist hatası
+    connect(this->ui->pushButton_save_all_cal_data,  SIGNAL(clicked()), signalMapper_usart, SLOT (map()));
     connect(this->signalMapper_usart,SIGNAL(mapped(int)), this, SLOT(usart_signalmapper_handler(int)));
 }
 void PressApp::usart_signalmapper_handler(int id){
     usart_signalmapper_no = id;
     command_send_protection_wait_timer->start();
     command_silencer = true;
-    qDebug()<<"usart_signalmapper_no"<<usart_signalmapper_no ;
+    qDebug()<<"usart signalmapper no"<<usart_signalmapper_no ;
 }
 void PressApp::print_test_results(){
     QByteArray data;
@@ -543,6 +544,7 @@ void PressApp::print_test_results(){
     EOL(data.data(),37);
     //fuzpid->pSerial->write(data);
     auxthread->serial->write(data);
+    qDebug()<<"print test res";
 }
 void PressApp::_100_msec_handler(){
     static u32 local_counter = 0;
@@ -926,7 +928,7 @@ void PressApp::on_pushButton_startTest_clicked()
         remote->set("main.start_test",QString::number(1));
         start_date = QDate::currentDate().toString("dd.MM.yyyy");   // added to print results
         start_time = QTime::currentTime().toString();               // added to print results
-        ui->wdg_paramArea->setDisabled(1);
+        ui->toolBox_app->setDisabled(1);
         ui->wdg_ReadWrite->setDisabled(1);
         ui->btn_expand->setDisabled(1);
         ui->pushButton_printPlot->setDisabled(1);
@@ -941,6 +943,8 @@ void PressApp::on_pushButton_startTest_clicked()
         test_status  = TEST_RUNNING;
         relay_start_stop = RELAY_ON;
         //auxthread->dac_value = dac_voltage_to_raw((double)0.1 * ui->spinBox_start_speed_percentage->value());
+        if(!step_response_status)
+            ui->pushButton_step_response->setText("Autotuning Durdur");
     }
 }
 void PressApp::on_pushButton_pauseTest_clicked()
@@ -953,13 +957,15 @@ void PressApp::on_pushButton_stopTest_clicked()
 {
     _time->stop();
     remote->set("main.stop_test",QString::number(1));
-    auxthread->test_finished = true;
+  //  auxthread->test_finished = true;      // crash
 }
 void PressApp::on_pushButton_refreshTest_clicked()
 {
     remote->set("main.refresh",QString::number(1));
     ui->label_time->setText("Zaman : 0.000");
     test_status = TEST_STOPPED;
+    step_response_status = false;
+    ui->pushButton_step_response->setText("Autotuning Başla");
 }
 void PressApp::on_pushButton_write_to_device_clicked()
 {
@@ -1552,8 +1558,12 @@ void PressApp::on_toolBox_app_currentChanged(int tab)
 {
      if (tab == TAB_GAIN || tab == TAB_CALIB || tab == TAB_PID)    // ui->wdg_adminSetting click ekle      // TODO
         authorization_event();
-     if (mouseevent && tab == TAB_PID)      // TODO
+     if (mouseevent && tab == TAB_PID){         // TODO
+         ui->pushButton_step_response->show();
          relay_auto_man = RELAY_ON;
+     }
+     else
+         ui->pushButton_step_response->hide();
 }
 // radio button:
 void PressApp::assign_frame()
