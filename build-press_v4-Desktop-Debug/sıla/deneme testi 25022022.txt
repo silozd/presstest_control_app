@@ -1,0 +1,14 @@
+
+TEST RESULTS 
+Line_1 :
+Line_2 :
+Test_No :65
+Test_Start_Date :25.02.2022
+Test_Start_Time :13:59:07
+Test_Finish_Time :13:59:29
+Test_Type :Yarmada Çekme
+Specimen :Küp
+Dimensions_(mm) :0 x 0
+Area_(mm2) :353.429 mm2
+Peak_Load_(kN) :10.230
+Peak_Stress_(MPa) :28.956

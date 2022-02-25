@@ -1,0 +1,165 @@
+QComboBox{
+    selection-background-color: rgb(0, 130, 210);
+}
+/******   MAIN PAGE    ******/
+#page_main {
+    background: rgb(240,238,238);
+}
+#frame_main{
+    background: rgb(252,252,252);
+    border: 1px solid rgb(170,170,172);
+    border-radius: 5px;
+}
+#pushButton_toApp {
+    border: 1px solid rgb(255,255,255);
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
+                            stop:0.331683 rgba(233, 230, 229, 255),
+                            stop:1 rgba(205, 202, 200, 255));
+}
+#pushButton_toApp:hover {
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
+                            stop:0.331683 rgba(253, 252, 251, 255),
+                            stop:1 rgba(233, 230, 229, 255));
+}
+/******  TAB WIDGET ******/
+QTabWidget {
+    background: rgb(253,252,252);
+}
+QTabBar::tab {
+    font: bold;
+    width: 250px;
+    height: 30px;
+    border: 1px solid rgb(170,170,172);
+    border-radius: 5px;
+    background-color: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, stop:0.326733 rgba(242, 248, 255, 255), stop:1 rgba(184, 197, 209, 255));
+    color: black;
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+background-color: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, stop:0.326733 rgba(255, 255, 255, 255), stop:1 rgba(220, 239, 247, 255));
+
+}
+#label_calculated_area, #label_alert_status,  #label_current_test_no_2,  #label_test_date_time_main,  #label_specimen,  #label_frame_type,
+#label_pace_rate,  #label_test_type_specimen,  #label_load,  #label_stress,  #label_time{
+    border: 1px solid rgb(170,170,172);
+    padding: 2px;
+}
+#wdg_paramArea QPushButton, #frame_testButtons QPushButton {
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, stop:0.326733 rgba(242, 248, 255, 255), stop:1 rgba(184, 197, 209, 255));
+    border: 1px solid rgb(255,255,255);
+    border-radius: 3px;
+}
+#wdg_paramArea QPushButton:pressed,  #frame_testButtons QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
+                                stop:0.331683 rgba(250, 252, 255, 255),
+                                stop:1 rgba(220, 225, 230, 255))
+}
+#pushButton_openFile, #pushButton_saveFile{
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, stop:0.326733 rgba(242, 255, 248, 255), stop:1 rgba(184, 209, 197, 255));
+    border: 1px solid rgb(253,255,251);
+    border-radius: 3px;
+}
+#pushButton_openFile:pressed, #pushButton_saveFile:pressed{
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, stop:0.326733 rgba(250, 255, 252, 255), stop:1 rgba(220, 230, 225, 255));
+}
+#tab_test QSpinBox, #tab_test  QDoubleSpinBox, #spinBox_test_numerator {
+    background:  rgb(253,253,253);
+    border: 1px solid rgb(160,160,162);
+    border-radius: 3px;
+}
+#tab_test QSpinBox::up-button, #tab_test  QSpinBox::down-button, #tab_test  QDoubleSpinBox::up-button, #tab_test  QDoubleSpinBox::down-button, #spinBox_test_numerator::up-button, #spinBox_test_numerator::down-button{
+    width: 0px;
+}
+/* TooBox: */
+#toolBox_app::tab  {
+    font: bold;
+    color: rgb(20, 100, 200);     /* blue */
+    border-radius: 5px;
+}
+#toolBox_app::tab:selected {
+    font: italic bold;
+    color: rgb(10,150,20);
+}
+#wdg_param, #wdg_calib {
+    background: rgb(240,240,240);
+}
+#page_specimen, #page_channels, #page_pid, #page_gain, #wdg_results {
+    background: rgb(240,240,240);
+    border: 1px solid rgb(170,170,172);
+}
+#label_read_write {
+    color: rgb(240,0,0);
+}
+QComboBox {
+    border: 1px solid rgb(253,255,251);
+    border-radius: 3px;
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fbfbfb, stop: 0.4 #e3e3e3,
+                                stop: 0.5 #dbdbdb, stop: 1.0 #c3c3c3);
+}
+QComboBox::drop-down {
+    border: 0px;
+}
+QComboBox::down-arrow {
+    color: blue;
+    width: 12px;
+    border-image: url(":/icons/navigate_close.png");
+}
+#pushButton_startTest{
+    image: url(":/icons/media_play.png");
+}
+#pushButton_pauseTest{
+    image: url(":/icons/media_pause_dis.png");
+}
+#pushButton_stopTest{
+    image: url(":/icons/media_stop_dis.png");
+}
+#pushButton_refreshTest{
+    image: url(":/icons/arrow_circle2.png");
+}
+#btn_expand{
+    image: url(":/icons/fit_to_size.png");
+}
+#pushButton_printPlot {
+    image: url(":/icons/document_chart_dis.png");
+}
+#btn_okSpecimen, #btn_okGain{
+    image: url(":/icons/navigate_check.png");
+}
+QPushButton{
+    border: 2px solid rgb(255,255,255);
+    border-radius: 3px;
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
+                            stop:0.331683 rgba(230, 235, 240, 255),
+                            stop:1 rgba(190, 195, 200, 255));
+}
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
+                            stop:0.331683 rgba(245, 250, 255, 255),
+                            stop:1 rgba(205, 210, 215, 255))
+}
+#pushButton_editFile{
+    text-align: right;
+    font-family: "Times New Roman";
+    text-decoration: underline;
+    border: none;
+    color: rgb(0,20,255);
+    background: none;
+}
+#pushButton_editFile:hover{
+    text-decoration: none;
+}
+#pushButton_load_factory_settings{
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
+                            stop:0.331683 rgba(250, 225, 225, 255),
+                            stop:1 rgba(255, 150, 150, 255));
+}
+#pushButton_load_factory_settings:pressed{
+    background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
+                            stop:0.331683 rgba(250, 240, 240, 255),
+                            stop:1 rgba(255, 190, 190, 255));
+}
+
+
+
+

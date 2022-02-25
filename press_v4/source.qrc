@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>stylesheet.css</file>
+        <file>icons/arrow_circle2.png</file>
+        <file>icons/media_pause.png</file>
+        <file>icons/media_play.png</file>
+        <file>icons/media_stop.png</file>
+        <file>icons/navigate_close.png</file>
+        <file>icons/navigate_check.png</file>
+        <file>icons/fit_to_size.png</file>
+        <file>icons/floppy_disk.png</file>
+        <file>icons/folder_out.png</file>
+        <file>icons/media_pause_dis.png</file>
+        <file>icons/media_play_dis.png</file>
+        <file>icons/media_stop_dis.png</file>
+        <file>icons/okay.png</file>
+        <file>icons/warning.png</file>
+        <file>icons/green_ball.png</file>
+        <file>icons/red_ball.png</file>
+        <file>icons/printer_gr.png</file>
+        <file>icons/document_chart.png</file>
+        <file>icons/document_chart_dis.png</file>
+        <file>icons/fit_to_size_dis.png</file>
+        <file>icons/lock.png</file>
+        <file>icons/unlock.png</file>
+    </qresource>
+</RCC>
