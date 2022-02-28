@@ -27,6 +27,8 @@ class aux_thread : public QWidget
 public:
     explicit aux_thread(PressApp *master, QWidget *parent = 0);
     ~aux_thread();
+    Ui::aux_thread *ui;
+
     PressApp *pressApp;
 
     QSerialPort *serial;
@@ -80,8 +82,6 @@ public slots:
     double discrete_PID_dac(void);
 
 private:
-    Ui::aux_thread *ui;
-
     QTimer* sender_timer;
     QTime   pid_delta_t_dac;
 

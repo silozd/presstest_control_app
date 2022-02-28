@@ -3985,8 +3985,13 @@ QPushButton:pressed {
                </item>
                <item row="0" column="0" colspan="2">
                 <widget class="QLabel" name="label_55">
+                 <property name="font">
+                  <font>
+                   <italic>true</italic>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>Şifre Yenileme :</string>
+                  <string>Şifre Yenileme </string>
                  </property>
                  <property name="indent">
                   <number>12</number>

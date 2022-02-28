@@ -7,19 +7,23 @@
 PressApp::PressApp(QWidget *parent) :
     QMainWindow(parent),
     editReport(new EditReport),
+    auxthread (new aux_thread(this)),
     ui(new Ui::PressApp)
 {
     ui->setupUi(this);
-    resizer = new QTimer(this);
-    grid_plotArea = new QGridLayout(ui->wdg_plotArea);
-    customPlot = new QCustomPlot(ui->wdg_plotArea);
-    _time = new QTimer(this);
-    _time->setInterval(100);
-    remote  = new RemoteConnection(8945,this);
-    show_graph = 0;
+    remote          = new RemoteConnection(8945,this);
+    grid_plotArea   = new QGridLayout(ui->wdg_plotArea);
+    customPlot      = new QCustomPlot(ui->wdg_plotArea);
+    resizer         = new QTimer(this);
+    _100_msec_timer = new QTimer(this);
+    _time           = new QTimer(this);
+    eth_timer       = new QTimer;
+    _time           ->setInterval(100);
+    _100_msec_timer ->setInterval(100);
+    eth_timer       ->setInterval(100);
     global_running_timer.restart();
-    eth_timer = new QTimer;
-    eth_timer->setInterval(100);
+    _100_msec_timer ->start();
+    show_graph = 0;
 
     QFont Font1("Times New Roman", Fontsize);
     hr = PressApp::GetScreenHRes(0);    //750
@@ -78,6 +82,7 @@ PressApp::PressApp(QWidget *parent) :
 
     connect(resizer,SIGNAL(timeout()),this,SLOT(resize_window()));
     connect(_time,SIGNAL(timeout()),this,SLOT(plot_graph()));
+    connect(_100_msec_timer, SIGNAL(timeout()),this,SLOT(_100_msec_handler()));     //
     connect(remote,SIGNAL(periodic_response_handler(QByteArray)),this,SLOT(periodic_response_handler(QByteArray)));
     connect(ui->radioButton_frame1, SIGNAL(clicked()), this, SLOT(assign_frame()));
     connect(ui->radioButton_frame2, SIGNAL(clicked()), this, SLOT(assign_frame()));
@@ -563,20 +568,20 @@ void PressApp::_100_msec_handler(){
     local_counter++;
 
     if(do_at_the_opening){
-        if(auxthread->communication_established){
+        if(auxthread->communication_established){ // sila
             gain_cal_send_timer->start();
             command_silencer = true;
             do_at_the_opening = false;
         }
     }
     if(auxthread->to_gui.hit){
-        auxthread->to_gui.hit = false;
+        auxthread->to_gui.hit = false;    // sila commented
         //qDebug() << "gui hit : ";
 
         for(u8 i = 0; i < 4; i++){
             if(i == 0){
                 if(test_status == TEST_JUST_FINISHED){
-                    label_adc_cal_channel[i]->setText(QString::number(auxthread->peak_load,'f',precision[i]));
+                    label_adc_cal_channel[i]->setText(QString::number(auxthread->peak_load,'f',precision[i]));  // TODO : buralar ui ile degisecek BURDA
                 }
                 else{
                     label_adc_cal_channel[i]->setText(QString::number(((1.0*auxthread->to_gui.calibrated[i])),'f',precision[i]));
@@ -586,6 +591,30 @@ void PressApp::_100_msec_handler(){
                 label_adc_cal_channel[i]->setText(QString::number(((1.0*auxthread->to_gui.calibrated[i])),'f',precision[i]));
             }
             label_adc_channel[i]->setText(QString::number(auxthread->to_gui.raw[i]));
+    // sila :
+            if(auxthread->to_gui.gain[0] == 0 || auxthread->to_gui.gain[1] == 0 || auxthread->to_gui.gain[2] == 0 || auxthread->to_gui.gain[3] == 0)
+                ui->label_gain_0->setText("+/- 10 V");
+            if(auxthread->to_gui.gain[0] == 1 || auxthread->to_gui.gain[1] == 1 || auxthread->to_gui.gain[2] == 1 || auxthread->to_gui.gain[3] == 1)
+                ui->label_gain_0->setText("+/- 5 V");
+            if(auxthread->to_gui.gain[0] == 2 || auxthread->to_gui.gain[1] == 2 || auxthread->to_gui.gain[2] == 2 || auxthread->to_gui.gain[3] == 2)
+                ui->label_gain_0->setText("+/- 2.5 V");
+            if(auxthread->to_gui.gain[0] == 3 || auxthread->to_gui.gain[1] == 3 || auxthread->to_gui.gain[2] == 3 || auxthread->to_gui.gain[3] == 3)
+                ui->label_gain_0->setText("+/- 1 V");
+            if(auxthread->to_gui.gain[0] == 4 || auxthread->to_gui.gain[1] == 4 || auxthread->to_gui.gain[2] == 4 || auxthread->to_gui.gain[3] == 4)
+                ui->label_gain_0->setText("+/- 500 mV");
+            if(auxthread->to_gui.gain[0] == 5 || auxthread->to_gui.gain[1] == 5 || auxthread->to_gui.gain[2] == 5 || auxthread->to_gui.gain[3] == 5)
+                ui->label_gain_0->setText("+/- 250 mV");
+            if(auxthread->to_gui.gain[0] == 6 || auxthread->to_gui.gain[1] == 6 || auxthread->to_gui.gain[2] == 6 || auxthread->to_gui.gain[3] == 6)
+                ui->label_gain_0->setText("+/- 125 mV");
+            if(auxthread->to_gui.gain[0] == 7 || auxthread->to_gui.gain[1] == 7 || auxthread->to_gui.gain[2] == 7 || auxthread->to_gui.gain[3] == 7)
+                ui->label_gain_0->setText("+/- 50 mV");
+            if(auxthread->to_gui.gain[0] == 8 || auxthread->to_gui.gain[1] == 8 || auxthread->to_gui.gain[2] == 8 || auxthread->to_gui.gain[3] == 8)
+                ui->label_gain_0->setText("+/- 25 mV");
+            if(auxthread->to_gui.gain[0] == 9 || auxthread->to_gui.gain[1] == 9 || auxthread->to_gui.gain[2] == 9 || auxthread->to_gui.gain[3] == 9)
+                ui->label_gain_0->setText("+/- 10 mV");
+            if(auxthread->to_gui.gain[0] == 10 || auxthread->to_gui.gain[1] == 10 || auxthread->to_gui.gain[2] == 10 || auxthread->to_gui.gain[3] == 10)
+                ui->label_gain_0->setText("+/- 5 mV");
+    //
             switch(auxthread->to_gui.gain[i]){
             case 0:
                 label_gain[i]->setText("+/- 10 V");

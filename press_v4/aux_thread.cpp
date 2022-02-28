@@ -12,11 +12,11 @@ aux_thread::aux_thread(PressApp *master, QWidget *parent) :
 
     connect(sender_timer, SIGNAL(timeout()), this,SLOT(fuzpid_thread_handler()));
 
-#ifdef CONFIG_ARM
-    QTimer::singleShot(10000,sender_timer,SLOT(start()));
-#else
-    QTimer::singleShot(5000,sender_timer,SLOT(start()));
-#endif
+//#ifdef CONFIG_ARM     // OPEN
+//    QTimer::singleShot(10000,sender_timer,SLOT(start()));
+//#else
+//    QTimer::singleShot(5000,sender_timer,SLOT(start()));
+//#endif
     hard_stop = 0;
     breaking_case = 0;
     max_load_value = 0;

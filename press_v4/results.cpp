@@ -7,7 +7,6 @@
 
 void PressApp::record_results(int no)
 {
-    qDebug()<<dimensions<<"test_type :"<<test_type<<"specimen :"<<ui->comboBox_specimen->currentText();
     test_no = no;
     ui->label_test_finish_time->setText(finish_time);
     ui->label_test_peak_stress->setText(QString::number(real_time.stress,'f',3));

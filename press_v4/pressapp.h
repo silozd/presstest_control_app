@@ -220,6 +220,7 @@ public:
     QTimer *resizer;
     QTimer *_time;
     QTimer *eth_timer;
+    QTimer *_100_msec_timer;
     QElapsedTimer global_running_timer;
 
     QDialog *dia_expand;

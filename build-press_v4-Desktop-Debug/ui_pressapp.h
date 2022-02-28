@@ -3017,6 +3017,9 @@ public:
 
         label_55 = new QLabel(widget_6);
         label_55->setObjectName(QStringLiteral("label_55"));
+        QFont font2;
+        font2.setItalic(true);
+        label_55->setFont(font2);
         label_55->setIndent(12);
 
         gridLayout_34->addWidget(label_55, 0, 0, 1, 2);
@@ -3302,8 +3305,6 @@ public:
 
         label_nameOfFile = new QLabel(wdg_pdfView);
         label_nameOfFile->setObjectName(QStringLiteral("label_nameOfFile"));
-        QFont font2;
-        font2.setItalic(true);
         label_nameOfFile->setFont(font2);
         label_nameOfFile->setIndent(12);
 
@@ -3756,7 +3757,7 @@ public:
         label_72->setText(QApplication::translate("PressApp", "Yeni \305\236ifre :", Q_NULLPTR));
         label_56->setText(QApplication::translate("PressApp", "Eski \305\236ifre :", Q_NULLPTR));
         pushButton_pswSave->setText(QApplication::translate("PressApp", "Kaydet", Q_NULLPTR));
-        label_55->setText(QApplication::translate("PressApp", "\305\236ifre Yenileme :", Q_NULLPTR));
+        label_55->setText(QApplication::translate("PressApp", "\305\236ifre Yenileme ", Q_NULLPTR));
         tabWidget_app->setTabText(tabWidget_app->indexOf(tab_admin), QApplication::translate("PressApp", "Kullan\304\261c\304\261", Q_NULLPTR));
         label_test_dimensions->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         txt_peak_load->setText(QApplication::translate("PressApp", "Y\303\274k :", Q_NULLPTR));
