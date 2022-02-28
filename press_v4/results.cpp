@@ -7,6 +7,7 @@
 
 void PressApp::record_results(int no)
 {
+    qDebug()<<dimensions<<"test_type :"<<test_type<<"specimen :"<<ui->comboBox_specimen->currentText();
     test_no = no;
     ui->label_test_finish_time->setText(finish_time);
     ui->label_test_peak_stress->setText(QString::number(real_time.stress,'f',3));
@@ -115,6 +116,7 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         int x = y;
         painter.setPen(Qt::black);
         painter.drawText(printer.width()/2 - h_label/2, 50, "TEST RESULTS");
+        painter.drawText( x, y, ui->lineEdit_fileName->text() + "\n");
         painter.drawText( x, 2*y, "Test Start Date :     " + ui->label_test_start_date->text() + "\n");
         painter.drawText( x, 3*y, "Test No :     " + ui->label_test_no->text() + "\n");
         painter.drawText( x, 4*y, "Line 1 :     " + ui->lineEdit_1->text() + "\n");

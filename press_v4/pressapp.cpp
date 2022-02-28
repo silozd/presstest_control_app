@@ -905,7 +905,69 @@ void PressApp::on_pushButton_openFile_clicked()
 }
 void PressApp::on_btn_okSpecimen_clicked()
 {
+// dimension'lar okunamayan/yazilamayan numunelerden dolayi eklendi
     calculate_area();
+    if(test_type == COMPRESSION){
+        switch (specimen_type) {
+        case COMPRESSION_CUBE:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_cube_w->value())+" x "
+                    + QString::number(ui->doubleSpinBox_specimen_cube_w->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_cube_w->value());
+            break;
+        case COMPRESSION_CYLINDER:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_cyl_d->value())+" x "
+                    + QString::number(ui->doubleSpinBox_specimen_cyl_l->value());
+            break;
+        case COMPRESSION_MASONRY_UNIT:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_masonry_unit_l->value())+" x "
+                    + QString::number(ui->doubleSpinBox_specimen_masonry_unit_w->value());
+            break;
+        }
+    }
+    else if(test_type == FLEXURAL){
+        switch(specimen_type) {
+        case FLEXURAL_BEAM3:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_beam3_l->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_beam3_b->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_beam3_d->value());
+            break;
+        case FLEXURAL_BEAM4:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_beam4_l->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_beam4_s->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_beam4_b->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_beam4_d->value());
+            break;
+        case FLEXURAL_KERB:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_kerb_a->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_kerb_b->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_kerb_c->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_kerb_d->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_kerb_l->value());
+            break;
+        case FLEXURAL_FLAGSTONE:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_flagstone_l->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_flagstone_s->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_flagstone_b->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_flagstone_d->value());
+            break;
+        }
+    }
+    else if(test_type == SPLIT_TENSILE){
+        switch(specimen_type) {
+        case SPLIT_TENSILE_CUBE:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_split_cube_w->value())+" x "
+                    + QString::number(ui->doubleSpinBox_specimen_split_cube_w->value());
+            break;
+        case SPLIT_TENSILE_CYLINDER:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_split_cylinder_l->value())+" x "
+                    + QString::number(ui->doubleSpinBox_specimen_split_cylinder_d->value());
+            break;
+        case SPLIT_TENSILE_PAVING_STONE:
+            dimensions = QString::number(ui->doubleSpinBox_specimen_split_paving_stone_l->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_split_paving_stone_d->value());
+            break;
+        }
+    }
 }
 void PressApp::on_btn_expand_clicked()
 {
@@ -1027,11 +1089,11 @@ void PressApp::on_pushButton_removeUser_clicked()
 {
     int selected_index = ui->comboBox_user->currentIndex();
     QString selected_str = ui->comboBox_user->currentText();
+    QMessageBox message;
+    message.setWindowTitle("Uyarı Kutusu");
+    message.setFont(QFont("Amerika", Fontsize-1 , -1, true));
     if(mouseevent){
         if(selected_str != ""){
-            QMessageBox message;
-            message.setWindowTitle("Uyarı Kutusu");
-            message.setFont(QFont("Amerika", Fontsize-1 , -1, true));
             message.setText(QString("%1 kullanıcısına ait dosyalar silinecek. Emin misiniz ?").arg(selected_str));
             message.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
             message.setDefaultButton(QMessageBox::Cancel);
@@ -1047,6 +1109,10 @@ void PressApp::on_pushButton_removeUser_clicked()
                     users_file.resize(0);
                     line << it_user << "\n";
                 }
+                message.setText(QString("   %1 başarıyla kaldırıldı  ").arg(selected_str));
+                message.setIconPixmap(QPixmap(":/icons/okay.png"));
+                message.setStandardButtons(QMessageBox::Ok);
+                message.exec();
                 qDebug()<<selected_str<<" : user removed";
             }
             else;
