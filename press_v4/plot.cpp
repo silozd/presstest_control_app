@@ -49,7 +49,7 @@ void PressApp::setup_PLOT()
     connect(customPlot, SIGNAL(plottableClick(QCPAbstractPlottable*,int,QMouseEvent*)), this, SLOT(graphClicked(QCPAbstractPlottable*,int)));
     connect(customPlot, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenuRequest(QPoint)));
 }
-void PressApp::plot_graph()     // BURADA : temizleme değil de yeniden start yaptığında 0-0dan başlama olsun ?
+void PressApp::plot_graph()     // BURDA : temizleme değil de yeniden start yaptığında 0-0dan başlama olsun ?
 {
     graph_index = 1;
     double _zero;
@@ -71,7 +71,7 @@ void PressApp::plot_graph()     // BURADA : temizleme değil de yeniden start ya
             return;
         }
         else if(statu == 3) {
-//            customPlot->graph()->data().data()->clear();    // TODO ?
+            customPlot->graph(0)->data().data()->clear();    // TODO ?
             //ui->label_breaking_point->setText(QString::number(real_time.load));
         }
         else if (graph_index == 0){

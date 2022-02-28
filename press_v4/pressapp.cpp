@@ -966,6 +966,7 @@ void PressApp::on_pushButton_refreshTest_clicked()
     test_status = TEST_STOPPED;
     step_response_status = false;
     ui->pushButton_step_response->setText("Autotuning Başla");
+    customPlot->graph(0)->data().data()->clear();
 }
 void PressApp::on_pushButton_write_to_device_clicked()
 {

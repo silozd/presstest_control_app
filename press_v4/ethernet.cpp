@@ -108,7 +108,7 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         QString third_section = str.section(":",2,2);
 
         if(first_section == "get"){
-            if(second_section == "param.pace_rate"){        // BURADA - 5 TIKTA YAZIYO
+            if(second_section == "param.pace_rate"){
                 ui->doubleSpinBox_pace_rate->setValue(third_section.toDouble());
                 ui->label_pace_rate->setText("Yükleme Hızı : " + QString::number(third_section.toDouble(),2,2) + QString("%1 %2/s").arg(ui->doubleSpinBox_pace_rate->value()).arg(load_unit));
             }
@@ -224,7 +224,7 @@ void PressApp::periodic_response_handler(QByteArray datagram)
     }
     static QTime time(QTime::currentTime());
     if(statu_device == 0){
-        qDebug () << "deney TEMİZLENDİ" << statu ;
+        //qDebug () << "deney TEMİZLENDİ" << statu ;
         time.restart();
         ui->pushButton_refreshTest->hide();
         ui->pushButton_startTest->show();
@@ -235,9 +235,12 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         ui->pushButton_pauseTest->setDisabled(true);
         ui->pushButton_pauseTest->setStyleSheet("image: url(:/icons/media_pause_dis.png); ");
         ui->label_test_date_time_main->setText(QString("Deney Tarihi : %1").arg(start_date));
+        test_status = TEST_STOPPED;
+        step_response_status = false;
+        ui->pushButton_step_response->setText("Autotuning Başla");
     }
     else if (statu_device == 1){
-        qDebug () << "deney BAŞLADI" << statu ;
+        //qDebug () << "deney BAŞLADI" << statu ;
         ui->pushButton_startTest->show();
         ui->pushButton_startTest->setDisabled(true);
         ui->pushButton_startTest->setStyleSheet("image: url(:/icons/media_play_dis.png); ");
@@ -247,7 +250,7 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         ui->pushButton_stopTest->setStyleSheet({"image: url(:/icons/media_stop.png);"});
     }
     else if (statu_device == 3){
-        qDebug () << "deney SONLANDI" << statu ;
+        //qDebug () << "deney SONLANDI" << statu ;
         _time->stop();
         ui->pushButton_refreshTest->show();
         ui->pushButton_refreshTest->setEnabled(true);

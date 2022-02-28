@@ -413,7 +413,6 @@ public:
     QWidget *wdg_adminSetting;
     QGridLayout *gridLayout_30;
     QProgressBar *progressBar_storage;
-    QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_load_factory_settings;
     QLabel *label_51;
     QSpacerItem *verticalSpacer_7;
@@ -506,8 +505,8 @@ public:
     QSpacerItem *verticalSpacer_15;
     QLabel *label_61;
     QSpacerItem *horizontalSpacer_5;
-    QButtonGroup *control_buttonGroup;
     QButtonGroup *recraw_buttonGroup;
+    QButtonGroup *control_buttonGroup;
     QButtonGroup *settings_buttonGroup;
     QButtonGroup *frame_buttonGroup;
 
@@ -653,6 +652,7 @@ public:
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
+        gridLayout_4->setContentsMargins(-1, -1, -1, 5);
         wdg_paramArea = new QWidget(tab_test);
         wdg_paramArea->setObjectName(QStringLiteral("wdg_paramArea"));
         gridLayout_40 = new QGridLayout(wdg_paramArea);
@@ -1298,7 +1298,7 @@ public:
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 384, 314));
+        page_param->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1755,7 +1755,7 @@ public:
         toolBox_app->addItem(page_channels, QStringLiteral("Kanallar"));
         page_gain = new QWidget();
         page_gain->setObjectName(QStringLiteral("page_gain"));
-        page_gain->setGeometry(QRect(0, 0, 384, 314));
+        page_gain->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_18 = new QGridLayout(page_gain);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setContentsMargins(11, 11, 11, 11);
@@ -1913,7 +1913,7 @@ public:
         toolBox_app->addItem(page_gain, QString::fromUtf8("Kazan\303\247"));
         page_calib = new QWidget();
         page_calib->setObjectName(QStringLiteral("page_calib"));
-        page_calib->setGeometry(QRect(0, 0, 384, 314));
+        page_calib->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_11 = new QGridLayout(page_calib);
         gridLayout_11->setSpacing(6);
         gridLayout_11->setContentsMargins(11, 11, 11, 11);
@@ -2768,10 +2768,6 @@ public:
 
         gridLayout_30->addWidget(progressBar_storage, 0, 1, 1, 2);
 
-        horizontalSpacer_3 = new QSpacerItem(199, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_30->addItem(horizontalSpacer_3, 0, 3, 1, 1);
-
         pushButton_load_factory_settings = new QPushButton(wdg_adminSetting);
         settings_buttonGroup = new QButtonGroup(PressApp);
         settings_buttonGroup->setObjectName(QStringLiteral("settings_buttonGroup"));
@@ -3458,7 +3454,7 @@ public:
         retranslateUi(PressApp);
 
         stackedWidget->setCurrentIndex(1);
-        tabWidget_app->setCurrentIndex(0);
+        tabWidget_app->setCurrentIndex(1);
         toolBox_app->setCurrentIndex(5);
         stackedWidget_specimen->setCurrentIndex(0);
 

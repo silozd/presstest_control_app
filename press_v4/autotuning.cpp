@@ -26,7 +26,9 @@ void PressApp::step_response_handle(void){      //BURDA
             ui->pushButton_step_response->setText("Autotuning Başla");
             relay_start_stop = RELAY_OFF;
             record_results(real_time.test_no);    // TODO : autotune kaydetsin mi?
-            // BURDA : toolbox enable et
+            ui->toolBox_app->setEnabled(1);
+            ui->wdg_ReadWrite->setEnabled(1);
+            // burda deney sonlanma sinyalini almıyor olablir !*
         }
     }
 }
