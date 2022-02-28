@@ -23,5 +23,14 @@
         <file>icons/fit_to_size_dis.png</file>
         <file>icons/lock.png</file>
         <file>icons/unlock.png</file>
+        <file>specimen_img/beam3n.png</file>
+        <file>specimen_img/beam4n.png</file>
+        <file>specimen_img/cube.png</file>
+        <file>specimen_img/cylinder.png</file>
+        <file>specimen_img/cylinder-split.png</file>
+        <file>specimen_img/flagstone.png</file>
+        <file>specimen_img/kerb.png</file>
+        <file>specimen_img/masonary.png</file>
+        <file>specimen_img/pavingstone.png</file>
     </qresource>
 </RCC>

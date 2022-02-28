@@ -301,7 +301,7 @@
            <string notr="true"/>
           </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_test">
            <attribute name="title">
@@ -390,24 +390,34 @@
                   <number>1</number>
                  </property>
                  <property name="currentIndex">
-                  <number>4</number>
+                  <number>0</number>
                  </property>
                  <widget class="QWidget" name="page_specimen">
                   <property name="geometry">
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>230</width>
-                    <height>339</height>
+                    <width>384</width>
+                    <height>318</height>
                    </rect>
                   </property>
                   <attribute name="label">
                    <string>Deney - Numune Tipi</string>
                   </attribute>
-                  <layout class="QGridLayout" name="gridLayout_7" rowstretch="1,1,1,5,1" columnstretch="1,1">
+                  <layout class="QGridLayout" name="gridLayout_7" rowstretch="1,1,1,2,1" columnstretch="1,1">
                    <property name="horizontalSpacing">
                     <number>16</number>
                    </property>
+                   <item row="4" column="0">
+                    <widget class="QPushButton" name="btn_okSpecimen">
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="0" column="1">
                     <widget class="QComboBox" name="combo_testType">
                      <property name="cursor">
@@ -415,743 +425,10 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="0" colspan="2">
-                    <widget class="QWidget" name="img_specimen" native="true">
-                     <layout class="QGridLayout" name="gridLayout_38">
-                      <item row="0" column="0">
-                       <widget class="QStackedWidget" name="stackedWidget_specimen">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="currentIndex">
-                         <number>0</number>
-                        </property>
-                        <widget class="QWidget" name="stack_cube_press">
-                         <layout class="QGridLayout" name="gridLayout_19">
-                          <item row="1" column="1">
-                           <spacer name="verticalSpacer_14">
-                            <property name="orientation">
-                             <enum>Qt::Vertical</enum>
-                            </property>
-                            <property name="sizeHint" stdset="0">
-                             <size>
-                              <width>20</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                           </spacer>
-                          </item>
-                          <item row="0" column="3">
-                           <spacer name="horizontalSpacer_6">
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                            <property name="sizeHint" stdset="0">
-                             <size>
-                              <width>40</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                           </spacer>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_5">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_cube_w">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_3">
-                            <property name="text">
-                             <string>w :</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_cyl_press">
-                         <layout class="QGridLayout" name="gridLayout_20">
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_7">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_cyl_d">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_8">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_4">
-                            <property name="text">
-                             <string>d :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_cyl_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_6">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_masonary">
-                         <layout class="QGridLayout" name="gridLayout_21">
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_9">
-                            <property name="text">
-                             <string>w :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_masonry_unit_w">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_10">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_masonry_unit_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_11">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_14">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_beam3n">
-                         <layout class="QGridLayout" name="gridLayout_22">
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam3_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="0">
-                           <widget class="QLabel" name="label_16">
-                            <property name="text">
-                             <string>d :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam3_d">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_15">
-                            <property name="text">
-                             <string>b :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam3_b">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_17">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_18">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_19">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="2">
-                           <widget class="QLabel" name="label_20">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_beam4n">
-                         <layout class="QGridLayout" name="gridLayout_23">
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_25">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                            </property>
-                            <property name="indent">
-                             <number>2</number>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_21">
-                            <property name="text">
-                             <string>s :</string>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                            </property>
-                            <property name="indent">
-                             <number>2</number>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_27">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_s">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_22">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_b">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="0">
-                           <widget class="QLabel" name="label_26">
-                            <property name="text">
-                             <string>d :</string>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                            </property>
-                            <property name="indent">
-                             <number>2</number>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_d">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="2">
-                           <widget class="QLabel" name="label_143">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="2">
-                           <widget class="QLabel" name="label_24">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="0">
-                           <widget class="QLabel" name="label_23">
-                            <property name="text">
-                             <string>b :</string>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                            </property>
-                            <property name="indent">
-                             <number>2</number>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_kerb">
-                         <layout class="QGridLayout" name="gridLayout_24">
-                          <item row="2" column="2">
-                           <widget class="QLabel" name="label_149">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_b">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_147">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="4" column="0">
-                           <widget class="QLabel" name="label_151">
-                            <property name="text">
-                             <string>d :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="0">
-                           <widget class="QLabel" name="label_150">
-                            <property name="text">
-                             <string>c :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_144">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_a">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_c">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_145">
-                            <property name="text">
-                             <string>a :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="4" column="2">
-                           <widget class="QLabel" name="label_154">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_148">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="4" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_d">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="2">
-                           <widget class="QLabel" name="label_153">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="0">
-                           <widget class="QLabel" name="label_146">
-                            <property name="text">
-                             <string>b :</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_flagstone">
-                         <layout class="QGridLayout" name="gridLayout_25">
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_156">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_s">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_b">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_157">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_152">
-                            <property name="text">
-                             <string>s :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_155">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="0">
-                           <widget class="QLabel" name="label_158">
-                            <property name="text">
-                             <string>b :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="2">
-                           <widget class="QLabel" name="label_159">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="0">
-                           <widget class="QLabel" name="label_160">
-                            <property name="text">
-                             <string>d :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_d">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="2">
-                           <widget class="QLabel" name="label_161">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_cube_split">
-                         <layout class="QGridLayout" name="gridLayout_26">
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_162">
-                            <property name="text">
-                             <string>w :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_cube_w">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_163">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_cyl_split">
-                         <layout class="QGridLayout" name="gridLayout_27">
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_164">
-                            <property name="text">
-                             <string>d :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_cylinder_d">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_165">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_166">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_cylinder_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_167">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                        <widget class="QWidget" name="stack_pavingStone">
-                         <layout class="QGridLayout" name="gridLayout_28">
-                          <item row="0" column="0">
-                           <widget class="QLabel" name="label_168">
-                            <property name="text">
-                             <string>d :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_paving_stone_d">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
-                           <widget class="QLabel" name="label_169">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_170">
-                            <property name="text">
-                             <string>l :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="1">
-                           <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_paving_stone_l">
-                            <property name="maximum">
-                             <double>999999.000000000000000</double>
-                            </property>
-                            <property name="singleStep">
-                             <double>0.100000000000000</double>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="1" column="2">
-                           <widget class="QLabel" name="label_171">
-                            <property name="text">
-                             <string>mm</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_12">
-                     <property name="text">
-                      <string>Deney Tipi :</string>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="comboBox_specimen">
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
                      </property>
                     </widget>
                    </item>
@@ -1172,31 +449,885 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QComboBox" name="comboBox_specimen">
-                     <property name="cursor">
-                      <cursorShape>PointingHandCursor</cursorShape>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_12">
+                     <property name="text">
+                      <string>Deney Tipi :</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="0" colspan="2">
-                    <widget class="QWidget" name="widget_7" native="true">
+                    <widget class="QWidget" name="wdg_specimen" native="true">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
+                     <layout class="QGridLayout" name="gridLayout_37" rowstretch="0" columnstretch="0,1,0">
+                      <item row="0" column="2">
+                       <spacer name="horizontalSpacer_7">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item row="0" column="0">
+                       <spacer name="horizontalSpacer_3">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLabel" name="img_specimen">
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
-                   <item row="4" column="0">
-                    <widget class="QPushButton" name="btn_okSpecimen">
-                     <property name="cursor">
-                      <cursorShape>PointingHandCursor</cursorShape>
+                   <item row="2" column="0" colspan="2">
+                    <widget class="QStackedWidget" name="stackedWidget_specimen">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="currentIndex">
+                      <number>0</number>
                      </property>
+                     <widget class="QWidget" name="stack_cube_press">
+                      <layout class="QGridLayout" name="gridLayout_19">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="1" column="1">
+                        <spacer name="verticalSpacer_14">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item row="0" column="3">
+                        <spacer name="horizontalSpacer_6">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_5">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_cube_w">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_3">
+                         <property name="text">
+                          <string>w :</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_cyl_press">
+                      <layout class="QGridLayout" name="gridLayout_20">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_7">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_cyl_d">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_8">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_4">
+                         <property name="text">
+                          <string>d :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_cyl_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_6">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_masonary">
+                      <layout class="QGridLayout" name="gridLayout_21">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_9">
+                         <property name="text">
+                          <string>w :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_masonry_unit_w">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_10">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_masonry_unit_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_11">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_14">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_beam3n">
+                      <layout class="QGridLayout" name="gridLayout_22">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam3_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QLabel" name="label_16">
+                         <property name="text">
+                          <string>d :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam3_d">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_15">
+                         <property name="text">
+                          <string>b :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam3_b">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_17">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_18">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_19">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="2">
+                        <widget class="QLabel" name="label_20">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_beam4n">
+                      <layout class="QGridLayout" name="gridLayout_23" columnstretch="0,0,0,1,0,0,0">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="1" column="5">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_d">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_27">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_25">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="indent">
+                          <number>2</number>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_s">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="6">
+                        <widget class="QLabel" name="label_24">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_22">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_21">
+                         <property name="text">
+                          <string>s :</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="indent">
+                          <number>2</number>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="4">
+                        <widget class="QLabel" name="label_23">
+                         <property name="text">
+                          <string>b :</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="indent">
+                          <number>2</number>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="5">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_beam4_b">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="6">
+                        <widget class="QLabel" name="label_143">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="4">
+                        <widget class="QLabel" name="label_26">
+                         <property name="text">
+                          <string>d :</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="indent">
+                          <number>2</number>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="3">
+                        <spacer name="horizontalSpacer_9">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_kerb">
+                      <layout class="QGridLayout" name="gridLayout_24">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="horizontalSpacing">
+                        <number>4</number>
+                       </property>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_147">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_148">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QLabel" name="label_146">
+                         <property name="text">
+                          <string>b :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_b">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_145">
+                         <property name="text">
+                          <string>a :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="2">
+                        <widget class="QLabel" name="label_149">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="6">
+                        <widget class="QLabel" name="label_153">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_144">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_a">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="5">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_c">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="5">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_kerb_d">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="6">
+                        <widget class="QLabel" name="label_154">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="4">
+                        <widget class="QLabel" name="label_151">
+                         <property name="text">
+                          <string>d :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="4">
+                        <widget class="QLabel" name="label_150">
+                         <property name="text">
+                          <string>c :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="3">
+                        <spacer name="horizontalSpacer_11">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_flagstone">
+                      <layout class="QGridLayout" name="gridLayout_25">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="1" column="6">
+                        <widget class="QLabel" name="label_161">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="6">
+                        <widget class="QLabel" name="label_159">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_152">
+                         <property name="text">
+                          <string>s :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_156">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_157">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_155">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_s">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="4">
+                        <widget class="QLabel" name="label_158">
+                         <property name="text">
+                          <string>b :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="4">
+                        <widget class="QLabel" name="label_160">
+                         <property name="text">
+                          <string>d :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="5">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_d">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="5">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_flagstone_b">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="3">
+                        <spacer name="horizontalSpacer_10">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_cube_split">
+                      <layout class="QGridLayout" name="gridLayout_26">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_162">
+                         <property name="text">
+                          <string>w :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_cube_w">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_163">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_cyl_split">
+                      <layout class="QGridLayout" name="gridLayout_27">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_164">
+                         <property name="text">
+                          <string>d :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_cylinder_d">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_165">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_166">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_cylinder_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_167">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="stack_pavingStone">
+                      <layout class="QGridLayout" name="gridLayout_28">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_168">
+                         <property name="text">
+                          <string>d :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_paving_stone_d">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="label_169">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_170">
+                         <property name="text">
+                          <string>l :</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_specimen_split_paving_stone_l">
+                         <property name="maximum">
+                          <double>999999.000000000000000</double>
+                         </property>
+                         <property name="singleStep">
+                          <double>0.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="label_171">
+                         <property name="text">
+                          <string>mm</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
                     </widget>
                    </item>
                   </layout>
@@ -1206,8 +1337,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>98</width>
-                    <height>70</height>
+                    <width>384</width>
+                    <height>318</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -1239,7 +1370,7 @@
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>339</width>
+                        <width>368</width>
                         <height>595</height>
                        </rect>
                       </property>
@@ -1699,7 +1830,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>221</width>
+                    <width>370</width>
                     <height>440</height>
                    </rect>
                   </property>
@@ -1935,8 +2066,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>311</width>
-                    <height>217</height>
+                    <width>384</width>
+                    <height>318</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -2706,7 +2837,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>279</width>
+                    <width>370</width>
                     <height>478</height>
                    </rect>
                   </property>
@@ -4479,13 +4610,10 @@ QPushButton:pressed {
   <tabstop>pushButton_pswSave</tabstop>
   <tabstop>doubleSpinBox_specimen_split_paving_stone_d</tabstop>
   <tabstop>doubleSpinBox_specimen_split_cylinder_l</tabstop>
-  <tabstop>doubleSpinBox_specimen_kerb_d</tabstop>
   <tabstop>doubleSpinBox_specimen_split_paving_stone_l</tabstop>
-  <tabstop>doubleSpinBox_specimen_flagstone_b</tabstop>
   <tabstop>doubleSpinBox_specimen_flagstone_l</tabstop>
   <tabstop>doubleSpinBox_specimen_split_cylinder_d</tabstop>
   <tabstop>doubleSpinBox_specimen_flagstone_s</tabstop>
-  <tabstop>doubleSpinBox_specimen_flagstone_d</tabstop>
   <tabstop>doubleSpinBox_specimen_cube_w</tabstop>
   <tabstop>scrollArea_param</tabstop>
   <tabstop>doubleSpinBox_specimen_split_cube_w</tabstop>
@@ -4498,12 +4626,9 @@ QPushButton:pressed {
   <tabstop>doubleSpinBox_specimen_beam3_d</tabstop>
   <tabstop>doubleSpinBox_specimen_beam4_s</tabstop>
   <tabstop>doubleSpinBox_specimen_beam4_l</tabstop>
-  <tabstop>doubleSpinBox_specimen_beam4_b</tabstop>
-  <tabstop>doubleSpinBox_specimen_beam4_d</tabstop>
   <tabstop>doubleSpinBox_specimen_kerb_l</tabstop>
   <tabstop>doubleSpinBox_specimen_kerb_a</tabstop>
   <tabstop>doubleSpinBox_specimen_kerb_b</tabstop>
-  <tabstop>doubleSpinBox_specimen_kerb_c</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -76,9 +76,17 @@ public:
     QToolBox *toolBox_app;
     QWidget *page_specimen;
     QGridLayout *gridLayout_7;
+    QPushButton *btn_okSpecimen;
     QComboBox *combo_testType;
-    QWidget *img_specimen;
-    QGridLayout *gridLayout_38;
+    QComboBox *comboBox_specimen;
+    QLabel *label_13;
+    QPushButton *pushButton_tare_load;
+    QLabel *label_12;
+    QWidget *wdg_specimen;
+    QGridLayout *gridLayout_37;
+    QSpacerItem *horizontalSpacer_7;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *img_specimen;
     QStackedWidget *stackedWidget_specimen;
     QWidget *stack_cube_press;
     QGridLayout *gridLayout_19;
@@ -116,49 +124,52 @@ public:
     QLabel *label_20;
     QWidget *stack_beam4n;
     QGridLayout *gridLayout_23;
-    QLabel *label_25;
-    QLabel *label_21;
-    QLabel *label_27;
-    QDoubleSpinBox *doubleSpinBox_specimen_beam4_s;
-    QLabel *label_22;
-    QDoubleSpinBox *doubleSpinBox_specimen_beam4_l;
-    QDoubleSpinBox *doubleSpinBox_specimen_beam4_b;
-    QLabel *label_26;
     QDoubleSpinBox *doubleSpinBox_specimen_beam4_d;
-    QLabel *label_143;
+    QLabel *label_27;
+    QLabel *label_25;
+    QDoubleSpinBox *doubleSpinBox_specimen_beam4_s;
+    QDoubleSpinBox *doubleSpinBox_specimen_beam4_l;
     QLabel *label_24;
+    QLabel *label_22;
+    QLabel *label_21;
     QLabel *label_23;
+    QDoubleSpinBox *doubleSpinBox_specimen_beam4_b;
+    QLabel *label_143;
+    QLabel *label_26;
+    QSpacerItem *horizontalSpacer_9;
     QWidget *stack_kerb;
     QGridLayout *gridLayout_24;
-    QLabel *label_149;
-    QDoubleSpinBox *doubleSpinBox_specimen_kerb_b;
     QLabel *label_147;
-    QLabel *label_151;
+    QLabel *label_148;
+    QLabel *label_146;
     QDoubleSpinBox *doubleSpinBox_specimen_kerb_l;
-    QLabel *label_150;
+    QDoubleSpinBox *doubleSpinBox_specimen_kerb_b;
+    QLabel *label_145;
+    QLabel *label_149;
+    QLabel *label_153;
     QLabel *label_144;
     QDoubleSpinBox *doubleSpinBox_specimen_kerb_a;
     QDoubleSpinBox *doubleSpinBox_specimen_kerb_c;
-    QLabel *label_145;
-    QLabel *label_154;
-    QLabel *label_148;
     QDoubleSpinBox *doubleSpinBox_specimen_kerb_d;
-    QLabel *label_153;
-    QLabel *label_146;
+    QLabel *label_154;
+    QLabel *label_151;
+    QLabel *label_150;
+    QSpacerItem *horizontalSpacer_11;
     QWidget *stack_flagstone;
     QGridLayout *gridLayout_25;
+    QLabel *label_161;
+    QLabel *label_159;
+    QLabel *label_152;
     QLabel *label_156;
+    QLabel *label_157;
+    QLabel *label_155;
     QDoubleSpinBox *doubleSpinBox_specimen_flagstone_s;
     QDoubleSpinBox *doubleSpinBox_specimen_flagstone_l;
-    QDoubleSpinBox *doubleSpinBox_specimen_flagstone_b;
-    QLabel *label_157;
-    QLabel *label_152;
-    QLabel *label_155;
     QLabel *label_158;
-    QLabel *label_159;
     QLabel *label_160;
     QDoubleSpinBox *doubleSpinBox_specimen_flagstone_d;
-    QLabel *label_161;
+    QDoubleSpinBox *doubleSpinBox_specimen_flagstone_b;
+    QSpacerItem *horizontalSpacer_10;
     QWidget *stack_cube_split;
     QGridLayout *gridLayout_26;
     QLabel *label_162;
@@ -180,12 +191,6 @@ public:
     QLabel *label_170;
     QDoubleSpinBox *doubleSpinBox_specimen_split_paving_stone_l;
     QLabel *label_171;
-    QLabel *label_12;
-    QLabel *label_13;
-    QPushButton *pushButton_tare_load;
-    QComboBox *comboBox_specimen;
-    QWidget *widget_7;
-    QPushButton *btn_okSpecimen;
     QWidget *page_param;
     QGridLayout *gridLayout_8;
     QScrollArea *scrollArea_param;
@@ -693,29 +698,76 @@ public:
         toolBox_app->setLineWidth(1);
         page_specimen = new QWidget();
         page_specimen->setObjectName(QStringLiteral("page_specimen"));
-        page_specimen->setGeometry(QRect(0, 0, 230, 339));
+        page_specimen->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_7 = new QGridLayout(page_specimen);
         gridLayout_7->setSpacing(6);
         gridLayout_7->setContentsMargins(11, 11, 11, 11);
         gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
         gridLayout_7->setHorizontalSpacing(16);
+        btn_okSpecimen = new QPushButton(page_specimen);
+        btn_okSpecimen->setObjectName(QStringLiteral("btn_okSpecimen"));
+        btn_okSpecimen->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_7->addWidget(btn_okSpecimen, 4, 0, 1, 1);
+
         combo_testType = new QComboBox(page_specimen);
         combo_testType->setObjectName(QStringLiteral("combo_testType"));
         combo_testType->setCursor(QCursor(Qt::PointingHandCursor));
 
         gridLayout_7->addWidget(combo_testType, 0, 1, 1, 1);
 
-        img_specimen = new QWidget(page_specimen);
-        img_specimen->setObjectName(QStringLiteral("img_specimen"));
-        gridLayout_38 = new QGridLayout(img_specimen);
-        gridLayout_38->setSpacing(6);
-        gridLayout_38->setContentsMargins(11, 11, 11, 11);
-        gridLayout_38->setObjectName(QStringLiteral("gridLayout_38"));
-        stackedWidget_specimen = new QStackedWidget(img_specimen);
-        stackedWidget_specimen->setObjectName(QStringLiteral("stackedWidget_specimen"));
+        comboBox_specimen = new QComboBox(page_specimen);
+        comboBox_specimen->setObjectName(QStringLiteral("comboBox_specimen"));
+        comboBox_specimen->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_7->addWidget(comboBox_specimen, 1, 1, 1, 1);
+
+        label_13 = new QLabel(page_specimen);
+        label_13->setObjectName(QStringLiteral("label_13"));
+
+        gridLayout_7->addWidget(label_13, 1, 0, 1, 1);
+
+        pushButton_tare_load = new QPushButton(page_specimen);
+        pushButton_tare_load->setObjectName(QStringLiteral("pushButton_tare_load"));
+        pushButton_tare_load->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_7->addWidget(pushButton_tare_load, 4, 1, 1, 1);
+
+        label_12 = new QLabel(page_specimen);
+        label_12->setObjectName(QStringLiteral("label_12"));
+
+        gridLayout_7->addWidget(label_12, 0, 0, 1, 1);
+
+        wdg_specimen = new QWidget(page_specimen);
+        wdg_specimen->setObjectName(QStringLiteral("wdg_specimen"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(wdg_specimen->sizePolicy().hasHeightForWidth());
+        wdg_specimen->setSizePolicy(sizePolicy1);
+        gridLayout_37 = new QGridLayout(wdg_specimen);
+        gridLayout_37->setSpacing(6);
+        gridLayout_37->setContentsMargins(11, 11, 11, 11);
+        gridLayout_37->setObjectName(QStringLiteral("gridLayout_37"));
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_37->addItem(horizontalSpacer_7, 0, 2, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_37->addItem(horizontalSpacer_3, 0, 0, 1, 1);
+
+        img_specimen = new QLabel(wdg_specimen);
+        img_specimen->setObjectName(QStringLiteral("img_specimen"));
+
+        gridLayout_37->addWidget(img_specimen, 0, 1, 1, 1);
+
+        gridLayout_37->setColumnStretch(1, 1);
+
+        gridLayout_7->addWidget(wdg_specimen, 3, 0, 1, 2);
+
+        stackedWidget_specimen = new QStackedWidget(page_specimen);
+        stackedWidget_specimen->setObjectName(QStringLiteral("stackedWidget_specimen"));
         sizePolicy1.setHeightForWidth(stackedWidget_specimen->sizePolicy().hasHeightForWidth());
         stackedWidget_specimen->setSizePolicy(sizePolicy1);
         stack_cube_press = new QWidget();
@@ -724,6 +776,7 @@ public:
         gridLayout_19->setSpacing(6);
         gridLayout_19->setContentsMargins(11, 11, 11, 11);
         gridLayout_19->setObjectName(QStringLiteral("gridLayout_19"));
+        gridLayout_19->setContentsMargins(0, -1, 0, -1);
         verticalSpacer_14 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         gridLayout_19->addItem(verticalSpacer_14, 1, 1, 1, 1);
@@ -756,6 +809,7 @@ public:
         gridLayout_20->setSpacing(6);
         gridLayout_20->setContentsMargins(11, 11, 11, 11);
         gridLayout_20->setObjectName(QStringLiteral("gridLayout_20"));
+        gridLayout_20->setContentsMargins(0, -1, 0, -1);
         label_7 = new QLabel(stack_cyl_press);
         label_7->setObjectName(QStringLiteral("label_7"));
 
@@ -797,6 +851,7 @@ public:
         gridLayout_21->setSpacing(6);
         gridLayout_21->setContentsMargins(11, 11, 11, 11);
         gridLayout_21->setObjectName(QStringLiteral("gridLayout_21"));
+        gridLayout_21->setContentsMargins(0, -1, 0, -1);
         label_9 = new QLabel(stack_masonary);
         label_9->setObjectName(QStringLiteral("label_9"));
 
@@ -838,6 +893,7 @@ public:
         gridLayout_22->setSpacing(6);
         gridLayout_22->setContentsMargins(11, 11, 11, 11);
         gridLayout_22->setObjectName(QStringLiteral("gridLayout_22"));
+        gridLayout_22->setContentsMargins(0, -1, 0, -1);
         doubleSpinBox_specimen_beam3_l = new QDoubleSpinBox(stack_beam3n);
         doubleSpinBox_specimen_beam3_l->setObjectName(QStringLiteral("doubleSpinBox_specimen_beam3_l"));
         doubleSpinBox_specimen_beam3_l->setMaximum(999999);
@@ -896,24 +952,25 @@ public:
         gridLayout_23->setSpacing(6);
         gridLayout_23->setContentsMargins(11, 11, 11, 11);
         gridLayout_23->setObjectName(QStringLiteral("gridLayout_23"));
+        gridLayout_23->setContentsMargins(0, -1, 0, -1);
+        doubleSpinBox_specimen_beam4_d = new QDoubleSpinBox(stack_beam4n);
+        doubleSpinBox_specimen_beam4_d->setObjectName(QStringLiteral("doubleSpinBox_specimen_beam4_d"));
+        doubleSpinBox_specimen_beam4_d->setMaximum(999999);
+        doubleSpinBox_specimen_beam4_d->setSingleStep(0.1);
+
+        gridLayout_23->addWidget(doubleSpinBox_specimen_beam4_d, 1, 5, 1, 1);
+
+        label_27 = new QLabel(stack_beam4n);
+        label_27->setObjectName(QStringLiteral("label_27"));
+
+        gridLayout_23->addWidget(label_27, 1, 2, 1, 1);
+
         label_25 = new QLabel(stack_beam4n);
         label_25->setObjectName(QStringLiteral("label_25"));
         label_25->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_25->setIndent(2);
 
         gridLayout_23->addWidget(label_25, 1, 0, 1, 1);
-
-        label_21 = new QLabel(stack_beam4n);
-        label_21->setObjectName(QStringLiteral("label_21"));
-        label_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_21->setIndent(2);
-
-        gridLayout_23->addWidget(label_21, 0, 0, 1, 1);
-
-        label_27 = new QLabel(stack_beam4n);
-        label_27->setObjectName(QStringLiteral("label_27"));
-
-        gridLayout_23->addWidget(label_27, 1, 2, 1, 1);
 
         doubleSpinBox_specimen_beam4_s = new QDoubleSpinBox(stack_beam4n);
         doubleSpinBox_specimen_beam4_s->setObjectName(QStringLiteral("doubleSpinBox_specimen_beam4_s"));
@@ -922,11 +979,6 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_specimen_beam4_s, 0, 1, 1, 1);
 
-        label_22 = new QLabel(stack_beam4n);
-        label_22->setObjectName(QStringLiteral("label_22"));
-
-        gridLayout_23->addWidget(label_22, 0, 2, 1, 1);
-
         doubleSpinBox_specimen_beam4_l = new QDoubleSpinBox(stack_beam4n);
         doubleSpinBox_specimen_beam4_l->setObjectName(QStringLiteral("doubleSpinBox_specimen_beam4_l"));
         doubleSpinBox_specimen_beam4_l->setMaximum(999999);
@@ -934,44 +986,54 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_specimen_beam4_l, 1, 1, 1, 1);
 
-        doubleSpinBox_specimen_beam4_b = new QDoubleSpinBox(stack_beam4n);
-        doubleSpinBox_specimen_beam4_b->setObjectName(QStringLiteral("doubleSpinBox_specimen_beam4_b"));
-        doubleSpinBox_specimen_beam4_b->setMaximum(999999);
-        doubleSpinBox_specimen_beam4_b->setSingleStep(0.1);
-
-        gridLayout_23->addWidget(doubleSpinBox_specimen_beam4_b, 2, 1, 1, 1);
-
-        label_26 = new QLabel(stack_beam4n);
-        label_26->setObjectName(QStringLiteral("label_26"));
-        label_26->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_26->setIndent(2);
-
-        gridLayout_23->addWidget(label_26, 3, 0, 1, 1);
-
-        doubleSpinBox_specimen_beam4_d = new QDoubleSpinBox(stack_beam4n);
-        doubleSpinBox_specimen_beam4_d->setObjectName(QStringLiteral("doubleSpinBox_specimen_beam4_d"));
-        doubleSpinBox_specimen_beam4_d->setMaximum(999999);
-        doubleSpinBox_specimen_beam4_d->setSingleStep(0.1);
-
-        gridLayout_23->addWidget(doubleSpinBox_specimen_beam4_d, 3, 1, 1, 1);
-
-        label_143 = new QLabel(stack_beam4n);
-        label_143->setObjectName(QStringLiteral("label_143"));
-
-        gridLayout_23->addWidget(label_143, 3, 2, 1, 1);
-
         label_24 = new QLabel(stack_beam4n);
         label_24->setObjectName(QStringLiteral("label_24"));
 
-        gridLayout_23->addWidget(label_24, 2, 2, 1, 1);
+        gridLayout_23->addWidget(label_24, 0, 6, 1, 1);
+
+        label_22 = new QLabel(stack_beam4n);
+        label_22->setObjectName(QStringLiteral("label_22"));
+
+        gridLayout_23->addWidget(label_22, 0, 2, 1, 1);
+
+        label_21 = new QLabel(stack_beam4n);
+        label_21->setObjectName(QStringLiteral("label_21"));
+        label_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        label_21->setIndent(2);
+
+        gridLayout_23->addWidget(label_21, 0, 0, 1, 1);
 
         label_23 = new QLabel(stack_beam4n);
         label_23->setObjectName(QStringLiteral("label_23"));
         label_23->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_23->setIndent(2);
 
-        gridLayout_23->addWidget(label_23, 2, 0, 1, 1);
+        gridLayout_23->addWidget(label_23, 0, 4, 1, 1);
 
+        doubleSpinBox_specimen_beam4_b = new QDoubleSpinBox(stack_beam4n);
+        doubleSpinBox_specimen_beam4_b->setObjectName(QStringLiteral("doubleSpinBox_specimen_beam4_b"));
+        doubleSpinBox_specimen_beam4_b->setMaximum(999999);
+        doubleSpinBox_specimen_beam4_b->setSingleStep(0.1);
+
+        gridLayout_23->addWidget(doubleSpinBox_specimen_beam4_b, 0, 5, 1, 1);
+
+        label_143 = new QLabel(stack_beam4n);
+        label_143->setObjectName(QStringLiteral("label_143"));
+
+        gridLayout_23->addWidget(label_143, 1, 6, 1, 1);
+
+        label_26 = new QLabel(stack_beam4n);
+        label_26->setObjectName(QStringLiteral("label_26"));
+        label_26->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        label_26->setIndent(2);
+
+        gridLayout_23->addWidget(label_26, 1, 4, 1, 1);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_23->addItem(horizontalSpacer_9, 0, 3, 1, 1);
+
+        gridLayout_23->setColumnStretch(3, 1);
         stackedWidget_specimen->addWidget(stack_beam4n);
         stack_kerb = new QWidget();
         stack_kerb->setObjectName(QStringLiteral("stack_kerb"));
@@ -979,27 +1041,22 @@ public:
         gridLayout_24->setSpacing(6);
         gridLayout_24->setContentsMargins(11, 11, 11, 11);
         gridLayout_24->setObjectName(QStringLiteral("gridLayout_24"));
-        label_149 = new QLabel(stack_kerb);
-        label_149->setObjectName(QStringLiteral("label_149"));
-
-        gridLayout_24->addWidget(label_149, 2, 2, 1, 1);
-
-        doubleSpinBox_specimen_kerb_b = new QDoubleSpinBox(stack_kerb);
-        doubleSpinBox_specimen_kerb_b->setObjectName(QStringLiteral("doubleSpinBox_specimen_kerb_b"));
-        doubleSpinBox_specimen_kerb_b->setMaximum(999999);
-        doubleSpinBox_specimen_kerb_b->setSingleStep(0.1);
-
-        gridLayout_24->addWidget(doubleSpinBox_specimen_kerb_b, 2, 1, 1, 1);
-
+        gridLayout_24->setHorizontalSpacing(4);
+        gridLayout_24->setContentsMargins(0, -1, 0, -1);
         label_147 = new QLabel(stack_kerb);
         label_147->setObjectName(QStringLiteral("label_147"));
 
         gridLayout_24->addWidget(label_147, 0, 2, 1, 1);
 
-        label_151 = new QLabel(stack_kerb);
-        label_151->setObjectName(QStringLiteral("label_151"));
+        label_148 = new QLabel(stack_kerb);
+        label_148->setObjectName(QStringLiteral("label_148"));
 
-        gridLayout_24->addWidget(label_151, 4, 0, 1, 1);
+        gridLayout_24->addWidget(label_148, 1, 2, 1, 1);
+
+        label_146 = new QLabel(stack_kerb);
+        label_146->setObjectName(QStringLiteral("label_146"));
+
+        gridLayout_24->addWidget(label_146, 2, 0, 1, 1);
 
         doubleSpinBox_specimen_kerb_l = new QDoubleSpinBox(stack_kerb);
         doubleSpinBox_specimen_kerb_l->setObjectName(QStringLiteral("doubleSpinBox_specimen_kerb_l"));
@@ -1008,10 +1065,27 @@ public:
 
         gridLayout_24->addWidget(doubleSpinBox_specimen_kerb_l, 0, 1, 1, 1);
 
-        label_150 = new QLabel(stack_kerb);
-        label_150->setObjectName(QStringLiteral("label_150"));
+        doubleSpinBox_specimen_kerb_b = new QDoubleSpinBox(stack_kerb);
+        doubleSpinBox_specimen_kerb_b->setObjectName(QStringLiteral("doubleSpinBox_specimen_kerb_b"));
+        doubleSpinBox_specimen_kerb_b->setMaximum(999999);
+        doubleSpinBox_specimen_kerb_b->setSingleStep(0.1);
 
-        gridLayout_24->addWidget(label_150, 3, 0, 1, 1);
+        gridLayout_24->addWidget(doubleSpinBox_specimen_kerb_b, 2, 1, 1, 1);
+
+        label_145 = new QLabel(stack_kerb);
+        label_145->setObjectName(QStringLiteral("label_145"));
+
+        gridLayout_24->addWidget(label_145, 1, 0, 1, 1);
+
+        label_149 = new QLabel(stack_kerb);
+        label_149->setObjectName(QStringLiteral("label_149"));
+
+        gridLayout_24->addWidget(label_149, 2, 2, 1, 1);
+
+        label_153 = new QLabel(stack_kerb);
+        label_153->setObjectName(QStringLiteral("label_153"));
+
+        gridLayout_24->addWidget(label_153, 0, 6, 1, 1);
 
         label_144 = new QLabel(stack_kerb);
         label_144->setObjectName(QStringLiteral("label_144"));
@@ -1030,39 +1104,33 @@ public:
         doubleSpinBox_specimen_kerb_c->setMaximum(999999);
         doubleSpinBox_specimen_kerb_c->setSingleStep(0.1);
 
-        gridLayout_24->addWidget(doubleSpinBox_specimen_kerb_c, 3, 1, 1, 1);
-
-        label_145 = new QLabel(stack_kerb);
-        label_145->setObjectName(QStringLiteral("label_145"));
-
-        gridLayout_24->addWidget(label_145, 1, 0, 1, 1);
-
-        label_154 = new QLabel(stack_kerb);
-        label_154->setObjectName(QStringLiteral("label_154"));
-
-        gridLayout_24->addWidget(label_154, 4, 2, 1, 1);
-
-        label_148 = new QLabel(stack_kerb);
-        label_148->setObjectName(QStringLiteral("label_148"));
-
-        gridLayout_24->addWidget(label_148, 1, 2, 1, 1);
+        gridLayout_24->addWidget(doubleSpinBox_specimen_kerb_c, 0, 5, 1, 1);
 
         doubleSpinBox_specimen_kerb_d = new QDoubleSpinBox(stack_kerb);
         doubleSpinBox_specimen_kerb_d->setObjectName(QStringLiteral("doubleSpinBox_specimen_kerb_d"));
         doubleSpinBox_specimen_kerb_d->setMaximum(999999);
         doubleSpinBox_specimen_kerb_d->setSingleStep(0.1);
 
-        gridLayout_24->addWidget(doubleSpinBox_specimen_kerb_d, 4, 1, 1, 1);
+        gridLayout_24->addWidget(doubleSpinBox_specimen_kerb_d, 1, 5, 1, 1);
 
-        label_153 = new QLabel(stack_kerb);
-        label_153->setObjectName(QStringLiteral("label_153"));
+        label_154 = new QLabel(stack_kerb);
+        label_154->setObjectName(QStringLiteral("label_154"));
 
-        gridLayout_24->addWidget(label_153, 3, 2, 1, 1);
+        gridLayout_24->addWidget(label_154, 1, 6, 1, 1);
 
-        label_146 = new QLabel(stack_kerb);
-        label_146->setObjectName(QStringLiteral("label_146"));
+        label_151 = new QLabel(stack_kerb);
+        label_151->setObjectName(QStringLiteral("label_151"));
 
-        gridLayout_24->addWidget(label_146, 2, 0, 1, 1);
+        gridLayout_24->addWidget(label_151, 1, 4, 1, 1);
+
+        label_150 = new QLabel(stack_kerb);
+        label_150->setObjectName(QStringLiteral("label_150"));
+
+        gridLayout_24->addWidget(label_150, 0, 4, 1, 1);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_24->addItem(horizontalSpacer_11, 0, 3, 1, 1);
 
         stackedWidget_specimen->addWidget(stack_kerb);
         stack_flagstone = new QWidget();
@@ -1071,10 +1139,36 @@ public:
         gridLayout_25->setSpacing(6);
         gridLayout_25->setContentsMargins(11, 11, 11, 11);
         gridLayout_25->setObjectName(QStringLiteral("gridLayout_25"));
+        gridLayout_25->setContentsMargins(0, -1, 0, -1);
+        label_161 = new QLabel(stack_flagstone);
+        label_161->setObjectName(QStringLiteral("label_161"));
+
+        gridLayout_25->addWidget(label_161, 1, 6, 1, 1);
+
+        label_159 = new QLabel(stack_flagstone);
+        label_159->setObjectName(QStringLiteral("label_159"));
+
+        gridLayout_25->addWidget(label_159, 0, 6, 1, 1);
+
+        label_152 = new QLabel(stack_flagstone);
+        label_152->setObjectName(QStringLiteral("label_152"));
+
+        gridLayout_25->addWidget(label_152, 0, 0, 1, 1);
+
         label_156 = new QLabel(stack_flagstone);
         label_156->setObjectName(QStringLiteral("label_156"));
 
         gridLayout_25->addWidget(label_156, 1, 0, 1, 1);
+
+        label_157 = new QLabel(stack_flagstone);
+        label_157->setObjectName(QStringLiteral("label_157"));
+
+        gridLayout_25->addWidget(label_157, 1, 2, 1, 1);
+
+        label_155 = new QLabel(stack_flagstone);
+        label_155->setObjectName(QStringLiteral("label_155"));
+
+        gridLayout_25->addWidget(label_155, 0, 2, 1, 1);
 
         doubleSpinBox_specimen_flagstone_s = new QDoubleSpinBox(stack_flagstone);
         doubleSpinBox_specimen_flagstone_s->setObjectName(QStringLiteral("doubleSpinBox_specimen_flagstone_s"));
@@ -1090,54 +1184,33 @@ public:
 
         gridLayout_25->addWidget(doubleSpinBox_specimen_flagstone_l, 1, 1, 1, 1);
 
-        doubleSpinBox_specimen_flagstone_b = new QDoubleSpinBox(stack_flagstone);
-        doubleSpinBox_specimen_flagstone_b->setObjectName(QStringLiteral("doubleSpinBox_specimen_flagstone_b"));
-        doubleSpinBox_specimen_flagstone_b->setMaximum(999999);
-        doubleSpinBox_specimen_flagstone_b->setSingleStep(0.1);
-
-        gridLayout_25->addWidget(doubleSpinBox_specimen_flagstone_b, 2, 1, 1, 1);
-
-        label_157 = new QLabel(stack_flagstone);
-        label_157->setObjectName(QStringLiteral("label_157"));
-
-        gridLayout_25->addWidget(label_157, 1, 2, 1, 1);
-
-        label_152 = new QLabel(stack_flagstone);
-        label_152->setObjectName(QStringLiteral("label_152"));
-
-        gridLayout_25->addWidget(label_152, 0, 0, 1, 1);
-
-        label_155 = new QLabel(stack_flagstone);
-        label_155->setObjectName(QStringLiteral("label_155"));
-
-        gridLayout_25->addWidget(label_155, 0, 2, 1, 1);
-
         label_158 = new QLabel(stack_flagstone);
         label_158->setObjectName(QStringLiteral("label_158"));
 
-        gridLayout_25->addWidget(label_158, 2, 0, 1, 1);
-
-        label_159 = new QLabel(stack_flagstone);
-        label_159->setObjectName(QStringLiteral("label_159"));
-
-        gridLayout_25->addWidget(label_159, 2, 2, 1, 1);
+        gridLayout_25->addWidget(label_158, 0, 4, 1, 1);
 
         label_160 = new QLabel(stack_flagstone);
         label_160->setObjectName(QStringLiteral("label_160"));
 
-        gridLayout_25->addWidget(label_160, 3, 0, 1, 1);
+        gridLayout_25->addWidget(label_160, 1, 4, 1, 1);
 
         doubleSpinBox_specimen_flagstone_d = new QDoubleSpinBox(stack_flagstone);
         doubleSpinBox_specimen_flagstone_d->setObjectName(QStringLiteral("doubleSpinBox_specimen_flagstone_d"));
         doubleSpinBox_specimen_flagstone_d->setMaximum(999999);
         doubleSpinBox_specimen_flagstone_d->setSingleStep(0.1);
 
-        gridLayout_25->addWidget(doubleSpinBox_specimen_flagstone_d, 3, 1, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_specimen_flagstone_d, 1, 5, 1, 1);
 
-        label_161 = new QLabel(stack_flagstone);
-        label_161->setObjectName(QStringLiteral("label_161"));
+        doubleSpinBox_specimen_flagstone_b = new QDoubleSpinBox(stack_flagstone);
+        doubleSpinBox_specimen_flagstone_b->setObjectName(QStringLiteral("doubleSpinBox_specimen_flagstone_b"));
+        doubleSpinBox_specimen_flagstone_b->setMaximum(999999);
+        doubleSpinBox_specimen_flagstone_b->setSingleStep(0.1);
 
-        gridLayout_25->addWidget(label_161, 3, 2, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_specimen_flagstone_b, 0, 5, 1, 1);
+
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_25->addItem(horizontalSpacer_10, 0, 3, 1, 1);
 
         stackedWidget_specimen->addWidget(stack_flagstone);
         stack_cube_split = new QWidget();
@@ -1146,6 +1219,7 @@ public:
         gridLayout_26->setSpacing(6);
         gridLayout_26->setContentsMargins(11, 11, 11, 11);
         gridLayout_26->setObjectName(QStringLiteral("gridLayout_26"));
+        gridLayout_26->setContentsMargins(0, -1, 0, -1);
         label_162 = new QLabel(stack_cube_split);
         label_162->setObjectName(QStringLiteral("label_162"));
 
@@ -1170,6 +1244,7 @@ public:
         gridLayout_27->setSpacing(6);
         gridLayout_27->setContentsMargins(11, 11, 11, 11);
         gridLayout_27->setObjectName(QStringLiteral("gridLayout_27"));
+        gridLayout_27->setContentsMargins(0, -1, 0, -1);
         label_164 = new QLabel(stack_cyl_split);
         label_164->setObjectName(QStringLiteral("label_164"));
 
@@ -1211,6 +1286,7 @@ public:
         gridLayout_28->setSpacing(6);
         gridLayout_28->setContentsMargins(11, 11, 11, 11);
         gridLayout_28->setObjectName(QStringLiteral("gridLayout_28"));
+        gridLayout_28->setContentsMargins(0, -1, 0, -1);
         label_168 = new QLabel(stack_pavingStone);
         label_168->setObjectName(QStringLiteral("label_168"));
 
@@ -1247,57 +1323,19 @@ public:
 
         stackedWidget_specimen->addWidget(stack_pavingStone);
 
-        gridLayout_38->addWidget(stackedWidget_specimen, 0, 0, 1, 1);
-
-
-        gridLayout_7->addWidget(img_specimen, 2, 0, 1, 2);
-
-        label_12 = new QLabel(page_specimen);
-        label_12->setObjectName(QStringLiteral("label_12"));
-
-        gridLayout_7->addWidget(label_12, 0, 0, 1, 1);
-
-        label_13 = new QLabel(page_specimen);
-        label_13->setObjectName(QStringLiteral("label_13"));
-
-        gridLayout_7->addWidget(label_13, 1, 0, 1, 1);
-
-        pushButton_tare_load = new QPushButton(page_specimen);
-        pushButton_tare_load->setObjectName(QStringLiteral("pushButton_tare_load"));
-        pushButton_tare_load->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_7->addWidget(pushButton_tare_load, 4, 1, 1, 1);
-
-        comboBox_specimen = new QComboBox(page_specimen);
-        comboBox_specimen->setObjectName(QStringLiteral("comboBox_specimen"));
-        comboBox_specimen->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_7->addWidget(comboBox_specimen, 1, 1, 1, 1);
-
-        widget_7 = new QWidget(page_specimen);
-        widget_7->setObjectName(QStringLiteral("widget_7"));
-        sizePolicy1.setHeightForWidth(widget_7->sizePolicy().hasHeightForWidth());
-        widget_7->setSizePolicy(sizePolicy1);
-
-        gridLayout_7->addWidget(widget_7, 3, 0, 1, 2);
-
-        btn_okSpecimen = new QPushButton(page_specimen);
-        btn_okSpecimen->setObjectName(QStringLiteral("btn_okSpecimen"));
-        btn_okSpecimen->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_7->addWidget(btn_okSpecimen, 4, 0, 1, 1);
+        gridLayout_7->addWidget(stackedWidget_specimen, 2, 0, 1, 2);
 
         gridLayout_7->setRowStretch(0, 1);
         gridLayout_7->setRowStretch(1, 1);
         gridLayout_7->setRowStretch(2, 1);
-        gridLayout_7->setRowStretch(3, 5);
+        gridLayout_7->setRowStretch(3, 2);
         gridLayout_7->setRowStretch(4, 1);
         gridLayout_7->setColumnStretch(0, 1);
         gridLayout_7->setColumnStretch(1, 1);
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 98, 70));
+        page_param->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1309,7 +1347,7 @@ public:
         scrollArea_param->setWidgetResizable(true);
         wdg_param = new QWidget();
         wdg_param->setObjectName(QStringLiteral("wdg_param"));
-        wdg_param->setGeometry(QRect(0, 0, 339, 595));
+        wdg_param->setGeometry(QRect(0, 0, 368, 595));
         gridLayout_9 = new QGridLayout(wdg_param);
         gridLayout_9->setSpacing(6);
         gridLayout_9->setContentsMargins(11, 11, 11, 11);
@@ -1600,7 +1638,7 @@ public:
         toolBox_app->addItem(page_param, QStringLiteral("Parametreler"));
         page_channels = new QWidget();
         page_channels->setObjectName(QStringLiteral("page_channels"));
-        page_channels->setGeometry(QRect(0, 0, 221, 440));
+        page_channels->setGeometry(QRect(0, 0, 370, 440));
         gridLayout_10 = new QGridLayout(page_channels);
         gridLayout_10->setSpacing(12);
         gridLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -1754,7 +1792,7 @@ public:
         toolBox_app->addItem(page_channels, QStringLiteral("Kanallar"));
         page_gain = new QWidget();
         page_gain->setObjectName(QStringLiteral("page_gain"));
-        page_gain->setGeometry(QRect(0, 0, 311, 217));
+        page_gain->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_18 = new QGridLayout(page_gain);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setContentsMargins(11, 11, 11, 11);
@@ -2259,7 +2297,7 @@ public:
         toolBox_app->addItem(page_calib, QStringLiteral("Kalibrasyon"));
         page_pid = new QWidget();
         page_pid->setObjectName(QStringLiteral("page_pid"));
-        page_pid->setGeometry(QRect(0, 0, 279, 478));
+        page_pid->setGeometry(QRect(0, 0, 370, 478));
         gridLayout_17 = new QGridLayout(page_pid);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);
@@ -3418,14 +3456,11 @@ public:
         QWidget::setTabOrder(lineEdit_newPsw, pushButton_pswSave);
         QWidget::setTabOrder(pushButton_pswSave, doubleSpinBox_specimen_split_paving_stone_d);
         QWidget::setTabOrder(doubleSpinBox_specimen_split_paving_stone_d, doubleSpinBox_specimen_split_cylinder_l);
-        QWidget::setTabOrder(doubleSpinBox_specimen_split_cylinder_l, doubleSpinBox_specimen_kerb_d);
-        QWidget::setTabOrder(doubleSpinBox_specimen_kerb_d, doubleSpinBox_specimen_split_paving_stone_l);
-        QWidget::setTabOrder(doubleSpinBox_specimen_split_paving_stone_l, doubleSpinBox_specimen_flagstone_b);
-        QWidget::setTabOrder(doubleSpinBox_specimen_flagstone_b, doubleSpinBox_specimen_flagstone_l);
+        QWidget::setTabOrder(doubleSpinBox_specimen_split_cylinder_l, doubleSpinBox_specimen_split_paving_stone_l);
+        QWidget::setTabOrder(doubleSpinBox_specimen_split_paving_stone_l, doubleSpinBox_specimen_flagstone_l);
         QWidget::setTabOrder(doubleSpinBox_specimen_flagstone_l, doubleSpinBox_specimen_split_cylinder_d);
         QWidget::setTabOrder(doubleSpinBox_specimen_split_cylinder_d, doubleSpinBox_specimen_flagstone_s);
-        QWidget::setTabOrder(doubleSpinBox_specimen_flagstone_s, doubleSpinBox_specimen_flagstone_d);
-        QWidget::setTabOrder(doubleSpinBox_specimen_flagstone_d, doubleSpinBox_specimen_cube_w);
+        QWidget::setTabOrder(doubleSpinBox_specimen_flagstone_s, doubleSpinBox_specimen_cube_w);
         QWidget::setTabOrder(doubleSpinBox_specimen_cube_w, scrollArea_param);
         QWidget::setTabOrder(scrollArea_param, doubleSpinBox_specimen_split_cube_w);
         QWidget::setTabOrder(doubleSpinBox_specimen_split_cube_w, doubleSpinBox_specimen_cyl_d);
@@ -3437,18 +3472,15 @@ public:
         QWidget::setTabOrder(doubleSpinBox_specimen_beam3_b, doubleSpinBox_specimen_beam3_d);
         QWidget::setTabOrder(doubleSpinBox_specimen_beam3_d, doubleSpinBox_specimen_beam4_s);
         QWidget::setTabOrder(doubleSpinBox_specimen_beam4_s, doubleSpinBox_specimen_beam4_l);
-        QWidget::setTabOrder(doubleSpinBox_specimen_beam4_l, doubleSpinBox_specimen_beam4_b);
-        QWidget::setTabOrder(doubleSpinBox_specimen_beam4_b, doubleSpinBox_specimen_beam4_d);
-        QWidget::setTabOrder(doubleSpinBox_specimen_beam4_d, doubleSpinBox_specimen_kerb_l);
+        QWidget::setTabOrder(doubleSpinBox_specimen_beam4_l, doubleSpinBox_specimen_kerb_l);
         QWidget::setTabOrder(doubleSpinBox_specimen_kerb_l, doubleSpinBox_specimen_kerb_a);
         QWidget::setTabOrder(doubleSpinBox_specimen_kerb_a, doubleSpinBox_specimen_kerb_b);
-        QWidget::setTabOrder(doubleSpinBox_specimen_kerb_b, doubleSpinBox_specimen_kerb_c);
 
         retranslateUi(PressApp);
 
         stackedWidget->setCurrentIndex(1);
-        tabWidget_app->setCurrentIndex(2);
-        toolBox_app->setCurrentIndex(4);
+        tabWidget_app->setCurrentIndex(0);
+        toolBox_app->setCurrentIndex(0);
         stackedWidget_specimen->setCurrentIndex(0);
 
 
@@ -3479,6 +3511,11 @@ public:
         );
         pushButton_read_from_device->setText(QApplication::translate("PressApp", "Cihazdan Oku", Q_NULLPTR));
         pushButton_write_to_device->setText(QApplication::translate("PressApp", "Cihaza Yaz", Q_NULLPTR));
+        btn_okSpecimen->setText(QString());
+        label_13->setText(QApplication::translate("PressApp", "Numune Tipi :", Q_NULLPTR));
+        pushButton_tare_load->setText(QApplication::translate("PressApp", "Dara", Q_NULLPTR));
+        label_12->setText(QApplication::translate("PressApp", "Deney Tipi :", Q_NULLPTR));
+        img_specimen->setText(QString());
         label_5->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_3->setText(QApplication::translate("PressApp", "w :", Q_NULLPTR));
         label_7->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
@@ -3495,32 +3532,32 @@ public:
         label_18->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_19->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_20->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_25->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
-        label_21->setText(QApplication::translate("PressApp", "s :", Q_NULLPTR));
         label_27->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_22->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_26->setText(QApplication::translate("PressApp", "d :", Q_NULLPTR));
-        label_143->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_25->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
         label_24->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_22->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_21->setText(QApplication::translate("PressApp", "s :", Q_NULLPTR));
         label_23->setText(QApplication::translate("PressApp", "b :", Q_NULLPTR));
-        label_149->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_143->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_26->setText(QApplication::translate("PressApp", "d :", Q_NULLPTR));
         label_147->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_148->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_146->setText(QApplication::translate("PressApp", "b :", Q_NULLPTR));
+        label_145->setText(QApplication::translate("PressApp", "a :", Q_NULLPTR));
+        label_149->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_153->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_144->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
+        label_154->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_151->setText(QApplication::translate("PressApp", "d :", Q_NULLPTR));
         label_150->setText(QApplication::translate("PressApp", "c :", Q_NULLPTR));
-        label_144->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
-        label_145->setText(QApplication::translate("PressApp", "a :", Q_NULLPTR));
-        label_154->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_148->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_153->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_146->setText(QApplication::translate("PressApp", "b :", Q_NULLPTR));
+        label_161->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_159->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
+        label_152->setText(QApplication::translate("PressApp", "s :", Q_NULLPTR));
         label_156->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
         label_157->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_152->setText(QApplication::translate("PressApp", "s :", Q_NULLPTR));
         label_155->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_158->setText(QApplication::translate("PressApp", "b :", Q_NULLPTR));
-        label_159->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_160->setText(QApplication::translate("PressApp", "d :", Q_NULLPTR));
-        label_161->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_162->setText(QApplication::translate("PressApp", "w :", Q_NULLPTR));
         label_163->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_164->setText(QApplication::translate("PressApp", "d :", Q_NULLPTR));
@@ -3531,10 +3568,6 @@ public:
         label_169->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
         label_170->setText(QApplication::translate("PressApp", "l :", Q_NULLPTR));
         label_171->setText(QApplication::translate("PressApp", "mm", Q_NULLPTR));
-        label_12->setText(QApplication::translate("PressApp", "Deney Tipi :", Q_NULLPTR));
-        label_13->setText(QApplication::translate("PressApp", "Numune Tipi :", Q_NULLPTR));
-        pushButton_tare_load->setText(QApplication::translate("PressApp", "Dara", Q_NULLPTR));
-        btn_okSpecimen->setText(QString());
         toolBox_app->setItemText(toolBox_app->indexOf(page_specimen), QApplication::translate("PressApp", "Deney - Numune Tipi", Q_NULLPTR));
         label_31->setText(QApplication::translate("PressApp", "Kontrol Tipi :", Q_NULLPTR));
         label_44->setText(QApplication::translate("PressApp", "Y\303\274k Ondal\304\261k Nok. :", Q_NULLPTR));

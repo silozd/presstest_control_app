@@ -484,7 +484,16 @@ qrc_source.cpp: ../press_v4/source.qrc \
 		../press_v4/icons/media_play.png \
 		../press_v4/icons/arrow_circle2.png \
 		../press_v4/icons/red_ball.png \
-		../press_v4/icons/green_ball.png
+		../press_v4/icons/green_ball.png \
+		../press_v4/specimen_img/pavingstone.png \
+		../press_v4/specimen_img/masonary.png \
+		../press_v4/specimen_img/beam4n.png \
+		../press_v4/specimen_img/kerb.png \
+		../press_v4/specimen_img/cube.png \
+		../press_v4/specimen_img/flagstone.png \
+		../press_v4/specimen_img/beam3n.png \
+		../press_v4/specimen_img/cylinder.png \
+		../press_v4/specimen_img/cylinder-split.png
 	/usr/lib/qt5/bin/rcc -name source ../press_v4/source.qrc -o qrc_source.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h

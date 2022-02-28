@@ -41,6 +41,7 @@ PressApp::PressApp(QWidget *parent) :
         TabH = vr*40/pr;
         BtnH = vr*40/pr;
         Fontsize = 12;
+        qDebug()<<"SW >= 1680";
     }
     if (ScreenWidth >= 3840){
         pr = pr/2;
@@ -49,14 +50,16 @@ PressApp::PressApp(QWidget *parent) :
         TabW = hr*235/pr;
         TabH = vr*25/pr;
         Fontsize = 13;
+        qDebug()<<"SW >= 3840";
     }
-    if (ScreenWidth <= 1280){       // ok
+    if (ScreenWidth <= 1280){
         pr = 1500;
         AppW = hr*1530/pr;
         AppH = vr*790/pr;
         TabW = hr*290/pr;
         TabH = vr*40/pr;
         Fontsize = 9;
+        qDebug()<<"SW <= 1280";
     }
     if (ScreenHeight < 720){
         pr = 1500;
@@ -206,6 +209,9 @@ void PressApp::setup_GUI()
     ui->btn_okGain->setMaximumSize(BtnH,BtnH);
     ui->btn_expand->setMaximumSize(BtnH*1.1,BtnH*1.1);
     ui->pushButton_printPlot->setMaximumSize(BtnH*1.1,BtnH*1.1);
+    ui->img_specimen->setMinimumSize(TabW*1.05/2.3,TabW/1.2);
+    ui->img_specimen->setMaximumSize(TabW*1.2,TabW);
+
     ui->pushButton_saveFile->setIcon(QIcon(":/icons/floppy_disk.png"));
     ui->pushButton_openFile->setIcon(QIcon(":/icons/folder_out.png"));
 
@@ -1100,7 +1106,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
         switch (index) {
         case COMPRESSION_CUBE:
             specimen_type = COMPRESSION_CUBE;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
             ui->stack_cube_press-> show();
             ui->stack_cube_press-> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1119,7 +1125,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
             break;
         case COMPRESSION_CYLINDER:
             specimen_type = COMPRESSION_CYLINDER;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder.png)");
             ui->stack_cyl_press -> show();
             ui->stack_cyl_press -> adjustSize();
             ui->stack_cube_press-> hide();
@@ -1137,7 +1143,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
             break;
         case COMPRESSION_MASONRY_UNIT:
             specimen_type = COMPRESSION_MASONRY_UNIT;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/masonary.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/masonary.png)");
             ui->stack_masonary  -> show();
             ui->stack_masonary  -> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1160,7 +1166,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
         switch(index) {
         case FLEXURAL_BEAM3:
             specimen_type = FLEXURAL_BEAM3;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam3n.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam3n.png)");
             ui->stack_beam3n    -> show();
             ui->stack_beam3n    -> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1179,7 +1185,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
             break;
         case FLEXURAL_BEAM4:
             specimen_type = FLEXURAL_BEAM4;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam4n.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam4n.png)");
             ui->stack_beam4n    -> show();
             ui->stack_beam4n    -> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1199,7 +1205,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
             break;
         case FLEXURAL_KERB:
             specimen_type = FLEXURAL_KERB;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/kerb.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/kerb.png)");
             ui->stack_kerb      -> show();
             ui->stack_kerb      -> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1220,7 +1226,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
             break;
         case FLEXURAL_FLAGSTONE:
             specimen_type = FLEXURAL_FLAGSTONE;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/flagstone.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/flagstone.png)");
             ui->stack_flagstone -> show();
             ui->stack_flagstone -> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1245,7 +1251,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
         switch(index) {
         case SPLIT_TENSILE_CUBE:
             specimen_type = SPLIT_TENSILE_CUBE;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
             ui->stack_cube_split-> show();
             ui->stack_cube_split-> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1263,7 +1269,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
             break;
         case SPLIT_TENSILE_CYLINDER:
             specimen_type = SPLIT_TENSILE_CYLINDER;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder-split.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder-split.png)");
             ui->stack_cyl_split -> show();
             ui->stack_cyl_split -> adjustSize();
             ui->stack_cyl_press -> hide();
@@ -1281,7 +1287,7 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
             break;
         case SPLIT_TENSILE_PAVING_STONE:
             specimen_type = SPLIT_TENSILE_PAVING_STONE;
-            //ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/pavingstone.png)");
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/pavingstone.png)");
             ui->stack_pavingStone->show();
             ui->stack_pavingStone->adjustSize();
             ui->stack_cyl_press -> hide();
