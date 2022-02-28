@@ -229,20 +229,36 @@ void PressApp::preview_results_file(QString fileName)
 }
 void PressApp::on_pushButton_editFile_clicked()
 {
-    QString path = QDir::currentPath() + "/" + userDir;
-    if(!results_saved && !custom_file_loaded){
-        editReport->ui->pushButton_save->setDisabled(1);
-        editReport->setWindowTitle("Gelişmiş Düzenleme");
-    } else{
+//    QString path = QDir::currentPath() + "/" + userDir;
+//    if(!results_saved && !custom_file_loaded){
+//        editReport->ui->pushButton_save->setDisabled(1);
+//        editReport->setWindowTitle("Gelişmiş Düzenleme");
+//    } else{
+//        editReport->ui->pushButton_save->setEnabled(1);
+//        if(results_saved){
+//            editReport->setWindowTitle(path+res_fileName);
+//            preview_results_file(res_fileName);
+//        }
+//        else if (custom_file_loaded){
+//            editReport->setWindowTitle(custom_path);
+//            preview_results_file(custom_path);
+//        }
+//    }
+//    editReport->exec();
+    if(results_saved || custom_file_loaded){
         editReport->ui->pushButton_save->setEnabled(1);
         if(results_saved){
-            editReport->setWindowTitle(path+res_fileName);
             preview_results_file(res_fileName);
+            editReport->setWindowTitle(res_fileName);
         }
         else if (custom_file_loaded){
-            editReport->setWindowTitle(custom_path);
             preview_results_file(custom_path);
+            editReport->setWindowTitle(custom_path);
         }
+    }
+    else {
+        editReport->ui->pushButton_save->setDisabled(1);
+        editReport->setWindowTitle("Gelişmiş Düzenleme");
     }
     editReport->exec();
 }
