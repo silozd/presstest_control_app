@@ -1,0 +1,12 @@
+CHANNEL,LOAD (kN),STRESS (MPa),Time (s),,,,,,,,,,,,,,
+Channel 1 ,2.95,8.343,14:06:18,,,,,,,,,,,,,,
+FRAME 1 Calibration Values,Point Number,RAW Value 0,Point Value 0,RAW Value 1,Point Value 1,RAW Value 2,Point Value 2,RAW Value 3,Point Value 3,RAW Value 4,Point Value 4,RAW Value 5,Point Value 5,RAW Value 6,Point Value 6,RAW Value 7,Point Value 7
+Channel 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Channel 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Channel 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Channel 4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FRAME 2 Calibration Values,,,,,,,,,,,,,,,,,
+Channel 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Channel 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Channel 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Channel 4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

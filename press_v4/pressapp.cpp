@@ -236,11 +236,6 @@ void PressApp::setup_GUI()
 
     ui->dateEdit->setDate(QDate::currentDate());
     ui->timeEdit->setTime(QTime::currentTime());
-
-    qDebug()<<"Point Number : " << parameters[0].cal[1].point_no << "\n";
-    for(u8 i = 0 ; i < 8 ; i++){
-        qDebug()<<QString("RAW Value %1 :").arg(i) << parameters[0].cal[1].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[0].cal[1].assigned_val[i] << "\n";
-    }
 }
 // process :
 void PressApp::setup_users()

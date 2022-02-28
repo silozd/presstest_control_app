@@ -25,73 +25,42 @@ void PressApp::record_results(int no)
     excel_file;
     QTextStream line(&excel_file);
     if(ui->radioButton_record_raw_data_on->isChecked()){        // TODO : load ve stress datalarını alt alta yazdır
-        excel_file.setFileName(path + QString("/excel_log_%1").arg(current_test_no) + start_date_filename_arg + ".csv");
+        excel_file.setFileName(path + QString("/excel_log_%1").arg(test_no) + start_date_filename_arg + ".csv");
         excel_file.open(QIODevice::WriteOnly);
 
         QTextStream line(&excel_file);
-        line << "Time (s)" << ","  << "CHANNEL" << ",";
+        line << "CHANNEL" << "," << QString("LOAD (%1)").arg(load_unit) << "," << QString("STRESS (%1)").arg(stress_unit) << "," << "Time (s)" << "\n" ;
+        line << "Channel 1 " << "," << QString::number(real_time.load,'f',3) << "," << QString::number(real_time.stress,'f',3) << "," << ui->label_test_finish_time->text() <<"\n";
+        line << "FRAME 1 Calibration Values" << "," << "Point Number" << "," ;
         for(u8 i = 0 ; i < 8 ; i++)
-            line << QString("RAW Value %1").arg(i) << "," << QString("Point %1").arg(i) << ",";
-        line << QString("LOAD (%1)").arg(load_unit) << "," << QString("STRESS (%1)").arg(stress_unit);
-        line << "\n"  << "time" << "," << "CH" << "," << "RAW" << "," << "Point" << "," << ui->label_test_finish_time->text() << "," << QString::number(real_time.load,'f',3) << "," << QString::number(real_time.stress,'f',3) << "\n";
-
+            line << QString("RAW Value %1").arg(i) << "," << QString("Point Value %1").arg(i) << ",";
+        line << "\n" << "Channel 1" << "," << parameters[0].cal[0].point_no << ",";
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[0].real_val[i] << "," << parameters[0].cal[0].assigned_val[i] << ",";
+        line << "\n" << "Channel 2" << "," << parameters[0].cal[1].point_no << ",";
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[1].real_val[i] << "," << parameters[0].cal[1].assigned_val[i] << ",";
+        line << "\n" << "Channel 3" << "," << parameters[0].cal[2].point_no << "," ;
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[2].real_val[i] << "," << parameters[0].cal[2].assigned_val[i] << ",";
+        line << "\n" << "Channel 4" << "," << parameters[0].cal[3].point_no << "," ;
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[3].real_val[i] << "," << parameters[0].cal[3].assigned_val[i] << ",";
+        line << "\n";
+        line << "FRAME 2 Calibration Values" << "\n" ;
+        line << "Channel 1" << "," << parameters[0].cal[0].point_no << ",";
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[0].real_val[i] << "," << parameters[0].cal[0].assigned_val[i] << ",";
+        line << "\n" << "Channel 2" << "," << parameters[0].cal[1].point_no << ",";
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[1].real_val[i] << "," << parameters[0].cal[1].assigned_val[i] << ",";
+        line << "\n" << "Channel 3" << "," << parameters[0].cal[2].point_no << "," ;
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[2].real_val[i] << "," << parameters[0].cal[2].assigned_val[i] << ",";
+        line << "\n" << "Channel 4" << "," << parameters[0].cal[3].point_no << "," ;
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << parameters[0].cal[3].real_val[i] << "," << parameters[0].cal[3].assigned_val[i] << ",";
     }
-//    QFile cal_file;
-//    cal_file.setFileName(QString("test_results/calibration.txt"));
-//    cal_file.open(QIODevice::WriteOnly);
-//    QTextStream lines(&cal_file);
-
-//    lines << "Viva Che!\n";
-//    lines << "*****************************************************\n";
-//    lines << "================ CALIBRATION VALUES =================\n";
-//    lines << "*****************************************************\n";
-//    lines << QString("Current Frame : FRAME %1 \n").arg(current_frame + 1);
-//    lines << "*****************************************************\n";
-//    lines << "FRAME 1 Calibration Values \n";
-//    lines << "CHANNEL : 1\n";
-//    lines << "Point Number : " << parameters[0].cal[0].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[0].cal[0].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[0].cal[0].assigned_val[i] << "\n";
-//    }
-//    lines << "CHANNEL : 2\n";
-//    lines << "Point Number : " << parameters[0].cal[1].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[0].cal[1].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[0].cal[1].assigned_val[i] << "\n";
-//    }
-//    lines << "CHANNEL : 3\n";
-//    lines << "Point Number : " << parameters[0].cal[2].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[0].cal[2].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[0].cal[2].assigned_val[i] << "\n";
-//    }
-//    lines << "CHANNEL : 4\n";
-//    lines << "Point Number : " << parameters[0].cal[3].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[0].cal[3].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[0].cal[3].assigned_val[i] << "\n";
-//    }
-//    lines << "*****************************************************\n";
-//    lines << "FRAME 2 Calibration Values \n";
-//    lines << "CHANNEL : 1\n";
-//    lines << "Point Number : " << parameters[1].cal[0].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[1].cal[0].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[1].cal[0].assigned_val[i] << "\n";
-//    }
-//    lines << "CHANNEL : 2\n";
-//    lines << "Point Number : " << parameters[1].cal[1].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[1].cal[1].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[1].cal[1].assigned_val[i] << "\n";
-//    }
-//    lines << "CHANNEL : 3\n";
-//    lines << "Point Number : " << parameters[1].cal[2].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[1].cal[2].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[1].cal[2].assigned_val[i] << "\n";
-//    }
-//    lines << "CHANNEL : 4\n";
-//    lines << "Point Number : " << parameters[1].cal[3].point_no << "\n";
-//    for(u8 i = 0 ; i < 8 ; i++){
-//        lines << QString("RAW Value %1 :").arg(i) << parameters[1].cal[3].real_val[i] << "\t" << QString("Point Value %1 :").arg(i) << parameters[1].cal[3].assigned_val[i] << "\n";
-//    }
-//    cal_file.close();
-
 }
 void PressApp::on_pushButton_saveResults_clicked()      /// Save results
 {
