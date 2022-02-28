@@ -235,6 +235,9 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         ui->pushButton_pauseTest->setDisabled(true);
         ui->pushButton_pauseTest->setStyleSheet("image: url(:/icons/media_pause_dis.png); ");
         ui->label_test_date_time_main->setText(QString("Deney Tarihi : %1").arg(start_date));
+        test_status = TEST_STOPPED;
+        step_response_status = false;
+        ui->pushButton_step_response->setText("Autotuning Başla");
     }
     else if (statu_device == 1){
         //qDebug () << "deney BAŞLADI" << statu ;
@@ -265,9 +268,6 @@ void PressApp::periodic_response_handler(QByteArray datagram)
         ui->pushButton_printPlot->setStyleSheet("image: url(:/icons/document_chart.png);");
         ui->comboBox_graphChoice->setEnabled(1);
         finish_time = QTime::currentTime().toString();      // added to print results
-        test_status = TEST_STOPPED;
-        step_response_status = false;
-        ui->pushButton_step_response->setText("Autotuning Başla");
         record_results(real_time.test_no);
     }
     static char current_status = statu;
