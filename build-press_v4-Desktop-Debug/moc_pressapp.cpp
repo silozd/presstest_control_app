@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_PressApp_t {
-    QByteArrayData data[140];
-    char stringdata0[2479];
+    QByteArrayData data[139];
+    char stringdata0[2436];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -122,55 +122,54 @@ QT_MOC_LITERAL(87, 1455, 37), // "on_combo_testType_currentInde..."
 QT_MOC_LITERAL(88, 1493, 5), // "index"
 QT_MOC_LITERAL(89, 1499, 40), // "on_comboBox_specimen_currentI..."
 QT_MOC_LITERAL(90, 1540, 36), // "on_comboBox_unit_currentIndex..."
-QT_MOC_LITERAL(91, 1577, 42), // "on_comboBox_channel_no_curren..."
-QT_MOC_LITERAL(92, 1620, 39), // "on_comboBox_unit_ch_currentIn..."
-QT_MOC_LITERAL(93, 1660, 35), // "on_combo_scrRes_currentIndexC..."
-QT_MOC_LITERAL(94, 1696, 42), // "on_comboBox_formatFile_curren..."
-QT_MOC_LITERAL(95, 1739, 43), // "on_pushButton_load_factory_se..."
-QT_MOC_LITERAL(96, 1783, 12), // "assign_frame"
-QT_MOC_LITERAL(97, 1796, 18), // "assign_controlType"
-QT_MOC_LITERAL(98, 1815, 16), // "assign_printMode"
-QT_MOC_LITERAL(99, 1832, 14), // "record_results"
-QT_MOC_LITERAL(100, 1847, 2), // "no"
-QT_MOC_LITERAL(101, 1850, 20), // "pace_rate_handler_kn"
-QT_MOC_LITERAL(102, 1871, 21), // "pace_rate_handler_mpa"
-QT_MOC_LITERAL(103, 1893, 15), // "on_loadFinished"
-QT_MOC_LITERAL(104, 1909, 2), // "ok"
-QT_MOC_LITERAL(105, 1912, 12), // "get_password"
-QT_MOC_LITERAL(106, 1925, 29), // "on_pushButton_pswSave_clicked"
-QT_MOC_LITERAL(107, 1955, 19), // "authorization_event"
-QT_MOC_LITERAL(108, 1975, 9), // "authorize"
-QT_MOC_LITERAL(109, 1985, 10), // "plot_graph"
-QT_MOC_LITERAL(110, 1996, 16), // "selectionChanged"
-QT_MOC_LITERAL(111, 2013, 10), // "mousePress"
-QT_MOC_LITERAL(112, 2024, 10), // "mouseWheel"
-QT_MOC_LITERAL(113, 2035, 18), // "contextMenuRequest"
-QT_MOC_LITERAL(114, 2054, 3), // "pos"
-QT_MOC_LITERAL(115, 2058, 10), // "moveLegend"
-QT_MOC_LITERAL(116, 2069, 12), // "graphClicked"
-QT_MOC_LITERAL(117, 2082, 21), // "QCPAbstractPlottable*"
-QT_MOC_LITERAL(118, 2104, 9), // "plottable"
-QT_MOC_LITERAL(119, 2114, 9), // "dataIndex"
-QT_MOC_LITERAL(120, 2124, 20), // "axisLabelDoubleClick"
-QT_MOC_LITERAL(121, 2145, 8), // "QCPAxis*"
-QT_MOC_LITERAL(122, 2154, 4), // "axis"
-QT_MOC_LITERAL(123, 2159, 23), // "QCPAxis::SelectablePart"
-QT_MOC_LITERAL(124, 2183, 4), // "part"
-QT_MOC_LITERAL(125, 2188, 17), // "legendDoubleClick"
-QT_MOC_LITERAL(126, 2206, 10), // "QCPLegend*"
-QT_MOC_LITERAL(127, 2217, 6), // "legend"
-QT_MOC_LITERAL(128, 2224, 22), // "QCPAbstractLegendItem*"
-QT_MOC_LITERAL(129, 2247, 4), // "item"
-QT_MOC_LITERAL(130, 2252, 10), // "renderPlot"
-QT_MOC_LITERAL(131, 2263, 9), // "QPrinter*"
-QT_MOC_LITERAL(132, 2273, 7), // "printer"
-QT_MOC_LITERAL(133, 2281, 31), // "on_pushButton_printPlot_clicked"
-QT_MOC_LITERAL(134, 2313, 20), // "preview_results_file"
-QT_MOC_LITERAL(135, 2334, 8), // "fileName"
-QT_MOC_LITERAL(136, 2343, 33), // "on_pushButton_saveResults_cli..."
-QT_MOC_LITERAL(137, 2377, 34), // "on_pushButton_printResults_cl..."
-QT_MOC_LITERAL(138, 2412, 35), // "on_pushButton_openFile_view_c..."
-QT_MOC_LITERAL(139, 2448, 30) // "on_pushButton_editFile_clicked"
+QT_MOC_LITERAL(91, 1577, 39), // "on_comboBox_unit_ch_currentIn..."
+QT_MOC_LITERAL(92, 1617, 35), // "on_combo_scrRes_currentIndexC..."
+QT_MOC_LITERAL(93, 1653, 42), // "on_comboBox_formatFile_curren..."
+QT_MOC_LITERAL(94, 1696, 43), // "on_pushButton_load_factory_se..."
+QT_MOC_LITERAL(95, 1740, 12), // "assign_frame"
+QT_MOC_LITERAL(96, 1753, 18), // "assign_controlType"
+QT_MOC_LITERAL(97, 1772, 16), // "assign_printMode"
+QT_MOC_LITERAL(98, 1789, 14), // "record_results"
+QT_MOC_LITERAL(99, 1804, 2), // "no"
+QT_MOC_LITERAL(100, 1807, 20), // "pace_rate_handler_kn"
+QT_MOC_LITERAL(101, 1828, 21), // "pace_rate_handler_mpa"
+QT_MOC_LITERAL(102, 1850, 15), // "on_loadFinished"
+QT_MOC_LITERAL(103, 1866, 2), // "ok"
+QT_MOC_LITERAL(104, 1869, 12), // "get_password"
+QT_MOC_LITERAL(105, 1882, 29), // "on_pushButton_pswSave_clicked"
+QT_MOC_LITERAL(106, 1912, 19), // "authorization_event"
+QT_MOC_LITERAL(107, 1932, 9), // "authorize"
+QT_MOC_LITERAL(108, 1942, 10), // "plot_graph"
+QT_MOC_LITERAL(109, 1953, 16), // "selectionChanged"
+QT_MOC_LITERAL(110, 1970, 10), // "mousePress"
+QT_MOC_LITERAL(111, 1981, 10), // "mouseWheel"
+QT_MOC_LITERAL(112, 1992, 18), // "contextMenuRequest"
+QT_MOC_LITERAL(113, 2011, 3), // "pos"
+QT_MOC_LITERAL(114, 2015, 10), // "moveLegend"
+QT_MOC_LITERAL(115, 2026, 12), // "graphClicked"
+QT_MOC_LITERAL(116, 2039, 21), // "QCPAbstractPlottable*"
+QT_MOC_LITERAL(117, 2061, 9), // "plottable"
+QT_MOC_LITERAL(118, 2071, 9), // "dataIndex"
+QT_MOC_LITERAL(119, 2081, 20), // "axisLabelDoubleClick"
+QT_MOC_LITERAL(120, 2102, 8), // "QCPAxis*"
+QT_MOC_LITERAL(121, 2111, 4), // "axis"
+QT_MOC_LITERAL(122, 2116, 23), // "QCPAxis::SelectablePart"
+QT_MOC_LITERAL(123, 2140, 4), // "part"
+QT_MOC_LITERAL(124, 2145, 17), // "legendDoubleClick"
+QT_MOC_LITERAL(125, 2163, 10), // "QCPLegend*"
+QT_MOC_LITERAL(126, 2174, 6), // "legend"
+QT_MOC_LITERAL(127, 2181, 22), // "QCPAbstractLegendItem*"
+QT_MOC_LITERAL(128, 2204, 4), // "item"
+QT_MOC_LITERAL(129, 2209, 10), // "renderPlot"
+QT_MOC_LITERAL(130, 2220, 9), // "QPrinter*"
+QT_MOC_LITERAL(131, 2230, 7), // "printer"
+QT_MOC_LITERAL(132, 2238, 31), // "on_pushButton_printPlot_clicked"
+QT_MOC_LITERAL(133, 2270, 20), // "preview_results_file"
+QT_MOC_LITERAL(134, 2291, 8), // "fileName"
+QT_MOC_LITERAL(135, 2300, 33), // "on_pushButton_saveResults_cli..."
+QT_MOC_LITERAL(136, 2334, 34), // "on_pushButton_printResults_cl..."
+QT_MOC_LITERAL(137, 2369, 35), // "on_pushButton_openFile_view_c..."
+QT_MOC_LITERAL(138, 2405, 30) // "on_pushButton_editFile_clicked"
 
     },
     "PressApp\0EOL\0\0char*\0base_array\0u8\0i\0"
@@ -219,7 +218,6 @@ QT_MOC_LITERAL(139, 2448, 30) // "on_pushButton_editFile_clicked"
     "on_combo_testType_currentIndexChanged\0"
     "index\0on_comboBox_specimen_currentIndexChanged\0"
     "on_comboBox_unit_currentIndexChanged\0"
-    "on_comboBox_channel_no_currentIndexChanged\0"
     "on_comboBox_unit_ch_currentIndexChanged\0"
     "on_combo_scrRes_currentIndexChanged\0"
     "on_comboBox_formatFile_currentIndexChanged\0"
@@ -253,7 +251,7 @@ static const uint qt_meta_data_PressApp[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      96,   14, // methods
+      95,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -261,102 +259,101 @@ static const uint qt_meta_data_PressApp[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    2,  494,    2, 0x0a /* Public */,
-       7,    2,  499,    2, 0x0a /* Public */,
-      12,    2,  504,    2, 0x0a /* Public */,
-      16,    2,  509,    2, 0x0a /* Public */,
-      17,    2,  514,    2, 0x0a /* Public */,
-      18,    2,  519,    2, 0x0a /* Public */,
-      19,    4,  524,    2, 0x0a /* Public */,
-      24,    0,  533,    2, 0x0a /* Public */,
-      25,    0,  534,    2, 0x0a /* Public */,
-      26,    1,  535,    2, 0x0a /* Public */,
-      28,    1,  538,    2, 0x0a /* Public */,
-      29,    1,  541,    2, 0x0a /* Public */,
-      31,    0,  544,    2, 0x0a /* Public */,
-      32,    1,  545,    2, 0x0a /* Public */,
-      34,    1,  548,    2, 0x0a /* Public */,
-      35,    0,  551,    2, 0x0a /* Public */,
-      36,    1,  552,    2, 0x0a /* Public */,
-      38,    0,  555,    2, 0x0a /* Public */,
-      39,    0,  556,    2, 0x0a /* Public */,
-      40,    0,  557,    2, 0x0a /* Public */,
-      41,    0,  558,    2, 0x0a /* Public */,
-      42,    0,  559,    2, 0x0a /* Public */,
-      43,    0,  560,    2, 0x0a /* Public */,
-      44,    1,  561,    2, 0x0a /* Public */,
-      46,    0,  564,    2, 0x0a /* Public */,
-      47,    0,  565,    2, 0x0a /* Public */,
-      48,    0,  566,    2, 0x0a /* Public */,
-      49,    1,  567,    2, 0x0a /* Public */,
-      51,    1,  570,    2, 0x0a /* Public */,
-      52,    0,  573,    2, 0x0a /* Public */,
-      53,    0,  574,    2, 0x0a /* Public */,
-      54,    0,  575,    2, 0x0a /* Public */,
-      55,    0,  576,    2, 0x0a /* Public */,
-      56,    0,  577,    2, 0x0a /* Public */,
-      57,    1,  578,    2, 0x0a /* Public */,
-      59,    1,  581,    2, 0x0a /* Public */,
-      60,    0,  584,    2, 0x08 /* Private */,
-      61,    0,  585,    2, 0x08 /* Private */,
-      62,    0,  586,    2, 0x08 /* Private */,
-      63,    1,  587,    2, 0x08 /* Private */,
-      65,    0,  590,    2, 0x08 /* Private */,
-      66,    0,  591,    2, 0x08 /* Private */,
-      67,    0,  592,    2, 0x08 /* Private */,
-      68,    0,  593,    2, 0x08 /* Private */,
-      69,    0,  594,    2, 0x08 /* Private */,
-      70,    1,  595,    2, 0x08 /* Private */,
-      72,    0,  598,    2, 0x08 /* Private */,
-      73,    0,  599,    2, 0x08 /* Private */,
-      74,    0,  600,    2, 0x08 /* Private */,
-      75,    0,  601,    2, 0x08 /* Private */,
-      76,    0,  602,    2, 0x08 /* Private */,
-      77,    0,  603,    2, 0x08 /* Private */,
-      78,    0,  604,    2, 0x08 /* Private */,
-      79,    0,  605,    2, 0x08 /* Private */,
-      80,    0,  606,    2, 0x08 /* Private */,
-      81,    0,  607,    2, 0x08 /* Private */,
-      82,    0,  608,    2, 0x08 /* Private */,
-      83,    0,  609,    2, 0x08 /* Private */,
-      84,    0,  610,    2, 0x08 /* Private */,
-      85,    0,  611,    2, 0x08 /* Private */,
-      86,    0,  612,    2, 0x08 /* Private */,
-      87,    1,  613,    2, 0x08 /* Private */,
-      89,    1,  616,    2, 0x08 /* Private */,
-      90,    1,  619,    2, 0x08 /* Private */,
-      91,    1,  622,    2, 0x08 /* Private */,
-      92,    1,  625,    2, 0x08 /* Private */,
-      93,    1,  628,    2, 0x08 /* Private */,
-      94,    1,  631,    2, 0x08 /* Private */,
-      95,    0,  634,    2, 0x08 /* Private */,
-      96,    0,  635,    2, 0x08 /* Private */,
-      97,    0,  636,    2, 0x08 /* Private */,
-      98,    0,  637,    2, 0x08 /* Private */,
-      99,    1,  638,    2, 0x08 /* Private */,
-     101,    0,  641,    2, 0x08 /* Private */,
-     102,    0,  642,    2, 0x08 /* Private */,
-     103,    1,  643,    2, 0x08 /* Private */,
-     105,    0,  646,    2, 0x08 /* Private */,
-     106,    0,  647,    2, 0x08 /* Private */,
-     107,    0,  648,    2, 0x08 /* Private */,
-     108,    0,  649,    2, 0x08 /* Private */,
-     109,    0,  650,    2, 0x08 /* Private */,
-     110,    0,  651,    2, 0x08 /* Private */,
-     111,    0,  652,    2, 0x08 /* Private */,
-     112,    0,  653,    2, 0x08 /* Private */,
-     113,    1,  654,    2, 0x08 /* Private */,
-     115,    0,  657,    2, 0x08 /* Private */,
-     116,    2,  658,    2, 0x08 /* Private */,
-     120,    2,  663,    2, 0x08 /* Private */,
-     125,    2,  668,    2, 0x08 /* Private */,
-     130,    1,  673,    2, 0x08 /* Private */,
-     133,    0,  676,    2, 0x08 /* Private */,
-     134,    1,  677,    2, 0x08 /* Private */,
-     136,    0,  680,    2, 0x08 /* Private */,
-     137,    0,  681,    2, 0x08 /* Private */,
-     138,    0,  682,    2, 0x08 /* Private */,
-     139,    0,  683,    2, 0x08 /* Private */,
+       1,    2,  489,    2, 0x0a /* Public */,
+       7,    2,  494,    2, 0x0a /* Public */,
+      12,    2,  499,    2, 0x0a /* Public */,
+      16,    2,  504,    2, 0x0a /* Public */,
+      17,    2,  509,    2, 0x0a /* Public */,
+      18,    2,  514,    2, 0x0a /* Public */,
+      19,    4,  519,    2, 0x0a /* Public */,
+      24,    0,  528,    2, 0x0a /* Public */,
+      25,    0,  529,    2, 0x0a /* Public */,
+      26,    1,  530,    2, 0x0a /* Public */,
+      28,    1,  533,    2, 0x0a /* Public */,
+      29,    1,  536,    2, 0x0a /* Public */,
+      31,    0,  539,    2, 0x0a /* Public */,
+      32,    1,  540,    2, 0x0a /* Public */,
+      34,    1,  543,    2, 0x0a /* Public */,
+      35,    0,  546,    2, 0x0a /* Public */,
+      36,    1,  547,    2, 0x0a /* Public */,
+      38,    0,  550,    2, 0x0a /* Public */,
+      39,    0,  551,    2, 0x0a /* Public */,
+      40,    0,  552,    2, 0x0a /* Public */,
+      41,    0,  553,    2, 0x0a /* Public */,
+      42,    0,  554,    2, 0x0a /* Public */,
+      43,    0,  555,    2, 0x0a /* Public */,
+      44,    1,  556,    2, 0x0a /* Public */,
+      46,    0,  559,    2, 0x0a /* Public */,
+      47,    0,  560,    2, 0x0a /* Public */,
+      48,    0,  561,    2, 0x0a /* Public */,
+      49,    1,  562,    2, 0x0a /* Public */,
+      51,    1,  565,    2, 0x0a /* Public */,
+      52,    0,  568,    2, 0x0a /* Public */,
+      53,    0,  569,    2, 0x0a /* Public */,
+      54,    0,  570,    2, 0x0a /* Public */,
+      55,    0,  571,    2, 0x0a /* Public */,
+      56,    0,  572,    2, 0x0a /* Public */,
+      57,    1,  573,    2, 0x0a /* Public */,
+      59,    1,  576,    2, 0x0a /* Public */,
+      60,    0,  579,    2, 0x08 /* Private */,
+      61,    0,  580,    2, 0x08 /* Private */,
+      62,    0,  581,    2, 0x08 /* Private */,
+      63,    1,  582,    2, 0x08 /* Private */,
+      65,    0,  585,    2, 0x08 /* Private */,
+      66,    0,  586,    2, 0x08 /* Private */,
+      67,    0,  587,    2, 0x08 /* Private */,
+      68,    0,  588,    2, 0x08 /* Private */,
+      69,    0,  589,    2, 0x08 /* Private */,
+      70,    1,  590,    2, 0x08 /* Private */,
+      72,    0,  593,    2, 0x08 /* Private */,
+      73,    0,  594,    2, 0x08 /* Private */,
+      74,    0,  595,    2, 0x08 /* Private */,
+      75,    0,  596,    2, 0x08 /* Private */,
+      76,    0,  597,    2, 0x08 /* Private */,
+      77,    0,  598,    2, 0x08 /* Private */,
+      78,    0,  599,    2, 0x08 /* Private */,
+      79,    0,  600,    2, 0x08 /* Private */,
+      80,    0,  601,    2, 0x08 /* Private */,
+      81,    0,  602,    2, 0x08 /* Private */,
+      82,    0,  603,    2, 0x08 /* Private */,
+      83,    0,  604,    2, 0x08 /* Private */,
+      84,    0,  605,    2, 0x08 /* Private */,
+      85,    0,  606,    2, 0x08 /* Private */,
+      86,    0,  607,    2, 0x08 /* Private */,
+      87,    1,  608,    2, 0x08 /* Private */,
+      89,    1,  611,    2, 0x08 /* Private */,
+      90,    1,  614,    2, 0x08 /* Private */,
+      91,    1,  617,    2, 0x08 /* Private */,
+      92,    1,  620,    2, 0x08 /* Private */,
+      93,    1,  623,    2, 0x08 /* Private */,
+      94,    0,  626,    2, 0x08 /* Private */,
+      95,    0,  627,    2, 0x08 /* Private */,
+      96,    0,  628,    2, 0x08 /* Private */,
+      97,    0,  629,    2, 0x08 /* Private */,
+      98,    1,  630,    2, 0x08 /* Private */,
+     100,    0,  633,    2, 0x08 /* Private */,
+     101,    0,  634,    2, 0x08 /* Private */,
+     102,    1,  635,    2, 0x08 /* Private */,
+     104,    0,  638,    2, 0x08 /* Private */,
+     105,    0,  639,    2, 0x08 /* Private */,
+     106,    0,  640,    2, 0x08 /* Private */,
+     107,    0,  641,    2, 0x08 /* Private */,
+     108,    0,  642,    2, 0x08 /* Private */,
+     109,    0,  643,    2, 0x08 /* Private */,
+     110,    0,  644,    2, 0x08 /* Private */,
+     111,    0,  645,    2, 0x08 /* Private */,
+     112,    1,  646,    2, 0x08 /* Private */,
+     114,    0,  649,    2, 0x08 /* Private */,
+     115,    2,  650,    2, 0x08 /* Private */,
+     119,    2,  655,    2, 0x08 /* Private */,
+     124,    2,  660,    2, 0x08 /* Private */,
+     129,    1,  665,    2, 0x08 /* Private */,
+     132,    0,  668,    2, 0x08 /* Private */,
+     133,    1,  669,    2, 0x08 /* Private */,
+     135,    0,  672,    2, 0x08 /* Private */,
+     136,    0,  673,    2, 0x08 /* Private */,
+     137,    0,  674,    2, 0x08 /* Private */,
+     138,    0,  675,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,    4,    6,
@@ -426,31 +423,30 @@ static const uint qt_meta_data_PressApp[] = {
     QMetaType::Void, QMetaType::Int,   88,
     QMetaType::Void, QMetaType::Int,   88,
     QMetaType::Void, QMetaType::Int,   88,
-    QMetaType::Void, QMetaType::Int,   88,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,  100,
+    QMetaType::Void, QMetaType::Int,   99,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,  104,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,  103,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QPoint,  114,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 117, QMetaType::Int,  118,  119,
-    QMetaType::Void, 0x80000000 | 121, 0x80000000 | 123,  122,  124,
-    QMetaType::Void, 0x80000000 | 126, 0x80000000 | 128,  127,  129,
-    QMetaType::Void, 0x80000000 | 131,  132,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,  135,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QPoint,  113,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 116, QMetaType::Int,  117,  118,
+    QMetaType::Void, 0x80000000 | 120, 0x80000000 | 122,  121,  123,
+    QMetaType::Void, 0x80000000 | 125, 0x80000000 | 127,  126,  128,
+    QMetaType::Void, 0x80000000 | 130,  131,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,  134,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -536,51 +532,50 @@ void PressApp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 61: _t->on_combo_testType_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 62: _t->on_comboBox_specimen_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 63: _t->on_comboBox_unit_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 64: _t->on_comboBox_channel_no_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 65: _t->on_comboBox_unit_ch_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 66: _t->on_combo_scrRes_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 67: _t->on_comboBox_formatFile_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 68: _t->on_pushButton_load_factory_settings_clicked(); break;
-        case 69: _t->assign_frame(); break;
-        case 70: _t->assign_controlType(); break;
-        case 71: _t->assign_printMode(); break;
-        case 72: _t->record_results((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 73: _t->pace_rate_handler_kn(); break;
-        case 74: _t->pace_rate_handler_mpa(); break;
-        case 75: _t->on_loadFinished((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 76: _t->get_password(); break;
-        case 77: _t->on_pushButton_pswSave_clicked(); break;
-        case 78: _t->authorization_event(); break;
-        case 79: _t->authorize(); break;
-        case 80: _t->plot_graph(); break;
-        case 81: _t->selectionChanged(); break;
-        case 82: _t->mousePress(); break;
-        case 83: _t->mouseWheel(); break;
-        case 84: _t->contextMenuRequest((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
-        case 85: _t->moveLegend(); break;
-        case 86: _t->graphClicked((*reinterpret_cast< QCPAbstractPlottable*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 87: _t->axisLabelDoubleClick((*reinterpret_cast< QCPAxis*(*)>(_a[1])),(*reinterpret_cast< QCPAxis::SelectablePart(*)>(_a[2]))); break;
-        case 88: _t->legendDoubleClick((*reinterpret_cast< QCPLegend*(*)>(_a[1])),(*reinterpret_cast< QCPAbstractLegendItem*(*)>(_a[2]))); break;
-        case 89: _t->renderPlot((*reinterpret_cast< QPrinter*(*)>(_a[1]))); break;
-        case 90: _t->on_pushButton_printPlot_clicked(); break;
-        case 91: _t->preview_results_file((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 92: _t->on_pushButton_saveResults_clicked(); break;
-        case 93: _t->on_pushButton_printResults_clicked(); break;
-        case 94: _t->on_pushButton_openFile_view_clicked(); break;
-        case 95: _t->on_pushButton_editFile_clicked(); break;
+        case 64: _t->on_comboBox_unit_ch_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 65: _t->on_combo_scrRes_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 66: _t->on_comboBox_formatFile_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 67: _t->on_pushButton_load_factory_settings_clicked(); break;
+        case 68: _t->assign_frame(); break;
+        case 69: _t->assign_controlType(); break;
+        case 70: _t->assign_printMode(); break;
+        case 71: _t->record_results((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 72: _t->pace_rate_handler_kn(); break;
+        case 73: _t->pace_rate_handler_mpa(); break;
+        case 74: _t->on_loadFinished((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 75: _t->get_password(); break;
+        case 76: _t->on_pushButton_pswSave_clicked(); break;
+        case 77: _t->authorization_event(); break;
+        case 78: _t->authorize(); break;
+        case 79: _t->plot_graph(); break;
+        case 80: _t->selectionChanged(); break;
+        case 81: _t->mousePress(); break;
+        case 82: _t->mouseWheel(); break;
+        case 83: _t->contextMenuRequest((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 84: _t->moveLegend(); break;
+        case 85: _t->graphClicked((*reinterpret_cast< QCPAbstractPlottable*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 86: _t->axisLabelDoubleClick((*reinterpret_cast< QCPAxis*(*)>(_a[1])),(*reinterpret_cast< QCPAxis::SelectablePart(*)>(_a[2]))); break;
+        case 87: _t->legendDoubleClick((*reinterpret_cast< QCPLegend*(*)>(_a[1])),(*reinterpret_cast< QCPAbstractLegendItem*(*)>(_a[2]))); break;
+        case 88: _t->renderPlot((*reinterpret_cast< QPrinter*(*)>(_a[1]))); break;
+        case 89: _t->on_pushButton_printPlot_clicked(); break;
+        case 90: _t->preview_results_file((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 91: _t->on_pushButton_saveResults_clicked(); break;
+        case 92: _t->on_pushButton_printResults_clicked(); break;
+        case 93: _t->on_pushButton_openFile_view_clicked(); break;
+        case 94: _t->on_pushButton_editFile_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 86:
+        case 85:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QCPAbstractPlottable* >(); break;
             }
             break;
-        case 87:
+        case 86:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
@@ -589,7 +584,7 @@ void PressApp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QCPAxis::SelectablePart >(); break;
             }
             break;
-        case 88:
+        case 87:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 1:
@@ -627,13 +622,13 @@ int PressApp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 96)
+        if (_id < 95)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 96;
+        _id -= 95;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 96)
+        if (_id < 95)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 96;
+        _id -= 95;
     }
     return _id;
 }

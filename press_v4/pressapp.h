@@ -384,7 +384,6 @@ private slots:
     void on_combo_testType_currentIndexChanged(int index);
     void on_comboBox_specimen_currentIndexChanged(int index);
     void on_comboBox_unit_currentIndexChanged(int index);
-    void on_comboBox_channel_no_currentIndexChanged(int index);
     void on_comboBox_unit_ch_currentIndexChanged(int index);
     void on_combo_scrRes_currentIndexChanged(int index);
     void on_comboBox_formatFile_currentIndexChanged(int index);

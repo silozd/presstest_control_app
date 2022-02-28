@@ -29,10 +29,13 @@ void PressApp::record_results(int no)
         excel_file.open(QIODevice::WriteOnly);
 
         QTextStream line(&excel_file);
-        line << "Time (s)" << "," << QString("LOAD (%1)").arg(load_unit) << "," << QString("STRESS (%1)").arg(stress_unit) << "\n";
-        line << ui->label_test_finish_time->text() << "," << QString::number(real_time.load,'f',3) << "," << QString::number(real_time.stress,'f',3) << "\n";
-    }
+        line << "Time (s)" << ","  << "CHANNEL" << ",";
+        for(u8 i = 0 ; i < 8 ; i++)
+            line << QString("RAW Value %1").arg(i) << "," << QString("Point %1").arg(i) << ",";
+        line << QString("LOAD (%1)").arg(load_unit) << "," << QString("STRESS (%1)").arg(stress_unit);
+        line << "\n"  << "time" << "," << "CH" << "," << "RAW" << "," << "Point" << "," << ui->label_test_finish_time->text() << "," << QString::number(real_time.load,'f',3) << "," << QString::number(real_time.stress,'f',3) << "\n";
 
+    }
 //    QFile cal_file;
 //    cal_file.setFileName(QString("test_results/calibration.txt"));
 //    cal_file.open(QIODevice::WriteOnly);

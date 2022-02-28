@@ -436,12 +436,11 @@ public:
     QGridLayout *gridLayout_33;
     QWidget *widget_4;
     QGridLayout *gridLayout_32;
-    QLabel *label_73;
     QLabel *label_40;
     QComboBox *comboBox_user;
     QSpacerItem *verticalSpacer_10;
-    QSpacerItem *verticalSpacer_8;
     QPushButton *pushButton_removeUser;
+    QSpacerItem *verticalSpacer_8;
     QWidget *widget_6;
     QGridLayout *gridLayout_34;
     QLineEdit *lineEdit_oldPsw;
@@ -694,7 +693,7 @@ public:
         toolBox_app->setLineWidth(1);
         page_specimen = new QWidget();
         page_specimen->setObjectName(QStringLiteral("page_specimen"));
-        page_specimen->setGeometry(QRect(0, 0, 370, 339));
+        page_specimen->setGeometry(QRect(0, 0, 230, 339));
         gridLayout_7 = new QGridLayout(page_specimen);
         gridLayout_7->setSpacing(6);
         gridLayout_7->setContentsMargins(11, 11, 11, 11);
@@ -1298,7 +1297,7 @@ public:
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 384, 318));
+        page_param->setGeometry(QRect(0, 0, 98, 70));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1310,7 +1309,7 @@ public:
         scrollArea_param->setWidgetResizable(true);
         wdg_param = new QWidget();
         wdg_param->setObjectName(QStringLiteral("wdg_param"));
-        wdg_param->setGeometry(QRect(0, 0, 368, 595));
+        wdg_param->setGeometry(QRect(0, 0, 339, 595));
         gridLayout_9 = new QGridLayout(wdg_param);
         gridLayout_9->setSpacing(6);
         gridLayout_9->setContentsMargins(11, 11, 11, 11);
@@ -1601,7 +1600,7 @@ public:
         toolBox_app->addItem(page_param, QStringLiteral("Parametreler"));
         page_channels = new QWidget();
         page_channels->setObjectName(QStringLiteral("page_channels"));
-        page_channels->setGeometry(QRect(0, 0, 370, 440));
+        page_channels->setGeometry(QRect(0, 0, 221, 440));
         gridLayout_10 = new QGridLayout(page_channels);
         gridLayout_10->setSpacing(12);
         gridLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -1755,7 +1754,7 @@ public:
         toolBox_app->addItem(page_channels, QStringLiteral("Kanallar"));
         page_gain = new QWidget();
         page_gain->setObjectName(QStringLiteral("page_gain"));
-        page_gain->setGeometry(QRect(0, 0, 384, 318));
+        page_gain->setGeometry(QRect(0, 0, 311, 217));
         gridLayout_18 = new QGridLayout(page_gain);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setContentsMargins(11, 11, 11, 11);
@@ -2260,7 +2259,7 @@ public:
         toolBox_app->addItem(page_calib, QStringLiteral("Kalibrasyon"));
         page_pid = new QWidget();
         page_pid->setObjectName(QStringLiteral("page_pid"));
-        page_pid->setGeometry(QRect(0, 0, 370, 478));
+        page_pid->setGeometry(QRect(0, 0, 279, 478));
         gridLayout_17 = new QGridLayout(page_pid);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);
@@ -2908,37 +2907,31 @@ public:
         gridLayout_32->setContentsMargins(11, 11, 11, 11);
         gridLayout_32->setObjectName(QStringLiteral("gridLayout_32"));
         gridLayout_32->setContentsMargins(18, 18, 18, 18);
-        label_73 = new QLabel(widget_4);
-        label_73->setObjectName(QStringLiteral("label_73"));
-        label_73->setIndent(12);
-
-        gridLayout_32->addWidget(label_73, 0, 0, 1, 2);
-
         label_40 = new QLabel(widget_4);
         label_40->setObjectName(QStringLiteral("label_40"));
         label_40->setIndent(12);
 
-        gridLayout_32->addWidget(label_40, 2, 0, 1, 1);
+        gridLayout_32->addWidget(label_40, 1, 0, 1, 1);
 
         comboBox_user = new QComboBox(widget_4);
         comboBox_user->setObjectName(QStringLiteral("comboBox_user"));
         comboBox_user->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_32->addWidget(comboBox_user, 2, 1, 1, 1);
+        gridLayout_32->addWidget(comboBox_user, 1, 1, 1, 1);
 
         verticalSpacer_10 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_32->addItem(verticalSpacer_10, 1, 1, 1, 1);
-
-        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout_32->addItem(verticalSpacer_8, 4, 1, 1, 1);
+        gridLayout_32->addItem(verticalSpacer_10, 0, 1, 1, 1);
 
         pushButton_removeUser = new QPushButton(widget_4);
         pushButton_removeUser->setObjectName(QStringLiteral("pushButton_removeUser"));
         pushButton_removeUser->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_32->addWidget(pushButton_removeUser, 3, 1, 1, 1);
+        gridLayout_32->addWidget(pushButton_removeUser, 2, 1, 1, 1);
+
+        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_32->addItem(verticalSpacer_8, 3, 1, 1, 1);
 
         gridLayout_32->setColumnStretch(0, 1);
         gridLayout_32->setColumnStretch(1, 1);
@@ -3454,7 +3447,7 @@ public:
         retranslateUi(PressApp);
 
         stackedWidget->setCurrentIndex(1);
-        tabWidget_app->setCurrentIndex(0);
+        tabWidget_app->setCurrentIndex(2);
         toolBox_app->setCurrentIndex(4);
         stackedWidget_specimen->setCurrentIndex(0);
 
@@ -3725,8 +3718,6 @@ public:
         radioButton_automatic_print_on->setText(QApplication::translate("PressApp", "On", Q_NULLPTR));
         label_46->setText(QApplication::translate("PressApp", "Oto Yazd\304\261rma :", Q_NULLPTR));
         tabWidget_app->setTabText(tabWidget_app->indexOf(tab_settings), QApplication::translate("PressApp", "Ba\304\237lant\304\261 ve Ayarlar", Q_NULLPTR));
-        label_73->setText(QApplication::translate("PressApp", "\304\260stenen Verileri G\303\266r\303\274nt\303\274leme : \n"
-"(dosya a\303\247ma fonk. gibi olacak: combo'dan se\303\247ebilme)", Q_NULLPTR));
         label_40->setText(QApplication::translate("PressApp", "Kullan\304\261c\304\261 :", Q_NULLPTR));
         pushButton_removeUser->setText(QApplication::translate("PressApp", "Kullan\304\261c\304\261y\304\261 Kald\304\261r", Q_NULLPTR));
         label_72->setText(QApplication::translate("PressApp", "Yeni \305\236ifre :", Q_NULLPTR));
