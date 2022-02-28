@@ -1513,23 +1513,6 @@ void PressApp::on_comboBox_unit_ch_currentIndexChanged(int index)
         break;
     }
 }
-void PressApp::on_comboBox_channel_no_currentIndexChanged(int index)
-{
-    switch (index) {
-    case 0:
-
-        break;
-    case 1:
-
-        break;
-    case 2:
-
-        break;
-    case 3:
-
-        break;
-    }
-}
 void PressApp::on_combo_scrRes_currentIndexChanged(int index)
 {
     // olmayabilir bu

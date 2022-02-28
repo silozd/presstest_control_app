@@ -3454,8 +3454,8 @@ public:
         retranslateUi(PressApp);
 
         stackedWidget->setCurrentIndex(1);
-        tabWidget_app->setCurrentIndex(1);
-        toolBox_app->setCurrentIndex(5);
+        tabWidget_app->setCurrentIndex(0);
+        toolBox_app->setCurrentIndex(4);
         stackedWidget_specimen->setCurrentIndex(0);
 
 
