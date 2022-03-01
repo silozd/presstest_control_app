@@ -5,7 +5,7 @@
 #include <QPdfWriter>
 #include <poppler/qt5/poppler-qt5.h>
 
-void PressApp::record_results(int no)
+void PressApp::record_results(int no)       // BURDA : pdf rapor yap
 {
     test_no = no;
     ui->label_test_finish_time->setText(finish_time);
@@ -104,7 +104,7 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         printer.getPageMargins(&left, &top, &right, &bottom, QPrinter::Millimeter);
         qDebug() << "Marges mm :" << left << top << right << bottom;
 
-        // TEMPLATE 1:      /////////////////////////////
+        // TEMPLATE 1:      /////////////////////////////       // BURDA : pdf rapor yap
         QPainter painter(&printer);
         painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform); painter.begin(&printer);
         QFont police(editReport->ui->comboBox_3->currentText(),30);

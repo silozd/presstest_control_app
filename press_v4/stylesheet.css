@@ -37,7 +37,6 @@ QTabBar::tab {
 }
 QTabBar::tab:selected, QTabBar::tab:hover {
 background-color: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, stop:0.326733 rgba(255, 255, 255, 255), stop:1 rgba(220, 239, 247, 255));
-
 }
 #label_calculated_area, #label_alert_status,  #label_current_test_no_2,  #label_test_date_time_main,  #label_specimen,  #label_frame_type,
 #label_pace_rate,  #label_test_type_specimen,  #label_load,  #label_stress,  #label_time{
@@ -61,6 +60,7 @@ background-color: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, st
 }
 #pushButton_openFile:pressed, #pushButton_saveFile:pressed{
     background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1, stop:0.326733 rgba(250, 255, 252, 255), stop:1 rgba(220, 230, 225, 255));
+    color : rgb(0,110,20);
 }
 #tab_test QSpinBox, #tab_test  QDoubleSpinBox, #spinBox_test_numerator {
     background:  rgb(253,253,253);
@@ -136,7 +136,8 @@ QPushButton{
 QPushButton:pressed {
     background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
                             stop:0.331683 rgba(245, 250, 255, 255),
-                            stop:1 rgba(205, 210, 215, 255))
+                            stop:1 rgba(205, 210, 215, 255));
+    color: rgb(20, 100, 200);
 }
 #pushButton_editFile{
     text-align: right;
@@ -158,6 +159,7 @@ QPushButton:pressed {
     background: qlineargradient(spread:pad, x1:0.564, y1:0, x2:0.708, y2:1,
                             stop:0.331683 rgba(250, 240, 240, 255),
                             stop:1 rgba(255, 190, 190, 255));
+    color : rgb(200,20,20);
 }
 
 
