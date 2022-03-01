@@ -94,7 +94,6 @@ PressApp::PressApp(QWidget *parent) :
 
     userDir = ui->lineEdit_user->text();
     setup_PLOT();
-
 // // GUI'den ///////////////////////////////////////////
     device_opening = true;
     command_send_protection_wait_timer= new QTimer(this);
@@ -412,7 +411,7 @@ void PressApp::tare_channel(int chan){
     send_data_order(data.data(),"TARE",0,3);
     data[4] = chan_no;
     EOL(data.data(),5);
-    //auxthread->serial->write(data);  BURDA     // TODO : unexpectedly finshed
+    auxthread->serial->write(data);
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
 #endif
@@ -421,7 +420,7 @@ void PressApp::tare_in_calibration(void){
     tare_channel(ui->comboBox_channel_no->currentIndex());
 }
 void PressApp::relay_on(void){
-    auxthread->relay_start_stop = RELAY_ON;     // TODO : unexpectedly finished
+    auxthread->relay_start_stop = RELAY_ON;
     ui->pushButton_start->setDisabled(1);
     ui->pushButton_stop->setEnabled(1);
     qDebug()<<"relay_on";
@@ -603,72 +602,82 @@ void PressApp::_100_msec_handler(){
             else{
                 //label_adc_cal_channel[i]->setText(QString::number(((1.0*auxthread->to_gui.calibrated[i])),'f',precision[i]));
                 ui->label_load->setText("Yük :" + QString::number((1.0*auxthread->to_gui.calibrated[0]),'f',precision[0]) + load_unit);
-                ui->label_adc_cal_channel_2->setText(QString::number(1.0*auxthread->to_gui.calibrated[1]));
-                ui->label_adc_cal_channel_3->setText(QString::number(1.0*auxthread->to_gui.calibrated[2]));
-                ui->label_adc_cal_channel_4->setText(QString::number(1.0*auxthread->to_gui.calibrated[3]));
+                ui->label_adc_cal_channel_2->setText(QString::number(1.0*auxthread->to_gui.calibrated[1],'f',precision[1]));
+                ui->label_adc_cal_channel_3->setText(QString::number(1.0*auxthread->to_gui.calibrated[2],'f',precision[2]));
+                ui->label_adc_cal_channel_4->setText(QString::number(1.0*auxthread->to_gui.calibrated[3],'f',precision[3]));
             }
             //label_adc_channel[i]->setText(QString::number(auxthread->to_gui.raw[i]));
             ui->label_adc_channel_1->setText(QString::number(auxthread->to_gui.raw[0]));
             ui->label_adc_channel_2->setText(QString::number(auxthread->to_gui.raw[1]));
             ui->label_adc_channel_3->setText(QString::number(auxthread->to_gui.raw[2]));
             ui->label_adc_channel_4->setText(QString::number(auxthread->to_gui.raw[3]));
-    // sila :
-            if(auxthread->to_gui.gain[0] == 0 || auxthread->to_gui.gain[1] == 0 || auxthread->to_gui.gain[2] == 0 || auxthread->to_gui.gain[3] == 0)
-                ui->label_gain_0->setText("+/- 10 V");
-            if(auxthread->to_gui.gain[0] == 1 || auxthread->to_gui.gain[1] == 1 || auxthread->to_gui.gain[2] == 1 || auxthread->to_gui.gain[3] == 1)
-                ui->label_gain_0->setText("+/- 5 V");
-            if(auxthread->to_gui.gain[0] == 2 || auxthread->to_gui.gain[1] == 2 || auxthread->to_gui.gain[2] == 2 || auxthread->to_gui.gain[3] == 2)
-                ui->label_gain_0->setText("+/- 2.5 V");
-            if(auxthread->to_gui.gain[0] == 3 || auxthread->to_gui.gain[1] == 3 || auxthread->to_gui.gain[2] == 3 || auxthread->to_gui.gain[3] == 3)
-                ui->label_gain_0->setText("+/- 1 V");
-            if(auxthread->to_gui.gain[0] == 4 || auxthread->to_gui.gain[1] == 4 || auxthread->to_gui.gain[2] == 4 || auxthread->to_gui.gain[3] == 4)
-                ui->label_gain_0->setText("+/- 500 mV");
-            if(auxthread->to_gui.gain[0] == 5 || auxthread->to_gui.gain[1] == 5 || auxthread->to_gui.gain[2] == 5 || auxthread->to_gui.gain[3] == 5)
-                ui->label_gain_0->setText("+/- 250 mV");
-            if(auxthread->to_gui.gain[0] == 6 || auxthread->to_gui.gain[1] == 6 || auxthread->to_gui.gain[2] == 6 || auxthread->to_gui.gain[3] == 6)
-                ui->label_gain_0->setText("+/- 125 mV");
-            if(auxthread->to_gui.gain[0] == 7 || auxthread->to_gui.gain[1] == 7 || auxthread->to_gui.gain[2] == 7 || auxthread->to_gui.gain[3] == 7)
-                ui->label_gain_0->setText("+/- 50 mV");
-            if(auxthread->to_gui.gain[0] == 8 || auxthread->to_gui.gain[1] == 8 || auxthread->to_gui.gain[2] == 8 || auxthread->to_gui.gain[3] == 8)
-                ui->label_gain_0->setText("+/- 25 mV");
-            if(auxthread->to_gui.gain[0] == 9 || auxthread->to_gui.gain[1] == 9 || auxthread->to_gui.gain[2] == 9 || auxthread->to_gui.gain[3] == 9)
-                ui->label_gain_0->setText("+/- 10 mV");
-            if(auxthread->to_gui.gain[0] == 10 || auxthread->to_gui.gain[1] == 10 || auxthread->to_gui.gain[2] == 10 || auxthread->to_gui.gain[3] == 10)
-                ui->label_gain_0->setText("+/- 5 mV");
-    //
+
             switch(auxthread->to_gui.gain[i]){
             case 0:
-                label_gain[i]->setText("+/- 10 V");
+                ui->label_gain_0->setText("+/- 10 V");
+                ui->label_gain_1->setText("+/- 10 V");
+                ui->label_gain_2->setText("+/- 10 V");
+                ui->label_gain_3->setText("+/- 10 V");
                 break;
             case 1:
-                label_gain[i]->setText("+/- 5 V");
+                ui->label_gain_0->setText("+/- 5 V");
+                ui->label_gain_1->setText("+/- 5 V");
+                ui->label_gain_2->setText("+/- 5 V");
+                ui->label_gain_3->setText("+/- 5 V");
                 break;
             case 2:
-                label_gain[i]->setText("+/- 2.5 V");
+                ui->label_gain_0->setText("+/- 2.5 V");
+                ui->label_gain_1->setText("+/- 2.5 V");
+                ui->label_gain_2->setText("+/- 2.5 V");
+                ui->label_gain_3->setText("+/- 2.5 V");
                 break;
             case 3:
-                label_gain[i]->setText("+/- 1 V");
+                ui->label_gain_0->setText("+/- 1 V");
+                ui->label_gain_1->setText("+/- 1 V");
+                ui->label_gain_2->setText("+/- 1 V");
+                ui->label_gain_3->setText("+/- 1 V");
                 break;
             case 4:
-                label_gain[i]->setText("+/- 500 mV");
+                ui->label_gain_0->setText("+/- 500 mV");
+                ui->label_gain_1->setText("+/- 500 mV");
+                ui->label_gain_2->setText("+/- 500 mV");
+                ui->label_gain_3->setText("+/- 500 mV");
                 break;
             case 5:
-                label_gain[i]->setText("+/- 250 mV");
+                ui->label_gain_0->setText("+/- 250 mV");
+                ui->label_gain_1->setText("+/- 250 mV");
+                ui->label_gain_2->setText("+/- 250 mV");
+                ui->label_gain_3->setText("+/- 250 mV");
                 break;
             case 6:
-                label_gain[i]->setText("+/- 125 mV");
+                ui->label_gain_0->setText("+/- 125 mV");
+                ui->label_gain_1->setText("+/- 125 mV");
+                ui->label_gain_2->setText("+/- 125 mV");
+                ui->label_gain_3->setText("+/- 125 mV");
                 break;
             case 7:
-                label_gain[i]->setText("+/- 50 mV");
+                ui->label_gain_0->setText("+/- 50 mV");
+                ui->label_gain_1->setText("+/- 50 mV");
+                ui->label_gain_2->setText("+/- 50 mV");
+                ui->label_gain_3->setText("+/- 50 mV");
                 break;
             case 8:
-                label_gain[i]->setText("+/- 25 mV");
+                ui->label_gain_0->setText("+/- 25 mV");
+                ui->label_gain_1->setText("+/- 25 mV");
+                ui->label_gain_2->setText("+/- 25 mV");
+                ui->label_gain_3->setText("+/- 25 mV");
                 break;
             case 9:
-                label_gain[i]->setText("+/- 10 mV");
+                ui->label_gain_0->setText("+/- 10 mV");
+                ui->label_gain_1->setText("+/- 10 mV");
+                ui->label_gain_2->setText("+/- 10 mV");
+                ui->label_gain_3->setText("+/- 10 mV");
                 break;
             case 10:
-                label_gain[i]->setText("+/- 5 mV");
+                ui->label_gain_0->setText("+/- 5 mV");
+                ui->label_gain_1->setText("+/- 5 mV");
+                ui->label_gain_2->setText("+/- 5 mV");
+                ui->label_gain_3->setText("+/- 5 mV");
                 break;
             }
         }
@@ -882,9 +891,6 @@ void PressApp::_100_msec_handler(){
                 if(automatic_print == 1){
                     QTimer::singleShot(1000,this,SLOT(print_test_results()));
                 }
-                QRectF falanca;
-//                channel[0].zoomer->setZoomBase(falanca.adjusted(channel[0].min_value_x,channel[0].max_value_x,
-//                                                                channel[0].min_value_y,channel[0].max_value_y));
             }
             qDebug() << "girdi to_gui.test_finished";
         }
@@ -928,9 +934,10 @@ void PressApp::on_pushButton_connect_clicked()     //setup.gui : lineedit inputm
     periodic_response_handler(QByteArray());
     start_comm();
 
-    qDebug()<<"Connected to"<<targetIP;
     ui->pushButton_connect->setDisabled(1);
     ui->pushButton_cutconnect->setEnabled(1);
+    qDebug()<<"Connected to"<<targetIP;
+
 }
 void PressApp::on_pushButton_cutconnect_clicked()
 {

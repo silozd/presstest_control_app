@@ -88,7 +88,7 @@ void aux_thread::read_parameters(void){
     QTextStream data_log(&dcMotorPc->matlab_data_log);
     QTextStream pace_log(&dcMotorPc->matlab_pace_rate_log);
 #endif
-    //qDebug() << "read parameters";
+    qDebug() << "read parameters";
 
     if(read_data_order(data_array,"ANS",0,2)){
         fcrc = crc_chk((u8*)data_array.data(),35);
@@ -309,7 +309,7 @@ void PressApp::command_sending_protection(void){
         auxthread->read_parameters();
         tmp++;
         break;
-    case 1:     // removed from press
+    case 1:
         if(usart_signalmapper_no < 44){
             send_gain(usart_signalmapper_no);
         }

@@ -28,7 +28,7 @@ void PressApp::send_gain(int gain){
 
     EOL(data.data(),6);
 
-    //auxthread->serial->write(data);  BURDA      // TODO : unexpectedly finshed : ORJ HALİ YAZ
+    auxthread->serial->write(data);
 }
 void PressApp::send_gains_and_cals(void){
     static u8 tmp = 0;

@@ -1,0 +1,14 @@
+
+TEST RESULTS 
+Line_1 :
+Line_2 :
+Test_No :191
+Test_Start_Date :01.03.2022
+Test_Start_Time :14:58:14
+Test_Finish_Time :14:58:42
+Test_Type :Basma
+Specimen :Küp
+Dimensions_(mm) :20 x 20 x 20
+Area_(mm2) :400 mm2
+Peak_Load_(kN) :13.880
+Peak_Stress_(MPa) :34.709
