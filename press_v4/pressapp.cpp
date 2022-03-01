@@ -108,6 +108,10 @@ PressApp::PressApp(QWidget *parent) :
     connect(ui->pushButton_save_pid,SIGNAL(clicked()),this,SLOT(save_pid_values()));  //
     connect(ui->pushButton_save_pid_to_all,SIGNAL(clicked()),this,SLOT(save_pid_values_to_all()));        //
     connect(ui->pushButton_step_response,SIGNAL(released()),this,SLOT(step_response_handle()));     //
+    connect(auxthread, SIGNAL(cohen_coon_kp(QString)), this->ui->label_step_resp_CC_KP, SLOT(setText(QString)));
+    connect(auxthread, SIGNAL(cohen_coon_ki(QString)), this->ui->label_step_resp_CC_Ki, SLOT(setText(QString)));
+    connect(auxthread, SIGNAL(cohen_coon_kd(QString)), this->ui->label_step_resp_CC_Kd, SLOT(setText(QString)));
+    connect(auxthread, SIGNAL(let_step_response()),    this, SLOT(step_response_handle()));
 }
 void PressApp::set_declaration()
 {
@@ -204,18 +208,20 @@ void PressApp::setup_GUI()
     ui->page_app->hide();
     ui->page_main->show();
 
+    step_response_status = false;
+
     ui->stackedWidget->setStyleSheet(QString("QLabel, QPushButton, QComboBox, QLineEdit, QToolBox, QTabWidget, QRadioButton, QSpinBox, QDoubleSpinBox, QToolButton, QScrollArea, QTimeEdit, QDateEdit, QDialog {font-size: %1pt}").arg(Fontsize));
     ui->tabWidget_app->setStyleSheet(QString("QTabBar::tab {width: %1px; height: %2px; font-size: %3pt} QPushButton, QComboBox {height: %4px}").arg(TabW).arg(TabH).arg(Fontsize).arg(BtnH));
     ui->tabWidget_app->setMinimumSize(AppW/1.2,AppH/1.2);
     ui->widget_plotArea->setMinimumWidth(AppW/4);
-    ui->wdg_paramArea->setMinimumWidth(AppW/3);
+    ui->wdg_paramArea->setMinimumWidth(AppW/3.7);
     ui->wdg_paramArea->setMaximumWidth(AppW/2.7);
     ui->btn_okSpecimen->setMaximumSize(BtnH,BtnH);
     ui->btn_okGain->setMaximumSize(BtnH,BtnH);
     ui->btn_expand->setMaximumSize(BtnH*1.1,BtnH*1.1);
     ui->pushButton_printPlot->setMaximumSize(BtnH*1.1,BtnH*1.1);
-    ui->img_specimen->setMinimumSize(TabW*1.05/2.3,TabW/1.2);
-    ui->img_specimen->setMaximumSize(TabW*1.2,TabW);
+    ui->img_specimen->setMinimumSize(TabW*1.05/2.3,TabW/1.5);
+    ui->img_specimen->setMaximumSize(TabW*1.2,TabW/1.05);
 
     ui->pushButton_saveFile->setIcon(QIcon(":/icons/floppy_disk.png"));
     ui->pushButton_openFile->setIcon(QIcon(":/icons/folder_out.png"));
@@ -415,7 +421,7 @@ void PressApp::tare_in_calibration(void){
     tare_channel(ui->comboBox_channel_no->currentIndex());
 }
 void PressApp::relay_on(void){
-    relay_start_stop = RELAY_ON;     // TODO : unexpectedly finished
+    auxthread->relay_start_stop = RELAY_ON;     // TODO : unexpectedly finished
     ui->pushButton_start->setDisabled(1);
     ui->pushButton_stop->setEnabled(1);
     qDebug()<<"relay_on";
@@ -424,7 +430,7 @@ void PressApp::relay_on(void){
 #endif
 }
 void PressApp::relay_off(void){
-    relay_start_stop = RELAY_OFF;
+    auxthread->relay_start_stop = RELAY_OFF;
     ui->pushButton_start->setEnabled(1);
     ui->pushButton_stop->setDisabled(1);
     qDebug()<<"relay_off";
@@ -519,7 +525,7 @@ void PressApp::usart_signalmapper(void){
 void PressApp::usart_signalmapper_handler(int id){
     usart_signalmapper_no = id;
     command_send_protection_wait_timer->start();
-    command_silencer = true;
+    auxthread->command_silencer = true;
     qDebug()<<"usart signalmapper no"<<usart_signalmapper_no ;
 }
 void PressApp::print_test_results(){
@@ -568,29 +574,44 @@ void PressApp::_100_msec_handler(){
     local_counter++;
 
     if(do_at_the_opening){
-        if(auxthread->communication_established){ // sila
+        if(auxthread->communication_established){
             gain_cal_send_timer->start();
-            command_silencer = true;
+            auxthread->command_silencer = true;
             do_at_the_opening = false;
         }
     }
     if(auxthread->to_gui.hit){
-        auxthread->to_gui.hit = false;    // sila commented
-        //qDebug() << "gui hit : ";
+        auxthread->to_gui.hit = false;
 
         for(u8 i = 0; i < 4; i++){
-            if(i == 0){
+            if(i == 0){  // TODO : exchange with gui items
                 if(test_status == TEST_JUST_FINISHED){
-                    label_adc_cal_channel[i]->setText(QString::number(auxthread->peak_load,'f',precision[i]));  // TODO : buralar ui ile degisecek BURDA
+                    //label_adc_cal_channel[i]->setText(QString::number(auxthread->peak_load,'f',precision[i]));
+                    ui->label_load->setText("Yük :" + QString::number(auxthread->peak_load,'f',precision[0]) + load_unit);
+                    ui->label_adc_cal_channel_2->setText(QString::number(auxthread->peak_load,'f',precision[1]));
+                    ui->label_adc_cal_channel_3->setText(QString::number(auxthread->peak_load,'f',precision[2]));
+                    ui->label_adc_cal_channel_4->setText(QString::number(auxthread->peak_load,'f',precision[3]));
                 }
                 else{
-                    label_adc_cal_channel[i]->setText(QString::number(((1.0*auxthread->to_gui.calibrated[i])),'f',precision[i]));
+                    //label_adc_cal_channel[i]->setText(QString::number(((1.0*auxthread->to_gui.calibrated[i])),'f',precision[i]));
+                    ui->label_load->setText("Yük :" + QString::number(1.0*auxthread->to_gui.calibrated[0],'f',precision[0]) + load_unit);
+                    ui->label_adc_cal_channel_2->setText(QString::number(1.0*auxthread->to_gui.calibrated[1],'f',precision[1]));
+                    ui->label_adc_cal_channel_3->setText(QString::number(1.0*auxthread->to_gui.calibrated[2],'f',precision[2]));
+                    ui->label_adc_cal_channel_4->setText(QString::number(1.0*auxthread->to_gui.calibrated[3],'f',precision[3]));
                 }
             }
             else{
-                label_adc_cal_channel[i]->setText(QString::number(((1.0*auxthread->to_gui.calibrated[i])),'f',precision[i]));
+                //label_adc_cal_channel[i]->setText(QString::number(((1.0*auxthread->to_gui.calibrated[i])),'f',precision[i]));
+                ui->label_load->setText("Yük :" + QString::number((1.0*auxthread->to_gui.calibrated[0]),'f',precision[0]) + load_unit);
+                ui->label_adc_cal_channel_2->setText(QString::number(1.0*auxthread->to_gui.calibrated[1]));
+                ui->label_adc_cal_channel_3->setText(QString::number(1.0*auxthread->to_gui.calibrated[2]));
+                ui->label_adc_cal_channel_4->setText(QString::number(1.0*auxthread->to_gui.calibrated[3]));
             }
-            label_adc_channel[i]->setText(QString::number(auxthread->to_gui.raw[i]));
+            //label_adc_channel[i]->setText(QString::number(auxthread->to_gui.raw[i]));
+            ui->label_adc_channel_1->setText(QString::number(auxthread->to_gui.raw[0]));
+            ui->label_adc_channel_2->setText(QString::number(auxthread->to_gui.raw[1]));
+            ui->label_adc_channel_3->setText(QString::number(auxthread->to_gui.raw[2]));
+            ui->label_adc_channel_4->setText(QString::number(auxthread->to_gui.raw[3]));
     // sila :
             if(auxthread->to_gui.gain[0] == 0 || auxthread->to_gui.gain[1] == 0 || auxthread->to_gui.gain[2] == 0 || auxthread->to_gui.gain[3] == 0)
                 ui->label_gain_0->setText("+/- 10 V");
@@ -1038,7 +1059,7 @@ void PressApp::on_pushButton_startTest_clicked()
 
 // ////// GUI'den   ////////////////
         test_status  = TEST_RUNNING;
-        relay_start_stop = RELAY_ON;
+        auxthread->relay_start_stop = RELAY_ON;
         //auxthread->dac_value = dac_voltage_to_raw((double)0.1 * ui->spinBox_start_speed_percentage->value());
         if(!step_response_status)
             ui->pushButton_step_response->setText("Autotuning Durdur");
@@ -1645,7 +1666,7 @@ void PressApp::on_toolBox_app_currentChanged(int tab)
         authorization_event();
      if (mouseevent && tab == TAB_PID){         // TODO
          ui->pushButton_step_response->show();
-         relay_auto_man = RELAY_ON;
+         auxthread->relay_auto_man = RELAY_ON;
      }
      else
          ui->pushButton_step_response->hide();
@@ -1668,18 +1689,18 @@ void PressApp::assign_frame()
     }
     if(device_opening == false){
         gain_cal_send_timer->start();
-        command_silencer = true;
+        auxthread->command_silencer = true;
     }
 }
 void PressApp::assign_controlType()
 {
     if (ui->radioButton_auto->isChecked()){
         control_mode = AUTO;
-        relay_auto_man = RELAY_ON;
+        auxthread->relay_auto_man = RELAY_ON;
     }
     else if (ui->radioButton_man->isChecked()){
         control_mode = MAN;
-        relay_auto_man = RELAY_OFF;
+        auxthread->relay_auto_man = RELAY_OFF;
     }
 }
 void PressApp::assign_printMode()

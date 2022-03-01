@@ -33,7 +33,7 @@ public:
 
     QSerialPort *serial;
 
-    //bool command_silencer;
+    bool command_silencer;
     bool test_finished;
     bool test_label_status;
     bool run_pid;
@@ -41,7 +41,7 @@ public:
     bool max_load_error;
     u8 breaking_case;
     u8 relay_auto_man;
-    //u8 relay_start_stop;
+    u8 relay_start_stop;
     double dac_value;
     float load_value;
     float filtered_load_value;
@@ -55,7 +55,7 @@ public:
     float peak_load;
     float peak_stress;
     float current_pace_rate;
-    //bool step_response_first_in;
+    bool step_response_first_in;
     bool communication_established;
     bool PID_first_in;
 

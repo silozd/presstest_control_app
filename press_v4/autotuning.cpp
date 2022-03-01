@@ -1,11 +1,11 @@
 #include "pressapp.h"
 
-void PressApp::step_response_handle(void){      //BURDA
+void PressApp::step_response_handle(void){
     qDebug()<<"step_response_status"<<step_response_status;
     if(_start_com && ui->pushButton_step_response){
         if(step_response_status == false && test_status==TEST_STOPPED){
             step_response_status = true;
-            step_response_first_in = true;
+            auxthread->step_response_first_in = true;
             ui->pushButton_startTest->clicked();    // sila
             ui->pushButton_step_response->setText("Autotuning Durdur");
 //            test_status = TEST_RUNNING;           // sila
@@ -24,7 +24,7 @@ void PressApp::step_response_handle(void){      //BURDA
             ui->pushButton_refreshTest->clicked();
             step_response_status = false;
             ui->pushButton_step_response->setText("Autotuning Başla");
-            relay_start_stop = RELAY_OFF;
+            auxthread->relay_start_stop = RELAY_OFF;
             record_results(real_time.test_no);    // TODO : autotune kaydetsin mi?
             ui->toolBox_app->setEnabled(1);
             ui->wdg_ReadWrite->setEnabled(1);
@@ -56,8 +56,8 @@ void aux_thread::step_response(void){
     double T_halt = 0;
     u8 checker;
 
-    if(pressApp->step_response_first_in){
-        //step_response_first_in = false;
+    if(step_response_first_in){
+        step_response_first_in = false;
 
         step_tmp = 0;
         average_first_step = 0;
@@ -77,7 +77,7 @@ void aux_thread::step_response(void){
 
     switch (step_tmp) {
     case 0:
-        pressApp->relay_start_stop = RELAY_ON;
+        relay_start_stop = RELAY_ON;
 //        dac_value = pressApp->dac_voltage_to_raw((double)0.1 * pressApp->ui->spinBox_start_speed_percentage->value());    // OPEN
         step_tmp++;
         break;

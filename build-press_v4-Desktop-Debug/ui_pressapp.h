@@ -509,10 +509,10 @@ public:
     QSpacerItem *verticalSpacer_15;
     QLabel *label_61;
     QSpacerItem *horizontalSpacer_5;
-    QButtonGroup *recraw_buttonGroup;
-    QButtonGroup *control_buttonGroup;
     QButtonGroup *settings_buttonGroup;
     QButtonGroup *frame_buttonGroup;
+    QButtonGroup *recraw_buttonGroup;
+    QButtonGroup *control_buttonGroup;
 
     void setupUi(QMainWindow *PressApp)
     {
@@ -2297,7 +2297,7 @@ public:
         toolBox_app->addItem(page_calib, QStringLiteral("Kalibrasyon"));
         page_pid = new QWidget();
         page_pid->setObjectName(QStringLiteral("page_pid"));
-        page_pid->setGeometry(QRect(0, 0, 370, 478));
+        page_pid->setGeometry(QRect(0, -160, 370, 478));
         gridLayout_17 = new QGridLayout(page_pid);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);
@@ -3481,7 +3481,7 @@ public:
 
         stackedWidget->setCurrentIndex(1);
         tabWidget_app->setCurrentIndex(0);
-        toolBox_app->setCurrentIndex(0);
+        toolBox_app->setCurrentIndex(5);
         stackedWidget_specimen->setCurrentIndex(0);
 
 
@@ -3677,8 +3677,8 @@ public:
 "H\304\261z", Q_NULLPTR));
         label_108->setText(QApplication::translate("PressApp", "Pid :", Q_NULLPTR));
         label_133->setText(QApplication::translate("PressApp", "Kp :", Q_NULLPTR));
-        label_141->setText(QApplication::translate("PressApp", "Switch\n"
-"Time", Q_NULLPTR));
+        label_141->setText(QApplication::translate("PressApp", "Bekleme\n"
+"S\303\274resi", Q_NULLPTR));
         label_110->setText(QApplication::translate("PressApp", "Ki :", Q_NULLPTR));
         label_109->setText(QApplication::translate("PressApp", "Kp :", Q_NULLPTR));
         label_111->setText(QApplication::translate("PressApp", "Kd :", Q_NULLPTR));

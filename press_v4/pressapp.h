@@ -281,9 +281,6 @@ public:
     };
     struct chan channel[2];
     u8 usart_signalmapper_no;
-    u8 relay_auto_man;
-    u8 relay_start_stop;
-    bool command_silencer;
     bool bad_calibration_file;
     QTimer *gain_cal_send_timer;
     bool device_opening;
@@ -304,7 +301,6 @@ public:
     QFile excel_file;
     double paving_stone_k;
     u8 test_status;
-    bool step_response_first_in;
     int signal_id;  // sila
     int step_res_clicked = 0;
 // //////////////////////////////////////////////////////////

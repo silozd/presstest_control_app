@@ -75,7 +75,7 @@ void PressApp::send_gains_and_cals(void){
     case 9:
         tmp = 0;
         gain_cal_send_timer->stop();
-        command_silencer = false;
+        auxthread->command_silencer = false;
         device_opening = false;
         break;
     }

@@ -390,7 +390,7 @@
                   <number>1</number>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>5</number>
                  </property>
                  <widget class="QWidget" name="page_specimen">
                   <property name="geometry">
@@ -2836,7 +2836,7 @@
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>0</y>
+                    <y>-160</y>
                     <width>370</width>
                     <height>478</height>
                    </rect>
@@ -2980,8 +2980,8 @@ Hız</string>
                    <item row="12" column="0">
                     <widget class="QLabel" name="label_141">
                      <property name="text">
-                      <string>Switch
-Time</string>
+                      <string>Bekleme
+Süresi</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -4638,9 +4638,9 @@ QPushButton:pressed {
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="recraw_buttonGroup"/>
-  <buttongroup name="control_buttonGroup"/>
   <buttongroup name="settings_buttonGroup"/>
   <buttongroup name="frame_buttonGroup"/>
+  <buttongroup name="recraw_buttonGroup"/>
+  <buttongroup name="control_buttonGroup"/>
  </buttongroups>
 </ui>

@@ -25,7 +25,7 @@ aux_thread::aux_thread(PressApp *master, QWidget *parent) :
     test_label_status = false;
     to_gui.hit = false;
     to_gui.test_finished = false;
-    pressApp->command_silencer = false;
+    command_silencer = false;
     load_value = 0;
     ch1_value = 0;
     ch2_value = 0;
@@ -34,8 +34,8 @@ aux_thread::aux_thread(PressApp *master, QWidget *parent) :
     max_load_error = true;
     run_pid = false;
     dac_value = 0;
-    pressApp->relay_auto_man = RELAY_ON;
-    pressApp->relay_start_stop = RELAY_OFF;
+    relay_auto_man = RELAY_ON;
+    relay_start_stop = RELAY_OFF;
     current_pace_rate = 0;
     PID_first_in = true;
     communication_established = false;
@@ -45,7 +45,7 @@ void aux_thread::fuzpid_thread_handler(void){
     static u8 counter = 0;
     static u8 bound = 5;
 
-    if(pressApp->command_silencer == false){
+    if(command_silencer == false){
         counter++;
         if(counter > bound){
             counter = 0;
@@ -153,7 +153,7 @@ void aux_thread::read_parameters(void){
             data_log << filtered_load_value << "\n";
             pace_log << load_value << "\n";
 #endif
-            if(pressApp->test_status == TEST_RUNNING && pressApp->relay_start_stop == RELAY_ON)
+            if(pressApp->test_status == TEST_RUNNING && relay_start_stop == RELAY_ON)
                     dac_value = pressApp->dac_voltage_to_raw((double)0.1 * pressApp->ui->spinBox_start_speed_percentage->value());
             if((pressApp->test_status == TEST_RUNNING)||(pressApp->test_status == TEST_PAUSED)){
                 if(plot_graphics == false){
@@ -216,7 +216,7 @@ void aux_thread::read_parameters(void){
                 run_pid = false;
                 dac_value = 0;
                 plot_graphics = false;
-                pressApp->relay_start_stop = RELAY_OFF;
+                relay_start_stop = RELAY_OFF;
                 PID_first_in = true;
 
                 if((pressApp->test_status == TEST_RUNNING)||(pressApp->test_status == TEST_PAUSED)){
@@ -327,7 +327,7 @@ void PressApp::command_sending_protection(void){
         break;
     case 3:
         command_send_protection_wait_timer->stop();
-        command_silencer = false;
+        auxthread->command_silencer = false;
         tmp = 0;
         break;
     }
@@ -338,7 +338,7 @@ void aux_thread::always_send(void){
 
     send_data_order(data.data(),"CONV",0,3);
     data[4] = relay_auto_man;
-    data[5] = pressApp->relay_start_stop;
+    data[5] = relay_start_stop;
 
     data[6] = (((u32)dac_value) / 256) % 256;
     data[7] = (((u32)dac_value) / 1) % 256;
