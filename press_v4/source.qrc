@@ -32,5 +32,6 @@
         <file>specimen_img/kerb.png</file>
         <file>specimen_img/masonary.png</file>
         <file>specimen_img/pavingstone.png</file>
+        <file>template_1.png</file>
     </qresource>
 </RCC>

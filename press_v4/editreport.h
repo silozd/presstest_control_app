@@ -18,11 +18,7 @@ public:
     Ui::EditReport *ui;
     PressApp *pressApp;
 
-    int template_type;
-
 public slots:
-
-    void on_pushButton_save_clicked();
 
 private:
 };

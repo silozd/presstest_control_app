@@ -254,7 +254,7 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
     case _PDF:{
         ui->pushButton_editFile->setEnabled(1);
         ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255);");
-        switch (editReport->template_type) {
+        switch (template_type) {
         case TEMPLATE_1:
             print_template1();
             break;
@@ -351,12 +351,20 @@ void PressApp::preview_results_file(QString fileName)
     Poppler::Document* doc = Poppler::Document::load(fileName);
     Poppler::Page* pdfPage = doc->page(0);  // Document starts at page 0
     QImage image2;
-    image2 = pdfPage->renderToImage(72.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
-    if(editReport->ui->comboBox_template->currentIndex() == 1)
-        image2 = pdfPage->renderToImage(100.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
-    else if(editReport->ui->comboBox_template->currentIndex() == 2)
-        image2 = pdfPage->renderToImage(150.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
 
+    // BURDA : comboboxla interaktif bağla. save butonunu da
+//    if(editReport->ui->comboBox_template->currentIndex() == 0){
+//        template_type = TEMPLATE_1;
+        image2 = pdfPage->renderToImage(72.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());      // open
+//    }
+//    if(editReport->ui->comboBox_template->currentIndex() == 1){
+//        template_type = TEMPLATE_2;
+//        image2 = pdfPage->renderToImage(100.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
+//    }
+//    else if(editReport->ui->comboBox_template->currentIndex() == 2){
+//        template_type = TEMPLATE_3;
+//        image2 = pdfPage->renderToImage(150.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
+//    }
     if (!doc || doc->isLocked()) {
       delete doc;
       return;
@@ -365,7 +373,8 @@ void PressApp::preview_results_file(QString fileName)
     if (pdfPage == 0) return;
     if (image2.isNull()) return;
 
-    editReport->ui->imageLabel->setPixmap(QPixmap::fromImage(image2));
+    //editReport->ui->imageLabel->setPixmap(QPixmap::fromImage(image2));    // open
+    editReport->ui->imageLabel->setPixmap(QPixmap(":/template_1.png"));
     delete pdfPage;
     delete doc;
 }

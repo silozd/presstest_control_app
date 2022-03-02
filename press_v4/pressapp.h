@@ -247,6 +247,8 @@ public:
 
     QPrinter printer;
 
+    int template_type;
+
     int ScreenWidth, ScreenHeight;
     int Fontsize;
     int hr;
