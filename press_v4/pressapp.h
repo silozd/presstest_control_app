@@ -418,6 +418,7 @@ private slots:
     void on_pushButton_printResults_clicked();
     void on_pushButton_openFile_view_clicked();
     void on_pushButton_editFile_clicked();
+    void print_template1();
 
 };
 
