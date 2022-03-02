@@ -5,7 +5,7 @@
 #include <QPdfWriter>
 #include <poppler/qt5/poppler-qt5.h>
 
-void PressApp::record_results(int no)       // BURDA : pdf rapor yap
+void PressApp::record_results(int no)
 {
     test_no = no;
     ui->label_test_finish_time->setText(finish_time);
@@ -15,6 +15,7 @@ void PressApp::record_results(int no)       // BURDA : pdf rapor yap
     ui->label_current_test_no->setText(QString::number(real_time.test_no));
     ui->label_test_test_type->setText(test_type_name);
     ui->label_test_specimen_type->setText(specimen_name);
+    ui->label_specAge->setText(QString::number(ui->spinBox_specAge->value()));
     ui->label_test_dimensions->setText(dimensions);
     ui->label_test_area->setText(QString::number(real_time.area) + QString(" %1").arg(length_unit) + "2");
     if(ui->label_test_paving_stone_fpl->isHidden() == false){
@@ -109,25 +110,70 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform); painter.begin(&printer);
         QFont police(editReport->ui->comboBox_3->currentText(),30);
         QFontMetrics fontmetric = painter.fontMetrics();
-        int h_label = fontmetric.width("TEST RESULTS");
-
+        QString header;
+        QString testName;
+        header = ui->lineEdit_company->text();                    // TODO
+        if(header.isEmpty())
+            header = "DENEY RAPORU";
+        testName = ui->lineEdit_testName->text();     // TODO
+        if(testName.isEmpty())
+            testName = dimensions+" "+specimen_name+" "+test_type_name+" Deneyi";
+        int h_label = fontmetric.width(header);
+        int t_label = fontmetric.width(testName);
         int y = printer.pageRect().y();
-        int x = y;
+        int x = y/1.5;
+        QStyleOptionViewItem option;
+        QModelIndex index;
+        QRect rect;     // header rect
+        painter.fillRect(option.rect, option.palette.highlight());
+        double factor ;//= double(value)/100.0;
+        QLineF line(x,y,9000,700);
+
         painter.setPen(Qt::black);
-        painter.drawText(printer.width()/2 - h_label/2, 50, "TEST RESULTS");
-        painter.drawText( x, y, ui->lineEdit_fileName->text() + "\n");
-        painter.drawText( x, 2*y, "Test Start Date :     " + ui->label_test_start_date->text() + "\n");
-        painter.drawText( x, 3*y, "Test No :     " + ui->label_test_no->text() + "\n");
-        painter.drawText( x, 4*y, "Line 1 :     " + ui->lineEdit_1->text() + "\n");
-        painter.drawText( x, 5*y, "Test Start Date :     " + ui->label_test_start_date->text() + "\n");
-        painter.drawText( x, 6*y, "Test Start Time :     " + ui->label_test_start_time->text() + "\n");
-        painter.drawText( x, 7*y, "Test Finish Time :     " + ui->label_test_finish_time->text() + "\n");
-        painter.drawText( x, 8*y, "Test Type :     " + ui->label_test_test_type->text() + "\n");
-        painter.drawText( x, 9*y, "Specimen :     " + ui->label_test_specimen_type->text() + "\n");
-        painter.drawText( x, 10*y, QString("Dimensions (%1) :     ").arg(length_unit) + ui->label_test_dimensions->text() + "\n");
-        painter.drawText( x, 11*y, QString("Area (%1%2) :     ").arg(length_unit,"2") + ui->label_test_area->text() + "\n");
-        painter.drawText( x, 12*y, QString("Peak Load (%1) :     ").arg(load_unit) + ui->label_test_peak_load->text() + "\n");
-        painter.drawText( x, 13*y, QString("Peak Stress (%1) :     ").arg(stress_unit) + ui->label_test_peak_stress->text() + "\n");
+        painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+y+50, int(1770*(option.rect.width()-5)), option.rect.height()-1050 ); // out table border
+        painter.drawRect( option.rect.x()+18*x, option.rect.y()+y, int(1750*(option.rect.width()-5)), option.rect.height()-950 ); // inner table border
+        painter.restore();
+
+        painter.drawText(printer.width()/2 - h_label/2, y/11, header);
+        painter.drawText(printer.width()/2 - t_label/2, y/1.5, testName);
+
+        painter.drawText( x/2, 2*y, "Deney Tarihi :     " + ui->label_test_start_date->text() + "\n");
+        painter.drawText( x/2, 2.5*y, "Deney Sayısı :     " + ui->label_test_no->text() + "\n");
+        painter.drawText( x/2, 3*y, "Deney Başlangıç ve Bitiş Saati :     " + ui->label_test_start_time->text() + " - " +ui->label_test_finish_time->text() + "\n");
+        painter.drawText( x/2, 3.5*y, "Deney Tipi :     " + ui->label_test_test_type->text() + "\n");
+        painter.drawText( x/2, 4*y, ui->lineEdit_addInfo->text() + ui->lineEdit_addInfo2->text() + "\n");
+        painter.drawRect( option.rect.x()+17*x, option.rect.y()+4.1*y, int(1350*(option.rect.width()-5)), option.rect.height() );
+
+        QString header2 = "Numune Detayları";
+        painter.drawText( x/8, 5.2*y, header2 + "\n");
+        painter.drawRect( option.rect.x()+3.3*x, option.rect.y()+5.3*y, int((header2.length()*20)*(option.rect.width()-5)), option.rect.height()-1 );
+        painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+7.3*y, int(1750*(option.rect.width()-5)), option.rect.height()-1300 ); // inner table border
+
+        painter.drawText( x/1.7,   6*y,    "Numune      \n");
+        painter.drawText( x/4,     6.9*y,   ui->label_test_specimen_type->text() + "\n");
+        painter.drawRect( option.rect.x()+3*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+        painter.drawText( x*4.2,   6*y,    "Yaş");
+        painter.drawText( x*3.4,   6.9*y,  ui->label_specAge->text() + "\n");
+        painter.drawRect( option.rect.x()+6*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+        painter.drawText( x*6.95,  5.9*y, "Boyut    \n");
+        painter.drawText( x*7,     6.2*y,  QString("(%1)").arg(length_unit) + "\n");
+        painter.drawText( x*6.5,   6.9*y, ui->label_test_dimensions->text() + "\n");
+        painter.drawRect( option.rect.x()+9*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+        painter.drawText( x*10.1,  5.9*y,  "Alan    \n");
+        painter.drawText( x*9.9,   6.2*y,  QString("(%1%2)").arg(length_unit,"2") + "\n");
+        painter.drawText( x*9.5,   6.9*y,  ui->label_test_area->text() + "\n");
+        painter.drawRect( option.rect.x()+12*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+        painter.drawText( x*12.7,  5.9*y,    "Tepe Yük  \n");
+        painter.drawText( x*13.1,  6.2*y,    QString("(%1)").arg(load_unit) + "\n");
+        painter.drawText( x*12.4,  6.9*y,  ui->label_test_peak_load->text() + "\n");
+        painter.drawRect( option.rect.x()+15*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+        painter.drawText( x*15.5,  5.9*y,    "Tepe Gerilim  \n");
+        painter.drawText( x*16.1,  6.2*y,    QString("(%1)").arg(stress_unit) + "\n");
+        painter.drawText( x*15.5,  6.9*y,  ui->label_test_peak_stress->text() + "\n");
+        painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+6.4*y, int(1750*(option.rect.width()-5)), option.rect.height()-1 );
+
+        qDebug()<<"printer.pageRect().y()"<<printer.pageRect().y()+"\n"<<"printer.width()"<<printer.width();
+        qDebug()<<option.rect.x()+2 << option.rect.y()+2 << int(200*(option.rect.width()-5)) << option.rect.height()-5;
 
         printer.newPage();
         const QImage image(QDir::currentPath()+"/22_şubat_deney_grafiği.pdf");
@@ -171,16 +217,18 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         QTextStream lines(&test_res);
         lines.setCodec("UTF-8");
         lines << QString("\nTEST RESULTS \n");
-        lines << QString("Line_1 :") << ui->lineEdit_1->text() << "\n";
-        lines << QString("Line_2 :") << ui->lineEdit_2->text() << "\n";
-    //    lines << trUtf8("User :") << ui->lineEdit_3->text() << "\n";      // OPEN
+        lines << QString("Company :") << ui->lineEdit_company->text() << "\n";
+        lines << QString("Test Name :") << ui->lineEdit_testName->text() << "\n";
+        lines << QString("User :") << ui->lineEdit_user->text() << "\n";
         lines << QString("Test_No :") << ui->label_test_no->text() << "\n";
         lines << QString("Test_Start_Date :") << ui->label_test_start_date->text() << "\n";
         lines << QString("Test_Start_Time :") << ui->label_test_start_time->text() << "\n";
         lines << QString("Test_Finish_Time :") << ui->label_test_finish_time->text() << "\n";
         lines << QString("Test_Type :") << ui->label_test_test_type->text() << "\n";
         lines << QString("Specimen :") << ui->label_test_specimen_type->text() << "\n";
+        lines << QString(ui->lineEdit_addInfo->text()) << ui->lineEdit_addInfo2->text() << "\n";
         lines << QString("Dimensions_(%1) :").arg(length_unit) << ui->label_test_dimensions->text() << "\n";
+        lines << QString("Age :") << ui->label_specAge->text() << "\n";
         lines << QString("Area_(%1%2) :").arg(length_unit,"2") << ui->label_test_area->text() << "\n";
         lines << QString("Peak_Load_(%1) :").arg(load_unit) << ui->label_test_peak_load->text() << "\n";
         lines << QString("Peak_Stress_(%1) :").arg(stress_unit) << ui->label_test_peak_stress->text() << "\n";

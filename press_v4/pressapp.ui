@@ -301,7 +301,7 @@
            <string notr="true"/>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="tab_test">
            <attribute name="title">
@@ -390,73 +390,25 @@
                   <number>1</number>
                  </property>
                  <property name="currentIndex">
-                  <number>5</number>
+                  <number>0</number>
                  </property>
                  <widget class="QWidget" name="page_specimen">
                   <property name="geometry">
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>384</width>
-                    <height>318</height>
+                    <width>370</width>
+                    <height>323</height>
                    </rect>
                   </property>
                   <attribute name="label">
                    <string>Deney - Numune Tipi</string>
                   </attribute>
-                  <layout class="QGridLayout" name="gridLayout_7" rowstretch="1,1,1,2,1" columnstretch="1,1">
+                  <layout class="QGridLayout" name="gridLayout_7" rowstretch="1,1,1,2,1,0" columnstretch="1,1">
                    <property name="horizontalSpacing">
                     <number>16</number>
                    </property>
-                   <item row="4" column="0">
-                    <widget class="QPushButton" name="btn_okSpecimen">
-                     <property name="cursor">
-                      <cursorShape>PointingHandCursor</cursorShape>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QComboBox" name="combo_testType">
-                     <property name="cursor">
-                      <cursorShape>PointingHandCursor</cursorShape>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QComboBox" name="comboBox_specimen">
-                     <property name="cursor">
-                      <cursorShape>PointingHandCursor</cursorShape>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_13">
-                     <property name="text">
-                      <string>Numune Tipi :</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="4" column="1">
-                    <widget class="QPushButton" name="pushButton_tare_load">
-                     <property name="cursor">
-                      <cursorShape>PointingHandCursor</cursorShape>
-                     </property>
-                     <property name="text">
-                      <string>Dara</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_12">
-                     <property name="text">
-                      <string>Deney Tipi :</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0" colspan="2">
+                   <item row="4" column="0" colspan="2">
                     <widget class="QWidget" name="wdg_specimen" native="true">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -501,7 +453,38 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="2" column="0" colspan="2">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_12">
+                     <property name="text">
+                      <string>Deney Tipi :</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_13">
+                     <property name="text">
+                      <string>Numune Tipi :</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QPushButton" name="pushButton_tare_load">
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="text">
+                      <string>Dara</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="comboBox_specimen">
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0" colspan="2">
                     <widget class="QStackedWidget" name="stackedWidget_specimen">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -1330,6 +1313,33 @@
                      </widget>
                     </widget>
                    </item>
+                   <item row="5" column="0">
+                    <widget class="QPushButton" name="btn_okSpecimen">
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QComboBox" name="combo_testType">
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_52">
+                     <property name="text">
+                      <string>Numune Yaşı :</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QSpinBox" name="spinBox_specAge"/>
+                   </item>
                   </layout>
                  </widget>
                  <widget class="QWidget" name="page_param">
@@ -1369,7 +1379,7 @@
                       <property name="geometry">
                        <rect>
                         <x>0</x>
-                        <y>0</y>
+                        <y>-279</y>
                         <width>368</width>
                         <height>595</height>
                        </rect>
@@ -2836,7 +2846,7 @@
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-160</y>
+                    <y>0</y>
                     <width>370</width>
                     <height>478</height>
                    </rect>
@@ -4053,62 +4063,18 @@ QPushButton:pressed {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>459</width>
-                 <height>613</height>
+                 <width>445</width>
+                 <height>678</height>
                 </rect>
                </property>
-               <layout class="QGridLayout" name="gridLayout_16" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="1,2,1">
+               <layout class="QGridLayout" name="gridLayout_16" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="1,2,1">
                 <property name="horizontalSpacing">
                  <number>12</number>
                 </property>
                 <property name="verticalSpacing">
                  <number>18</number>
                 </property>
-                <item row="13" column="1">
-                 <widget class="QLabel" name="label_test_dimensions">
-                  <property name="cursor">
-                   <cursorShape>ArrowCursor</cursorShape>
-                  </property>
-                  <property name="text">
-                   <string>-</string>
-                  </property>
-                  <property name="indent">
-                   <number>9</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="0">
-                 <widget class="QLabel" name="txt_peak_load">
-                  <property name="text">
-                   <string>Yük :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="9" column="0">
-                 <widget class="QLabel" name="label_88">
-                  <property name="text">
-                   <string>Deney No :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
-                 <widget class="QLabel" name="label_80">
-                  <property name="text">
-                   <string>Line 2 :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="12" column="0">
-                 <widget class="QLabel" name="label_99">
-                  <property name="text">
-                   <string>Numune Tipi :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="lineEdit_1"/>
-                </item>
-                <item row="10" column="1">
+                <item row="11" column="1">
                  <widget class="QLabel" name="label_current_test_no">
                   <property name="cursor">
                    <cursorShape>ArrowCursor</cursorShape>
@@ -4121,34 +4087,7 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="0">
-                 <widget class="QLabel" name="label_81">
-                  <property name="text">
-                   <string>Deney Baş. Tarihi :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="8" column="0">
-                 <widget class="QLabel" name="txt_paving_stone_fpl">
-                  <property name="text">
-                   <string>P/L :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="6" column="1">
-                 <widget class="QLabel" name="label_test_peak_stress">
-                  <property name="cursor">
-                   <cursorShape>ArrowCursor</cursorShape>
-                  </property>
-                  <property name="text">
-                   <string>-</string>
-                  </property>
-                  <property name="indent">
-                   <number>9</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1">
+                <item row="4" column="1">
                  <widget class="QLabel" name="label_test_start_date">
                   <property name="cursor">
                    <cursorShape>ArrowCursor</cursorShape>
@@ -4161,11 +4100,22 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="12" column="1">
-                 <widget class="QLabel" name="label_test_specimen_type">
-                  <property name="cursor">
-                   <cursorShape>ArrowCursor</cursorShape>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_82">
+                  <property name="text">
+                   <string>Deney Baş. Saati :</string>
                   </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_81">
+                  <property name="text">
+                   <string>Deney Baş. Tarihi :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="1">
+                 <widget class="QLabel" name="label_test_paving_stone_fpl">
                   <property name="text">
                    <string>-</string>
                   </property>
@@ -4174,33 +4124,17 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="1">
-                 <widget class="QLabel" name="label_test_start_time">
-                  <property name="cursor">
-                   <cursorShape>ArrowCursor</cursorShape>
-                  </property>
+                <item row="10" column="0">
+                 <widget class="QLabel" name="label_88">
                   <property name="text">
-                   <string>-</string>
-                  </property>
-                  <property name="indent">
-                   <number>9</number>
+                   <string>Deney No :</string>
                   </property>
                  </widget>
                 </item>
-                <item row="11" column="1">
-                 <widget class="QLabel" name="label_test_test_type">
-                  <property name="cursor">
-                   <cursorShape>ArrowCursor</cursorShape>
-                  </property>
-                  <property name="text">
-                   <string>-</string>
-                  </property>
-                  <property name="indent">
-                   <number>9</number>
-                  </property>
-                 </widget>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="lineEdit_company"/>
                 </item>
-                <item row="5" column="1">
+                <item row="6" column="1">
                  <widget class="QLabel" name="label_test_finish_time">
                   <property name="cursor">
                    <cursorShape>ArrowCursor</cursorShape>
@@ -4213,14 +4147,30 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="10" column="0">
-                 <widget class="QLabel" name="label_95">
+                <item row="15" column="0">
+                 <widget class="QLabel" name="txt_test_dimensions">
                   <property name="text">
-                   <string>Current Deney No :</string>
+                   <string>Boyutlar :</string>
                   </property>
                  </widget>
                 </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="lineEdit_testName"/>
+                </item>
                 <item row="7" column="1">
+                 <widget class="QLabel" name="label_test_peak_stress">
+                  <property name="cursor">
+                   <cursorShape>ArrowCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="indent">
+                   <number>9</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
                  <widget class="QLabel" name="label_test_peak_load">
                   <property name="cursor">
                    <cursorShape>ArrowCursor</cursorShape>
@@ -4233,15 +4183,18 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0">
-                 <widget class="QLabel" name="label_82">
+                <item row="16" column="0">
+                 <widget class="QLabel" name="txt_test_area">
                   <property name="text">
-                   <string>Deney Baş. Saati :</string>
+                   <string>Alan :</string>
                   </property>
                  </widget>
                 </item>
-                <item row="8" column="1">
-                 <widget class="QLabel" name="label_test_paving_stone_fpl">
+                <item row="12" column="1">
+                 <widget class="QLabel" name="label_test_test_type">
+                  <property name="cursor">
+                   <cursorShape>ArrowCursor</cursorShape>
+                  </property>
                   <property name="text">
                    <string>-</string>
                   </property>
@@ -4250,7 +4203,44 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="9" column="1">
+                <item row="11" column="0">
+                 <widget class="QLabel" name="label_95">
+                  <property name="text">
+                   <string>Current Deney No :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QLabel" name="label_83">
+                  <property name="text">
+                   <string>Deney Bitiş Saati :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="16" column="1">
+                 <widget class="QLabel" name="label_test_area">
+                  <property name="cursor">
+                   <cursorShape>ArrowCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="indent">
+                   <number>9</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="txt_peak_stress">
+                  <property name="text">
+                   <string>Tepe Gerilim :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="lineEdit_fileName"/>
+                </item>
+                <item row="10" column="1">
                  <widget class="QLabel" name="label_test_no">
                   <property name="cursor">
                    <cursorShape>ArrowCursor</cursorShape>
@@ -4263,40 +4253,6 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="1">
-                 <widget class="QLineEdit" name="lineEdit_2"/>
-                </item>
-                <item row="11" column="0">
-                 <widget class="QLabel" name="txt_test_type">
-                  <property name="text">
-                   <string>Deney Tipi :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLineEdit" name="lineEdit_fileName"/>
-                </item>
-                <item row="6" column="0">
-                 <widget class="QLabel" name="txt_peak_stress">
-                  <property name="text">
-                   <string>Gerilim :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0">
-                 <widget class="QLabel" name="label_83">
-                  <property name="text">
-                   <string>Deney Bitiş Saati :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="13" column="0">
-                 <widget class="QLabel" name="txt_test_dimensions">
-                  <property name="text">
-                   <string>Boyutlar :</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_78">
                   <property name="text">
@@ -4304,15 +4260,79 @@ QPushButton:pressed {
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="lineEdit_addInfo2"/>
+                </item>
+                <item row="2" column="0">
                  <widget class="QLabel" name="label_79">
                   <property name="text">
-                   <string>Line 1 :</string>
+                   <string>Deney Adı :</string>
                   </property>
                  </widget>
                 </item>
-                <item row="14" column="1">
-                 <widget class="QLabel" name="label_test_area">
+                <item row="12" column="0">
+                 <widget class="QLabel" name="txt_test_type">
+                  <property name="text">
+                   <string>Deney Tipi :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_43">
+                  <property name="text">
+                   <string>Firma Adı :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLabel" name="label_test_start_time">
+                  <property name="cursor">
+                   <cursorShape>ArrowCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="indent">
+                   <number>9</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="13" column="0">
+                 <widget class="QLabel" name="label_99">
+                  <property name="text">
+                   <string>Numune Tipi :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLineEdit" name="lineEdit_addInfo">
+                  <property name="text">
+                   <string>Ek Bilgi :                </string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="13" column="1">
+                 <widget class="QLabel" name="label_test_specimen_type">
+                  <property name="cursor">
+                   <cursorShape>ArrowCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="indent">
+                   <number>9</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QLabel" name="txt_peak_load">
+                  <property name="text">
+                   <string>Tepe Yük :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="15" column="1">
+                 <widget class="QLabel" name="label_test_dimensions">
                   <property name="cursor">
                    <cursorShape>ArrowCursor</cursorShape>
                   </property>
@@ -4337,10 +4357,27 @@ QPushButton:pressed {
                   </property>
                  </spacer>
                 </item>
-                <item row="14" column="0">
-                 <widget class="QLabel" name="txt_test_area">
+                <item row="9" column="0">
+                 <widget class="QLabel" name="txt_paving_stone_fpl">
                   <property name="text">
-                   <string>Alan :</string>
+                   <string>P/L :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="14" column="0">
+                 <widget class="QLabel" name="label_53">
+                  <property name="text">
+                   <string>Numune Yaşı :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="14" column="1">
+                 <widget class="QLabel" name="label_specAge">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="indent">
+                   <number>9</number>
                   </property>
                  </widget>
                 </item>
@@ -4607,8 +4644,8 @@ QPushButton:pressed {
   <tabstop>pushButton_load_factory_settings</tabstop>
   <tabstop>scrollArea_results</tabstop>
   <tabstop>lineEdit_fileName</tabstop>
-  <tabstop>lineEdit_1</tabstop>
-  <tabstop>lineEdit_2</tabstop>
+  <tabstop>lineEdit_testName</tabstop>
+  <tabstop>lineEdit_addInfo2</tabstop>
   <tabstop>comboBox_user</tabstop>
   <tabstop>lineEdit_oldPsw</tabstop>
   <tabstop>lineEdit_newPsw</tabstop>
@@ -4638,9 +4675,9 @@ QPushButton:pressed {
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="control_buttonGroup"/>
+  <buttongroup name="recraw_buttonGroup"/>
   <buttongroup name="settings_buttonGroup"/>
   <buttongroup name="frame_buttonGroup"/>
-  <buttongroup name="recraw_buttonGroup"/>
-  <buttongroup name="control_buttonGroup"/>
  </buttongroups>
 </ui>

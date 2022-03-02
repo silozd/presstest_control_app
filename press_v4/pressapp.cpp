@@ -539,13 +539,15 @@ void PressApp::print_test_results(){
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("START TIME : ")+ui->label_test_start_time->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("FINISH TIME : ")+ui->label_test_finish_time->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("NUMERATOR : ")+(ui->label_test_no->text())+QString("                         "))).toLatin1().data(),0,35);
-        send_data_order(data.data(),QString((QString("PRINT")+trUtf8("DOSYA : ")+ui->lineEdit_fileName->text()+QString("                         "))).toLatin1().data(),0,35);
-        send_data_order(data.data(),QString((QString("PRINT")+trUtf8("LINE 1 : ")+ui->lineEdit_1->text()+QString("                         "))).toLatin1().data(),0,35);
-        send_data_order(data.data(),QString((QString("PRINT")+trUtf8("LINE 2 : ")+ui->lineEdit_2->text()+QString("                         "))).toLatin1().data(),0,35);
+        send_data_order(data.data(),QString((QString("PRINT")+trUtf8("FILE : ")+ui->lineEdit_fileName->text()+QString("                         "))).toLatin1().data(),0,35);
+        send_data_order(data.data(),QString((QString("PRINT")+trUtf8("COMPANY : ")+ui->lineEdit_company->text()+QString("                         "))).toLatin1().data(),0,35);
+        send_data_order(data.data(),QString((QString("PRINT")+trUtf8("TEST NAME : ")+ui->lineEdit_testName->text()+QString("                         "))).toLatin1().data(),0,35);
+        send_data_order(data.data(),QString((QString("PRINT")+(ui->lineEdit_addInfo->text())+ui->lineEdit_addInfo2->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("USER : ")+ui->lineEdit_user->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("TEST TYPE : ")+ui->label_test_test_type->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("SPECIMEN : ")+ui->label_test_specimen_type->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("DIMENSIONS (%1) : ").arg(length_unit)+ui->label_test_dimensions->text()+QString("                         "))).toLatin1().data(),0,35);
+        send_data_order(data.data(),QString((QString("PRINT")+trUtf8("AGE : ") + ui->label_specAge->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("AREA (%1%2) : ").arg(length_unit,"2")+ui->label_test_area->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("PEAK LOAD (%1) : ").arg(load_unit)+ui->label_test_peak_load->text()+QString("                         "))).toLatin1().data(),0,35);
         send_data_order(data.data(),QString((QString("PRINT")+trUtf8("PEAK STRESS (%1) : ").arg(stress_unit)+ui->label_test_peak_stress->text()+QString("                         "))).toLatin1().data(),0,35);
