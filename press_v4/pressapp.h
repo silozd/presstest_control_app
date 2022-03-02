@@ -75,6 +75,10 @@
 #define CH_3    2
 #define CH_4    3
 
+#define TEMPLATE_1  0
+#define TEMPLATE_2  1
+#define TEMPLATE_3  2
+
 typedef unsigned char u8;
 typedef unsigned int u32;
 
@@ -240,6 +244,8 @@ public:
     QCPPlottableLegendItem *plItem;
 
     QGridLayout *grid_plotArea;
+
+    QPrinter printer;
 
     int ScreenWidth, ScreenHeight;
     int Fontsize;
@@ -419,6 +425,8 @@ private slots:
     void on_pushButton_openFile_view_clicked();
     void on_pushButton_editFile_clicked();
     void print_template1();
+    void print_template2();
+    void print_template3();
 
 };
 

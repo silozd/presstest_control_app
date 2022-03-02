@@ -111,21 +111,6 @@
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
-            <item>
-             <property name="text">
-              <string>Template 1</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Template 2</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Template 3</string>
-             </property>
-            </item>
            </widget>
           </item>
           <item row="0" column="0">

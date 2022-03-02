@@ -164,12 +164,6 @@ public:
         );
         pushButton_save->setText(QApplication::translate("EditReport", "Kaydet", Q_NULLPTR));
         label_2->setText(QApplication::translate("EditReport", "Boyut :", Q_NULLPTR));
-        comboBox_template->clear();
-        comboBox_template->insertItems(0, QStringList()
-         << QApplication::translate("EditReport", "Template 1", Q_NULLPTR)
-         << QApplication::translate("EditReport", "Template 2", Q_NULLPTR)
-         << QApplication::translate("EditReport", "Template 3", Q_NULLPTR)
-        );
         label->setText(QApplication::translate("EditReport", "Bi\303\247im :", Q_NULLPTR));
         pushButton_logo->setText(QApplication::translate("EditReport", "Logo Y\303\274kle", Q_NULLPTR));
         label_4->setText(QApplication::translate("EditReport", "Dil :", Q_NULLPTR));

@@ -63,11 +63,184 @@ void PressApp::record_results(int no)
             line << parameters[0].cal[3].real_val[i] << "," << parameters[0].cal[3].assigned_val[i] << ",";
     }
 }
+void PressApp::print_template1()
+{
+    QPainter painter(&printer);
+    painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform); painter.begin(&printer);
+    QFont police(editReport->ui->comboBox_3->currentText(),30);
+    QFontMetrics fontmetric = painter.fontMetrics();
+    QString header;
+    QString testName;
+    header = ui->lineEdit_company->text();                    // TODO
+    if(header.isEmpty())
+        header = "FİRMA ADI";
+    testName = ui->lineEdit_testName->text();     // TODO
+    if(testName.isEmpty())
+        //testName = dimensions+" "+specimen_name+" "+test_type_name+" Deneyi";
+        testName = "Deney Adı";
+    int h_label = fontmetric.width(header);
+    int t_label = fontmetric.width(testName);
+    int y = printer.pageRect().y();
+    int x = y/1.5;
+    QStyleOptionViewItem option;
+    QModelIndex index;
+    QRect rect;     // header rect
+    painter.fillRect(option.rect, option.palette.highlight());
+    double factor ;//= double(value)/100.0;
+    QLineF line(x,y,9000,700);
+
+    painter.setPen(Qt::black);
+    painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+y+50, int(1770*(option.rect.width()-5)), option.rect.height()-1050 ); // out table border
+    painter.drawRect( option.rect.x()+18*x, option.rect.y()+y, int(1750*(option.rect.width()-5)), option.rect.height()-950 ); // inner table border
+    painter.restore();
+
+    painter.drawText(printer.width()/2 - h_label/2, y/11, header);
+    painter.drawText(printer.width()/2 - t_label/2, y/1.5, testName);
+
+    painter.drawText( x/2, 2*y,   "Deney Tarihi");
+    painter.drawText( x*6, 2*y,   ":  " + ui->label_test_start_date->text() + "\n");
+    painter.drawText( x/2, 2.5*y, "Deney Sayısı");
+    painter.drawText( x*6, 2.5*y, ":  " + ui->label_test_no->text() + "\n");
+    painter.drawText( x/2, 3*y,   "Deney Başlangıç ve Bitiş Saati");
+    painter.drawText( x*6, 3*y,   ":  " + ui->label_test_start_time->text() + " - " +ui->label_test_finish_time->text() + "\n");
+    painter.drawText( x/2, 3.5*y, "Deney Tipi");
+    painter.drawText( x*6, 3.5*y, ":  " + ui->label_test_test_type->text() + "\n");
+    painter.drawText( x/2, 4*y,   ui->lineEdit_addInfo->text());
+    painter.drawText( x*6, 4*y,   ":  " + ui->lineEdit_addInfo2->text() + "\n");
+    painter.drawRect( option.rect.x()+17*x, option.rect.y()+4.1*y, int(1020*(option.rect.width()-5)), option.rect.height() );
+
+    QString header2 = "Numune Detayları";
+    painter.drawText( x-x*1.1, 5.2*y, header2 + "\n");
+    painter.drawRect( option.rect.x()+3*x, option.rect.y()+5.3*y, int((header2.length()*19)*(option.rect.width()-5)), option.rect.height()-1 );
+
+    painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+7.3*y, int(1750*(option.rect.width()-5)), option.rect.height()-1300 ); // inner table border
+    painter.drawText( x/1.7,   6*y,    "Numune      \n");
+    painter.drawText( x/4,     6.9*y,   ui->label_test_specimen_type->text() + "\n");
+    painter.drawRect( option.rect.x()+3*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+    painter.drawText( x*4.2,   6*y,    "Yaş");
+    painter.drawText( x*3.4,   6.9*y,  ui->label_specAge->text() + "\n");
+    painter.drawRect( option.rect.x()+6*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+    painter.drawText( x*6.95,  5.9*y, "Boyut    \n");
+    painter.drawText( x*7,     6.2*y,  QString("(%1)").arg(length_unit) + "\n");
+    painter.drawText( x*6.5,   6.9*y, ui->label_test_dimensions->text() + "\n");
+    painter.drawRect( option.rect.x()+9*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+    painter.drawText( x*10.1,  6*y,  "Alan    \n");
+    //painter.drawText( x*9.9,   6.2*y,  QString("(%1%2)").arg(length_unit,"2") + "\n");
+    painter.drawText( x*9.5,   6.9*y,  ui->label_test_area->text() + "\n");
+    painter.drawRect( option.rect.x()+12*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+    painter.drawText( x*12.7,  5.9*y,  "Tepe Yük  \n");
+    painter.drawText( x*13.1,  6.2*y,  QString("(%1)").arg(load_unit) + "\n");
+    painter.drawText( x*12.4,  6.9*y,  ui->label_test_peak_load->text() + "\n");
+    painter.drawRect( option.rect.x()+15*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+    painter.drawText( x*15.5,  5.9*y,  "Tepe Gerilim  \n");
+    painter.drawText( x*16.1,  6.2*y,  QString("(%1)").arg(stress_unit) + "\n");
+    painter.drawText( x*15.5,  6.9*y,  ui->label_test_peak_stress->text() + "\n");
+    painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+6.4*y, int(1750*(option.rect.width()-5)), option.rect.height()-1 );
+
+    painter.drawText( x/2, 8.5*y, "Sıcaklık");
+    painter.drawText( x*6, 8.5*y, ":  ");
+    painter.drawText( x/2, 9*y,   "Materyal");
+    painter.drawText( x*6, 9*y,   ":  ");
+    painter.drawText( x/2, 9.5*y, "Deney Teslimi");
+    painter.drawText( x*6, 9.5*y, ":  ");
+    painter.drawText( x/2, 10*y,  "Ek bilgi");
+    painter.drawText( x*6, 10*y, ":  ");
+    painter.drawRect( option.rect.x()+17*x, option.rect.y()+10.1*y, int(1020*(option.rect.width()-5)), option.rect.height() );
+
+    painter.drawText( x/2, 13*y,  "Test Teknikeri :     \n");
+    painter.drawText( x/2, 14*y,  "İmza :     \n");
+    painter.drawText( x*17,17.5*y,  "1");
+
+    qDebug()<<"printer.pageRect().y()"<<printer.pageRect().y()+"\n"<<"printer.width()"<<printer.width();
+    qDebug()<<option.rect.x()+2 << option.rect.y()+2 << int(200*(option.rect.width()-5)) << option.rect.height()-5;
+
+    printer.newPage();
+    painter.drawText( 0,    y, QString::fromUtf8("Grafik"));
+    painter.drawText( x*17, y*17.5,  "2");
+
+    const QImage image(QDir::currentPath()+"/22_şubat_deney_grafiği.pdf");
+    const QPoint imageCoordinates(x,y*2);
+
+    const QImage image1(QDir::currentPath()+"/22_şubat_deneyi.pdf");
+    const QPoint imageCoordinates1(x*30,y*2);
+
+    painter.drawImage(imageCoordinates, image);
+    painter.drawImage(imageCoordinates1, image1);
+    //pdfWriter.newPage();
+
+    QPixmap pix(ui->wdg_plotArea->size());
+    QPainter painter1(&pix);
+    ui->wdg_plotArea->render(&painter);
+    painter.end();
+
+    painter1.begin(&printer);
+    double xscale = printer.pageRect().width() / double(pix.width());
+    double yscale = printer.pageRect().height() / double(pix.height());
+    double scale = qMin(xscale, yscale);
+    painter.translate(printer.paperRect().x() + printer.pageRect().width() / 2,
+                   printer.paperRect().y()*4 + printer.pageRect().height() / 2);
+    painter.scale(scale, scale);
+    painter.translate(-ui->wdg_plotArea->width() /2, -ui->wdg_plotArea->height() /2);
+    painter.drawPixmap(0, 0, pix);
+
+    painter1.end();
+}
+void PressApp::print_template2()
+{
+    QPainter painter(&printer);
+    painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform); painter.begin(&printer);
+    QFont police(editReport->ui->comboBox_3->currentText(),30);
+    QFontMetrics fontmetric = painter.fontMetrics();
+    QString header;
+    QString testName;
+    header = ui->lineEdit_company->text();                    // TODO
+    if(header.isEmpty())
+        header = "FİRMA ADI";
+    testName = ui->lineEdit_testName->text();     // TODO
+    if(testName.isEmpty())
+        //testName = dimensions+" "+specimen_name+" "+test_type_name+" Deneyi";
+        testName = "Deney Adı";
+    int h_label = fontmetric.width(header);
+    int t_label = fontmetric.width(testName);
+    int y = printer.pageRect().y();
+    int x = y/1.5;
+    QStyleOptionViewItem option;
+    QModelIndex index;
+    QRect rect;     // header rect
+    painter.fillRect(option.rect, option.palette.highlight());
+    double factor ;//= double(value)/100.0;
+    QLineF line(x,y,9000,700);
+
+    painter.setPen(Qt::black);
+    painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+y+50, int(1770*(option.rect.width()-5)), option.rect.height()-1050 ); // out table border
+    painter.drawRect( option.rect.x()+18*x, option.rect.y()+y, int(1750*(option.rect.width()-5)), option.rect.height()-950 ); // inner table border
+    painter.restore();
+
+    painter.drawText(printer.width()/2 - h_label/2, y/11, header);
+    painter.drawText(printer.width()/2 - t_label/2, y/1.5, testName);
+
+    painter.drawText( x/2, 2*y,   "Deney Tarihi");
+    painter.drawText( x*6, 2*y,   ":  " + ui->label_test_start_date->text() + "\n");
+    painter.drawText( x/2, 2.5*y, "Deney Sayısı");
+    painter.drawText( x*6, 2.5*y, ":  " + ui->label_test_no->text() + "\n");
+    painter.drawText( x/2, 3*y,   "Deney Başlangıç ve Bitiş Saati");
+    painter.drawText( x*6, 3*y,   ":  " + ui->label_test_start_time->text() + " - " +ui->label_test_finish_time->text() + "\n");
+    painter.drawText( x/2, 3.5*y, "Deney Tipi");
+    painter.drawText( x*6, 3.5*y, ":  " + ui->label_test_test_type->text() + "\n");
+    painter.drawText( x/2, 4*y,   ui->lineEdit_addInfo->text());
+    painter.drawText( x*6, 4*y,   ":  " + ui->lineEdit_addInfo2->text() + "\n");
+    painter.drawRect( option.rect.x()+17*x, option.rect.y()+4.1*y, int(1020*(option.rect.width()-5)), option.rect.height() );
+    painter.end();
+
+}
+void PressApp::print_template3()
+{
+
+}
 void PressApp::on_pushButton_saveResults_clicked()      /// Save results
 {
     results_saved = true;
     custom_file_loaded = false;
-    QPrinter printer(QPrinter::HighResolution);
     QString fileName = ui->lineEdit_fileName->text();
     QString path;
     QDir dir;
@@ -81,21 +254,34 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
     case _PDF:{
         ui->pushButton_editFile->setEnabled(1);
         ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255);");
+        switch (editReport->template_type) {
+        case TEMPLATE_1:
+            print_template1();
+            break;
+        case TEMPLATE_2:
+            print_template2();
+            break;
+        case TEMPLATE_3:
+            print_template3();
+            break;
+        default:
+            print_template1();
+            break;
+        }
+        printer.setResolution(QPrinter::HighResolution);
         printer.setOutputFormat(QPrinter::PdfFormat);
         printer.setPageSize(QPageSize(QPageSize::A4));
         printer.setOrientation(QPrinter::Portrait);
         printer.setPaperSize(QPrinter::A4);
         printer.setPageSize(QPrinter::A4);
         printer.setPageMargins(15,15,15,15,QPrinter::Millimeter);
-        if(ui->lineEdit_fileName->text().isEmpty()){
+        if(ui->lineEdit_fileName->text().isEmpty())
             res_fileName = QString("/test_%1").arg(test_no) + start_date_filename_arg;
-            res_fileName.append(".pdf");
-            printer.setOutputFileName(path + res_fileName);
-        } else {
+        else
             res_fileName = QString("/%1").arg(fileName);
-            res_fileName.append(".pdf");
-            printer.setOutputFileName(path + res_fileName);
-        }
+        res_fileName.append(".pdf");
+        printer.setOutputFileName(path + res_fileName);
+
 //        //ui->btn_openPrintView->setEnabled(1);     // TODO
         qDebug() << "Page px :" << printer.pageRect() << printer.paperRect();
         qDebug() << "Page mm :" << printer.pageRect(QPrinter::Millimeter) << printer.paperRect(QPrinter::Millimeter);
@@ -105,128 +291,6 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         printer.getPageMargins(&left, &top, &right, &bottom, QPrinter::Millimeter);
         qDebug() << "Marges mm :" << left << top << right << bottom;
 
-        // TEMPLATE 1:      /////////////////////////////       // BURDA : pdf rapor yap
-        QPainter painter(&printer);
-        painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform); painter.begin(&printer);
-        QFont police(editReport->ui->comboBox_3->currentText(),30);
-        QFontMetrics fontmetric = painter.fontMetrics();
-        QString header;
-        QString testName;
-        header = ui->lineEdit_company->text();                    // TODO
-        if(header.isEmpty())
-            header = "FİRMA ADI";
-        testName = ui->lineEdit_testName->text();     // TODO
-        if(testName.isEmpty())
-            //testName = dimensions+" "+specimen_name+" "+test_type_name+" Deneyi";
-            testName = "Deney Adı";
-        int h_label = fontmetric.width(header);
-        int t_label = fontmetric.width(testName);
-        int y = printer.pageRect().y();
-        int x = y/1.5;
-        QStyleOptionViewItem option;
-        QModelIndex index;
-        QRect rect;     // header rect
-        painter.fillRect(option.rect, option.palette.highlight());
-        double factor ;//= double(value)/100.0;
-        QLineF line(x,y,9000,700);
-
-        painter.setPen(Qt::black);
-        painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+y+50, int(1770*(option.rect.width()-5)), option.rect.height()-1050 ); // out table border
-        painter.drawRect( option.rect.x()+18*x, option.rect.y()+y, int(1750*(option.rect.width()-5)), option.rect.height()-950 ); // inner table border
-        painter.restore();
-
-        painter.drawText(printer.width()/2 - h_label/2, y/11, header);
-        painter.drawText(printer.width()/2 - t_label/2, y/1.5, testName);
-
-        painter.drawText( x/2, 2*y,   "Deney Tarihi");
-        painter.drawText( x*6, 2*y,   ":  " + ui->label_test_start_date->text() + "\n");
-        painter.drawText( x/2, 2.5*y, "Deney Sayısı");
-        painter.drawText( x*6, 2.5*y, ":  " + ui->label_test_no->text() + "\n");
-        painter.drawText( x/2, 3*y,   "Deney Başlangıç ve Bitiş Saati");
-        painter.drawText( x*6, 3*y,   ":  " + ui->label_test_start_time->text() + " - " +ui->label_test_finish_time->text() + "\n");
-        painter.drawText( x/2, 3.5*y, "Deney Tipi");
-        painter.drawText( x*6, 3.5*y, ":  " + ui->label_test_test_type->text() + "\n");
-        painter.drawText( x/2, 4*y,   ui->lineEdit_addInfo->text());
-        painter.drawText( x*6, 4*y,   ":  " + ui->lineEdit_addInfo2->text() + "\n");
-        painter.drawRect( option.rect.x()+17*x, option.rect.y()+4.1*y, int(1020*(option.rect.width()-5)), option.rect.height() );
-
-        QString header2 = "Numune Detayları";
-        painter.drawText( x-x*1.1, 5.2*y, header2 + "\n");
-        painter.drawRect( option.rect.x()+3*x, option.rect.y()+5.3*y, int((header2.length()*19)*(option.rect.width()-5)), option.rect.height()-1 );
-
-        painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+7.3*y, int(1750*(option.rect.width()-5)), option.rect.height()-1300 ); // inner table border
-        painter.drawText( x/1.7,   6*y,    "Numune      \n");
-        painter.drawText( x/4,     6.9*y,   ui->label_test_specimen_type->text() + "\n");
-        painter.drawRect( option.rect.x()+3*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-        painter.drawText( x*4.2,   6*y,    "Yaş");
-        painter.drawText( x*3.4,   6.9*y,  ui->label_specAge->text() + "\n");
-        painter.drawRect( option.rect.x()+6*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-        painter.drawText( x*6.95,  5.9*y, "Boyut    \n");
-        painter.drawText( x*7,     6.2*y,  QString("(%1)").arg(length_unit) + "\n");
-        painter.drawText( x*6.5,   6.9*y, ui->label_test_dimensions->text() + "\n");
-        painter.drawRect( option.rect.x()+9*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-        painter.drawText( x*10.1,  5.9*y,  "Alan    \n");
-        painter.drawText( x*9.9,   6.2*y,  QString("(%1%2)").arg(length_unit,"2") + "\n");
-        painter.drawText( x*9.5,   6.9*y,  ui->label_test_area->text() + "\n");
-        painter.drawRect( option.rect.x()+12*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-        painter.drawText( x*12.7,  5.9*y,  "Tepe Yük  \n");
-        painter.drawText( x*13.1,  6.2*y,  QString("(%1)").arg(load_unit) + "\n");
-        painter.drawText( x*12.4,  6.9*y,  ui->label_test_peak_load->text() + "\n");
-        painter.drawRect( option.rect.x()+15*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-        painter.drawText( x*15.5,  5.9*y,  "Tepe Gerilim  \n");
-        painter.drawText( x*16.1,  6.2*y,  QString("(%1)").arg(stress_unit) + "\n");
-        painter.drawText( x*15.5,  6.9*y,  ui->label_test_peak_stress->text() + "\n");
-        painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+6.4*y, int(1750*(option.rect.width()-5)), option.rect.height()-1 );
-
-        painter.drawText( x/2, 8.5*y, "Sıcaklık");
-        painter.drawText( x*6, 8.5*y, ":  ");
-        painter.drawText( x/2, 9*y,   "Materyal");
-        painter.drawText( x*6, 9*y,   ":  ");
-        painter.drawText( x/2, 9.5*y, "Deney Teslimi");
-        painter.drawText( x*6, 9.5*y, ":  ");
-        painter.drawText( x/2, 10*y,  "Ek bilgi");
-        painter.drawText( x*6, 10*y, ":  ");
-        painter.drawRect( option.rect.x()+17*x, option.rect.y()+10.1*y, int(1020*(option.rect.width()-5)), option.rect.height() );
-
-        painter.drawText( x/2, 13*y,  "Test Teknikeri :     \n");
-        painter.drawText( x/2, 14*y,  "İmza :     \n");
-        painter.drawText( x*17,17.5*y,  "1");
-
-
-        qDebug()<<"printer.pageRect().y()"<<printer.pageRect().y()+"\n"<<"printer.width()"<<printer.width();
-        qDebug()<<option.rect.x()+2 << option.rect.y()+2 << int(200*(option.rect.width()-5)) << option.rect.height()-5;
-
-        printer.newPage();
-        painter.drawText( 0,    y, QString::fromUtf8("Grafik"));
-        painter.drawText( x*17, y*17.5,  "2");
-
-        const QImage image(QDir::currentPath()+"/22_şubat_deney_grafiği.pdf");
-        const QPoint imageCoordinates(x,y*2);
-
-        const QImage image1(QDir::currentPath()+"/22_şubat_deneyi.pdf");
-        const QPoint imageCoordinates1(x*30,y*2);
-
-        painter.drawImage(imageCoordinates, image);
-        painter.drawImage(imageCoordinates1, image1);
-        //pdfWriter.newPage();
-
-        QPixmap pix(ui->wdg_plotArea->size());
-        QPainter painter1(&pix);
-        ui->wdg_plotArea->render(&painter);
-        painter.end();
-
-        painter1.begin(&printer);
-        double xscale = printer.pageRect().width() / double(pix.width());
-        double yscale = printer.pageRect().height() / double(pix.height());
-        double scale = qMin(xscale, yscale);
-        painter.translate(printer.paperRect().x() + printer.pageRect().width() / 2,
-                       printer.paperRect().y()*4 + printer.pageRect().height() / 2);
-        painter.scale(scale, scale);
-        painter.translate(-ui->wdg_plotArea->width() /2, -ui->wdg_plotArea->height() /2);
-        painter.drawPixmap(0, 0, pix);
-
-
-        painter1.end();
         break;
     }
     case _TXT:
@@ -286,7 +350,12 @@ void PressApp::preview_results_file(QString fileName)
 
     Poppler::Document* doc = Poppler::Document::load(fileName);
     Poppler::Page* pdfPage = doc->page(0);  // Document starts at page 0
-    QImage image2 = pdfPage->renderToImage(72.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
+    QImage image2;
+    image2 = pdfPage->renderToImage(72.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
+    if(editReport->ui->comboBox_template->currentIndex() == 1)
+        image2 = pdfPage->renderToImage(100.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
+    else if(editReport->ui->comboBox_template->currentIndex() == 2)
+        image2 = pdfPage->renderToImage(150.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
 
     if (!doc || doc->isLocked()) {
       delete doc;

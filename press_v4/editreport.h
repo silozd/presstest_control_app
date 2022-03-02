@@ -3,10 +3,6 @@
 
 #include <QDialog>
 
-#define TEMPLATE_1  0
-#define TEMPLATE_2  1
-#define TEMPLATE_3  2
-
 namespace Ui {
 class EditReport;
 }
@@ -24,7 +20,7 @@ public:
 
     int template_type;
 
-private slots:
+public slots:
 
     void on_pushButton_save_clicked();
 
