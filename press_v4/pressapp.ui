@@ -301,7 +301,7 @@
            <string notr="true"/>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="tab_test">
            <attribute name="title">
@@ -1347,8 +1347,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>384</width>
-                    <height>318</height>
+                    <width>86</width>
+                    <height>70</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -1380,7 +1380,7 @@
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>368</width>
+                        <width>339</width>
                         <height>595</height>
                        </rect>
                       </property>
@@ -1840,7 +1840,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>370</width>
+                    <width>221</width>
                     <height>440</height>
                    </rect>
                   </property>
@@ -2076,8 +2076,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>384</width>
-                    <height>318</height>
+                    <width>311</width>
+                    <height>217</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -2339,8 +2339,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>384</width>
-                    <height>318</height>
+                    <width>86</width>
+                    <height>70</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -2369,7 +2369,7 @@
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>368</width>
+                        <width>364</width>
                         <height>522</height>
                        </rect>
                       </property>
@@ -2847,7 +2847,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>370</width>
+                    <width>291</width>
                     <height>478</height>
                    </rect>
                   </property>
@@ -4434,16 +4434,6 @@ QPushButton:pressed {
                  </property>
                 </widget>
                </item>
-               <item row="4" column="3">
-                <widget class="QPushButton" name="pushButton_editFile">
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
-                 </property>
-                 <property name="text">
-                  <string>Gelişmiş Düzenleme</string>
-                 </property>
-                </widget>
-               </item>
                <item row="6" column="0">
                 <widget class="QPushButton" name="pushButton_saveResults">
                  <property name="cursor">
@@ -4524,6 +4514,16 @@ QPushButton:pressed {
                   </size>
                  </property>
                 </spacer>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="pushButton_editFile">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Gelişmiş Düzenleme</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </widget>

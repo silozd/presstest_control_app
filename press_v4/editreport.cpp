@@ -16,7 +16,7 @@ EditReport::EditReport(QWidget *parent) :
     //connect(ui->comboBox_template, SIGNAL(currentIndexChanged(int)), pressApp, SLOT(preview_results_file(QString)));
     //connect(ui->pushButton_save,   SIGNAL(clicked()), pressApp, SLOT());
 }
-void EditReport::on_comboBox_template_currentIndexChanged(int index)
+void EditReport::on_comboBox_template_currentIndexChanged(int index)         // BURDA : pdf resmi koy, burdan file adını okumuyor
 {
     QString file = QDir::currentPath() + "/a.pdf";
     Poppler::Document* pre_doc = Poppler::Document::load(file);
@@ -74,17 +74,18 @@ void EditReport::on_pushButton_save_clicked()
     switch (templ) {
     case 0:
         templ_type = 0;
+        pressApp->print_custom_PDF(0);
         break;
     case 1:
         templ_type = 1;
+        pressApp->print_custom_PDF(1);
         break;
     case 2:
         templ_type = 2;
         break;
     }
-    pressApp->print_custom_PDF();
 
-    //this->close();
+    this->close();
     qDebug()<<templ_type;
 }
 

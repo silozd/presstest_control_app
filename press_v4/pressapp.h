@@ -95,12 +95,16 @@ public:
     QCustomPlot *customPlot;
     EditReport *editReport;
     aux_thread *auxthread;
+    QString header_report;
+    QString testName_report;
 
     u8 templ_type;
     QPrinter pdf_printer;
     QString pdf_fileName;
     QString pdf_path;
-
+    QFont police;//(editReport->ui->comboBox_3->currentText(),30);
+    int h_label;
+    int t_label;
 
     struct _cal{
         double real_val[8];
@@ -362,7 +366,7 @@ public slots:
     void on_pushButton_printResults_clicked();
     void on_pushButton_openFile_view_clicked();
     void on_pushButton_editFile_clicked();
-    void print_custom_PDF();
+    void print_custom_PDF(int templ);
 
 private slots:
     void resize_window();

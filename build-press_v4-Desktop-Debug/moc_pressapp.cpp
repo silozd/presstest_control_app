@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_PressApp_t {
-    QByteArrayData data[138];
-    char stringdata0[2423];
+    QByteArrayData data[139];
+    char stringdata0[2429];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -96,79 +96,80 @@ QT_MOC_LITERAL(61, 783, 34), // "on_pushButton_printResults_cl..."
 QT_MOC_LITERAL(62, 818, 35), // "on_pushButton_openFile_view_c..."
 QT_MOC_LITERAL(63, 854, 30), // "on_pushButton_editFile_clicked"
 QT_MOC_LITERAL(64, 885, 16), // "print_custom_PDF"
-QT_MOC_LITERAL(65, 902, 13), // "resize_window"
-QT_MOC_LITERAL(66, 916, 10), // "start_comm"
-QT_MOC_LITERAL(67, 927, 8), // "end_comm"
-QT_MOC_LITERAL(68, 936, 25), // "periodic_response_handler"
-QT_MOC_LITERAL(69, 962, 8), // "datagram"
-QT_MOC_LITERAL(70, 971, 15), // "set_test_status"
-QT_MOC_LITERAL(71, 987, 31), // "read_parameters_from_the_device"
-QT_MOC_LITERAL(72, 1019, 30), // "write_parameters_to_the_device"
-QT_MOC_LITERAL(73, 1050, 29), // "write_specimens_to_the_device"
-QT_MOC_LITERAL(74, 1080, 30), // "read_specimens_from_the_device"
-QT_MOC_LITERAL(75, 1111, 29), // "on_toolBox_app_currentChanged"
-QT_MOC_LITERAL(76, 1141, 3), // "tab"
-QT_MOC_LITERAL(77, 1145, 27), // "on_pushButton_toApp_clicked"
-QT_MOC_LITERAL(78, 1173, 29), // "on_pushButton_connect_clicked"
-QT_MOC_LITERAL(79, 1203, 32), // "on_pushButton_cutconnect_clicked"
-QT_MOC_LITERAL(80, 1236, 30), // "on_pushButton_saveFile_clicked"
-QT_MOC_LITERAL(81, 1267, 30), // "on_pushButton_openFile_clicked"
-QT_MOC_LITERAL(82, 1298, 31), // "on_pushButton_startTest_clicked"
-QT_MOC_LITERAL(83, 1330, 31), // "on_pushButton_pauseTest_clicked"
-QT_MOC_LITERAL(84, 1362, 30), // "on_pushButton_stopTest_clicked"
-QT_MOC_LITERAL(85, 1393, 33), // "on_pushButton_refreshTest_cli..."
-QT_MOC_LITERAL(86, 1427, 25), // "on_btn_okSpecimen_clicked"
-QT_MOC_LITERAL(87, 1453, 21), // "on_btn_expand_clicked"
-QT_MOC_LITERAL(88, 1475, 37), // "on_pushButton_write_to_device..."
-QT_MOC_LITERAL(89, 1513, 38), // "on_pushButton_read_from_devic..."
-QT_MOC_LITERAL(90, 1552, 22), // "on_btn_saveSet_clicked"
-QT_MOC_LITERAL(91, 1575, 32), // "on_pushButton_removeUser_clicked"
-QT_MOC_LITERAL(92, 1608, 37), // "on_combo_testType_currentInde..."
-QT_MOC_LITERAL(93, 1646, 5), // "index"
-QT_MOC_LITERAL(94, 1652, 40), // "on_comboBox_specimen_currentI..."
-QT_MOC_LITERAL(95, 1693, 36), // "on_comboBox_unit_currentIndex..."
-QT_MOC_LITERAL(96, 1730, 39), // "on_comboBox_unit_ch_currentIn..."
-QT_MOC_LITERAL(97, 1770, 35), // "on_combo_scrRes_currentIndexC..."
-QT_MOC_LITERAL(98, 1806, 42), // "on_comboBox_formatFile_curren..."
-QT_MOC_LITERAL(99, 1849, 43), // "on_pushButton_load_factory_se..."
-QT_MOC_LITERAL(100, 1893, 12), // "assign_frame"
-QT_MOC_LITERAL(101, 1906, 18), // "assign_controlType"
-QT_MOC_LITERAL(102, 1925, 16), // "assign_printMode"
-QT_MOC_LITERAL(103, 1942, 14), // "record_results"
-QT_MOC_LITERAL(104, 1957, 2), // "no"
-QT_MOC_LITERAL(105, 1960, 20), // "pace_rate_handler_kn"
-QT_MOC_LITERAL(106, 1981, 21), // "pace_rate_handler_mpa"
-QT_MOC_LITERAL(107, 2003, 15), // "on_loadFinished"
-QT_MOC_LITERAL(108, 2019, 2), // "ok"
-QT_MOC_LITERAL(109, 2022, 12), // "get_password"
-QT_MOC_LITERAL(110, 2035, 29), // "on_pushButton_pswSave_clicked"
-QT_MOC_LITERAL(111, 2065, 19), // "authorization_event"
-QT_MOC_LITERAL(112, 2085, 9), // "authorize"
-QT_MOC_LITERAL(113, 2095, 10), // "plot_graph"
-QT_MOC_LITERAL(114, 2106, 16), // "selectionChanged"
-QT_MOC_LITERAL(115, 2123, 10), // "mousePress"
-QT_MOC_LITERAL(116, 2134, 10), // "mouseWheel"
-QT_MOC_LITERAL(117, 2145, 18), // "contextMenuRequest"
-QT_MOC_LITERAL(118, 2164, 3), // "pos"
-QT_MOC_LITERAL(119, 2168, 10), // "moveLegend"
-QT_MOC_LITERAL(120, 2179, 12), // "graphClicked"
-QT_MOC_LITERAL(121, 2192, 21), // "QCPAbstractPlottable*"
-QT_MOC_LITERAL(122, 2214, 9), // "plottable"
-QT_MOC_LITERAL(123, 2224, 9), // "dataIndex"
-QT_MOC_LITERAL(124, 2234, 20), // "axisLabelDoubleClick"
-QT_MOC_LITERAL(125, 2255, 8), // "QCPAxis*"
-QT_MOC_LITERAL(126, 2264, 4), // "axis"
-QT_MOC_LITERAL(127, 2269, 23), // "QCPAxis::SelectablePart"
-QT_MOC_LITERAL(128, 2293, 4), // "part"
-QT_MOC_LITERAL(129, 2298, 17), // "legendDoubleClick"
-QT_MOC_LITERAL(130, 2316, 10), // "QCPLegend*"
-QT_MOC_LITERAL(131, 2327, 6), // "legend"
-QT_MOC_LITERAL(132, 2334, 22), // "QCPAbstractLegendItem*"
-QT_MOC_LITERAL(133, 2357, 4), // "item"
-QT_MOC_LITERAL(134, 2362, 10), // "renderPlot"
-QT_MOC_LITERAL(135, 2373, 9), // "QPrinter*"
-QT_MOC_LITERAL(136, 2383, 7), // "printer"
-QT_MOC_LITERAL(137, 2391, 31) // "on_pushButton_printPlot_clicked"
+QT_MOC_LITERAL(65, 902, 5), // "templ"
+QT_MOC_LITERAL(66, 908, 13), // "resize_window"
+QT_MOC_LITERAL(67, 922, 10), // "start_comm"
+QT_MOC_LITERAL(68, 933, 8), // "end_comm"
+QT_MOC_LITERAL(69, 942, 25), // "periodic_response_handler"
+QT_MOC_LITERAL(70, 968, 8), // "datagram"
+QT_MOC_LITERAL(71, 977, 15), // "set_test_status"
+QT_MOC_LITERAL(72, 993, 31), // "read_parameters_from_the_device"
+QT_MOC_LITERAL(73, 1025, 30), // "write_parameters_to_the_device"
+QT_MOC_LITERAL(74, 1056, 29), // "write_specimens_to_the_device"
+QT_MOC_LITERAL(75, 1086, 30), // "read_specimens_from_the_device"
+QT_MOC_LITERAL(76, 1117, 29), // "on_toolBox_app_currentChanged"
+QT_MOC_LITERAL(77, 1147, 3), // "tab"
+QT_MOC_LITERAL(78, 1151, 27), // "on_pushButton_toApp_clicked"
+QT_MOC_LITERAL(79, 1179, 29), // "on_pushButton_connect_clicked"
+QT_MOC_LITERAL(80, 1209, 32), // "on_pushButton_cutconnect_clicked"
+QT_MOC_LITERAL(81, 1242, 30), // "on_pushButton_saveFile_clicked"
+QT_MOC_LITERAL(82, 1273, 30), // "on_pushButton_openFile_clicked"
+QT_MOC_LITERAL(83, 1304, 31), // "on_pushButton_startTest_clicked"
+QT_MOC_LITERAL(84, 1336, 31), // "on_pushButton_pauseTest_clicked"
+QT_MOC_LITERAL(85, 1368, 30), // "on_pushButton_stopTest_clicked"
+QT_MOC_LITERAL(86, 1399, 33), // "on_pushButton_refreshTest_cli..."
+QT_MOC_LITERAL(87, 1433, 25), // "on_btn_okSpecimen_clicked"
+QT_MOC_LITERAL(88, 1459, 21), // "on_btn_expand_clicked"
+QT_MOC_LITERAL(89, 1481, 37), // "on_pushButton_write_to_device..."
+QT_MOC_LITERAL(90, 1519, 38), // "on_pushButton_read_from_devic..."
+QT_MOC_LITERAL(91, 1558, 22), // "on_btn_saveSet_clicked"
+QT_MOC_LITERAL(92, 1581, 32), // "on_pushButton_removeUser_clicked"
+QT_MOC_LITERAL(93, 1614, 37), // "on_combo_testType_currentInde..."
+QT_MOC_LITERAL(94, 1652, 5), // "index"
+QT_MOC_LITERAL(95, 1658, 40), // "on_comboBox_specimen_currentI..."
+QT_MOC_LITERAL(96, 1699, 36), // "on_comboBox_unit_currentIndex..."
+QT_MOC_LITERAL(97, 1736, 39), // "on_comboBox_unit_ch_currentIn..."
+QT_MOC_LITERAL(98, 1776, 35), // "on_combo_scrRes_currentIndexC..."
+QT_MOC_LITERAL(99, 1812, 42), // "on_comboBox_formatFile_curren..."
+QT_MOC_LITERAL(100, 1855, 43), // "on_pushButton_load_factory_se..."
+QT_MOC_LITERAL(101, 1899, 12), // "assign_frame"
+QT_MOC_LITERAL(102, 1912, 18), // "assign_controlType"
+QT_MOC_LITERAL(103, 1931, 16), // "assign_printMode"
+QT_MOC_LITERAL(104, 1948, 14), // "record_results"
+QT_MOC_LITERAL(105, 1963, 2), // "no"
+QT_MOC_LITERAL(106, 1966, 20), // "pace_rate_handler_kn"
+QT_MOC_LITERAL(107, 1987, 21), // "pace_rate_handler_mpa"
+QT_MOC_LITERAL(108, 2009, 15), // "on_loadFinished"
+QT_MOC_LITERAL(109, 2025, 2), // "ok"
+QT_MOC_LITERAL(110, 2028, 12), // "get_password"
+QT_MOC_LITERAL(111, 2041, 29), // "on_pushButton_pswSave_clicked"
+QT_MOC_LITERAL(112, 2071, 19), // "authorization_event"
+QT_MOC_LITERAL(113, 2091, 9), // "authorize"
+QT_MOC_LITERAL(114, 2101, 10), // "plot_graph"
+QT_MOC_LITERAL(115, 2112, 16), // "selectionChanged"
+QT_MOC_LITERAL(116, 2129, 10), // "mousePress"
+QT_MOC_LITERAL(117, 2140, 10), // "mouseWheel"
+QT_MOC_LITERAL(118, 2151, 18), // "contextMenuRequest"
+QT_MOC_LITERAL(119, 2170, 3), // "pos"
+QT_MOC_LITERAL(120, 2174, 10), // "moveLegend"
+QT_MOC_LITERAL(121, 2185, 12), // "graphClicked"
+QT_MOC_LITERAL(122, 2198, 21), // "QCPAbstractPlottable*"
+QT_MOC_LITERAL(123, 2220, 9), // "plottable"
+QT_MOC_LITERAL(124, 2230, 9), // "dataIndex"
+QT_MOC_LITERAL(125, 2240, 20), // "axisLabelDoubleClick"
+QT_MOC_LITERAL(126, 2261, 8), // "QCPAxis*"
+QT_MOC_LITERAL(127, 2270, 4), // "axis"
+QT_MOC_LITERAL(128, 2275, 23), // "QCPAxis::SelectablePart"
+QT_MOC_LITERAL(129, 2299, 4), // "part"
+QT_MOC_LITERAL(130, 2304, 17), // "legendDoubleClick"
+QT_MOC_LITERAL(131, 2322, 10), // "QCPLegend*"
+QT_MOC_LITERAL(132, 2333, 6), // "legend"
+QT_MOC_LITERAL(133, 2340, 22), // "QCPAbstractLegendItem*"
+QT_MOC_LITERAL(134, 2363, 4), // "item"
+QT_MOC_LITERAL(135, 2368, 10), // "renderPlot"
+QT_MOC_LITERAL(136, 2379, 9), // "QPrinter*"
+QT_MOC_LITERAL(137, 2389, 7), // "printer"
+QT_MOC_LITERAL(138, 2397, 31) // "on_pushButton_printPlot_clicked"
 
     },
     "PressApp\0EOL\0\0char*\0base_array\0u8\0i\0"
@@ -195,7 +196,7 @@ QT_MOC_LITERAL(137, 2391, 31) // "on_pushButton_printPlot_clicked"
     "on_pushButton_printResults_clicked\0"
     "on_pushButton_openFile_view_clicked\0"
     "on_pushButton_editFile_clicked\0"
-    "print_custom_PDF\0resize_window\0"
+    "print_custom_PDF\0templ\0resize_window\0"
     "start_comm\0end_comm\0periodic_response_handler\0"
     "datagram\0set_test_status\0"
     "read_parameters_from_the_device\0"
@@ -297,61 +298,61 @@ static const uint qt_meta_data_PressApp[] = {
       61,    0,  580,    2, 0x0a /* Public */,
       62,    0,  581,    2, 0x0a /* Public */,
       63,    0,  582,    2, 0x0a /* Public */,
-      64,    0,  583,    2, 0x0a /* Public */,
-      65,    0,  584,    2, 0x08 /* Private */,
-      66,    0,  585,    2, 0x08 /* Private */,
-      67,    0,  586,    2, 0x08 /* Private */,
-      68,    1,  587,    2, 0x08 /* Private */,
-      70,    0,  590,    2, 0x08 /* Private */,
-      71,    0,  591,    2, 0x08 /* Private */,
-      72,    0,  592,    2, 0x08 /* Private */,
-      73,    0,  593,    2, 0x08 /* Private */,
-      74,    0,  594,    2, 0x08 /* Private */,
-      75,    1,  595,    2, 0x08 /* Private */,
-      77,    0,  598,    2, 0x08 /* Private */,
-      78,    0,  599,    2, 0x08 /* Private */,
-      79,    0,  600,    2, 0x08 /* Private */,
-      80,    0,  601,    2, 0x08 /* Private */,
-      81,    0,  602,    2, 0x08 /* Private */,
-      82,    0,  603,    2, 0x08 /* Private */,
-      83,    0,  604,    2, 0x08 /* Private */,
-      84,    0,  605,    2, 0x08 /* Private */,
-      85,    0,  606,    2, 0x08 /* Private */,
-      86,    0,  607,    2, 0x08 /* Private */,
-      87,    0,  608,    2, 0x08 /* Private */,
-      88,    0,  609,    2, 0x08 /* Private */,
-      89,    0,  610,    2, 0x08 /* Private */,
-      90,    0,  611,    2, 0x08 /* Private */,
-      91,    0,  612,    2, 0x08 /* Private */,
-      92,    1,  613,    2, 0x08 /* Private */,
-      94,    1,  616,    2, 0x08 /* Private */,
-      95,    1,  619,    2, 0x08 /* Private */,
-      96,    1,  622,    2, 0x08 /* Private */,
-      97,    1,  625,    2, 0x08 /* Private */,
-      98,    1,  628,    2, 0x08 /* Private */,
-      99,    0,  631,    2, 0x08 /* Private */,
-     100,    0,  632,    2, 0x08 /* Private */,
-     101,    0,  633,    2, 0x08 /* Private */,
-     102,    0,  634,    2, 0x08 /* Private */,
-     103,    1,  635,    2, 0x08 /* Private */,
-     105,    0,  638,    2, 0x08 /* Private */,
-     106,    0,  639,    2, 0x08 /* Private */,
-     107,    1,  640,    2, 0x08 /* Private */,
-     109,    0,  643,    2, 0x08 /* Private */,
-     110,    0,  644,    2, 0x08 /* Private */,
-     111,    0,  645,    2, 0x08 /* Private */,
-     112,    0,  646,    2, 0x08 /* Private */,
-     113,    0,  647,    2, 0x08 /* Private */,
-     114,    0,  648,    2, 0x08 /* Private */,
-     115,    0,  649,    2, 0x08 /* Private */,
-     116,    0,  650,    2, 0x08 /* Private */,
-     117,    1,  651,    2, 0x08 /* Private */,
-     119,    0,  654,    2, 0x08 /* Private */,
-     120,    2,  655,    2, 0x08 /* Private */,
-     124,    2,  660,    2, 0x08 /* Private */,
-     129,    2,  665,    2, 0x08 /* Private */,
-     134,    1,  670,    2, 0x08 /* Private */,
-     137,    0,  673,    2, 0x08 /* Private */,
+      64,    1,  583,    2, 0x0a /* Public */,
+      66,    0,  586,    2, 0x08 /* Private */,
+      67,    0,  587,    2, 0x08 /* Private */,
+      68,    0,  588,    2, 0x08 /* Private */,
+      69,    1,  589,    2, 0x08 /* Private */,
+      71,    0,  592,    2, 0x08 /* Private */,
+      72,    0,  593,    2, 0x08 /* Private */,
+      73,    0,  594,    2, 0x08 /* Private */,
+      74,    0,  595,    2, 0x08 /* Private */,
+      75,    0,  596,    2, 0x08 /* Private */,
+      76,    1,  597,    2, 0x08 /* Private */,
+      78,    0,  600,    2, 0x08 /* Private */,
+      79,    0,  601,    2, 0x08 /* Private */,
+      80,    0,  602,    2, 0x08 /* Private */,
+      81,    0,  603,    2, 0x08 /* Private */,
+      82,    0,  604,    2, 0x08 /* Private */,
+      83,    0,  605,    2, 0x08 /* Private */,
+      84,    0,  606,    2, 0x08 /* Private */,
+      85,    0,  607,    2, 0x08 /* Private */,
+      86,    0,  608,    2, 0x08 /* Private */,
+      87,    0,  609,    2, 0x08 /* Private */,
+      88,    0,  610,    2, 0x08 /* Private */,
+      89,    0,  611,    2, 0x08 /* Private */,
+      90,    0,  612,    2, 0x08 /* Private */,
+      91,    0,  613,    2, 0x08 /* Private */,
+      92,    0,  614,    2, 0x08 /* Private */,
+      93,    1,  615,    2, 0x08 /* Private */,
+      95,    1,  618,    2, 0x08 /* Private */,
+      96,    1,  621,    2, 0x08 /* Private */,
+      97,    1,  624,    2, 0x08 /* Private */,
+      98,    1,  627,    2, 0x08 /* Private */,
+      99,    1,  630,    2, 0x08 /* Private */,
+     100,    0,  633,    2, 0x08 /* Private */,
+     101,    0,  634,    2, 0x08 /* Private */,
+     102,    0,  635,    2, 0x08 /* Private */,
+     103,    0,  636,    2, 0x08 /* Private */,
+     104,    1,  637,    2, 0x08 /* Private */,
+     106,    0,  640,    2, 0x08 /* Private */,
+     107,    0,  641,    2, 0x08 /* Private */,
+     108,    1,  642,    2, 0x08 /* Private */,
+     110,    0,  645,    2, 0x08 /* Private */,
+     111,    0,  646,    2, 0x08 /* Private */,
+     112,    0,  647,    2, 0x08 /* Private */,
+     113,    0,  648,    2, 0x08 /* Private */,
+     114,    0,  649,    2, 0x08 /* Private */,
+     115,    0,  650,    2, 0x08 /* Private */,
+     116,    0,  651,    2, 0x08 /* Private */,
+     117,    0,  652,    2, 0x08 /* Private */,
+     118,    1,  653,    2, 0x08 /* Private */,
+     120,    0,  656,    2, 0x08 /* Private */,
+     121,    2,  657,    2, 0x08 /* Private */,
+     125,    2,  662,    2, 0x08 /* Private */,
+     130,    2,  667,    2, 0x08 /* Private */,
+     135,    1,  672,    2, 0x08 /* Private */,
+     138,    0,  675,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,    4,    6,
@@ -394,22 +395,17 @@ static const uint qt_meta_data_PressApp[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   65,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QByteArray,   69,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   76,
+    QMetaType::Void, QMetaType::QByteArray,   70,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   77,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -420,34 +416,39 @@ static const uint qt_meta_data_PressApp[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   93,
-    QMetaType::Void, QMetaType::Int,   93,
-    QMetaType::Void, QMetaType::Int,   93,
-    QMetaType::Void, QMetaType::Int,   93,
-    QMetaType::Void, QMetaType::Int,   93,
-    QMetaType::Void, QMetaType::Int,   93,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,  104,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,  108,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   94,
+    QMetaType::Void, QMetaType::Int,   94,
+    QMetaType::Void, QMetaType::Int,   94,
+    QMetaType::Void, QMetaType::Int,   94,
+    QMetaType::Void, QMetaType::Int,   94,
+    QMetaType::Void, QMetaType::Int,   94,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QPoint,  118,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 121, QMetaType::Int,  122,  123,
-    QMetaType::Void, 0x80000000 | 125, 0x80000000 | 127,  126,  128,
-    QMetaType::Void, 0x80000000 | 130, 0x80000000 | 132,  131,  133,
-    QMetaType::Void, 0x80000000 | 135,  136,
+    QMetaType::Void, QMetaType::Int,  105,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,  109,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QPoint,  119,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 122, QMetaType::Int,  123,  124,
+    QMetaType::Void, 0x80000000 | 126, 0x80000000 | 128,  127,  129,
+    QMetaType::Void, 0x80000000 | 131, 0x80000000 | 133,  132,  134,
+    QMetaType::Void, 0x80000000 | 136,  137,
     QMetaType::Void,
 
        0        // eod
@@ -506,7 +507,7 @@ void PressApp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 37: _t->on_pushButton_printResults_clicked(); break;
         case 38: _t->on_pushButton_openFile_view_clicked(); break;
         case 39: _t->on_pushButton_editFile_clicked(); break;
-        case 40: _t->print_custom_PDF(); break;
+        case 40: _t->print_custom_PDF((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 41: _t->resize_window(); break;
         case 42: _t->start_comm(); break;
         case 43: _t->end_comm(); break;

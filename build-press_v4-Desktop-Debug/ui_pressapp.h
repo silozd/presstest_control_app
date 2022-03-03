@@ -507,7 +507,6 @@ public:
     QSpacerItem *verticalSpacer_16;
     QComboBox *comboBox_formatFile;
     QPushButton *pushButton_openFile_view;
-    QPushButton *pushButton_editFile;
     QPushButton *pushButton_saveResults;
     QLabel *label_nameOfFile;
     QPushButton *pushButton_printResults;
@@ -515,6 +514,7 @@ public:
     QSpacerItem *verticalSpacer_15;
     QLabel *label_61;
     QSpacerItem *horizontalSpacer_5;
+    QPushButton *pushButton_editFile;
     QButtonGroup *control_buttonGroup;
     QButtonGroup *recraw_buttonGroup;
     QButtonGroup *frame_buttonGroup;
@@ -1352,7 +1352,7 @@ public:
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 384, 318));
+        page_param->setGeometry(QRect(0, 0, 86, 70));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1364,7 +1364,7 @@ public:
         scrollArea_param->setWidgetResizable(true);
         wdg_param = new QWidget();
         wdg_param->setObjectName(QStringLiteral("wdg_param"));
-        wdg_param->setGeometry(QRect(0, 0, 368, 595));
+        wdg_param->setGeometry(QRect(0, 0, 339, 595));
         gridLayout_9 = new QGridLayout(wdg_param);
         gridLayout_9->setSpacing(6);
         gridLayout_9->setContentsMargins(11, 11, 11, 11);
@@ -1655,7 +1655,7 @@ public:
         toolBox_app->addItem(page_param, QStringLiteral("Parametreler"));
         page_channels = new QWidget();
         page_channels->setObjectName(QStringLiteral("page_channels"));
-        page_channels->setGeometry(QRect(0, 0, 370, 440));
+        page_channels->setGeometry(QRect(0, 0, 221, 440));
         gridLayout_10 = new QGridLayout(page_channels);
         gridLayout_10->setSpacing(12);
         gridLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -1809,7 +1809,7 @@ public:
         toolBox_app->addItem(page_channels, QStringLiteral("Kanallar"));
         page_gain = new QWidget();
         page_gain->setObjectName(QStringLiteral("page_gain"));
-        page_gain->setGeometry(QRect(0, 0, 384, 318));
+        page_gain->setGeometry(QRect(0, 0, 311, 217));
         gridLayout_18 = new QGridLayout(page_gain);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setContentsMargins(11, 11, 11, 11);
@@ -1967,7 +1967,7 @@ public:
         toolBox_app->addItem(page_gain, QString::fromUtf8("Kazan\303\247"));
         page_calib = new QWidget();
         page_calib->setObjectName(QStringLiteral("page_calib"));
-        page_calib->setGeometry(QRect(0, 0, 384, 318));
+        page_calib->setGeometry(QRect(0, 0, 86, 70));
         gridLayout_11 = new QGridLayout(page_calib);
         gridLayout_11->setSpacing(6);
         gridLayout_11->setContentsMargins(11, 11, 11, 11);
@@ -1978,7 +1978,7 @@ public:
         scrollArea_calib->setWidgetResizable(true);
         wdg_calib = new QWidget();
         wdg_calib->setObjectName(QStringLiteral("wdg_calib"));
-        wdg_calib->setGeometry(QRect(0, 0, 368, 522));
+        wdg_calib->setGeometry(QRect(0, 0, 364, 522));
         gridLayout_12 = new QGridLayout(wdg_calib);
         gridLayout_12->setSpacing(6);
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
@@ -2314,7 +2314,7 @@ public:
         toolBox_app->addItem(page_calib, QStringLiteral("Kalibrasyon"));
         page_pid = new QWidget();
         page_pid->setObjectName(QStringLiteral("page_pid"));
-        page_pid->setGeometry(QRect(0, 0, 370, 478));
+        page_pid->setGeometry(QRect(0, 0, 291, 478));
         gridLayout_17 = new QGridLayout(page_pid);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);
@@ -3329,12 +3329,6 @@ public:
 
         gridLayout_14->addWidget(pushButton_openFile_view, 6, 1, 1, 1);
 
-        pushButton_editFile = new QPushButton(wdg_pdfView);
-        pushButton_editFile->setObjectName(QStringLiteral("pushButton_editFile"));
-        pushButton_editFile->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_14->addWidget(pushButton_editFile, 4, 3, 1, 1);
-
         pushButton_saveResults = new QPushButton(wdg_pdfView);
         pushButton_saveResults->setObjectName(QStringLiteral("pushButton_saveResults"));
         pushButton_saveResults->setCursor(QCursor(Qt::PointingHandCursor));
@@ -3373,6 +3367,12 @@ public:
         horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout_14->addItem(horizontalSpacer_5, 6, 2, 1, 1);
+
+        pushButton_editFile = new QPushButton(wdg_pdfView);
+        pushButton_editFile->setObjectName(QStringLiteral("pushButton_editFile"));
+        pushButton_editFile->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_14->addWidget(pushButton_editFile, 0, 3, 1, 1);
 
         gridLayout_14->setColumnStretch(0, 1);
         gridLayout_14->setColumnStretch(1, 1);
@@ -3518,7 +3518,7 @@ public:
         retranslateUi(PressApp);
 
         stackedWidget->setCurrentIndex(1);
-        tabWidget_app->setCurrentIndex(0);
+        tabWidget_app->setCurrentIndex(3);
         toolBox_app->setCurrentIndex(0);
         stackedWidget_specimen->setCurrentIndex(0);
 
@@ -3834,12 +3834,12 @@ public:
          << QApplication::translate("PressApp", ".txt", Q_NULLPTR)
         );
         pushButton_openFile_view->setText(QApplication::translate("PressApp", "Farkl\304\261 Dosya A\303\247", Q_NULLPTR));
-        pushButton_editFile->setText(QApplication::translate("PressApp", "Geli\305\237mi\305\237 D\303\274zenleme", Q_NULLPTR));
         pushButton_saveResults->setText(QApplication::translate("PressApp", "Deneyi Kaydet ", Q_NULLPTR));
         label_nameOfFile->setText(QApplication::translate("PressApp", "..", Q_NULLPTR));
         pushButton_printResults->setText(QApplication::translate("PressApp", "Yazd\304\261r", Q_NULLPTR));
         label_77->setText(QApplication::translate("PressApp", "\304\260\305\237lenen Dosya :", Q_NULLPTR));
         label_61->setText(QApplication::translate("PressApp", "Format :", Q_NULLPTR));
+        pushButton_editFile->setText(QApplication::translate("PressApp", "Geli\305\237mi\305\237 D\303\274zenleme", Q_NULLPTR));
         tabWidget_app->setTabText(tabWidget_app->indexOf(tab_print), QApplication::translate("PressApp", "Sonu\303\247lar - Yazd\304\261rma", Q_NULLPTR));
     } // retranslateUi
 
