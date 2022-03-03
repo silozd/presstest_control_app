@@ -254,20 +254,8 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
     case _PDF:{
         ui->pushButton_editFile->setEnabled(1);
         ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255);");
-        switch (template_type) {
-        case TEMPLATE_1:
-            print_template1();
-            break;
-        case TEMPLATE_2:
-            print_template2();
-            break;
-        case TEMPLATE_3:
-            print_template3();
-            break;
-        default:
-            print_template1();
-            break;
-        }
+        print_template1();
+
         printer.setResolution(QPrinter::HighResolution);
         printer.setOutputFormat(QPrinter::PdfFormat);
         printer.setPageSize(QPageSize(QPageSize::A4));
@@ -353,18 +341,18 @@ void PressApp::preview_results_file(QString fileName)
     QImage image2;
 
     // BURDA : comboboxla interaktif bağla. save butonunu da
-//    if(editReport->ui->comboBox_template->currentIndex() == 0){
-//        template_type = TEMPLATE_1;
+    if(editReport->ui->comboBox_template->currentIndex() == 0){
+        template_type = TEMPLATE_1;
         image2 = pdfPage->renderToImage(72.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());      // open
-//    }
-//    if(editReport->ui->comboBox_template->currentIndex() == 1){
-//        template_type = TEMPLATE_2;
-//        image2 = pdfPage->renderToImage(100.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
-//    }
-//    else if(editReport->ui->comboBox_template->currentIndex() == 2){
-//        template_type = TEMPLATE_3;
-//        image2 = pdfPage->renderToImage(150.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
-//    }
+    }
+    if(editReport->ui->comboBox_template->currentIndex() == 1){
+        template_type = TEMPLATE_2;
+        image2 = pdfPage->renderToImage(100.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
+    }
+    else if(editReport->ui->comboBox_template->currentIndex() == 2){
+        template_type = TEMPLATE_3;
+        image2 = pdfPage->renderToImage(150.0,72.0,-1,-1,editReport->ui->imageLabel->width(),editReport->ui->imageLabel->height());
+    }
     if (!doc || doc->isLocked()) {
       delete doc;
       return;
@@ -373,8 +361,8 @@ void PressApp::preview_results_file(QString fileName)
     if (pdfPage == 0) return;
     if (image2.isNull()) return;
 
-    //editReport->ui->imageLabel->setPixmap(QPixmap::fromImage(image2));    // open
-    editReport->ui->imageLabel->setPixmap(QPixmap(":/template_1.png"));
+    editReport->ui->imageLabel->setPixmap(QPixmap::fromImage(image2));    // open
+    //editReport->ui->imageLabel->setPixmap(QPixmap(":/template_1.png"));
     delete pdfPage;
     delete doc;
 }
@@ -406,13 +394,15 @@ void PressApp::on_pushButton_openFile_view_clicked()
                                                 filters, &defaultFilter);
     if(QFileDialog::Accepted){
         custom_file_loaded = true;
-        if(!custom_path.endsWith(".pdf")){
-            ui->pushButton_editFile->setDisabled(1);
-            ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
-        } else{
-            ui->pushButton_editFile->setEnabled(1);
-            ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255)");
-        }
+        ui->pushButton_editFile->setDisabled(1);
+        ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
+//        if(!custom_path.endsWith(".pdf")){
+//            ui->pushButton_editFile->setDisabled(1);
+//            ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
+//        } else{
+//            ui->pushButton_editFile->setEnabled(1);
+//            ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255)");
+//        }
     }
     else custom_file_loaded = false;
 

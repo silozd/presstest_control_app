@@ -100,6 +100,8 @@ public:
     EditReport *editReport;
     aux_thread *auxthread;
 
+    u8 template_type;
+
     struct _cal{
         double real_val[8];
         float assigned_val[8];
@@ -247,8 +249,6 @@ public:
 
     QPrinter printer;
 
-    int template_type;
-
     int ScreenWidth, ScreenHeight;
     int Fontsize;
     int hr;
@@ -359,6 +359,16 @@ public slots:
     void saveParameters(QString file_name);
     void readParameters(QString file_name);
 
+    // results :
+    void preview_results_file(QString fileName);
+    void on_pushButton_saveResults_clicked();
+    void on_pushButton_printResults_clicked();
+    void on_pushButton_openFile_view_clicked();
+    void on_pushButton_editFile_clicked();
+    void print_template1();
+    void print_template2();
+    void print_template3();
+
 private slots:
     void resize_window();
     void start_comm();
@@ -420,15 +430,7 @@ private slots:
     void renderPlot(QPrinter *printer);
     void on_pushButton_printPlot_clicked();
 
-    // results :
-    void preview_results_file(QString fileName);
-    void on_pushButton_saveResults_clicked();
-    void on_pushButton_printResults_clicked();
-    void on_pushButton_openFile_view_clicked();
-    void on_pushButton_editFile_clicked();
-    void print_template1();
-    void print_template2();
-    void print_template3();
+
 
 };
 

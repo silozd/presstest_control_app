@@ -24,3 +24,17 @@ EditReport::~EditReport()
 
 
 
+//switch (template_type) {
+//case TEMPLATE_1:
+//    print_template1();
+//    break;
+//case TEMPLATE_2:
+//    print_template2();
+//    break;
+//case TEMPLATE_3:
+//    print_template3();
+//    break;
+//default:
+//    print_template1();
+//    break;
+//}

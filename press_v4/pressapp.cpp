@@ -39,7 +39,7 @@ PressApp::PressApp(QWidget *parent) :
         qDebug()<<"SW < 1920";
     }
     if (ScreenWidth >= 1680){
-        AppW = hr*1600/pr;
+        AppW = hr*1450/pr;
         AppH = vr*1020/pr;
         TabW = hr*300/pr;
         TabH = vr*40/pr;
