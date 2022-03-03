@@ -301,7 +301,7 @@
            <string notr="true"/>
           </property>
           <property name="currentIndex">
-           <number>3</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_test">
            <attribute name="title">
@@ -404,7 +404,7 @@
                   <attribute name="label">
                    <string>Deney - Numune Tipi</string>
                   </attribute>
-                  <layout class="QGridLayout" name="gridLayout_7" rowstretch="1,1,1,2,1,0" columnstretch="1,1">
+                  <layout class="QGridLayout" name="gridLayout_7" rowstretch="1,1,1,1,3,1" columnstretch="1,1">
                    <property name="horizontalSpacing">
                     <number>16</number>
                    </property>
@@ -1379,7 +1379,7 @@
                       <property name="geometry">
                        <rect>
                         <x>0</x>
-                        <y>-279</y>
+                        <y>0</y>
                         <width>368</width>
                         <height>595</height>
                        </rect>
@@ -4677,7 +4677,7 @@ QPushButton:pressed {
  <buttongroups>
   <buttongroup name="control_buttonGroup"/>
   <buttongroup name="recraw_buttonGroup"/>
-  <buttongroup name="settings_buttonGroup"/>
   <buttongroup name="frame_buttonGroup"/>
+  <buttongroup name="settings_buttonGroup"/>
  </buttongroups>
 </ui>

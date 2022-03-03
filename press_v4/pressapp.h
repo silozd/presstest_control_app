@@ -75,10 +75,6 @@
 #define CH_3    2
 #define CH_4    3
 
-#define TEMPLATE_1  0
-#define TEMPLATE_2  1
-#define TEMPLATE_3  2
-
 typedef unsigned char u8;
 typedef unsigned int u32;
 
@@ -100,7 +96,6 @@ public:
     EditReport *editReport;
     aux_thread *auxthread;
 
-    u8 template_type;
 
     struct _cal{
         double real_val[8];

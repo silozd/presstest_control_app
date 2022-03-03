@@ -517,8 +517,8 @@ public:
     QSpacerItem *horizontalSpacer_5;
     QButtonGroup *control_buttonGroup;
     QButtonGroup *recraw_buttonGroup;
-    QButtonGroup *settings_buttonGroup;
     QButtonGroup *frame_buttonGroup;
+    QButtonGroup *settings_buttonGroup;
 
     void setupUi(QMainWindow *PressApp)
     {
@@ -1344,8 +1344,9 @@ public:
         gridLayout_7->setRowStretch(0, 1);
         gridLayout_7->setRowStretch(1, 1);
         gridLayout_7->setRowStretch(2, 1);
-        gridLayout_7->setRowStretch(3, 2);
-        gridLayout_7->setRowStretch(4, 1);
+        gridLayout_7->setRowStretch(3, 1);
+        gridLayout_7->setRowStretch(4, 3);
+        gridLayout_7->setRowStretch(5, 1);
         gridLayout_7->setColumnStretch(0, 1);
         gridLayout_7->setColumnStretch(1, 1);
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
@@ -1363,7 +1364,7 @@ public:
         scrollArea_param->setWidgetResizable(true);
         wdg_param = new QWidget();
         wdg_param->setObjectName(QStringLiteral("wdg_param"));
-        wdg_param->setGeometry(QRect(0, -279, 368, 595));
+        wdg_param->setGeometry(QRect(0, 0, 368, 595));
         gridLayout_9 = new QGridLayout(wdg_param);
         gridLayout_9->setSpacing(6);
         gridLayout_9->setContentsMargins(11, 11, 11, 11);
@@ -3517,7 +3518,7 @@ public:
         retranslateUi(PressApp);
 
         stackedWidget->setCurrentIndex(1);
-        tabWidget_app->setCurrentIndex(3);
+        tabWidget_app->setCurrentIndex(0);
         toolBox_app->setCurrentIndex(0);
         stackedWidget_specimen->setCurrentIndex(0);
 
