@@ -18,6 +18,8 @@ public:
     Ui::EditReport *ui;
     PressApp *pressApp;
 
+    int templ_type;
+
 public slots:
     void on_comboBox_template_currentIndexChanged(int index);
     void on_pushButton_save_clicked();

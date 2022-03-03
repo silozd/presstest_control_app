@@ -73,9 +73,17 @@ void EditReport::on_pushButton_save_clicked()
     int templ = ui->comboBox_template->currentIndex();
     switch (templ) {
     case 0:
-        //pressApp->print_template1();
+        templ_type = 0;
+        break;
+    case 1:
+        templ_type = 1;
+        break;
+    case 2:
+        templ_type = 2;
         break;
     }
+    this->close();
+    qDebug()<<templ_type;
 }
 
 EditReport::~EditReport()

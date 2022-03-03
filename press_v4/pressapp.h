@@ -96,6 +96,7 @@ public:
     EditReport *editReport;
     aux_thread *auxthread;
 
+    u8 templ_type;
 
     struct _cal{
         double real_val[8];
