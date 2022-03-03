@@ -97,6 +97,10 @@ public:
     aux_thread *auxthread;
 
     u8 templ_type;
+    QPrinter pdf_printer;
+    QString pdf_fileName;
+    QString pdf_path;
+
 
     struct _cal{
         double real_val[8];
@@ -243,8 +247,6 @@ public:
 
     QGridLayout *grid_plotArea;
 
-    QPrinter printer;
-
     int ScreenWidth, ScreenHeight;
     int Fontsize;
     int hr;
@@ -356,14 +358,11 @@ public slots:
     void readParameters(QString file_name);
 
     // results :
-    void preview_results_file(QString fileName);
     void on_pushButton_saveResults_clicked();
     void on_pushButton_printResults_clicked();
     void on_pushButton_openFile_view_clicked();
     void on_pushButton_editFile_clicked();
-    void print_template1();
-    void print_template2();
-    void print_template3();
+    void print_custom_PDF();
 
 private slots:
     void resize_window();

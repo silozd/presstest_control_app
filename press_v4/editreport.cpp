@@ -82,7 +82,9 @@ void EditReport::on_pushButton_save_clicked()
         templ_type = 2;
         break;
     }
-    this->close();
+    pressApp->print_custom_PDF();
+
+    //this->close();
     qDebug()<<templ_type;
 }
 
