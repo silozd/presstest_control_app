@@ -467,41 +467,40 @@ public:
     QScrollArea *scrollArea_results;
     QWidget *wdg_results;
     QGridLayout *gridLayout_16;
-    QLabel *label_current_test_no;
-    QLabel *label_test_start_date;
-    QLabel *label_82;
-    QLabel *label_81;
-    QLabel *label_test_paving_stone_fpl;
-    QLabel *label_88;
-    QLineEdit *lineEdit_company;
-    QLabel *label_test_finish_time;
-    QLabel *txt_test_dimensions;
-    QLineEdit *lineEdit_testName;
-    QLabel *label_test_peak_stress;
     QLabel *label_test_peak_load;
-    QLabel *txt_test_area;
-    QLabel *label_test_test_type;
-    QLabel *label_95;
-    QLabel *label_83;
-    QLabel *label_test_area;
-    QLabel *txt_peak_stress;
-    QLineEdit *lineEdit_fileName;
-    QLabel *label_test_no;
-    QLabel *label_78;
-    QLineEdit *lineEdit_addInfo2;
-    QLabel *label_79;
-    QLabel *txt_test_type;
-    QLabel *label_43;
-    QLabel *label_test_start_time;
-    QLabel *label_99;
     QLineEdit *lineEdit_addInfo;
-    QLabel *label_test_specimen_type;
-    QLabel *txt_peak_load;
-    QLabel *label_test_dimensions;
-    QSpacerItem *horizontalSpacer_4;
-    QLabel *txt_paving_stone_fpl;
     QLabel *label_53;
+    QLabel *label_test_specimen_type;
+    QLabel *txt_peak_stress;
+    QLineEdit *lineEdit_company;
+    QLabel *label_test_dimensions;
+    QLabel *txt_paving_stone_fpl;
+    QLabel *label_81;
+    QLabel *label_test_start_date;
+    QLabel *label_test_area;
+    QLabel *label_test_paving_stone_fpl;
+    QLineEdit *lineEdit_addInfo2;
+    QLabel *label_83;
+    QLabel *txt_test_type;
+    QLabel *label_test_test_type;
+    QLabel *label_43;
+    QLabel *txt_test_area;
+    QLabel *txt_test_dimensions;
+    QLabel *label_78;
+    QLabel *label_test_finish_time;
     QLabel *label_specAge;
+    QLineEdit *lineEdit_testName;
+    QLabel *label_99;
+    QLineEdit *lineEdit_fileName;
+    QLabel *label_82;
+    QLabel *label_current_test_no;
+    QLabel *label_95;
+    QLabel *label_test_no;
+    QLabel *label_79;
+    QLabel *txt_peak_load;
+    QLabel *label_88;
+    QLabel *label_test_peak_stress;
+    QLabel *label_test_start_time;
     QFrame *wdg_pdfView;
     QGridLayout *gridLayout_14;
     QSpacerItem *verticalSpacer_16;
@@ -3101,70 +3100,6 @@ public:
         gridLayout_16->setObjectName(QStringLiteral("gridLayout_16"));
         gridLayout_16->setHorizontalSpacing(12);
         gridLayout_16->setVerticalSpacing(18);
-        label_current_test_no = new QLabel(wdg_results);
-        label_current_test_no->setObjectName(QStringLiteral("label_current_test_no"));
-        label_current_test_no->setCursor(QCursor(Qt::ArrowCursor));
-        label_current_test_no->setIndent(9);
-
-        gridLayout_16->addWidget(label_current_test_no, 11, 1, 1, 1);
-
-        label_test_start_date = new QLabel(wdg_results);
-        label_test_start_date->setObjectName(QStringLiteral("label_test_start_date"));
-        label_test_start_date->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_start_date->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_start_date, 4, 1, 1, 1);
-
-        label_82 = new QLabel(wdg_results);
-        label_82->setObjectName(QStringLiteral("label_82"));
-
-        gridLayout_16->addWidget(label_82, 5, 0, 1, 1);
-
-        label_81 = new QLabel(wdg_results);
-        label_81->setObjectName(QStringLiteral("label_81"));
-
-        gridLayout_16->addWidget(label_81, 4, 0, 1, 1);
-
-        label_test_paving_stone_fpl = new QLabel(wdg_results);
-        label_test_paving_stone_fpl->setObjectName(QStringLiteral("label_test_paving_stone_fpl"));
-        label_test_paving_stone_fpl->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_paving_stone_fpl, 9, 1, 1, 1);
-
-        label_88 = new QLabel(wdg_results);
-        label_88->setObjectName(QStringLiteral("label_88"));
-
-        gridLayout_16->addWidget(label_88, 10, 0, 1, 1);
-
-        lineEdit_company = new QLineEdit(wdg_results);
-        lineEdit_company->setObjectName(QStringLiteral("lineEdit_company"));
-
-        gridLayout_16->addWidget(lineEdit_company, 1, 1, 1, 1);
-
-        label_test_finish_time = new QLabel(wdg_results);
-        label_test_finish_time->setObjectName(QStringLiteral("label_test_finish_time"));
-        label_test_finish_time->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_finish_time->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_finish_time, 6, 1, 1, 1);
-
-        txt_test_dimensions = new QLabel(wdg_results);
-        txt_test_dimensions->setObjectName(QStringLiteral("txt_test_dimensions"));
-
-        gridLayout_16->addWidget(txt_test_dimensions, 15, 0, 1, 1);
-
-        lineEdit_testName = new QLineEdit(wdg_results);
-        lineEdit_testName->setObjectName(QStringLiteral("lineEdit_testName"));
-
-        gridLayout_16->addWidget(lineEdit_testName, 2, 1, 1, 1);
-
-        label_test_peak_stress = new QLabel(wdg_results);
-        label_test_peak_stress->setObjectName(QStringLiteral("label_test_peak_stress"));
-        label_test_peak_stress->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_peak_stress->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_peak_stress, 7, 1, 1, 1);
-
         label_test_peak_load = new QLabel(wdg_results);
         label_test_peak_load->setObjectName(QStringLiteral("label_test_peak_load"));
         label_test_peak_load->setCursor(QCursor(Qt::ArrowCursor));
@@ -3172,93 +3107,15 @@ public:
 
         gridLayout_16->addWidget(label_test_peak_load, 8, 1, 1, 1);
 
-        txt_test_area = new QLabel(wdg_results);
-        txt_test_area->setObjectName(QStringLiteral("txt_test_area"));
-
-        gridLayout_16->addWidget(txt_test_area, 16, 0, 1, 1);
-
-        label_test_test_type = new QLabel(wdg_results);
-        label_test_test_type->setObjectName(QStringLiteral("label_test_test_type"));
-        label_test_test_type->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_test_type->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_test_type, 12, 1, 1, 1);
-
-        label_95 = new QLabel(wdg_results);
-        label_95->setObjectName(QStringLiteral("label_95"));
-
-        gridLayout_16->addWidget(label_95, 11, 0, 1, 1);
-
-        label_83 = new QLabel(wdg_results);
-        label_83->setObjectName(QStringLiteral("label_83"));
-
-        gridLayout_16->addWidget(label_83, 6, 0, 1, 1);
-
-        label_test_area = new QLabel(wdg_results);
-        label_test_area->setObjectName(QStringLiteral("label_test_area"));
-        label_test_area->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_area->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_area, 16, 1, 1, 1);
-
-        txt_peak_stress = new QLabel(wdg_results);
-        txt_peak_stress->setObjectName(QStringLiteral("txt_peak_stress"));
-
-        gridLayout_16->addWidget(txt_peak_stress, 7, 0, 1, 1);
-
-        lineEdit_fileName = new QLineEdit(wdg_results);
-        lineEdit_fileName->setObjectName(QStringLiteral("lineEdit_fileName"));
-
-        gridLayout_16->addWidget(lineEdit_fileName, 0, 1, 1, 1);
-
-        label_test_no = new QLabel(wdg_results);
-        label_test_no->setObjectName(QStringLiteral("label_test_no"));
-        label_test_no->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_no->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_no, 10, 1, 1, 1);
-
-        label_78 = new QLabel(wdg_results);
-        label_78->setObjectName(QStringLiteral("label_78"));
-
-        gridLayout_16->addWidget(label_78, 0, 0, 1, 1);
-
-        lineEdit_addInfo2 = new QLineEdit(wdg_results);
-        lineEdit_addInfo2->setObjectName(QStringLiteral("lineEdit_addInfo2"));
-
-        gridLayout_16->addWidget(lineEdit_addInfo2, 3, 1, 1, 1);
-
-        label_79 = new QLabel(wdg_results);
-        label_79->setObjectName(QStringLiteral("label_79"));
-
-        gridLayout_16->addWidget(label_79, 2, 0, 1, 1);
-
-        txt_test_type = new QLabel(wdg_results);
-        txt_test_type->setObjectName(QStringLiteral("txt_test_type"));
-
-        gridLayout_16->addWidget(txt_test_type, 12, 0, 1, 1);
-
-        label_43 = new QLabel(wdg_results);
-        label_43->setObjectName(QStringLiteral("label_43"));
-
-        gridLayout_16->addWidget(label_43, 1, 0, 1, 1);
-
-        label_test_start_time = new QLabel(wdg_results);
-        label_test_start_time->setObjectName(QStringLiteral("label_test_start_time"));
-        label_test_start_time->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_start_time->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_start_time, 5, 1, 1, 1);
-
-        label_99 = new QLabel(wdg_results);
-        label_99->setObjectName(QStringLiteral("label_99"));
-
-        gridLayout_16->addWidget(label_99, 13, 0, 1, 1);
-
         lineEdit_addInfo = new QLineEdit(wdg_results);
         lineEdit_addInfo->setObjectName(QStringLiteral("lineEdit_addInfo"));
 
         gridLayout_16->addWidget(lineEdit_addInfo, 3, 0, 1, 1);
+
+        label_53 = new QLabel(wdg_results);
+        label_53->setObjectName(QStringLiteral("label_53"));
+
+        gridLayout_16->addWidget(label_53, 14, 0, 1, 1);
 
         label_test_specimen_type = new QLabel(wdg_results);
         label_test_specimen_type->setObjectName(QStringLiteral("label_test_specimen_type"));
@@ -3267,10 +3124,15 @@ public:
 
         gridLayout_16->addWidget(label_test_specimen_type, 13, 1, 1, 1);
 
-        txt_peak_load = new QLabel(wdg_results);
-        txt_peak_load->setObjectName(QStringLiteral("txt_peak_load"));
+        txt_peak_stress = new QLabel(wdg_results);
+        txt_peak_stress->setObjectName(QStringLiteral("txt_peak_stress"));
 
-        gridLayout_16->addWidget(txt_peak_load, 8, 0, 1, 1);
+        gridLayout_16->addWidget(txt_peak_stress, 7, 0, 1, 1);
+
+        lineEdit_company = new QLineEdit(wdg_results);
+        lineEdit_company->setObjectName(QStringLiteral("lineEdit_company"));
+
+        gridLayout_16->addWidget(lineEdit_company, 1, 1, 1, 1);
 
         label_test_dimensions = new QLabel(wdg_results);
         label_test_dimensions->setObjectName(QStringLiteral("label_test_dimensions"));
@@ -3279,19 +3141,84 @@ public:
 
         gridLayout_16->addWidget(label_test_dimensions, 15, 1, 1, 1);
 
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_16->addItem(horizontalSpacer_4, 0, 2, 1, 1);
-
         txt_paving_stone_fpl = new QLabel(wdg_results);
         txt_paving_stone_fpl->setObjectName(QStringLiteral("txt_paving_stone_fpl"));
 
         gridLayout_16->addWidget(txt_paving_stone_fpl, 9, 0, 1, 1);
 
-        label_53 = new QLabel(wdg_results);
-        label_53->setObjectName(QStringLiteral("label_53"));
+        label_81 = new QLabel(wdg_results);
+        label_81->setObjectName(QStringLiteral("label_81"));
 
-        gridLayout_16->addWidget(label_53, 14, 0, 1, 1);
+        gridLayout_16->addWidget(label_81, 4, 0, 1, 1);
+
+        label_test_start_date = new QLabel(wdg_results);
+        label_test_start_date->setObjectName(QStringLiteral("label_test_start_date"));
+        label_test_start_date->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_start_date->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_start_date, 4, 1, 1, 1);
+
+        label_test_area = new QLabel(wdg_results);
+        label_test_area->setObjectName(QStringLiteral("label_test_area"));
+        label_test_area->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_area->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_area, 16, 1, 1, 1);
+
+        label_test_paving_stone_fpl = new QLabel(wdg_results);
+        label_test_paving_stone_fpl->setObjectName(QStringLiteral("label_test_paving_stone_fpl"));
+        label_test_paving_stone_fpl->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_paving_stone_fpl, 9, 1, 1, 1);
+
+        lineEdit_addInfo2 = new QLineEdit(wdg_results);
+        lineEdit_addInfo2->setObjectName(QStringLiteral("lineEdit_addInfo2"));
+
+        gridLayout_16->addWidget(lineEdit_addInfo2, 3, 1, 1, 1);
+
+        label_83 = new QLabel(wdg_results);
+        label_83->setObjectName(QStringLiteral("label_83"));
+
+        gridLayout_16->addWidget(label_83, 6, 0, 1, 1);
+
+        txt_test_type = new QLabel(wdg_results);
+        txt_test_type->setObjectName(QStringLiteral("txt_test_type"));
+
+        gridLayout_16->addWidget(txt_test_type, 12, 0, 1, 1);
+
+        label_test_test_type = new QLabel(wdg_results);
+        label_test_test_type->setObjectName(QStringLiteral("label_test_test_type"));
+        label_test_test_type->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_test_type->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_test_type, 12, 1, 1, 1);
+
+        label_43 = new QLabel(wdg_results);
+        label_43->setObjectName(QStringLiteral("label_43"));
+
+        gridLayout_16->addWidget(label_43, 1, 0, 1, 1);
+
+        txt_test_area = new QLabel(wdg_results);
+        txt_test_area->setObjectName(QStringLiteral("txt_test_area"));
+
+        gridLayout_16->addWidget(txt_test_area, 16, 0, 1, 1);
+
+        txt_test_dimensions = new QLabel(wdg_results);
+        txt_test_dimensions->setObjectName(QStringLiteral("txt_test_dimensions"));
+
+        gridLayout_16->addWidget(txt_test_dimensions, 15, 0, 1, 1);
+
+        label_78 = new QLabel(wdg_results);
+        label_78->setObjectName(QStringLiteral("label_78"));
+
+        gridLayout_16->addWidget(label_78, 0, 0, 1, 1);
+
+        label_test_finish_time = new QLabel(wdg_results);
+        label_test_finish_time->setObjectName(QStringLiteral("label_test_finish_time"));
+        label_test_finish_time->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_finish_time->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_finish_time, 6, 1, 1, 1);
 
         label_specAge = new QLabel(wdg_results);
         label_specAge->setObjectName(QStringLiteral("label_specAge"));
@@ -3299,9 +3226,76 @@ public:
 
         gridLayout_16->addWidget(label_specAge, 14, 1, 1, 1);
 
+        lineEdit_testName = new QLineEdit(wdg_results);
+        lineEdit_testName->setObjectName(QStringLiteral("lineEdit_testName"));
+
+        gridLayout_16->addWidget(lineEdit_testName, 2, 1, 1, 1);
+
+        label_99 = new QLabel(wdg_results);
+        label_99->setObjectName(QStringLiteral("label_99"));
+
+        gridLayout_16->addWidget(label_99, 13, 0, 1, 1);
+
+        lineEdit_fileName = new QLineEdit(wdg_results);
+        lineEdit_fileName->setObjectName(QStringLiteral("lineEdit_fileName"));
+
+        gridLayout_16->addWidget(lineEdit_fileName, 0, 1, 1, 1);
+
+        label_82 = new QLabel(wdg_results);
+        label_82->setObjectName(QStringLiteral("label_82"));
+
+        gridLayout_16->addWidget(label_82, 5, 0, 1, 1);
+
+        label_current_test_no = new QLabel(wdg_results);
+        label_current_test_no->setObjectName(QStringLiteral("label_current_test_no"));
+        label_current_test_no->setCursor(QCursor(Qt::ArrowCursor));
+        label_current_test_no->setIndent(9);
+
+        gridLayout_16->addWidget(label_current_test_no, 11, 1, 1, 1);
+
+        label_95 = new QLabel(wdg_results);
+        label_95->setObjectName(QStringLiteral("label_95"));
+
+        gridLayout_16->addWidget(label_95, 11, 0, 1, 1);
+
+        label_test_no = new QLabel(wdg_results);
+        label_test_no->setObjectName(QStringLiteral("label_test_no"));
+        label_test_no->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_no->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_no, 10, 1, 1, 1);
+
+        label_79 = new QLabel(wdg_results);
+        label_79->setObjectName(QStringLiteral("label_79"));
+
+        gridLayout_16->addWidget(label_79, 2, 0, 1, 1);
+
+        txt_peak_load = new QLabel(wdg_results);
+        txt_peak_load->setObjectName(QStringLiteral("txt_peak_load"));
+
+        gridLayout_16->addWidget(txt_peak_load, 8, 0, 1, 1);
+
+        label_88 = new QLabel(wdg_results);
+        label_88->setObjectName(QStringLiteral("label_88"));
+
+        gridLayout_16->addWidget(label_88, 10, 0, 1, 1);
+
+        label_test_peak_stress = new QLabel(wdg_results);
+        label_test_peak_stress->setObjectName(QStringLiteral("label_test_peak_stress"));
+        label_test_peak_stress->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_peak_stress->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_peak_stress, 7, 1, 1, 1);
+
+        label_test_start_time = new QLabel(wdg_results);
+        label_test_start_time->setObjectName(QStringLiteral("label_test_start_time"));
+        label_test_start_time->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_start_time->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_start_time, 5, 1, 1, 1);
+
         gridLayout_16->setColumnStretch(0, 1);
         gridLayout_16->setColumnStretch(1, 2);
-        gridLayout_16->setColumnStretch(2, 1);
         scrollArea_results->setWidget(wdg_results);
 
         gridLayout_15->addWidget(scrollArea_results, 0, 0, 1, 1);
@@ -3805,36 +3799,36 @@ public:
         pushButton_pswSave->setText(QApplication::translate("PressApp", "Kaydet", Q_NULLPTR));
         label_55->setText(QApplication::translate("PressApp", "\305\236ifre Yenileme ", Q_NULLPTR));
         tabWidget_app->setTabText(tabWidget_app->indexOf(tab_admin), QApplication::translate("PressApp", "Kullan\304\261c\304\261", Q_NULLPTR));
-        label_current_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        label_test_start_date->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        label_82->setText(QApplication::translate("PressApp", "Deney Ba\305\237. Saati :", Q_NULLPTR));
-        label_81->setText(QApplication::translate("PressApp", "Deney Ba\305\237. Tarihi :", Q_NULLPTR));
-        label_test_paving_stone_fpl->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        label_88->setText(QApplication::translate("PressApp", "Deney No :", Q_NULLPTR));
-        label_test_finish_time->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        txt_test_dimensions->setText(QApplication::translate("PressApp", "Boyutlar :", Q_NULLPTR));
-        label_test_peak_stress->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         label_test_peak_load->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        txt_test_area->setText(QApplication::translate("PressApp", "Alan :", Q_NULLPTR));
-        label_test_test_type->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        label_95->setText(QApplication::translate("PressApp", "Current Deney No :", Q_NULLPTR));
-        label_83->setText(QApplication::translate("PressApp", "Deney Biti\305\237 Saati :", Q_NULLPTR));
-        label_test_area->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        txt_peak_stress->setText(QApplication::translate("PressApp", "Tepe Gerilim :", Q_NULLPTR));
-        label_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        label_78->setText(QApplication::translate("PressApp", "Dosya Ad\304\261 :", Q_NULLPTR));
-        label_79->setText(QApplication::translate("PressApp", "Deney Ad\304\261 :", Q_NULLPTR));
-        txt_test_type->setText(QApplication::translate("PressApp", "Deney Tipi :", Q_NULLPTR));
-        label_43->setText(QApplication::translate("PressApp", "Firma Ad\304\261 :", Q_NULLPTR));
-        label_test_start_time->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        label_99->setText(QApplication::translate("PressApp", "Numune Tipi :", Q_NULLPTR));
         lineEdit_addInfo->setText(QApplication::translate("PressApp", "Ek Bilgi :                ", Q_NULLPTR));
+        label_53->setText(QApplication::translate("PressApp", "Numune Ya\305\237\304\261 :", Q_NULLPTR));
         label_test_specimen_type->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        txt_peak_load->setText(QApplication::translate("PressApp", "Tepe Y\303\274k :", Q_NULLPTR));
+        txt_peak_stress->setText(QApplication::translate("PressApp", "Tepe Gerilim :", Q_NULLPTR));
         label_test_dimensions->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         txt_paving_stone_fpl->setText(QApplication::translate("PressApp", "P/L :", Q_NULLPTR));
-        label_53->setText(QApplication::translate("PressApp", "Numune Ya\305\237\304\261 :", Q_NULLPTR));
+        label_81->setText(QApplication::translate("PressApp", "Deney Ba\305\237. Tarihi :", Q_NULLPTR));
+        label_test_start_date->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_test_area->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_test_paving_stone_fpl->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_83->setText(QApplication::translate("PressApp", "Deney Biti\305\237 Saati :", Q_NULLPTR));
+        txt_test_type->setText(QApplication::translate("PressApp", "Deney Tipi :", Q_NULLPTR));
+        label_test_test_type->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_43->setText(QApplication::translate("PressApp", "Firma Ad\304\261 :", Q_NULLPTR));
+        txt_test_area->setText(QApplication::translate("PressApp", "Alan :", Q_NULLPTR));
+        txt_test_dimensions->setText(QApplication::translate("PressApp", "Boyutlar :", Q_NULLPTR));
+        label_78->setText(QApplication::translate("PressApp", "Dosya Ad\304\261 :", Q_NULLPTR));
+        label_test_finish_time->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         label_specAge->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_99->setText(QApplication::translate("PressApp", "Numune Tipi :", Q_NULLPTR));
+        label_82->setText(QApplication::translate("PressApp", "Deney Ba\305\237. Saati :", Q_NULLPTR));
+        label_current_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_95->setText(QApplication::translate("PressApp", "Current Deney No :", Q_NULLPTR));
+        label_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_79->setText(QApplication::translate("PressApp", "Deney Ad\304\261 :", Q_NULLPTR));
+        txt_peak_load->setText(QApplication::translate("PressApp", "Tepe Y\303\274k :", Q_NULLPTR));
+        label_88->setText(QApplication::translate("PressApp", "Deney No :", Q_NULLPTR));
+        label_test_peak_stress->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_test_start_time->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         comboBox_formatFile->clear();
         comboBox_formatFile->insertItems(0, QStringList()
          << QApplication::translate("PressApp", ".pdf", Q_NULLPTR)

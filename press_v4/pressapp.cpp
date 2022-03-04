@@ -24,6 +24,7 @@ PressApp::PressApp(QWidget *parent) :
     global_running_timer.restart();
     _100_msec_timer ->start();
     show_graph = 0;
+    qDebug()<<"tt"<<editReport->templ_type;
 
     QFont Font1("Times New Roman", Fontsize);
     hr = PressApp::GetScreenHRes(0);    //750

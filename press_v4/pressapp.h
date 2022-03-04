@@ -98,7 +98,7 @@ public:
     QString header_report;
     QString testName_report;
 
-    u8 templ_type;
+    //u8 templ_type;
     QPrinter pdf_printer;
     QString pdf_fileName;
     QString pdf_path;
@@ -366,7 +366,6 @@ public slots:
     void on_pushButton_printResults_clicked();
     void on_pushButton_openFile_view_clicked();
     void on_pushButton_editFile_clicked();
-    void print_custom_PDF(int templ);
     void on_pushButton_printPlot_clicked();
     void on_pushButton_quitFile_clicked();
 
