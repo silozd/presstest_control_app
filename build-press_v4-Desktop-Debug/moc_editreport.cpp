@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_EditReport_t {
     QByteArrayData data[5];
-    char stringdata0[86];
+    char stringdata0[90];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,11 +35,11 @@ QT_MOC_LITERAL(0, 0, 10), // "EditReport"
 QT_MOC_LITERAL(1, 11, 40), // "on_comboBox_template_currentI..."
 QT_MOC_LITERAL(2, 52, 0), // ""
 QT_MOC_LITERAL(3, 53, 5), // "index"
-QT_MOC_LITERAL(4, 59, 26) // "on_pushButton_save_clicked"
+QT_MOC_LITERAL(4, 59, 30) // "on_pushButton_saveEdit_clicked"
 
     },
     "EditReport\0on_comboBox_template_currentIndexChanged\0"
-    "\0index\0on_pushButton_save_clicked"
+    "\0index\0on_pushButton_saveEdit_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -74,7 +74,7 @@ void EditReport::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_comboBox_template_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 1: _t->on_pushButton_save_clicked(); break;
+        case 1: _t->on_pushButton_saveEdit_clicked(); break;
         default: ;
         }
     }

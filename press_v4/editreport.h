@@ -22,7 +22,7 @@ public:
 
 public slots:
     void on_comboBox_template_currentIndexChanged(int index);
-    void on_pushButton_save_clicked();
+    void on_pushButton_saveEdit_clicked();
 private:
 };
 

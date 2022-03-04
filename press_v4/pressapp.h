@@ -367,6 +367,8 @@ public slots:
     void on_pushButton_openFile_view_clicked();
     void on_pushButton_editFile_clicked();
     void print_custom_PDF(int templ);
+    void on_pushButton_printPlot_clicked();
+    void on_pushButton_quitFile_clicked();
 
 private slots:
     void resize_window();
@@ -427,7 +429,6 @@ private slots:
     void axisLabelDoubleClick(QCPAxis *axis, QCPAxis::SelectablePart part);
     void legendDoubleClick(QCPLegend *legend, QCPAbstractLegendItem *item);
     void renderPlot(QPrinter *printer);
-    void on_pushButton_printPlot_clicked();
 
 
 

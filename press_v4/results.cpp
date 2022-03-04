@@ -67,7 +67,9 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
 {
     results_saved = true;
     custom_file_loaded = false;
+    ui->pushButton_quitFile->setEnabled(1);
     ui->pushButton_editFile->setDisabled(1);
+    ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
     QPrinter printer(QPrinter::HighResolution);
     pdf_fileName = ui->lineEdit_fileName->text();
     QDir dir;
@@ -80,8 +82,6 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
 
     switch (format_type) {
     case _PDF:{
-        ui->pushButton_editFile->setEnabled(1);
-        ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255);");
         printer.setOutputFormat(QPrinter::PdfFormat);
         printer.setPageSize(QPageSize(QPageSize::A4));
         printer.setOrientation(QPrinter::Portrait);
@@ -259,8 +259,6 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
             lines << QString("P/L_(%1/%2)  :").arg(load_unit,length_unit) << ui->label_test_paving_stone_fpl->text() << "\n";
         }
         test_res.close();
-        ui->pushButton_editFile->setDisabled(1);
-        ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
         break;
     }
     QMessageBox message;
@@ -426,43 +424,43 @@ void PressApp::print_custom_PDF(int templ)
 }
 void PressApp::on_pushButton_editFile_clicked()
 {
-    if(results_saved || custom_file_loaded){
-        editReport->ui->pushButton_save->setEnabled(1);
-        if(results_saved)
-            editReport->setWindowTitle(res_fileName);
-        else if (custom_file_loaded)
-            editReport->setWindowTitle(custom_path);
-    }
-    else {
-        editReport->ui->pushButton_save->setDisabled(1);
-        editReport->setWindowTitle("Gelişmiş Düzenleme");
-    }
+    editReport->setWindowTitle("Gelişmiş Düzenleme");
     editReport->exec();
 }
 void PressApp::on_pushButton_openFile_view_clicked()
 {
     results_saved = false;
-    QString filters(".pdf files (*.pdf);; .txt files (*.txt);; All files (*.*)");
+    QString filters(".pdf files (*.pdf);; .txt files (*.txt)");
     QString defaultFilter(".pdf files (*.pdf)");
     custom_path = QFileDialog::getOpenFileName(this, tr("Dosya Aç"), QDir::currentPath(),
                                                 filters, &defaultFilter);
     if(QFileDialog::Accepted){
         custom_file_loaded = true;
-        ui->pushButton_editFile->setDisabled(1);
-        ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
-//        if(!custom_path.endsWith(".pdf")){
-//            ui->pushButton_editFile->setDisabled(1);
-//            ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
-//        } else{
-//            ui->pushButton_editFile->setEnabled(1);
-//            ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255)");
-//        }
+        ui->label_nameOfFile->setText(custom_path);
+        res_fileName = custom_path;
+        qDebug()<<"custom_path :"<<res_fileName;
+        if(custom_path.endsWith(".pdf") || custom_path.endsWith(".txt")){
+            ui->pushButton_editFile->setDisabled(1);
+            ui->pushButton_editFile->setStyleSheet("color: rgb(150,180,255)");
+        } else{
+            ui->pushButton_editFile->setEnabled(1);
+            ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255)");
+        }
+        ui->pushButton_quitFile->setEnabled(1);
     }
-    else custom_file_loaded = false;
+    else   custom_file_loaded = false;
+}
+void PressApp::on_pushButton_quitFile_clicked()
+{
+    results_saved = false;
+    custom_file_loaded = false;
 
-    ui->label_nameOfFile->setText(custom_path);
-    res_fileName = custom_path;
-    qDebug()<<"custom_path :"<<res_fileName;
+    ui->pushButton_editFile->setEnabled(1);
+    ui->pushButton_editFile->setStyleSheet("color: rgb(0,20,255)");
+
+    ui->label_nameOfFile->setText("..");
+
+    ui->pushButton_quitFile->setDisabled(1);
 }
 void PressApp::on_pushButton_printResults_clicked()     /// OPEN PDF FILE :
 {

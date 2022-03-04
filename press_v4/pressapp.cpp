@@ -239,6 +239,7 @@ void PressApp::setup_GUI()
     ui->pushButton_stopTest->setDisabled(1);
     ui->pushButton_refreshTest->hide();
     ui->pushButton_printPlot->setDisabled(1);
+    ui->pushButton_quitFile->setDisabled(1);
     ui->page_specimen->setEnabled(1);
     ui->page_param->setEnabled(1);
     ui->page_channels->setEnabled(1);
@@ -1792,6 +1793,8 @@ PressApp::~PressApp()
 {
     delete ui;
 }
+
+
 
 
 

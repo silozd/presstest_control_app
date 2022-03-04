@@ -37,7 +37,7 @@ public:
     QGridLayout *gridLayout_2;
     QLabel *label_3;
     QComboBox *comboBox_2;
-    QPushButton *pushButton_save;
+    QPushButton *pushButton_saveEdit;
     QSpacerItem *verticalSpacer;
     QLabel *label_2;
     QComboBox *comboBox_template;
@@ -80,11 +80,11 @@ public:
 
         gridLayout_2->addWidget(comboBox_2, 1, 1, 1, 1);
 
-        pushButton_save = new QPushButton(scrollAreaWidgetContents);
-        pushButton_save->setObjectName(QStringLiteral("pushButton_save"));
-        pushButton_save->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_saveEdit = new QPushButton(scrollAreaWidgetContents);
+        pushButton_saveEdit->setObjectName(QStringLiteral("pushButton_saveEdit"));
+        pushButton_saveEdit->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_2->addWidget(pushButton_save, 6, 1, 1, 1);
+        gridLayout_2->addWidget(pushButton_saveEdit, 6, 1, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -162,7 +162,7 @@ public:
          << QApplication::translate("EditReport", "A5", Q_NULLPTR)
          << QApplication::translate("EditReport", "A3", Q_NULLPTR)
         );
-        pushButton_save->setText(QApplication::translate("EditReport", "Kaydet", Q_NULLPTR));
+        pushButton_saveEdit->setText(QApplication::translate("EditReport", "Kaydet", Q_NULLPTR));
         label_2->setText(QApplication::translate("EditReport", "Boyut :", Q_NULLPTR));
         label->setText(QApplication::translate("EditReport", "Bi\303\247im :", Q_NULLPTR));
         pushButton_logo->setText(QApplication::translate("EditReport", "Logo Y\303\274kle", Q_NULLPTR));

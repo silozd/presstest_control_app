@@ -68,7 +68,7 @@ void EditReport::on_comboBox_template_currentIndexChanged(int index)         // 
     delete pdfPage;
     delete pre_doc;
 }
-void EditReport::on_pushButton_save_clicked()
+void EditReport::on_pushButton_saveEdit_clicked()
 {
     int templ = ui->comboBox_template->currentIndex();
     switch (templ) {
