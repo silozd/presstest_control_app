@@ -3800,7 +3800,7 @@ public:
         label_55->setText(QApplication::translate("PressApp", "\305\236ifre Yenileme ", Q_NULLPTR));
         tabWidget_app->setTabText(tabWidget_app->indexOf(tab_admin), QApplication::translate("PressApp", "Kullan\304\261c\304\261", Q_NULLPTR));
         label_test_peak_load->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        lineEdit_addInfo->setText(QApplication::translate("PressApp", "Ek Bilgi :                ", Q_NULLPTR));
+        lineEdit_addInfo->setText(QApplication::translate("PressApp", "Ek Bilgi                ", Q_NULLPTR));
         label_53->setText(QApplication::translate("PressApp", "Numune Ya\305\237\304\261 :", Q_NULLPTR));
         label_test_specimen_type->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         txt_peak_stress->setText(QApplication::translate("PressApp", "Tepe Gerilim :", Q_NULLPTR));

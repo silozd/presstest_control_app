@@ -4090,7 +4090,7 @@ QPushButton:pressed {
                 <item row="3" column="0">
                  <widget class="QLineEdit" name="lineEdit_addInfo">
                   <property name="text">
-                   <string>Ek Bilgi :                </string>
+                   <string>Ek Bilgi                </string>
                   </property>
                  </widget>
                 </item>
