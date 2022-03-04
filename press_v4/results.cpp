@@ -175,76 +175,75 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
             painter.drawText( x*6.5,    11.5*y,   ui->label_test_peak_stress->text() + "\n");
 //            painter.drawRect( option.rect.x()+x*18, option.rect.y()+y*17.5, int(1750*(option.rect.width()-5)), option.rect.height()-y*3 ); // table
 //            painter.drawRect( option.rect.x()+x*6, option.rect.y()+y*17.5, int(1020*(option.rect.width())), option.rect.height()-y*3 );
-            painter.drawText( 0,        13.5*y,    "Ek Bilgi :");
-            painter.drawText( 0,        14.2*y,  "Deney Teslimi :");
-            painter.drawText( 0,        15.5*y,    "Test Teknikeri :");
-            painter.drawText( x*13.5,   15.5*y,    "İmza :");
+            painter.drawText( 0,        13.5*y,   "Ek Bilgi :");
+            painter.drawText( 0,        14.2*y,   "Deney Teslimi :");
+            painter.drawText( 0,        15.5*y,   "Test Teknikeri :");
+            painter.drawText( x*13.5,   15.5*y,   "İmza :");
 
 
             painter.restore();
         }
         /// TEMPLATE_2 :
         if(editReport->templ_type == 1){
-            painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+y+50, int(1770*(option.rect.width()-5)), option.rect.height()-1050 ); // out table border
-            painter.drawRect( option.rect.x()+18*x, option.rect.y()+y, int(1750*(option.rect.width()-5)), option.rect.height()-950 ); // inner table border
+            painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+y*1.8, int(1770*(option.rect.width()-5)), option.rect.height()-y*2 ); // out table border
+            painter.drawRect( option.rect.x()+18.03*x, option.rect.y()+y*1.75, int(1756*(option.rect.width()-5)), option.rect.height()-y*1.9 ); // inner table border
             painter.restore();
 
-            painter.drawText(printer.width()/2 - h_label/2, y/11, header_report);
-            painter.drawText(printer.width()/2 - t_label/2, y/1.5, testName_report);
+            painter.drawText(printer.width()/2 - h_label/2, y/2, header_report);
+            painter.drawText(printer.width()/2 - t_label/2, y*1.2, testName_report);
 
-            painter.drawText( x/2, 2*y,   "Deney Tarihi");
-            painter.drawText( x*6, 2*y,   ":  " + ui->label_test_start_date->text() + "\n");
-            painter.drawText( x/2, 2.5*y, "Deney Sayısı");
-            painter.drawText( x*6, 2.5*y, ":  " + ui->label_test_no->text() + "\n");
-            painter.drawText( x/2, 3*y,   "Deney Başlangıç ve Bitiş Saati");
-            painter.drawText( x*6, 3*y,   ":  " + ui->label_test_start_time->text() + " - " +ui->label_test_finish_time->text() + "\n");
-            painter.drawText( x/2, 3.5*y, "Deney Tipi");
-            painter.drawText( x*6, 3.5*y, ":  " + ui->label_test_test_type->text() + "\n");
-            painter.drawText( x/2, 4*y,   ui->lineEdit_addInfo->text());
-            painter.drawText( x*6, 4*y,   ":  " + ui->lineEdit_addInfo2->text() + "\n");
-            painter.drawRect( option.rect.x()+17*x, option.rect.y()+4.1*y, int(1020*(option.rect.width()-5)), option.rect.height() );
+            painter.drawText( x/2, 3*y,   "Deney Tarihi");
+            painter.drawText( x*6, 3*y,   ":  " + ui->label_test_start_date->text() + "\n");
+            painter.drawText( x/2, 3.7*y, "Deney Sayısı");
+            painter.drawText( x*6, 3.7*y, ":  " + ui->label_test_no->text() + "\n");
+            painter.drawText( x/2, 4.4*y,   "Deney Başlangıç ve Bitiş Saati");
+            painter.drawText( x*6, 4.4*y,   ":  " + ui->label_test_start_time->text() + " - " +ui->label_test_finish_time->text() + "\n");
+            painter.drawText( x/2, 5.1*y, "Deney Tipi");
+            painter.drawText( x*6, 5.1*y, ":  " + ui->label_test_test_type->text() + "\n");
+            painter.drawText( x/2, 5.8*y,   ui->lineEdit_addInfo->text());
+            painter.drawText( x*6, 5.8*y,   ":  " + ui->lineEdit_addInfo2->text() + "\n");
+            painter.drawRect( option.rect.x()+17*x, option.rect.y()+5.9*y, int(1020*(option.rect.width()-5)), option.rect.height() );
 
-            QString header2 = "Numune Detayları";
-            painter.drawText( x-x*1.1, 5.2*y, header2 + "\n");
-            painter.drawRect( option.rect.x()+3*x, option.rect.y()+5.3*y, int((header2.length()*19)*(option.rect.width()-5)), option.rect.height()-1 );
+            QString header2 = "NUMUNE DETAYLARI";
+            painter.drawText( x-x*1.1, 7.2*y, header2 + "\n");
+            painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+8.2*y, int(1750*(option.rect.width()-5)), option.rect.height()-1 );
+            painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+9.2*y, int(1750*(option.rect.width()-5)), option.rect.height()-1300 ); // inner table border
+            //painter.drawRect( option.rect.x()+3*x, option.rect.y()+6.3*y, int((header2.length()*19)*(option.rect.width()-5)), option.rect.height()-1 );
+            painter.drawText( x/1.7,   7.9*y,    "Numune      \n");
+            painter.drawText( x/4,     8.8*y,   ui->label_test_specimen_type->text() + "\n");
+            painter.drawRect( option.rect.x()+3*x, option.rect.y()+9.2*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+            painter.drawText( x*4.2,   7.9*y,    "Yaş");
+            painter.drawText( x*3.4,   8.8*y,  ui->label_specAge->text() + "\n");
+            painter.drawRect( option.rect.x()+6*x, option.rect.y()+9.2*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+            painter.drawText( x*6.95,  7.7*y, "Boyut    \n");
+            painter.drawText( x*7,     8*y,  QString("(%1)").arg(length_unit) + "\n");
+            painter.drawText( x*6.5,   8.8*y, ui->label_test_dimensions->text() + "\n");
+            painter.drawRect( option.rect.x()+9*x, option.rect.y()+9.2*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+            painter.drawText( x*10.1,  7.7*y,  "Alan    \n");
+            painter.drawText( x*9.9,   8*y,  QString("(%1%2)").arg(length_unit,"2") + "\n");
+            painter.drawText( x*9.5,   8.8*y,  ui->label_test_area->text() + "\n");
+            painter.drawRect( option.rect.x()+12*x, option.rect.y()+9.2*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+            painter.drawText( x*12.7,  7.7*y,  "Tepe Yük  \n");
+            painter.drawText( x*13.1,  8*y,  QString("(%1)").arg(load_unit) + "\n");
+            painter.drawText( x*12.4,  8.8*y,  ui->label_test_peak_load->text() + "\n");
+            painter.drawRect( option.rect.x()+15*x, option.rect.y()+9.2*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
+            painter.drawText( x*15.5,  7.7*y,  "Tepe Gerilim  \n");
+            painter.drawText( x*16.1,  8*y,  QString("(%1)").arg(stress_unit) + "\n");
+            painter.drawText( x*15.5,  8.8*y,  ui->label_test_peak_stress->text() + "\n");
 
-            painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+7.3*y, int(1750*(option.rect.width()-5)), option.rect.height()-1300 ); // inner table border
-            painter.drawText( x/1.7,   6*y,    "Numune      \n");
-            painter.drawText( x/4,     6.9*y,   ui->label_test_specimen_type->text() + "\n");
-            painter.drawRect( option.rect.x()+3*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-            painter.drawText( x*4.2,   6*y,    "Yaş");
-            painter.drawText( x*3.4,   6.9*y,  ui->label_specAge->text() + "\n");
-            painter.drawRect( option.rect.x()+6*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-            painter.drawText( x*6.95,  5.9*y, "Boyut    \n");
-            painter.drawText( x*7,     6.2*y,  QString("(%1)").arg(length_unit) + "\n");
-            painter.drawText( x*6.5,   6.9*y, ui->label_test_dimensions->text() + "\n");
-            painter.drawRect( option.rect.x()+9*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-            painter.drawText( x*10.1,  6*y,  "Alan    \n");
-            //painter.drawText( x*9.9,   6.2*y,  QString("(%1%2)").arg(length_unit,"2") + "\n");
-            painter.drawText( x*9.5,   6.9*y,  ui->label_test_area->text() + "\n");
-            painter.drawRect( option.rect.x()+12*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-            painter.drawText( x*12.7,  5.9*y,  "Tepe Yük  \n");
-            painter.drawText( x*13.1,  6.2*y,  QString("(%1)").arg(load_unit) + "\n");
-            painter.drawText( x*12.4,  6.9*y,  ui->label_test_peak_load->text() + "\n");
-            painter.drawRect( option.rect.x()+15*x, option.rect.y()+7.3*y, (option.rect.width()), option.rect.height()-1300 ); // inner table border
-            painter.drawText( x*15.5,  5.9*y,  "Tepe Gerilim  \n");
-            painter.drawText( x*16.1,  6.2*y,  QString("(%1)").arg(stress_unit) + "\n");
-            painter.drawText( x*15.5,  6.9*y,  ui->label_test_peak_stress->text() + "\n");
-            painter.drawRect( option.rect.x()+18.1*x, option.rect.y()+6.4*y, int(1750*(option.rect.width()-5)), option.rect.height()-1 );
+            painter.drawText( x/2, 10.7*y, "Sıcaklık");
+            painter.drawText( x*6, 10.7*y, ":  ");
+            painter.drawText( x/2, 11.4*y,   "Materyal");
+            painter.drawText( x*6, 11.4*y,   ":  ");
+            painter.drawText( x/2, 12.1*y, "Deney Teslimi");
+            painter.drawText( x*6, 12.1*y, ":  ");
+            painter.drawText( x/2, 12.8*y,  "Ek bilgi");
+            painter.drawText( x*6, 12.8*y, ":  ");
+            painter.drawRect( option.rect.x()+17*x, option.rect.y()+12.9*y, int(1020*(option.rect.width()-5)), option.rect.height() );
 
-            painter.drawText( x/2, 8.5*y, "Sıcaklık");
-            painter.drawText( x*6, 8.5*y, ":  ");
-            painter.drawText( x/2, 9*y,   "Materyal");
-            painter.drawText( x*6, 9*y,   ":  ");
-            painter.drawText( x/2, 9.5*y, "Deney Teslimi");
-            painter.drawText( x*6, 9.5*y, ":  ");
-            painter.drawText( x/2, 10*y,  "Ek bilgi");
-            painter.drawText( x*6, 10*y, ":  ");
-            painter.drawRect( option.rect.x()+17*x, option.rect.y()+10.1*y, int(1020*(option.rect.width()-5)), option.rect.height() );
-
-            painter.drawText( x/2, 13*y,  "Test Teknikeri :     \n");
-            painter.drawText( x/2, 14*y,  "İmza :     \n");
-            painter.drawText( x*17,17.5*y,  "1");
+            painter.drawText( x/2, 16*y,  "Test Teknikeri :     \n");
+            painter.drawText( x*15, 16*y,  "İmza     \n");
+            //painter.drawText( x*17,17.5*y,  "1");
 
             qDebug()<<"printer.pageRect().y()"<<printer.pageRect().y()+"\n"<<"printer.width()"<<printer.width();
             qDebug()<<option.rect.x()+2 << option.rect.y()+2 << int(200*(option.rect.width()-5)) << option.rect.height()-5;

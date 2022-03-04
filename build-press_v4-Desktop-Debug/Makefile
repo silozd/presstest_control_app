@@ -464,6 +464,7 @@ qrc_source.cpp: ../press_v4/source.qrc \
 		/usr/lib/qt5/bin/rcc \
 		../press_v4/template_1.png \
 		../press_v4/stylesheet.css \
+		../press_v4/template_2.png \
 		../press_v4/icons/navigate_check.png \
 		../press_v4/icons/document_chart.png \
 		../press_v4/icons/media_play_dis.png \
