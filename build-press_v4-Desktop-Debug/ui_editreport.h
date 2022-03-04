@@ -52,7 +52,7 @@ public:
     {
         if (EditReport->objectName().isEmpty())
             EditReport->setObjectName(QStringLiteral("EditReport"));
-        EditReport->resize(1010, 689);
+        EditReport->resize(857, 641);
         gridLayout = new QGridLayout(EditReport);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -66,7 +66,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 392, 669));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 331, 621));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         label_3 = new QLabel(scrollAreaWidgetContents);
