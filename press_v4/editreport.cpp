@@ -12,8 +12,8 @@ EditReport::EditReport(QWidget *parent) :
     ui->comboBox_template->addItem("Template 1", 0);
     ui->comboBox_template->addItem("Template 2", 1);
     ui->comboBox_template->addItem("Template 3", 2);
-    ui->comboBox_template->setCurrentIndex(0);
-    templ_type=0;
+    //ui->comboBox_template->setCurrentIndex(0);  // TODO : 0 yap
+    templ_type=1; // TODO : 0 yap
 }
 void EditReport::on_comboBox_template_currentIndexChanged(int index)
 {
