@@ -45,7 +45,7 @@ public:
     QFontComboBox *fontComboBox;
     QPushButton *pushButton_logo;
     QLabel *label_4;
-    QComboBox *comboBox_3;
+    QComboBox *comboBox_langEdit;
     QLabel *imageLabel;
 
     void setupUi(QDialog *EditReport)
@@ -123,11 +123,11 @@ public:
 
         gridLayout_2->addWidget(label_4, 3, 0, 1, 1);
 
-        comboBox_3 = new QComboBox(scrollAreaWidgetContents);
-        comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
-        comboBox_3->setCursor(QCursor(Qt::PointingHandCursor));
+        comboBox_langEdit = new QComboBox(scrollAreaWidgetContents);
+        comboBox_langEdit->setObjectName(QStringLiteral("comboBox_langEdit"));
+        comboBox_langEdit->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_2->addWidget(comboBox_3, 3, 1, 1, 1);
+        gridLayout_2->addWidget(comboBox_langEdit, 3, 1, 1, 1);
 
         gridLayout_2->setColumnStretch(0, 1);
         gridLayout_2->setColumnStretch(1, 1);
@@ -167,11 +167,6 @@ public:
         label->setText(QApplication::translate("EditReport", "Bi\303\247im :", Q_NULLPTR));
         pushButton_logo->setText(QApplication::translate("EditReport", "Logo Y\303\274kle", Q_NULLPTR));
         label_4->setText(QApplication::translate("EditReport", "Dil :", Q_NULLPTR));
-        comboBox_3->clear();
-        comboBox_3->insertItems(0, QStringList()
-         << QApplication::translate("EditReport", "TR", Q_NULLPTR)
-         << QApplication::translate("EditReport", "ENG", Q_NULLPTR)
-        );
         imageLabel->setText(QString());
     } // retranslateUi
 

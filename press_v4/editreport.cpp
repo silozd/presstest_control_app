@@ -12,28 +12,32 @@ EditReport::EditReport(QWidget *parent) :
     ui->comboBox_template->addItem("Template 1", 0);
     ui->comboBox_template->addItem("Template 2", 1);
     ui->comboBox_template->addItem("Template 3", 2);
-    //ui->comboBox_template->setCurrentIndex(0);  // TODO : 0 yap
-    templ_type=1;// TODO : 0 yap
+    templ_type=0;
+    ui->comboBox_langEdit->addItem("TR",  0);
+    ui->comboBox_langEdit->addItem("ENG", 1);
+    lang_file=0;
+
+    ui->fontComboBox->setCurrentFont(QFont("Times New Roman"));
 }
 void EditReport::on_comboBox_template_currentIndexChanged(int index)
 {
 // Display template form by image:
     switch (index) {
-    case 0: ui->imageLabel->setStyleSheet("border-image: url(:/template_1.png);");//setPixmap(QPixmap::fromImage(img));
+    case 0: ui->imageLabel->setStyleSheet("border-image: url(:/temp_1.png);");//setPixmap(QPixmap::fromImage(img));
         break;
-    case 1: ui->imageLabel->setStyleSheet("border-image: url(:/template_2.png);");
+    case 1: ui->imageLabel->setStyleSheet("border-image: url(:/temp_2.png);");
         break;
     case 2: ui->imageLabel->setStyleSheet("border-image: url(:/template_1.png);");
         break;
     }
 
 //// FOR PREVIEW PDF FILE :
-//    QString file = QDir::currentPath() + "/template_1.pdf";
-//    Poppler::Document* pre_doc = Poppler::Document::load(file);
-//    Poppler::Page* pdfPage = pre_doc->page(0);  // Document starts at page 0
-//    QImage img;
 //    switch (index) {
-//    case 0:
+//    case 0:{
+//        QString file = QDir::currentPath() + "/template_1.pdf";
+//        Poppler::Document* pre_doc = Poppler::Document::load(file);
+//        Poppler::Page* pdfPage = pre_doc->page(0);  // Document starts at page 0
+//        QImage img;
 //        //pressApp->preview_template(0);
 //        img = pdfPage->renderToImage(72.0,72.0,-1,-1,ui->imageLabel->width(),ui->imageLabel->height());
 //        //
@@ -45,10 +49,32 @@ void EditReport::on_comboBox_template_currentIndexChanged(int index)
 //        if (pdfPage == 0) return;
 //        if (img.isNull()) return;
 
+//        delete pdfPage;
 //        ui->imageLabel->setPixmap(QPixmap::fromImage(img));
 //        //
-//        break;
-//    case 1:
+//        break;}
+//    case 1:{
+//        QString file = QDir::currentPath() + "/template_2.pdf";
+//        Poppler::Document* pre_doc = Poppler::Document::load(file);
+//        Poppler::Page* pdfPage = pre_doc->page(0);  // Document starts at page 0
+//        QImage img;img = pdfPage->renderToImage(72.0,72.0,-1,-1,ui->imageLabel->width(),ui->imageLabel->height());
+//        //
+//        if (!pre_doc || pre_doc->isLocked()) {
+//          delete pre_doc;
+//          return;
+//        }
+//        if (pre_doc == 0) return;
+//        if (pdfPage == 0) return;
+//        if (img.isNull()) return;
+
+//        delete pdfPage;
+//        ui->imageLabel->setPixmap(QPixmap::fromImage(img));
+//        break;}
+//    case 2:{
+//        QString file = QDir::currentPath() + "/template_3.pdf";
+//        Poppler::Document* pre_doc = Poppler::Document::load(file);
+//        Poppler::Page* pdfPage = pre_doc->page(0);  // Document starts at page 0
+//        QImage img;
 //        img = pdfPage->renderToImage(72.0,72.0,-1,-1,ui->imageLabel->width(),ui->imageLabel->height());
 //        //
 //        if (!pre_doc || pre_doc->isLocked()) {
@@ -59,23 +85,27 @@ void EditReport::on_comboBox_template_currentIndexChanged(int index)
 //        if (pdfPage == 0) return;
 //        if (img.isNull()) return;
 
+//        delete pdfPage;
 //        ui->imageLabel->setPixmap(QPixmap::fromImage(img));
-//        break;
-//    case 2:
-//        img = pdfPage->renderToImage(72.0,72.0,-1,-1,ui->imageLabel->width(),ui->imageLabel->height());
-//        //
-//        if (!pre_doc || pre_doc->isLocked()) {
-//          delete pre_doc;
-//          return;
-//        }
-//        if (pre_doc == 0) return;
-//        if (pdfPage == 0) return;
-//        if (img.isNull()) return;
-
-//        ui->imageLabel->setPixmap(QPixmap::fromImage(img));
-//        break;
+//        break;}
 //    }
-//    delete pdfPage;
+}
+void EditReport::on_comboBox_langEdit_currentIndexChanged(int index)
+{
+    switch (index) {
+    case 0:
+        if(templ_type == 0)
+            ui->imageLabel->setStyleSheet("border-image: url(:/temp_1.png);");
+        if(templ_type == 1)
+            ui->imageLabel->setStyleSheet("border-image: url(:/temp_2.png);");
+        break;
+    case 1:
+        if(templ_type == 0)
+            ui->imageLabel->setStyleSheet("border-image: url(:/temp_1_eng.png);");
+        if(templ_type == 1)
+            ui->imageLabel->setStyleSheet("border-image: url(:/temp_2_eng.png);");
+        break;
+    }
 }
 void EditReport::on_pushButton_saveEdit_clicked()
 {
@@ -85,7 +115,11 @@ void EditReport::on_pushButton_saveEdit_clicked()
     case 1: templ_type = 1; break;
     case 2: templ_type = 2; break;
     }
-
+    int lang = ui->comboBox_langEdit->currentIndex();
+    switch (lang) {
+    case 0: lang_file = 0; break;
+    case 1: lang_file = 1; break;
+    }
     this->close();
     qDebug()<<templ_type;
 }

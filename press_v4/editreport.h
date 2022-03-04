@@ -19,10 +19,15 @@ public:
     PressApp *pressApp;
 
     int templ_type;
+    int lang_file;
 
 public slots:
     void on_comboBox_template_currentIndexChanged(int index);
     void on_pushButton_saveEdit_clicked();
+    void on_comboBox_langEdit_currentIndexChanged(int index);
+
+private slots:
+
 private:
 };
 

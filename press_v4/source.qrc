@@ -32,7 +32,8 @@
         <file>specimen_img/kerb.png</file>
         <file>specimen_img/masonary.png</file>
         <file>specimen_img/pavingstone.png</file>
-        <file>template_1.png</file>
-        <file>template_2.png</file>
+        <file>temp_1.png</file>
+        <file>temp_1_eng.png</file>
+        <file>temp_2.png</file>
     </qresource>
 </RCC>

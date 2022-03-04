@@ -102,7 +102,6 @@ public:
     QPrinter pdf_printer;
     QString pdf_fileName;
     QString pdf_path;
-    QFont police;//(editReport->ui->comboBox_3->currentText(),30);
     int h_label;
     int t_label;
 
