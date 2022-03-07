@@ -387,10 +387,6 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
 
 //            painter1.end();
         }
-        /// TEMPLATE_3
-        if(editReport->templ_type==2){
-            qDebug()<<"PRINTING 3 heyo";
-        }
         break;
     }
     case _TXT:
@@ -404,22 +400,22 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         test_res.open(QIODevice::WriteOnly);
         QTextStream lines(&test_res);
         lines.setCodec("UTF-8");
-        lines << QString("\nTEST RESULTS \n");
-        lines << QString("Company :") << ui->lineEdit_company->text() << "\n";
-        lines << QString("Test Name :") << ui->lineEdit_testName->text() << "\n";
-        lines << QString("User :") << ui->lineEdit_user->text() << "\n";
-        lines << QString("Test_No :") << ui->label_test_no->text() << "\n";
-        lines << QString("Test_Start_Date :") << ui->label_test_start_date->text() << "\n";
-        lines << QString("Test_Start_Time :") << ui->label_test_start_time->text() << "\n";
-        lines << QString("Test_Finish_Time :") << ui->label_test_finish_time->text() << "\n";
-        lines << QString("Test_Type :") << ui->label_test_test_type->text() << "\n";
-        lines << QString("Specimen :") << ui->label_test_specimen_type->text() << "\n";
+        lines << QString("\nDENEY SONUÇLARI \n");
+        lines << QString("Firma :") << ui->lineEdit_company->text() << "\n";
+        lines << QString("Deney_Adı :") << ui->lineEdit_testName->text() << "\n";
+        lines << QString("Kullanıcı :") << ui->lineEdit_user->text() << "\n";
+        lines << QString("Deney_Sayısı :") << ui->label_test_no->text() << "\n";
+        lines << QString("Deney_Başlama_Tarihi :") << ui->label_test_start_date->text() << "\n";
+        lines << QString("Deney_Başlama_Saati :") << ui->label_test_start_time->text() << "\n";
+        lines << QString("Deney_Bitiş_Saati :") << ui->label_test_finish_time->text() << "\n";
+        lines << QString("Deney_Tipi :") << ui->label_test_test_type->text() << "\n";
+        lines << QString("Numune :") << ui->label_test_specimen_type->text() << "\n";
         lines << QString(ui->lineEdit_addInfo->text()) << ui->lineEdit_addInfo2->text() << "\n";
-        lines << QString("Dimensions_(%1) :").arg(length_unit) << ui->label_test_dimensions->text() << "\n";
-        lines << QString("Age :") << ui->label_specAge->text() << "\n";
-        lines << QString("Area_(%1%2) :").arg(length_unit,"2") << ui->label_test_area->text() << "\n";
-        lines << QString("Peak_Load_(%1) :").arg(load_unit) << ui->label_test_peak_load->text() << "\n";
-        lines << QString("Peak_Stress_(%1) :").arg(stress_unit) << ui->label_test_peak_stress->text() << "\n";
+        lines << QString("Boyutlar_(%1) :").arg(length_unit) << ui->label_test_dimensions->text() << "\n";
+        lines << QString("Yaş :") << ui->label_specAge->text() << "\n";
+        lines << QString("Alan_(%1%2) :").arg(length_unit,"2") << ui->label_test_area->text() << "\n";
+        lines << QString("Tepe_Yük_(%1) :").arg(load_unit) << ui->label_test_peak_load->text() << "\n";
+        lines << QString("Tepe_Gerilim_(%1) :").arg(stress_unit) << ui->label_test_peak_stress->text() << "\n";
         if(ui->label_test_paving_stone_fpl->isHidden() == false){
             lines << QString("P/L_(%1/%2)  :").arg(load_unit,length_unit) << ui->label_test_paving_stone_fpl->text() << "\n";
         }

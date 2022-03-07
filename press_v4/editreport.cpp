@@ -11,7 +11,6 @@ EditReport::EditReport(QWidget *parent) :
 
     ui->comboBox_template->addItem("Template 1", 0);
     ui->comboBox_template->addItem("Template 2", 1);
-    ui->comboBox_template->addItem("Template 3", 2);
     templ_type=0;
     ui->comboBox_langEdit->addItem("TR",  0);
     ui->comboBox_langEdit->addItem("ENG", 1);
@@ -114,7 +113,6 @@ void EditReport::on_pushButton_saveEdit_clicked()
     switch (templ) {
     case 0: templ_type = 0; break;
     case 1: templ_type = 1; break;
-    case 2: templ_type = 2; break;
     }
     int lang = ui->comboBox_langEdit->currentIndex();
     switch (lang) {

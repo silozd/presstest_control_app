@@ -210,6 +210,7 @@ public:
     QString start_time;
     QString finish_time;
     QString dimensions;
+    QString material_type;
 
     double calc_area;
     double load_unit_multiplier;
@@ -395,13 +396,14 @@ private slots:
     void on_pushButton_read_from_device_clicked();
     void on_btn_saveSet_clicked();
     void on_pushButton_removeUser_clicked();
+    void on_pushButton_load_factory_settings_clicked();
     void on_combo_testType_currentIndexChanged(int index);
     void on_comboBox_specimen_currentIndexChanged(int index);
     void on_comboBox_unit_currentIndexChanged(int index);
     void on_comboBox_unit_ch_currentIndexChanged(int index);
     void on_combo_scrRes_currentIndexChanged(int index);
     void on_comboBox_formatFile_currentIndexChanged(int index);
-    void on_pushButton_load_factory_settings_clicked();
+    void on_comboBox_standard_currentIndexChanged(int index);
     void assign_frame();
     void assign_controlType();
     void assign_printMode();
@@ -433,3 +435,4 @@ private slots:
 };
 
 #endif // PRESSAPP_H
+

@@ -30,7 +30,7 @@
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_main">
        <layout class="QGridLayout" name="gridLayout_2" rowstretch="2,1,1,1,2,1,1,1" columnstretch="1,1,1">
@@ -397,7 +397,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>370</width>
+                    <width>366</width>
                     <height>323</height>
                    </rect>
                   </property>
@@ -1347,8 +1347,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>384</width>
-                    <height>318</height>
+                    <width>98</width>
+                    <height>70</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -1380,7 +1380,7 @@
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>368</width>
+                        <width>339</width>
                         <height>595</height>
                        </rect>
                       </property>
@@ -1839,8 +1839,8 @@
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-122</y>
-                    <width>370</width>
+                    <y>0</y>
+                    <width>221</width>
                     <height>440</height>
                    </rect>
                   </property>
@@ -2076,8 +2076,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>384</width>
-                    <height>318</height>
+                    <width>311</width>
+                    <height>217</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -2339,8 +2339,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>384</width>
-                    <height>318</height>
+                    <width>98</width>
+                    <height>70</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -2368,8 +2368,8 @@
                       <property name="geometry">
                        <rect>
                         <x>0</x>
-                        <y>-120</y>
-                        <width>368</width>
+                        <y>0</y>
+                        <width>364</width>
                         <height>522</height>
                        </rect>
                       </property>
@@ -2846,8 +2846,8 @@
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-160</y>
-                    <width>370</width>
+                    <y>0</y>
+                    <width>291</width>
                     <height>478</height>
                    </rect>
                   </property>

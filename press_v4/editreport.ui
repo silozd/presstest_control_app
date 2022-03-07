@@ -46,37 +46,8 @@
            <height>627</height>
           </rect>
          </property>
-         <layout class="QGridLayout" name="gridLayout_2" columnstretch="1,1">
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>Yazı Tipi :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QComboBox" name="comboBox_2">
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <item>
-             <property name="text">
-              <string>A4</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A5</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>A3</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="6" column="1">
+         <layout class="QGridLayout" name="gridLayout_2" columnstretch="1,2">
+          <item row="5" column="1">
            <widget class="QPushButton" name="pushButton_saveEdit">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
@@ -86,7 +57,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="4" column="1">
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -98,13 +69,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Boyut :</string>
-            </property>
-           </widget>
           </item>
           <item row="0" column="1">
            <widget class="QComboBox" name="comboBox_template">
@@ -120,14 +84,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
-           <widget class="QFontComboBox" name="fontComboBox">
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
+          <item row="3" column="1">
            <widget class="QPushButton" name="pushButton_logo">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
@@ -137,17 +94,31 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="1" column="1">
+           <widget class="QFontComboBox" name="fontComboBox">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
            <widget class="QLabel" name="label_4">
             <property name="text">
              <string>Dil :</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="2" column="1">
            <widget class="QComboBox" name="comboBox_langEdit">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Yazı Tipi :</string>
             </property>
            </widget>
           </item>

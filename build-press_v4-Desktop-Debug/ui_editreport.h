@@ -35,17 +35,15 @@ public:
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QGridLayout *gridLayout_2;
-    QLabel *label_3;
-    QComboBox *comboBox_2;
     QPushButton *pushButton_saveEdit;
     QSpacerItem *verticalSpacer;
-    QLabel *label_2;
     QComboBox *comboBox_template;
     QLabel *label;
-    QFontComboBox *fontComboBox;
     QPushButton *pushButton_logo;
+    QFontComboBox *fontComboBox;
     QLabel *label_4;
     QComboBox *comboBox_langEdit;
+    QLabel *label_3;
     QLabel *imageLabel;
 
     void setupUi(QDialog *EditReport)
@@ -69,31 +67,15 @@ public:
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 318, 627));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        label_3 = new QLabel(scrollAreaWidgetContents);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        gridLayout_2->addWidget(label_3, 2, 0, 1, 1);
-
-        comboBox_2 = new QComboBox(scrollAreaWidgetContents);
-        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
-        comboBox_2->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_2->addWidget(comboBox_2, 1, 1, 1, 1);
-
         pushButton_saveEdit = new QPushButton(scrollAreaWidgetContents);
         pushButton_saveEdit->setObjectName(QStringLiteral("pushButton_saveEdit"));
         pushButton_saveEdit->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_2->addWidget(pushButton_saveEdit, 6, 1, 1, 1);
+        gridLayout_2->addWidget(pushButton_saveEdit, 5, 1, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_2->addItem(verticalSpacer, 5, 1, 1, 1);
-
-        label_2 = new QLabel(scrollAreaWidgetContents);
-        label_2->setObjectName(QStringLiteral("label_2"));
-
-        gridLayout_2->addWidget(label_2, 1, 0, 1, 1);
+        gridLayout_2->addItem(verticalSpacer, 4, 1, 1, 1);
 
         comboBox_template = new QComboBox(scrollAreaWidgetContents);
         comboBox_template->setObjectName(QStringLiteral("comboBox_template"));
@@ -106,31 +88,36 @@ public:
 
         gridLayout_2->addWidget(label, 0, 0, 1, 1);
 
-        fontComboBox = new QFontComboBox(scrollAreaWidgetContents);
-        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
-        fontComboBox->setCursor(QCursor(Qt::PointingHandCursor));
-
-        gridLayout_2->addWidget(fontComboBox, 2, 1, 1, 1);
-
         pushButton_logo = new QPushButton(scrollAreaWidgetContents);
         pushButton_logo->setObjectName(QStringLiteral("pushButton_logo"));
         pushButton_logo->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_2->addWidget(pushButton_logo, 4, 1, 1, 1);
+        gridLayout_2->addWidget(pushButton_logo, 3, 1, 1, 1);
+
+        fontComboBox = new QFontComboBox(scrollAreaWidgetContents);
+        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
+        fontComboBox->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_2->addWidget(fontComboBox, 1, 1, 1, 1);
 
         label_4 = new QLabel(scrollAreaWidgetContents);
         label_4->setObjectName(QStringLiteral("label_4"));
 
-        gridLayout_2->addWidget(label_4, 3, 0, 1, 1);
+        gridLayout_2->addWidget(label_4, 2, 0, 1, 1);
 
         comboBox_langEdit = new QComboBox(scrollAreaWidgetContents);
         comboBox_langEdit->setObjectName(QStringLiteral("comboBox_langEdit"));
         comboBox_langEdit->setCursor(QCursor(Qt::PointingHandCursor));
 
-        gridLayout_2->addWidget(comboBox_langEdit, 3, 1, 1, 1);
+        gridLayout_2->addWidget(comboBox_langEdit, 2, 1, 1, 1);
+
+        label_3 = new QLabel(scrollAreaWidgetContents);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        gridLayout_2->addWidget(label_3, 1, 0, 1, 1);
 
         gridLayout_2->setColumnStretch(0, 1);
-        gridLayout_2->setColumnStretch(1, 1);
+        gridLayout_2->setColumnStretch(1, 2);
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         gridLayout_3->addWidget(scrollArea, 0, 1, 1, 1);
@@ -155,18 +142,11 @@ public:
     void retranslateUi(QDialog *EditReport)
     {
         EditReport->setWindowTitle(QApplication::translate("EditReport", "Dialog", Q_NULLPTR));
-        label_3->setText(QApplication::translate("EditReport", "Yaz\304\261 Tipi :", Q_NULLPTR));
-        comboBox_2->clear();
-        comboBox_2->insertItems(0, QStringList()
-         << QApplication::translate("EditReport", "A4", Q_NULLPTR)
-         << QApplication::translate("EditReport", "A5", Q_NULLPTR)
-         << QApplication::translate("EditReport", "A3", Q_NULLPTR)
-        );
         pushButton_saveEdit->setText(QApplication::translate("EditReport", "Kaydet", Q_NULLPTR));
-        label_2->setText(QApplication::translate("EditReport", "Boyut :", Q_NULLPTR));
         label->setText(QApplication::translate("EditReport", "Bi\303\247im :", Q_NULLPTR));
         pushButton_logo->setText(QApplication::translate("EditReport", "Logo Y\303\274kle", Q_NULLPTR));
         label_4->setText(QApplication::translate("EditReport", "Dil :", Q_NULLPTR));
+        label_3->setText(QApplication::translate("EditReport", "Yaz\304\261 Tipi :", Q_NULLPTR));
         imageLabel->setText(QString());
     } // retranslateUi
 

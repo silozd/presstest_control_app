@@ -493,14 +493,14 @@ public:
     QLabel *label_99;
     QLineEdit *lineEdit_fileName;
     QLabel *label_82;
-    QLabel *label_current_test_no;
-    QLabel *label_95;
-    QLabel *label_test_no;
     QLabel *label_79;
     QLabel *txt_peak_load;
-    QLabel *label_88;
     QLabel *label_test_peak_stress;
     QLabel *label_test_start_time;
+    QLabel *label_test_no;
+    QLabel *label_current_test_no;
+    QLabel *label_88;
+    QLabel *label_95;
     QFrame *wdg_pdfView;
     QGridLayout *gridLayout_14;
     QSpacerItem *verticalSpacer_16;
@@ -1352,7 +1352,7 @@ public:
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 98, 70));
+        page_param->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1364,7 +1364,7 @@ public:
         scrollArea_param->setWidgetResizable(true);
         wdg_param = new QWidget();
         wdg_param->setObjectName(QStringLiteral("wdg_param"));
-        wdg_param->setGeometry(QRect(0, 0, 339, 595));
+        wdg_param->setGeometry(QRect(0, 0, 368, 595));
         gridLayout_9 = new QGridLayout(wdg_param);
         gridLayout_9->setSpacing(6);
         gridLayout_9->setContentsMargins(11, 11, 11, 11);
@@ -1655,7 +1655,7 @@ public:
         toolBox_app->addItem(page_param, QStringLiteral("Parametreler"));
         page_channels = new QWidget();
         page_channels->setObjectName(QStringLiteral("page_channels"));
-        page_channels->setGeometry(QRect(0, 0, 221, 440));
+        page_channels->setGeometry(QRect(0, -122, 370, 440));
         gridLayout_10 = new QGridLayout(page_channels);
         gridLayout_10->setSpacing(12);
         gridLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -1809,7 +1809,7 @@ public:
         toolBox_app->addItem(page_channels, QStringLiteral("Kanallar"));
         page_gain = new QWidget();
         page_gain->setObjectName(QStringLiteral("page_gain"));
-        page_gain->setGeometry(QRect(0, 0, 311, 217));
+        page_gain->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_18 = new QGridLayout(page_gain);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setContentsMargins(11, 11, 11, 11);
@@ -1967,7 +1967,7 @@ public:
         toolBox_app->addItem(page_gain, QString::fromUtf8("Kazan\303\247"));
         page_calib = new QWidget();
         page_calib->setObjectName(QStringLiteral("page_calib"));
-        page_calib->setGeometry(QRect(0, 0, 98, 70));
+        page_calib->setGeometry(QRect(0, 0, 384, 318));
         gridLayout_11 = new QGridLayout(page_calib);
         gridLayout_11->setSpacing(6);
         gridLayout_11->setContentsMargins(11, 11, 11, 11);
@@ -1978,7 +1978,7 @@ public:
         scrollArea_calib->setWidgetResizable(true);
         wdg_calib = new QWidget();
         wdg_calib->setObjectName(QStringLiteral("wdg_calib"));
-        wdg_calib->setGeometry(QRect(0, 0, 364, 522));
+        wdg_calib->setGeometry(QRect(0, -120, 368, 522));
         gridLayout_12 = new QGridLayout(wdg_calib);
         gridLayout_12->setSpacing(6);
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
@@ -2314,7 +2314,7 @@ public:
         toolBox_app->addItem(page_calib, QStringLiteral("Kalibrasyon"));
         page_pid = new QWidget();
         page_pid->setObjectName(QStringLiteral("page_pid"));
-        page_pid->setGeometry(QRect(0, 0, 291, 478));
+        page_pid->setGeometry(QRect(0, -160, 370, 478));
         gridLayout_17 = new QGridLayout(page_pid);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);
@@ -3246,25 +3246,6 @@ public:
 
         gridLayout_16->addWidget(label_82, 5, 0, 1, 1);
 
-        label_current_test_no = new QLabel(wdg_results);
-        label_current_test_no->setObjectName(QStringLiteral("label_current_test_no"));
-        label_current_test_no->setCursor(QCursor(Qt::ArrowCursor));
-        label_current_test_no->setIndent(9);
-
-        gridLayout_16->addWidget(label_current_test_no, 11, 1, 1, 1);
-
-        label_95 = new QLabel(wdg_results);
-        label_95->setObjectName(QStringLiteral("label_95"));
-
-        gridLayout_16->addWidget(label_95, 11, 0, 1, 1);
-
-        label_test_no = new QLabel(wdg_results);
-        label_test_no->setObjectName(QStringLiteral("label_test_no"));
-        label_test_no->setCursor(QCursor(Qt::ArrowCursor));
-        label_test_no->setIndent(9);
-
-        gridLayout_16->addWidget(label_test_no, 10, 1, 1, 1);
-
         label_79 = new QLabel(wdg_results);
         label_79->setObjectName(QStringLiteral("label_79"));
 
@@ -3274,11 +3255,6 @@ public:
         txt_peak_load->setObjectName(QStringLiteral("txt_peak_load"));
 
         gridLayout_16->addWidget(txt_peak_load, 8, 0, 1, 1);
-
-        label_88 = new QLabel(wdg_results);
-        label_88->setObjectName(QStringLiteral("label_88"));
-
-        gridLayout_16->addWidget(label_88, 10, 0, 1, 1);
 
         label_test_peak_stress = new QLabel(wdg_results);
         label_test_peak_stress->setObjectName(QStringLiteral("label_test_peak_stress"));
@@ -3293,6 +3269,30 @@ public:
         label_test_start_time->setIndent(9);
 
         gridLayout_16->addWidget(label_test_start_time, 5, 1, 1, 1);
+
+        label_test_no = new QLabel(wdg_results);
+        label_test_no->setObjectName(QStringLiteral("label_test_no"));
+        label_test_no->setCursor(QCursor(Qt::ArrowCursor));
+        label_test_no->setIndent(9);
+
+        gridLayout_16->addWidget(label_test_no, 11, 1, 1, 1);
+
+        label_current_test_no = new QLabel(wdg_results);
+        label_current_test_no->setObjectName(QStringLiteral("label_current_test_no"));
+        label_current_test_no->setCursor(QCursor(Qt::ArrowCursor));
+        label_current_test_no->setIndent(9);
+
+        gridLayout_16->addWidget(label_current_test_no, 10, 1, 1, 1);
+
+        label_88 = new QLabel(wdg_results);
+        label_88->setObjectName(QStringLiteral("label_88"));
+
+        gridLayout_16->addWidget(label_88, 11, 0, 1, 1);
+
+        label_95 = new QLabel(wdg_results);
+        label_95->setObjectName(QStringLiteral("label_95"));
+
+        gridLayout_16->addWidget(label_95, 10, 0, 1, 1);
 
         gridLayout_16->setColumnStretch(0, 1);
         gridLayout_16->setColumnStretch(1, 2);
@@ -3520,7 +3520,7 @@ public:
 
         stackedWidget->setCurrentIndex(1);
         tabWidget_app->setCurrentIndex(3);
-        toolBox_app->setCurrentIndex(0);
+        toolBox_app->setCurrentIndex(2);
         stackedWidget_specimen->setCurrentIndex(0);
 
 
@@ -3644,16 +3644,16 @@ public:
         label_57->setText(QApplication::translate("PressApp", "Ondal\304\261k Nok. :", Q_NULLPTR));
         label_adc_cal_channel_4->setText(QApplication::translate("PressApp", "000", Q_NULLPTR));
         pushButton_tare_ch2->setText(QApplication::translate("PressApp", "Dara", Q_NULLPTR));
-        lineEdit_ch4->setText(QApplication::translate("PressApp", "Channel 4", Q_NULLPTR));
+        lineEdit_ch4->setText(QApplication::translate("PressApp", "Kanal 4", Q_NULLPTR));
         label_ch3_unit->setText(QString());
         label_ch4_unit->setText(QString());
         label_ch2_unit->setText(QString());
-        lineEdit_ch3->setText(QApplication::translate("PressApp", "Channel 3", Q_NULLPTR));
+        lineEdit_ch3->setText(QApplication::translate("PressApp", "Kanal 3", Q_NULLPTR));
         label_adc_cal_channel_3->setText(QApplication::translate("PressApp", "000", Q_NULLPTR));
         pushButton_tare_ch4->setText(QApplication::translate("PressApp", "Dara", Q_NULLPTR));
         label_adc_cal_channel_2->setText(QApplication::translate("PressApp", "000", Q_NULLPTR));
         label_58->setText(QApplication::translate("PressApp", "Ondal\304\261k Nok. :", Q_NULLPTR));
-        lineEdit_ch2->setText(QApplication::translate("PressApp", "Channel 2", Q_NULLPTR));
+        lineEdit_ch2->setText(QApplication::translate("PressApp", "Kanal 2", Q_NULLPTR));
         pushButton_tare_ch3->setText(QApplication::translate("PressApp", "Dara", Q_NULLPTR));
         label_76->setText(QApplication::translate("PressApp", "Birim :", Q_NULLPTR));
         toolBox_app->setItemText(toolBox_app->indexOf(page_channels), QApplication::translate("PressApp", "Kanallar", Q_NULLPTR));
@@ -3730,7 +3730,7 @@ public:
         label_step_resp_CC_Kd->setText(QApplication::translate("PressApp", "---", Q_NULLPTR));
         toolBox_app->setItemText(toolBox_app->indexOf(page_pid), QApplication::translate("PressApp", "Pid", Q_NULLPTR));
         pushButton_step_response->setText(QApplication::translate("PressApp", "> Autotuning", Q_NULLPTR));
-        label_read_write->setText(QApplication::translate("PressApp", "parametreler editlenirse burada uyar\304\261 yazacak", Q_NULLPTR));
+        label_read_write->setText(QApplication::translate("PressApp", "parametreler editlenirse burada uyar\304\261 yazacak - TODO", Q_NULLPTR));
         label_pace_rate->setText(QApplication::translate("PressApp", "Y\303\274kleme H\304\261z\304\261 :", Q_NULLPTR));
         label_test_date_time_main->setText(QApplication::translate("PressApp", "Deney Tarihi :", Q_NULLPTR));
         label_calculated_area->setText(QApplication::translate("PressApp", "Alan :", Q_NULLPTR));
@@ -3776,10 +3776,10 @@ public:
 #endif // QT_NO_WHATSTHIS
         btn_expand->setText(QString());
         tabWidget_app->setTabText(tabWidget_app->indexOf(tab_test), QApplication::translate("PressApp", "Deney", Q_NULLPTR));
-        pushButton_connect->setText(QApplication::translate("PressApp", "Connect", Q_NULLPTR));
+        pushButton_connect->setText(QApplication::translate("PressApp", "Ba\304\237lan", Q_NULLPTR));
         label_connection->setText(QApplication::translate("PressApp", "Ba\304\237lant\304\261 Durumu", Q_NULLPTR));
         label_29->setText(QApplication::translate("PressApp", "IP :    ", Q_NULLPTR));
-        pushButton_cutconnect->setText(QApplication::translate("PressApp", "Disconnect", Q_NULLPTR));
+        pushButton_cutconnect->setText(QApplication::translate("PressApp", "Ba\304\237lant\304\261 Kes", Q_NULLPTR));
         pushButton_load_factory_settings->setText(QApplication::translate("PressApp", " Fabrika Ayarlar\304\261 ", Q_NULLPTR));
         label_51->setText(QApplication::translate("PressApp", "Haf\304\261za :", Q_NULLPTR));
         pushButton_delete_storage->setText(QApplication::translate("PressApp", "Temizle", Q_NULLPTR));
@@ -3821,14 +3821,14 @@ public:
         label_specAge->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         label_99->setText(QApplication::translate("PressApp", "Numune Tipi :", Q_NULLPTR));
         label_82->setText(QApplication::translate("PressApp", "Deney Ba\305\237. Saati :", Q_NULLPTR));
-        label_current_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        label_95->setText(QApplication::translate("PressApp", "Current Deney No :", Q_NULLPTR));
-        label_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         label_79->setText(QApplication::translate("PressApp", "Deney Ad\304\261 :", Q_NULLPTR));
         txt_peak_load->setText(QApplication::translate("PressApp", "Tepe Y\303\274k :", Q_NULLPTR));
-        label_88->setText(QApplication::translate("PressApp", "Deney No :", Q_NULLPTR));
         label_test_peak_stress->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         label_test_start_time->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_current_test_no->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
+        label_88->setText(QApplication::translate("PressApp", "Toplam Deney No :", Q_NULLPTR));
+        label_95->setText(QApplication::translate("PressApp", "Deney No :", Q_NULLPTR));
         comboBox_formatFile->clear();
         comboBox_formatFile->insertItems(0, QStringList()
          << QApplication::translate("PressApp", ".pdf", Q_NULLPTR)
