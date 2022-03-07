@@ -928,7 +928,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(cube, 0);
         ui->comboBox_specimen ->addItem(cylinder, 1);
-        material_type = "BETON";
+        if(editReport->lang_file == 0) material_type = "BETON";
         break;
     case 1:
         test_type = FLEXURAL;
@@ -937,7 +937,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen->addItem(beam3, 0);
         ui->comboBox_specimen->addItem(beam4, 1);
-        material_type = "BETON";
+        if(editReport->lang_file == 0) material_type = "BETON";
         break;
     case 2:
         test_type = FLEXURAL;
@@ -945,7 +945,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(FLEXURAL);
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(kerb, 0);
-        material_type = "BETON";
+        if(editReport->lang_file == 0) material_type = "BETON";
         break;
     case 3:
         test_type = SPLIT_TENSILE;
@@ -953,7 +953,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(SPLIT_TENSILE);
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(pavingstone, 0);
-        material_type = "BETON";
+        if(editReport->lang_file == 0) material_type = "BETON";
         break;
     case 4:
         test_type = SPLIT_TENSILE;
@@ -962,7 +962,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(cube, 0);
         ui->comboBox_specimen ->addItem(cylinder, 1);
-        material_type = "BETON";
+        if(editReport->lang_file == 0) material_type = "BETON";
         break;
     case 5:
         test_type = COMPRESSION;
@@ -978,7 +978,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(FLEXURAL);
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(masonry, 0);   // numune dogru mu? TODO
-        material_type = "BETON DÖŞEME";
+        if(editReport->lang_file == 0) material_type = "BETON DÖŞEME";
         break;
     case 7:
         test_type = FLEXURAL;
@@ -986,7 +986,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(FLEXURAL);  // test tipi dogru mu? TODO
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(flagstone, 0);
-        material_type = "TERAZZO";
+        material_type = "TERRAZZO";
         break;
     case 8:
         test_type = COMPRESSION;
@@ -996,7 +996,8 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen ->addItem(cube, 0);          // numuneler dogru mu? TODO
         ui->comboBox_specimen ->addItem(cylinder, 1);
         ui->comboBox_specimen ->addItem(masonry, 2);
-        material_type = "ÇİMENTO";
+        if(editReport->lang_file == 0) material_type = "ÇİMENTO";
+        else if(editReport->lang_file == 1) material_type = "CEMENT";
         break;
     case 9:
         test_type = FLEXURAL;
@@ -1007,7 +1008,8 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen->addItem(beam4, 1);
         ui->comboBox_specimen ->addItem(kerb, 0);
         ui->comboBox_specimen ->addItem(flagstone, 0);
-        material_type = "ÇİMENTO";
+        if(editReport->lang_file == 0) material_type = "ÇİMENTO";
+        else if(editReport->lang_file == 1) material_type = "CEMENT";
         break;
     case 10:
         test_type = COMPRESSION;
@@ -1015,7 +1017,8 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(COMPRESSION);
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(flagstone, 0);
-        material_type = "BETON";
+        if(editReport->lang_file == 0) material_type = "BETON";
+        else if(editReport->lang_file == 1) material_type = "CONCRETE";
         break;
     }
     ui->combo_testType ->setDisabled(1);

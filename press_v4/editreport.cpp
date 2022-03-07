@@ -107,6 +107,13 @@ void EditReport::on_comboBox_langEdit_currentIndexChanged(int index)
         break;
     }
 }
+void EditReport::on_pushButton_logo_clicked()
+{
+    QString filters(".png(*.png);; .jpeg(*.jpeg);; .jpg(*.jpg)");
+    QString defaultFilter(".jpeg files (*.jpeg)");
+    logo_path = logo_dialog.getOpenFileName(this, tr("Logo Seç"), QDir::currentPath(),
+                                                filters, &defaultFilter);
+}
 void EditReport::on_pushButton_saveEdit_clicked()
 {
     int templ = ui->comboBox_template->currentIndex();
@@ -119,6 +126,12 @@ void EditReport::on_pushButton_saveEdit_clicked()
     case 0: lang_file = 0; break;
     case 1: lang_file = 1; break;
     }
+    if(logo_dialog.Accepted){
+        if(logo_path.endsWith(".png") || logo_path.endsWith(".jpg") || logo_path.endsWith(".jpeg")){
+            logo_load = logo_path;
+        }
+        else logo_load = "";
+    }
     this->close();
     qDebug()<<templ_type;
 }
@@ -127,4 +140,5 @@ EditReport::~EditReport()
 {
     delete ui;
 }
+
 
