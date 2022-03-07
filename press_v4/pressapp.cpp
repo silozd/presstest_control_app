@@ -125,8 +125,14 @@ void PressApp::set_declaration()
     lbl_psw       = new QLabel("\nErişim için şifreyi girin !\n");
     btn_newPsw    = new QPushButton("Tamam");
     password      = new QLineEdit;
-
-    // combobox items : /////////////////////////////////// DECLARE //////////
+    cube     = ("Küp");
+    cylinder = ("Silindir");
+    beam3    = ("Kiriş 3N");
+    beam4    = ("Kiriş 4N");
+    kerb     = ("Bordür");
+    masonry  = ("Briket");
+    pavingstone = ("Parke Taşı");
+    flagstone   = ("Karo");
     compression_list    = (QStringList() << "Küp" << "Silindir" << "Briket");
     flexural_list       = (QStringList() << "Kiriş-3N" << "Kiriş-4N" << "Bordür" << "Karo");
     splitTensile_list   = (QStringList() << "Küp" << "Silindir" << "Parke Taşı");
@@ -913,154 +919,229 @@ void PressApp::_100_msec_handler(){
 // comboboxes :
 void PressApp::on_comboBox_standard_currentIndexChanged(int index)
 {
-    switch (index) {
-    case 0:
-        ui->combo_testType->setCurrentIndex(COMPRESSION);
-        ui->combo_testType->setDisabled(1);
-        material_type = "BETON";
-        break;
-    case 1:
-        ui->combo_testType->setCurrentIndex(FLEXURAL);
-        ui->combo_testType->setDisabled(1);
-        material_type = "BETON";
-        break;
-
-    }
-}
-void PressApp::on_combo_testType_currentIndexChanged(int index)
-{
-    ui->label_calculated_area->setText("Alan :");
-    ui->txt_paving_stone_fpl->hide();           // TODO
-    ui->label_test_paving_stone_fpl->hide();    // TODO
-    current_frame = 0; // del
-    test_type_name = ui->combo_testType->currentText();
+    standard_change = true;
     switch (index) {
     case 0:
         test_type = COMPRESSION;
         parameters[current_frame].test_type = COMPRESSION;
+        ui->combo_testType ->setCurrentIndex(COMPRESSION);
         ui->comboBox_specimen -> clear();
-        ui->comboBox_specimen -> addItems(compression_list);
+        ui->comboBox_specimen ->addItem(cube, 0);
+        ui->comboBox_specimen ->addItem(cylinder, 1);
+        material_type = "BETON";
         break;
     case 1:
         test_type = FLEXURAL;
         parameters[current_frame].test_type = FLEXURAL;
+        ui->combo_testType->setCurrentIndex(FLEXURAL);
         ui->comboBox_specimen -> clear();
-        ui->comboBox_specimen -> addItems(flexural_list);
+        ui->comboBox_specimen->addItem(beam3, 0);
+        ui->comboBox_specimen->addItem(beam4, 1);
+        material_type = "BETON";
         break;
     case 2:
+        test_type = FLEXURAL;
+        parameters[current_frame].test_type = FLEXURAL;
+        ui->combo_testType->setCurrentIndex(FLEXURAL);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(kerb, 0);
+        material_type = "BETON";
+        break;
+    case 3:
         test_type = SPLIT_TENSILE;
         parameters[current_frame].test_type = SPLIT_TENSILE;
+        ui->combo_testType->setCurrentIndex(SPLIT_TENSILE);
         ui->comboBox_specimen -> clear();
-        ui->comboBox_specimen -> addItems(splitTensile_list);
+        ui->comboBox_specimen ->addItem(pavingstone, 0);
+        material_type = "BETON";
         break;
+    case 4:
+        test_type = SPLIT_TENSILE;
+        parameters[current_frame].test_type = SPLIT_TENSILE;
+        ui->combo_testType->setCurrentIndex(SPLIT_TENSILE);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(cube, 0);
+        ui->comboBox_specimen ->addItem(cylinder, 1);
+        material_type = "BETON";
+        break;
+    case 5:
+        test_type = COMPRESSION;
+        parameters[current_frame].test_type = COMPRESSION;
+        ui->combo_testType->setCurrentIndex(COMPRESSION);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(masonry, 0);
+        material_type = "KAGIR";
+        break;
+    case 6:
+        test_type = FLEXURAL;
+        parameters[current_frame].test_type = FLEXURAL;
+        ui->combo_testType->setCurrentIndex(FLEXURAL);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(masonry, 0);   // numune dogru mu? TODO
+        material_type = "BETON DÖŞEME";
+        break;
+    case 7:
+        test_type = FLEXURAL;
+        parameters[current_frame].test_type = FLEXURAL;
+        ui->combo_testType->setCurrentIndex(FLEXURAL);  // test tipi dogru mu? TODO
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(flagstone, 0);
+        material_type = "TERAZZO";
+        break;
+    case 8:
+        test_type = COMPRESSION;
+        parameters[current_frame].test_type = COMPRESSION;
+        ui->combo_testType->setCurrentIndex(COMPRESSION);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(cube, 0);          // numuneler dogru mu? TODO
+        ui->comboBox_specimen ->addItem(cylinder, 1);
+        ui->comboBox_specimen ->addItem(masonry, 2);
+        material_type = "ÇİMENTO";
+        break;
+    case 9:
+        test_type = FLEXURAL;
+        parameters[current_frame].test_type = FLEXURAL;
+        ui->combo_testType->setCurrentIndex(FLEXURAL);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen->addItem(beam3, 0);
+        ui->comboBox_specimen->addItem(beam4, 1);
+        ui->comboBox_specimen ->addItem(kerb, 0);
+        ui->comboBox_specimen ->addItem(flagstone, 0);
+        material_type = "ÇİMENTO";
+        break;
+    case 10:
+        test_type = COMPRESSION;
+        parameters[current_frame].test_type = COMPRESSION;
+        ui->combo_testType->setCurrentIndex(COMPRESSION);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(flagstone, 0);
+        material_type = "BETON";
+        break;
+    }
+    ui->combo_testType ->setDisabled(1);
+    ui->label_test_type_specimen->setText("Deney : " + test_type_name); // + " - " + specimen_name);
+}
+void PressApp::on_combo_testType_currentIndexChanged(int index)
+{
+// UNLESS STANDARD COMBOBOX IS ENABLE :
+    ui->txt_paving_stone_fpl->hide();           // TODO
+    ui->label_test_paving_stone_fpl->hide();    // TODO
+    current_frame = 0; // del
+    test_type_name = ui->combo_testType->currentText();
+    if(!standard_change){
+        switch (index) {
+        case 0:
+            test_type = COMPRESSION;
+            parameters[current_frame].test_type = COMPRESSION;
+            ui->comboBox_specimen -> clear();
+            ui->comboBox_specimen -> addItems(compression_list);
+            break;
+        case 1:
+            test_type = FLEXURAL;
+            parameters[current_frame].test_type = FLEXURAL;
+            ui->comboBox_specimen -> clear();
+            ui->comboBox_specimen -> addItems(flexural_list);
+            break;
+        case 2:
+            test_type = SPLIT_TENSILE;
+            parameters[current_frame].test_type = SPLIT_TENSILE;
+            ui->comboBox_specimen -> clear();
+            ui->comboBox_specimen -> addItems(splitTensile_list);
+            break;
+        }
     }
     ui->label_test_type_specimen->setText("Deney : " + test_type_name); // + " - " + specimen_name);
 }
 void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
 {
     ui->label_calculated_area->setText("Alan :");
-    if(test_type == COMPRESSION){
-        switch (index) {
-        case COMPRESSION_CUBE:
-            specimen_type = COMPRESSION_CUBE;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
-            ui->stack_cube_press-> show();
-            ui->stack_cube_press-> adjustSize();
-            ui->stack_cyl_press -> hide();
-            ui->stack_cyl_split -> hide();
-            ui->stack_beam3n    -> hide();
-            ui->stack_beam4n    -> hide();
-            ui->stack_cube_split-> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_masonary  -> hide();
-            ui->stack_pavingStone->hide();
+    int std_no = ui->comboBox_standard->currentIndex();
+    if(standard_change){
+        switch (std_no) {
+        case 0:
+            switch (index) {
+            case COMPRESSION_CUBE:
+                specimen_type = COMPRESSION_CUBE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
+                ui->stack_cube_press-> show();
+                ui->stack_cube_press-> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+                dimensions = QString::number(ui->doubleSpinBox_specimen_cube_w->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_cube_w->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_cube_w->value());
+                break;
+            case COMPRESSION_CYLINDER:
+                specimen_type = COMPRESSION_CYLINDER;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder.png)");
+                ui->stack_cyl_press -> show();
+                ui->stack_cyl_press -> adjustSize();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
 
-            dimensions = QString::number(ui->doubleSpinBox_specimen_cube_w->value())+" x "
-                    + QString::number(ui->doubleSpinBox_specimen_cube_w->value()) + " x "
-                    + QString::number(ui->doubleSpinBox_specimen_cube_w->value());
+                dimensions = QString::number(ui->doubleSpinBox_specimen_cyl_d->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_cyl_l->value());
+                break;
+            }
             break;
-        case COMPRESSION_CYLINDER:
-            specimen_type = COMPRESSION_CYLINDER;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder.png)");
-            ui->stack_cyl_press -> show();
-            ui->stack_cyl_press -> adjustSize();
-            ui->stack_cube_press-> hide();
-            ui->stack_cyl_split -> hide();
-            ui->stack_beam3n    -> hide();
-            ui->stack_beam4n    -> hide();
-            ui->stack_cube_split-> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_masonary  -> hide();
-            ui->stack_pavingStone->hide();
+        case 1:
+            switch (index) {
+            case FLEXURAL_BEAM3:
+                specimen_type = FLEXURAL_BEAM3;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam3n.png)");
+                ui->stack_beam3n    -> show();
+                ui->stack_beam3n    -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
 
-            dimensions = QString::number(ui->doubleSpinBox_specimen_cyl_d->value())+" x "
-                    + QString::number(ui->doubleSpinBox_specimen_cyl_l->value());
-            break;
-        case COMPRESSION_MASONRY_UNIT:
-            specimen_type = COMPRESSION_MASONRY_UNIT;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/masonary.png)");
-            ui->stack_masonary  -> show();
-            ui->stack_masonary  -> adjustSize();
-            ui->stack_cyl_press -> hide();
-            ui->stack_cube_press-> hide();
-            ui->stack_cyl_split -> hide();
-            ui->stack_beam3n    -> hide();
-            ui->stack_beam4n    -> hide();
-            ui->stack_cube_split-> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_pavingStone->hide();
+                dimensions = QString::number(ui->doubleSpinBox_specimen_beam3_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam3_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam3_d->value());
+                break;
+            case FLEXURAL_BEAM4:
+                specimen_type = FLEXURAL_BEAM4;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam4n.png)");
+                ui->stack_beam4n    -> show();
+                ui->stack_beam4n    -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
 
-            dimensions = QString::number(ui->doubleSpinBox_specimen_masonry_unit_l->value())+" x "
-                    + QString::number(ui->doubleSpinBox_specimen_masonry_unit_w->value());
+                dimensions = QString::number(ui->doubleSpinBox_specimen_beam4_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_s->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_d->value());
+                break;
+            }
             break;
-        }
-        parameters[current_frame].speciment_type_index_compression = specimen_type;
-    }
-    else if(test_type == FLEXURAL){
-        switch(index) {
-        case FLEXURAL_BEAM3:
-            specimen_type = FLEXURAL_BEAM3;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam3n.png)");
-            ui->stack_beam3n    -> show();
-            ui->stack_beam3n    -> adjustSize();
-            ui->stack_cyl_press -> hide();
-            ui->stack_cube_press-> hide();
-            ui->stack_cyl_split -> hide();
-            ui->stack_beam4n    -> hide();
-            ui->stack_cube_split-> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_masonary  -> hide();
-            ui->stack_pavingStone->hide();
-
-            dimensions = QString::number(ui->doubleSpinBox_specimen_beam3_l->value()) + " x "
-                    + QString::number(ui->doubleSpinBox_specimen_beam3_b->value()) + " x "
-                    + QString::number(ui->doubleSpinBox_specimen_beam3_d->value());
-            break;
-        case FLEXURAL_BEAM4:
-            specimen_type = FLEXURAL_BEAM4;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam4n.png)");
-            ui->stack_beam4n    -> show();
-            ui->stack_beam4n    -> adjustSize();
-            ui->stack_cyl_press -> hide();
-            ui->stack_cube_press-> hide();
-            ui->stack_cyl_split -> hide();
-            ui->stack_beam3n    -> hide();
-            ui->stack_cube_split-> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_masonary  -> hide();
-            ui->stack_pavingStone->hide();
-
-            dimensions = QString::number(ui->doubleSpinBox_specimen_beam4_l->value()) + " x "
-                    + QString::number(ui->doubleSpinBox_specimen_beam4_s->value()) + " x "
-                    + QString::number(ui->doubleSpinBox_specimen_beam4_b->value()) + " x "
-                    + QString::number(ui->doubleSpinBox_specimen_beam4_d->value());
-            break;
-        case FLEXURAL_KERB:
+        case 2:
             specimen_type = FLEXURAL_KERB;
             ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/kerb.png)");
             ui->stack_kerb      -> show();
@@ -1081,7 +1162,101 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
                     + QString::number(ui->doubleSpinBox_specimen_kerb_d->value()) + " x "
                     + QString::number(ui->doubleSpinBox_specimen_kerb_l->value());
             break;
-        case FLEXURAL_FLAGSTONE:
+        case 3:
+            specimen_type = SPLIT_TENSILE_PAVING_STONE;
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/pavingstone.png)");
+            ui->stack_pavingStone->show();
+            ui->stack_pavingStone->adjustSize();
+            ui->stack_cyl_press -> hide();
+            ui->stack_cube_press-> hide();
+            ui->stack_cyl_split -> hide();
+            ui->stack_beam3n    -> hide();
+            ui->stack_beam4n    -> hide();
+            ui->stack_cube_split-> hide();
+            ui->stack_flagstone -> hide();
+            ui->stack_kerb      -> hide();
+            ui->stack_masonary  -> hide();
+
+            dimensions = QString::number(ui->doubleSpinBox_specimen_split_paving_stone_l->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_split_paving_stone_d->value());
+            break;
+        case 4:
+            switch (index) {
+            case SPLIT_TENSILE_CUBE:
+                specimen_type = SPLIT_TENSILE_CUBE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
+                ui->stack_cube_split-> show();
+                ui->stack_cube_split-> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_split_cube_w->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_split_cube_w->value());
+                break;
+            case SPLIT_TENSILE_CYLINDER:
+                specimen_type = SPLIT_TENSILE_CYLINDER;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder-split.png)");
+                ui->stack_cyl_split -> show();
+                ui->stack_cyl_split -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_split_cylinder_l->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_split_cylinder_d->value());
+                break;
+            }
+            break;
+        case 5:
+            specimen_type = COMPRESSION_MASONRY_UNIT;
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/masonary.png)");
+            ui->stack_masonary  -> show();
+            ui->stack_masonary  -> adjustSize();
+            ui->stack_cyl_press -> hide();
+            ui->stack_cube_press-> hide();
+            ui->stack_cyl_split -> hide();
+            ui->stack_beam3n    -> hide();
+            ui->stack_beam4n    -> hide();
+            ui->stack_cube_split-> hide();
+            ui->stack_flagstone -> hide();
+            ui->stack_kerb      -> hide();
+            ui->stack_pavingStone->hide();
+
+            dimensions = QString::number(ui->doubleSpinBox_specimen_masonry_unit_l->value())+" x "
+                    + QString::number(ui->doubleSpinBox_specimen_masonry_unit_w->value());
+            break;
+        case 6:
+            specimen_type = COMPRESSION_MASONRY_UNIT;       // TODO
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/masonary.png)");
+            ui->stack_masonary  -> show();
+            ui->stack_masonary  -> adjustSize();
+            ui->stack_cyl_press -> hide();
+            ui->stack_cube_press-> hide();
+            ui->stack_cyl_split -> hide();
+            ui->stack_beam3n    -> hide();
+            ui->stack_beam4n    -> hide();
+            ui->stack_cube_split-> hide();
+            ui->stack_flagstone -> hide();
+            ui->stack_kerb      -> hide();
+            ui->stack_pavingStone->hide();
+
+            dimensions = QString::number(ui->doubleSpinBox_specimen_masonry_unit_l->value())+" x "
+                    + QString::number(ui->doubleSpinBox_specimen_masonry_unit_w->value());
+            break;
+        case 7:
             specimen_type = FLEXURAL_FLAGSTONE;
             ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/flagstone.png)");
             ui->stack_flagstone -> show();
@@ -1101,67 +1276,376 @@ void PressApp::on_comboBox_specimen_currentIndexChanged(int index)
                     + QString::number(ui->doubleSpinBox_specimen_flagstone_b->value()) + " x "
                     + QString::number(ui->doubleSpinBox_specimen_flagstone_d->value());
             break;
-        }
-        parameters[current_frame].speciment_type_index_flexural = specimen_type;
+        case 8:
+            switch (index) {
+            case COMPRESSION_CUBE:
+                specimen_type = COMPRESSION_CUBE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
+                ui->stack_cube_press-> show();
+                ui->stack_cube_press-> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_cube_w->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_cube_w->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_cube_w->value());
+                break;
+            case COMPRESSION_CYLINDER:
+                specimen_type = COMPRESSION_CYLINDER;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder.png)");
+                ui->stack_cyl_press -> show();
+                ui->stack_cyl_press -> adjustSize();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_cyl_d->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_cyl_l->value());
+                break;
+            case COMPRESSION_MASONRY_UNIT:
+                specimen_type = COMPRESSION_MASONRY_UNIT;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/masonary.png)");
+                ui->stack_masonary  -> show();
+                ui->stack_masonary  -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_masonry_unit_l->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_masonry_unit_w->value());
+                break;
+            }
+            break;
+        case 9:
+            switch(index) {
+            case FLEXURAL_BEAM3:
+                specimen_type = FLEXURAL_BEAM3;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam3n.png)");
+                ui->stack_beam3n    -> show();
+                ui->stack_beam3n    -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_beam3_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam3_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam3_d->value());
+                break;
+            case FLEXURAL_BEAM4:
+                specimen_type = FLEXURAL_BEAM4;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam4n.png)");
+                ui->stack_beam4n    -> show();
+                ui->stack_beam4n    -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_beam4_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_s->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_d->value());
+                break;
+            case FLEXURAL_KERB:
+                specimen_type = FLEXURAL_KERB;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/kerb.png)");
+                ui->stack_kerb      -> show();
+                ui->stack_kerb      -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_kerb_a->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_c->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_d->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_l->value());
+                break;
+            case FLEXURAL_FLAGSTONE:
+                specimen_type = FLEXURAL_FLAGSTONE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/flagstone.png)");
+                ui->stack_flagstone -> show();
+                ui->stack_flagstone -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_flagstone_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_flagstone_s->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_flagstone_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_flagstone_d->value());
+                break;
+            }
+            break;
+        case 10:
+            specimen_type = FLEXURAL_FLAGSTONE;
+            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/flagstone.png)");
+            ui->stack_flagstone -> show();
+            ui->stack_flagstone -> adjustSize();
+            ui->stack_cyl_press -> hide();
+            ui->stack_cube_press-> hide();
+            ui->stack_cyl_split -> hide();
+            ui->stack_beam3n    -> hide();
+            ui->stack_beam4n    -> hide();
+            ui->stack_cube_split-> hide();
+            ui->stack_kerb      -> hide();
+            ui->stack_masonary  -> hide();
+            ui->stack_pavingStone->hide();
+
+            dimensions = QString::number(ui->doubleSpinBox_specimen_flagstone_l->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_flagstone_s->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_flagstone_b->value()) + " x "
+                    + QString::number(ui->doubleSpinBox_specimen_flagstone_d->value());
+            break;
+       }
     }
-    else if(test_type == SPLIT_TENSILE){
-        switch(index) {
-        case SPLIT_TENSILE_CUBE:
-            specimen_type = SPLIT_TENSILE_CUBE;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
-            ui->stack_cube_split-> show();
-            ui->stack_cube_split-> adjustSize();
-            ui->stack_cyl_press -> hide();
-            ui->stack_cube_press-> hide();
-            ui->stack_cyl_split -> hide();
-            ui->stack_beam3n    -> hide();
-            ui->stack_beam4n    -> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_masonary  -> hide();
-            ui->stack_pavingStone->hide();
+    if (!standard_change){         // unless standard combobox is enable :
+        if(test_type == COMPRESSION){
+            switch (index) {
+            case COMPRESSION_CUBE:
+                specimen_type = COMPRESSION_CUBE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
+                ui->stack_cube_press-> show();
+                ui->stack_cube_press-> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
 
-            dimensions = QString::number(ui->doubleSpinBox_specimen_split_cube_w->value())+" x "
-                    + QString::number(ui->doubleSpinBox_specimen_split_cube_w->value());
-            break;
-        case SPLIT_TENSILE_CYLINDER:
-            specimen_type = SPLIT_TENSILE_CYLINDER;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder-split.png)");
-            ui->stack_cyl_split -> show();
-            ui->stack_cyl_split -> adjustSize();
-            ui->stack_cyl_press -> hide();
-            ui->stack_cube_press-> hide();
-            ui->stack_beam3n    -> hide();
-            ui->stack_beam4n    -> hide();
-            ui->stack_cube_split-> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_masonary  -> hide();
-            ui->stack_pavingStone->hide();
+                dimensions = QString::number(ui->doubleSpinBox_specimen_cube_w->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_cube_w->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_cube_w->value());
+                break;
+            case COMPRESSION_CYLINDER:
+                specimen_type = COMPRESSION_CYLINDER;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder.png)");
+                ui->stack_cyl_press -> show();
+                ui->stack_cyl_press -> adjustSize();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
 
-            dimensions = QString::number(ui->doubleSpinBox_specimen_split_cylinder_l->value())+" x "
-                    + QString::number(ui->doubleSpinBox_specimen_split_cylinder_d->value());
-            break;
-        case SPLIT_TENSILE_PAVING_STONE:
-            specimen_type = SPLIT_TENSILE_PAVING_STONE;
-            ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/pavingstone.png)");
-            ui->stack_pavingStone->show();
-            ui->stack_pavingStone->adjustSize();
-            ui->stack_cyl_press -> hide();
-            ui->stack_cube_press-> hide();
-            ui->stack_cyl_split -> hide();
-            ui->stack_beam3n    -> hide();
-            ui->stack_beam4n    -> hide();
-            ui->stack_cube_split-> hide();
-            ui->stack_flagstone -> hide();
-            ui->stack_kerb      -> hide();
-            ui->stack_masonary  -> hide();
+                dimensions = QString::number(ui->doubleSpinBox_specimen_cyl_d->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_cyl_l->value());
+                break;
+            case COMPRESSION_MASONRY_UNIT:
+                specimen_type = COMPRESSION_MASONRY_UNIT;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/masonary.png)");
+                ui->stack_masonary  -> show();
+                ui->stack_masonary  -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_pavingStone->hide();
 
-            dimensions = QString::number(ui->doubleSpinBox_specimen_split_paving_stone_l->value()) + " x "
-                    + QString::number(ui->doubleSpinBox_specimen_split_paving_stone_d->value());
-            break;
+                dimensions = QString::number(ui->doubleSpinBox_specimen_masonry_unit_l->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_masonry_unit_w->value());
+                break;
+            }
+            parameters[current_frame].speciment_type_index_compression = specimen_type;
         }
-        parameters[current_frame].speciment_type_index_split_tensile = specimen_type;
+        else if(test_type == FLEXURAL){
+            switch(index) {
+            case FLEXURAL_BEAM3:
+                specimen_type = FLEXURAL_BEAM3;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam3n.png)");
+                ui->stack_beam3n    -> show();
+                ui->stack_beam3n    -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_beam3_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam3_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam3_d->value());
+                break;
+            case FLEXURAL_BEAM4:
+                specimen_type = FLEXURAL_BEAM4;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/beam4n.png)");
+                ui->stack_beam4n    -> show();
+                ui->stack_beam4n    -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_beam4_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_s->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_beam4_d->value());
+                break;
+            case FLEXURAL_KERB:
+                specimen_type = FLEXURAL_KERB;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/kerb.png)");
+                ui->stack_kerb      -> show();
+                ui->stack_kerb      -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_kerb_a->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_c->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_d->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_kerb_l->value());
+                break;
+            case FLEXURAL_FLAGSTONE:
+                specimen_type = FLEXURAL_FLAGSTONE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/flagstone.png)");
+                ui->stack_flagstone -> show();
+                ui->stack_flagstone -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_flagstone_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_flagstone_s->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_flagstone_b->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_flagstone_d->value());
+                break;
+            }
+            parameters[current_frame].speciment_type_index_flexural = specimen_type;
+        }
+        else if(test_type == SPLIT_TENSILE){
+            switch(index) {
+            case SPLIT_TENSILE_CUBE:
+                specimen_type = SPLIT_TENSILE_CUBE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cube.png)");
+                ui->stack_cube_split-> show();
+                ui->stack_cube_split-> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_split_cube_w->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_split_cube_w->value());
+                break;
+            case SPLIT_TENSILE_CYLINDER:
+                specimen_type = SPLIT_TENSILE_CYLINDER;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/cylinder-split.png)");
+                ui->stack_cyl_split -> show();
+                ui->stack_cyl_split -> adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+                ui->stack_pavingStone->hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_split_cylinder_l->value())+" x "
+                        + QString::number(ui->doubleSpinBox_specimen_split_cylinder_d->value());
+                break;
+            case SPLIT_TENSILE_PAVING_STONE:
+                specimen_type = SPLIT_TENSILE_PAVING_STONE;
+                ui->img_specimen    -> setStyleSheet("border-image: url(:/specimen_img/pavingstone.png)");
+                ui->stack_pavingStone->show();
+                ui->stack_pavingStone->adjustSize();
+                ui->stack_cyl_press -> hide();
+                ui->stack_cube_press-> hide();
+                ui->stack_cyl_split -> hide();
+                ui->stack_beam3n    -> hide();
+                ui->stack_beam4n    -> hide();
+                ui->stack_cube_split-> hide();
+                ui->stack_flagstone -> hide();
+                ui->stack_kerb      -> hide();
+                ui->stack_masonary  -> hide();
+
+                dimensions = QString::number(ui->doubleSpinBox_specimen_split_paving_stone_l->value()) + " x "
+                        + QString::number(ui->doubleSpinBox_specimen_split_paving_stone_d->value());
+                break;
+            }
+            parameters[current_frame].speciment_type_index_split_tensile = specimen_type;
+        }
     }
     specimen_name = ui->comboBox_specimen->currentText();
     ui->label_specimen->setText("Numune : " + specimen_name);
@@ -1408,7 +1892,19 @@ void PressApp::on_pushButton_toApp_clicked()
     ui->page_app->adjustSize();
     ui->page_app->show();
     resizer->stop();
+    ui->label_calculated_area->setText("Alan :");
+    if(!standard_change){
+        ui->combo_testType ->setCurrentIndex(COMPRESSION);
+        ui->combo_testType ->setDisabled(1);
+        ui->comboBox_specimen -> clear();
+        ui->comboBox_specimen ->addItem(cube, 0);
+        ui->comboBox_specimen ->addItem(cylinder, 1);
+        material_type = "BETON";
+    }
     setup_users();
+    /////
+    qDebug()<<"test_type"<<test_type<<test_type_name<<"\n";
+    qDebug()<<"specimen_type"<<specimen_type<<specimen_name;
 }
 void PressApp::on_pushButton_connect_clicked()     //setup.gui : lineedit inputmask kaldır
 {

@@ -704,7 +704,7 @@ public:
         toolBox_app->setLineWidth(1);
         page_specimen = new QWidget();
         page_specimen->setObjectName(QStringLiteral("page_specimen"));
-        page_specimen->setGeometry(QRect(0, 0, 370, 323));
+        page_specimen->setGeometry(QRect(0, 0, 366, 323));
         gridLayout_7 = new QGridLayout(page_specimen);
         gridLayout_7->setSpacing(6);
         gridLayout_7->setContentsMargins(11, 11, 11, 11);
@@ -1352,7 +1352,7 @@ public:
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 384, 318));
+        page_param->setGeometry(QRect(0, 0, 86, 70));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1364,7 +1364,7 @@ public:
         scrollArea_param->setWidgetResizable(true);
         wdg_param = new QWidget();
         wdg_param->setObjectName(QStringLiteral("wdg_param"));
-        wdg_param->setGeometry(QRect(0, 0, 368, 595));
+        wdg_param->setGeometry(QRect(0, 0, 339, 595));
         gridLayout_9 = new QGridLayout(wdg_param);
         gridLayout_9->setSpacing(6);
         gridLayout_9->setContentsMargins(11, 11, 11, 11);
@@ -1655,7 +1655,7 @@ public:
         toolBox_app->addItem(page_param, QStringLiteral("Parametreler"));
         page_channels = new QWidget();
         page_channels->setObjectName(QStringLiteral("page_channels"));
-        page_channels->setGeometry(QRect(0, -122, 370, 440));
+        page_channels->setGeometry(QRect(0, 0, 370, 440));
         gridLayout_10 = new QGridLayout(page_channels);
         gridLayout_10->setSpacing(12);
         gridLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -1809,7 +1809,7 @@ public:
         toolBox_app->addItem(page_channels, QStringLiteral("Kanallar"));
         page_gain = new QWidget();
         page_gain->setObjectName(QStringLiteral("page_gain"));
-        page_gain->setGeometry(QRect(0, 0, 384, 318));
+        page_gain->setGeometry(QRect(0, 0, 311, 217));
         gridLayout_18 = new QGridLayout(page_gain);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setContentsMargins(11, 11, 11, 11);
@@ -1967,7 +1967,7 @@ public:
         toolBox_app->addItem(page_gain, QString::fromUtf8("Kazan\303\247"));
         page_calib = new QWidget();
         page_calib->setObjectName(QStringLiteral("page_calib"));
-        page_calib->setGeometry(QRect(0, 0, 384, 318));
+        page_calib->setGeometry(QRect(0, 0, 86, 70));
         gridLayout_11 = new QGridLayout(page_calib);
         gridLayout_11->setSpacing(6);
         gridLayout_11->setContentsMargins(11, 11, 11, 11);
@@ -1978,7 +1978,7 @@ public:
         scrollArea_calib->setWidgetResizable(true);
         wdg_calib = new QWidget();
         wdg_calib->setObjectName(QStringLiteral("wdg_calib"));
-        wdg_calib->setGeometry(QRect(0, -120, 368, 522));
+        wdg_calib->setGeometry(QRect(0, 0, 364, 522));
         gridLayout_12 = new QGridLayout(wdg_calib);
         gridLayout_12->setSpacing(6);
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
@@ -2314,7 +2314,7 @@ public:
         toolBox_app->addItem(page_calib, QStringLiteral("Kalibrasyon"));
         page_pid = new QWidget();
         page_pid->setObjectName(QStringLiteral("page_pid"));
-        page_pid->setGeometry(QRect(0, -160, 370, 478));
+        page_pid->setGeometry(QRect(0, 0, 291, 478));
         gridLayout_17 = new QGridLayout(page_pid);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setContentsMargins(11, 11, 11, 11);

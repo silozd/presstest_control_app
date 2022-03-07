@@ -227,6 +227,15 @@ public:
     QString res_fileName;
     QString custom_path;
 
+    QString cube;
+    QString cylinder;
+    QString beam3;
+    QString beam4;
+    QString kerb;
+    QString masonry;
+    QString pavingstone;
+    QString flagstone;
+
     QTimer *resizer;
     QTimer *_time;
     QTimer *eth_timer;
@@ -263,6 +272,7 @@ public:
     bool mouseevent = false;
     bool results_saved = false;
     bool custom_file_loaded = false;
+    bool standard_change = false;
     char show_graph;
     char statu_device;
     double key;

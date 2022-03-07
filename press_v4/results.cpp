@@ -341,7 +341,7 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
                 painter.drawText( x/2, 10.7*y, "Temperature");
                 painter.drawText( x*6, 10.7*y, ":  ");
                 painter.drawText( x/2, 11.4*y,   "Material");
-                painter.drawText( x*6, 11.4*y,   ":  ");
+                painter.drawText( x*6, 11.4*y,   ":  " + material_type);
                 painter.drawText( x/2, 12.1*y, "Test Delivery");
                 painter.drawText( x*6, 12.1*y, ":  ");
                 painter.drawText( x/2, 12.8*y,  "Additional");
