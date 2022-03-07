@@ -75,6 +75,9 @@
 #define CH_3    2
 #define CH_4    3
 
+#define _TR      0
+#define _ENG     1
+
 typedef unsigned char u8;
 typedef unsigned int u32;
 
@@ -104,6 +107,7 @@ public:
     QString pdf_path;
     int h_label;
     int t_label;
+    int lang_index;
 
     struct _cal{
         double real_val[8];
@@ -235,6 +239,11 @@ public:
     QString masonry;
     QString pavingstone;
     QString flagstone;
+    QString concrete;
+    QString concrete_floor;
+    QString cement;
+    QString terrazzo;
+    QString kagir;
 
     QTimer *resizer;
     QTimer *_time;

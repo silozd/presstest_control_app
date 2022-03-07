@@ -109,7 +109,7 @@ void EditReport::on_comboBox_langEdit_currentIndexChanged(int index)
 }
 void EditReport::on_pushButton_logo_clicked()
 {
-    QString filters(".png(*.png);; .jpeg(*.jpeg);; .jpg(*.jpg)");
+    QString filters(".jpeg(*.jpeg);; .png(*.png);; .jpg(*.jpg)");
     QString defaultFilter(".jpeg files (*.jpeg)");
     logo_path = logo_dialog.getOpenFileName(this, tr("Logo Seç"), QDir::currentPath(),
                                                 filters, &defaultFilter);
