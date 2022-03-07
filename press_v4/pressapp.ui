@@ -1347,7 +1347,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>86</width>
+                    <width>98</width>
                     <height>70</height>
                    </rect>
                   </property>
@@ -2339,7 +2339,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>86</width>
+                    <width>98</width>
                     <height>70</height>
                    </rect>
                   </property>
@@ -4090,7 +4090,7 @@ QPushButton:pressed {
                 <item row="3" column="0">
                  <widget class="QLineEdit" name="lineEdit_addInfo">
                   <property name="text">
-                   <string/>
+                   <string>Ek bilgi</string>
                   </property>
                  </widget>
                 </item>
@@ -4672,9 +4672,9 @@ QPushButton:pressed {
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="settings_buttonGroup"/>
   <buttongroup name="recraw_buttonGroup"/>
-  <buttongroup name="frame_buttonGroup"/>
+  <buttongroup name="settings_buttonGroup"/>
   <buttongroup name="control_buttonGroup"/>
+  <buttongroup name="frame_buttonGroup"/>
  </buttongroups>
 </ui>

@@ -27,7 +27,7 @@ void EditReport::on_comboBox_template_currentIndexChanged(int index)
         break;
     case 1: ui->imageLabel->setStyleSheet("border-image: url(:/temp_2.png);");
         break;
-    case 2: ui->imageLabel->setStyleSheet("border-image: url(:/template_1.png);");
+    case 2: ui->imageLabel->setStyleSheet("border-image: url(:/temp_3.png);");
         break;
     }
 
@@ -92,17 +92,18 @@ void EditReport::on_comboBox_template_currentIndexChanged(int index)
 }
 void EditReport::on_comboBox_langEdit_currentIndexChanged(int index)
 {
+    int _template = ui->comboBox_template->currentIndex();
     switch (index) {
     case 0:
-        if(templ_type == 0)
+        if(_template == 0)
             ui->imageLabel->setStyleSheet("border-image: url(:/temp_1.png);");
-        if(templ_type == 1)
+        if(_template == 1)
             ui->imageLabel->setStyleSheet("border-image: url(:/temp_2.png);");
         break;
     case 1:
-        if(templ_type == 0)
+        if(_template == 0)
             ui->imageLabel->setStyleSheet("border-image: url(:/temp_1_eng.png);");
-        if(templ_type == 1)
+        if(_template == 1)
             ui->imageLabel->setStyleSheet("border-image: url(:/temp_2_eng.png);");
         break;
     }

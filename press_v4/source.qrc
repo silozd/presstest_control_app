@@ -35,5 +35,6 @@
         <file>temp_1.png</file>
         <file>temp_1_eng.png</file>
         <file>temp_2.png</file>
+        <file>temp_2_eng.png</file>
     </qresource>
 </RCC>

@@ -465,6 +465,7 @@ qrc_source.cpp: ../press_v4/source.qrc \
 		../press_v4/temp_1_eng.png \
 		../press_v4/stylesheet.css \
 		../press_v4/temp_2.png \
+		../press_v4/temp_2_eng.png \
 		../press_v4/temp_1.png \
 		../press_v4/icons/navigate_check.png \
 		../press_v4/icons/document_chart.png \

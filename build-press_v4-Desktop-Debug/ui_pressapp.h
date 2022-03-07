@@ -515,10 +515,10 @@ public:
     QPushButton *pushButton_editFile;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *pushButton_quitFile;
-    QButtonGroup *settings_buttonGroup;
     QButtonGroup *recraw_buttonGroup;
-    QButtonGroup *frame_buttonGroup;
+    QButtonGroup *settings_buttonGroup;
     QButtonGroup *control_buttonGroup;
+    QButtonGroup *frame_buttonGroup;
 
     void setupUi(QMainWindow *PressApp)
     {
@@ -1352,7 +1352,7 @@ public:
         toolBox_app->addItem(page_specimen, QStringLiteral("Deney - Numune Tipi"));
         page_param = new QWidget();
         page_param->setObjectName(QStringLiteral("page_param"));
-        page_param->setGeometry(QRect(0, 0, 86, 70));
+        page_param->setGeometry(QRect(0, 0, 98, 70));
         gridLayout_8 = new QGridLayout(page_param);
         gridLayout_8->setSpacing(6);
         gridLayout_8->setContentsMargins(11, 11, 11, 11);
@@ -1967,7 +1967,7 @@ public:
         toolBox_app->addItem(page_gain, QString::fromUtf8("Kazan\303\247"));
         page_calib = new QWidget();
         page_calib->setObjectName(QStringLiteral("page_calib"));
-        page_calib->setGeometry(QRect(0, 0, 86, 70));
+        page_calib->setGeometry(QRect(0, 0, 98, 70));
         gridLayout_11 = new QGridLayout(page_calib);
         gridLayout_11->setSpacing(6);
         gridLayout_11->setContentsMargins(11, 11, 11, 11);
@@ -3800,7 +3800,7 @@ public:
         label_55->setText(QApplication::translate("PressApp", "\305\236ifre Yenileme ", Q_NULLPTR));
         tabWidget_app->setTabText(tabWidget_app->indexOf(tab_admin), QApplication::translate("PressApp", "Kullan\304\261c\304\261", Q_NULLPTR));
         label_test_peak_load->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
-        lineEdit_addInfo->setText(QString());
+        lineEdit_addInfo->setText(QApplication::translate("PressApp", "Ek bilgi", Q_NULLPTR));
         label_53->setText(QApplication::translate("PressApp", "Numune Ya\305\237\304\261 :", Q_NULLPTR));
         label_test_specimen_type->setText(QApplication::translate("PressApp", "-", Q_NULLPTR));
         txt_peak_stress->setText(QApplication::translate("PressApp", "Tepe Gerilim :", Q_NULLPTR));
