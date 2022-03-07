@@ -133,7 +133,8 @@ void EditReport::on_pushButton_saveEdit_clicked()
         else logo_load = "";
     }
     this->close();
-    qDebug()<<templ_type;
+    qDebug()<<"Template :"<<templ_type;
+    qDebug()<<"LOGO PATH"<<logo_load;
 }
 
 EditReport::~EditReport()
