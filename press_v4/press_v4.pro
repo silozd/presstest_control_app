@@ -53,5 +53,7 @@ LIBS += -L/usr/local/lib -lpoppler-qt5
 
 DISTFILES +=
 
+TRANSLATIONS = press_tr.ts press_en.ts
+
 RESOURCES += \
     source.qrc

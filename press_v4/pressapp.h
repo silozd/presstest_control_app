@@ -98,16 +98,18 @@ public:
     QCustomPlot *customPlot;
     EditReport *editReport;
     aux_thread *auxthread;
+
     QString header_report;
     QString testName_report;
-
-    //u8 templ_type;
     QPrinter pdf_printer;
     QString pdf_fileName;
     QString pdf_path;
     int h_label;
     int t_label;
     int lang_index;
+
+    QString lang;
+    QTranslator *translator;
 
     struct _cal{
         double real_val[8];
@@ -369,6 +371,7 @@ public slots:
     void usart_gain_signalmapper();   // sila
     void print_test_results();
     void _100_msec_handler();
+    void language_switch();
 // /////////////////////////////////////////////////////////////////////
 
     int GetScreenHRes(int s);

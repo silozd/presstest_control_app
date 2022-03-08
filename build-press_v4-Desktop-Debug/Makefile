@@ -435,6 +435,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents ../press_v4/pressapp.h ../press_v4/remoteconnection.h ../press_v4/qcustomplot.h ../press_v4/editreport.h ../press_v4/aux_thread.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../press_v4/main.cpp ../press_v4/pressapp.cpp ../press_v4/remoteconnection.cpp ../press_v4/ethernet.cpp ../press_v4/qcustomplot.cpp ../press_v4/plot.cpp ../press_v4/authorization.cpp ../press_v4/results.cpp ../press_v4/editreport.cpp ../press_v4/autotuning.cpp ../press_v4/aux_thread.cpp ../press_v4/filters.cpp ../press_v4/calibration.cpp ../press_v4/pid.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../press_v4/pressapp.ui ../press_v4/editreport.ui $(DISTDIR)/
+	$(COPY_FILE) --parents press_tr.ts press_en.ts $(DISTDIR)/
 
 
 clean: compiler_clean 

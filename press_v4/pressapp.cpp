@@ -18,6 +18,7 @@ PressApp::PressApp(QWidget *parent) :
     _100_msec_timer = new QTimer(this);
     _time           = new QTimer(this);
     eth_timer       = new QTimer;
+    translator      = new QTranslator;
     _time           ->setInterval(100);
     _100_msec_timer ->setInterval(100);
     eth_timer       ->setInterval(100);
@@ -92,9 +93,11 @@ PressApp::PressApp(QWidget *parent) :
     connect(ui->pushButton_connect, SIGNAL(clicked(bool)),this,SLOT(start_comm()));
     connect(ui->doubleSpinBox_pace_rate,SIGNAL(valueChanged(double)),this,SLOT(pace_rate_handler_kn()));
     connect(ui->doubleSpinBox_pace_rate_mpa,SIGNAL(valueChanged(double)),this,SLOT(pace_rate_handler_mpa()));
-
+    connect(ui->btn_saveSet,SIGNAL(clicked()),this,SLOT(language_switch()));
     userDir = ui->lineEdit_user->text();
     setup_PLOT();
+    language_switch();
+
 // // GUI'den ///////////////////////////////////////////
     device_opening = true;
     command_send_protection_wait_timer= new QTimer(this);
@@ -951,7 +954,43 @@ void PressApp::_100_msec_handler(){
         }
     }
 }
+void PressApp::language_switch()
+{
+  //  static u8 do_once = 1;
+    u8 old_language = lang_index;
 
+#ifdef CONFIG_x86
+    QString file_lang = QString(QDir::currentPath() + "/press_%1.qm").arg(lang);
+#else
+    QString file_lang = QString(QDir::currentPath() + "/press_%1.qm").arg(lang);
+#endif
+
+    if (QFile::exists(file_lang)) {
+        QCoreApplication *a = QApplication::instance();
+        if (translator) {
+            a->removeTranslator(translator);
+            translator->deleteLater();
+        }
+        translator = new QTranslator(this);
+        bool loaded = translator->load(file_lang);
+        qDebug("translating to '%s' %s", qPrintable(lang), loaded ? "succeeded" : "failed");
+        a->installTranslator(translator);
+        ui->retranslateUi(this);
+    }
+    data_changed = true;
+   // QTimer::singleShot(1000,this,SLOT(fill_after_language_change()));     // TODO
+
+//#ifndef CONFIG_x86        // TODO
+//    if(do_once == 1){
+//        do_once = 0;
+//        this->setStyleSheet(styleSheet);
+//    }
+//    else{
+//        if(((old_language < 4)&&(language_index == 4))||((old_language == 4)&&(language_index < 4)))
+//            this->setStyleSheet(styleSheet);
+//    }
+//#endif
+}
 // comboboxes :
 void PressApp::on_comboBox_standard_currentIndexChanged(int index)
 {
@@ -2158,8 +2197,15 @@ void PressApp::on_pushButton_read_from_device_clicked()
 void PressApp::on_btn_saveSet_clicked()
 {
     // tarih - dil -vs kaydet
-    if(ui->combo_lang->currentIndex() == 0) lang_index = _TR;
-    else if(ui->combo_lang->currentIndex() == 1) lang_index = _ENG;
+    if(ui->combo_lang->currentIndex() == _TR){
+        lang = "tr";
+        lang_index = _TR;
+    }
+    else if(ui->combo_lang->currentIndex() == _ENG){
+        lang = "en";
+        lang_index = _ENG;
+    }
+    //language_switch();
 }
 void PressApp::on_pushButton_removeUser_clicked()
 {
