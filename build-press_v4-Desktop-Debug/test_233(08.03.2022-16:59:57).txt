@@ -1,0 +1,17 @@
+
+DENEY SONUÃLARI 
+Firma :SILA AŞ
+Deney_AdÄ± :DENEY
+KullanÄ±cÄ± :
+Deney_SayÄ±sÄ± :233
+Deney_BaÅlama_Tarihi :08.03.2022
+Deney_BaÅlama_Saati :16:59:57
+Deney_BitiÅ_Saati :17:00:24
+Deney_Tipi :Yarmada Çekme
+Numune :Silindir
+Ek bilgiSDFDF
+Boyutlar_(mm) :6 x 0
+Yaş :0
+Alan_(mm2) :31.416 mm2
+Tepe_Yük_(kN) :17.000
+Tepe_Gerilim_(MPa) :528.500

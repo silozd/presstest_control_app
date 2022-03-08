@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="en_US">
+<TS version="2.1" language="en_US">
 <context>
     <name>EditReport</name>
     <message>
@@ -13,12 +13,12 @@
         <source>Kaydet</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="editreport.ui" line="83"/>
         <source>Biçim :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="editreport.ui" line="93"/>
         <source>Logo Yükle</source>
         <translation type="unfinished"></translation>
@@ -28,15 +28,15 @@
         <source>Dil :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="editreport.ui" line="121"/>
         <source>Yazı Tipi :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="editreport.cpp" line="114"/>
-        <source>Logo SeÃ§</source>
-        <oldsource>Logo Seç</oldsource>
+        <source>Logo Seç</source>
+        <oldsource>Logo SeÃ§</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -47,118 +47,118 @@
         <source>PressApp</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="56"/>
         <source>Deney tipini girin - tek seferlik işlem !</source>
-        <translation type="unfinished"></translation>
+        <translation>Log the test type - one time process !</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="92"/>
         <source>LOGO</source>
-        <translation type="unfinished"></translation>
+        <translation>LOGO</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="111"/>
         <source>İLERİ</source>
-        <translation type="unfinished"></translation>
+        <translation>FORWARD</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="178"/>
         <source>Deney :</source>
-        <translation type="unfinished"></translation>
+        <translation>Test :</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="188"/>
         <location filename="pressapp.ui" line="3876"/>
         <source>Kullanıcı :</source>
-        <translation type="unfinished"></translation>
+        <translation>User :</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="208"/>
         <source>1. TS EN 12390-3 Beton Küp-Silindir Basınç Dayanımı</source>
-        <translation type="unfinished"></translation>
+        <translation>1. TS EN 12390-3 Concrete Cube-Cylinder Compression Strength</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="213"/>
         <source>2. TS EN 12390-5 Beton Kiriş Eğilme Dayanımı</source>
-        <translation type="unfinished"></translation>
+        <translation>2. TS EN 12390-5 Concrete Beam Flexural Strength</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="218"/>
         <source>3. TS EN 1340 Beton Bordür Eğilme Dayanımı</source>
-        <translation type="unfinished"></translation>
+        <translation>3. TS EN 1340 Concrete Kerb Flexural Strength</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="223"/>
         <source>4. TS 2824 EN 1338 Beton Parke Taşı Yarmada Çekme</source>
-        <translation type="unfinished"></translation>
+        <translation>4. TS 2824 EN 1338 Concrete Paving Stone Split Tensile</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="228"/>
         <source>5. TS EN 12390-6 Beton Küp-Silindir Yarmada Çekme</source>
-        <translation type="unfinished"></translation>
+        <translation>5. TS EN 12390-6 Concrete Cube-Cylinder Split Tensile</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="233"/>
         <source>6. TS EN 772-1 Kagir Birim (Tuğla, Briket, vb.) Basınç</source>
-        <translation type="unfinished"></translation>
+        <translation>6. TS EN 772-1 Kagir Unit (Brick, Masonry, etc) Compression</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="238"/>
         <source>7. TS EN 1339 Zemin Döşemesi Beton Kap. Plak Eğilme</source>
-        <translation type="unfinished"></translation>
+        <translation>7. TS EN 1339 Concrete Floor Pressing Flexural</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="243"/>
         <source>8. TS 213 EN 13748 Terrazo Karo, Kırılma Dayanımı</source>
-        <translation type="unfinished"></translation>
+        <translation>8. TS 213 EN 13748 Terrazzo Flagstone ?</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="248"/>
         <source>9. TS EN 196-1 Çimento Basınç Dayanımı</source>
-        <translation type="unfinished"></translation>
+        <translation>9. TS EN 196-1Cement Compression Strength</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="253"/>
         <source>10. TS EN 196-1 Çimento Eğilme Dayanımı</source>
-        <translation type="unfinished"></translation>
+        <translation>10. TS EN 196-1 Cement Flexural Strength</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="258"/>
         <source>11. TS EN 12504-1 Beton Karot Basınç Dayanımı</source>
-        <translation type="unfinished"></translation>
+        <translation>11. TS EN 12504-1 Concrete Flagstone Compression Strength</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="308"/>
         <source>Deney</source>
-        <translation type="unfinished"></translation>
+        <translation>Test</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="359"/>
         <source>Cihazdan Oku</source>
-        <translation type="unfinished"></translation>
+        <translation>Read from Device</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="369"/>
         <source>Cihaza Yaz</source>
-        <translation type="unfinished"></translation>
+        <translation>Write to Device</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="405"/>
         <source>Deney - Numune Tipi</source>
-        <translation type="unfinished"></translation>
+        <translation>Test - Specimen Type</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="459"/>
         <location filename="pressapp.ui" line="4203"/>
         <source>Deney Tipi :</source>
-        <translation type="unfinished"></translation>
+        <translation>Test Type :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="466"/>
         <location filename="pressapp.ui" line="4277"/>
         <source>Numune Tipi :</source>
-        <translation type="unfinished"></translation>
+        <translation>Specimen Type :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="476"/>
@@ -167,7 +167,7 @@
         <location filename="pressapp.ui" line="2044"/>
         <location filename="pressapp.ui" line="2832"/>
         <source>Dara</source>
-        <translation type="unfinished"></translation>
+        <translation>Tare</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="535"/>
@@ -197,14 +197,14 @@
         <location filename="pressapp.ui" line="1284"/>
         <location filename="pressapp.ui" line="1308"/>
         <source>mm</source>
-        <translation type="unfinished"></translation>
+        <translation>mm</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="552"/>
         <location filename="pressapp.ui" line="627"/>
         <location filename="pressapp.ui" line="1175"/>
         <source>w :</source>
-        <translation type="unfinished"></translation>
+        <translation>w :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="569"/>
@@ -253,38 +253,38 @@
         <source>c :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1336"/>
         <location filename="pressapp.ui" line="4100"/>
         <source>Numune Yaşı :</source>
-        <translation type="unfinished"></translation>
+        <translation>Specimen Age :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="1355"/>
         <source>Parametreler</source>
-        <translation type="unfinished"></translation>
+        <translation>Parameters</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="1406"/>
         <source>Kontrol Tipi :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1416"/>
         <source>Yük Ondalık Nok. :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1426"/>
         <source>Ham Veri Kayıt :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1443"/>
         <source>Başlama Hızı :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1453"/>
         <source>Kırılma Yüzdesi :</source>
         <translation type="unfinished"></translation>
@@ -294,7 +294,7 @@
         <source>ON</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1476"/>
         <location filename="pressapp.ui" line="3255"/>
         <source>Gövde :</source>
@@ -305,17 +305,17 @@
         <source>2</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1499"/>
         <source>Hata? Eşiği :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1509"/>
         <source>Gerilme Ondalık :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1536"/>
         <location filename="pressapp.ui" line="3234"/>
         <source>Yükleme Hızı :</source>
@@ -337,7 +337,7 @@
         <source>%</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1659"/>
         <source>Kayıt aralığı :</source>
         <translation type="unfinished"></translation>
@@ -357,7 +357,7 @@
         <source>Manuel</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1732"/>
         <source>Sıfır Baskılama :</source>
         <translation type="unfinished"></translation>
@@ -373,12 +373,12 @@
         <source>OFF</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1792"/>
         <source>Maks. Yük :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1802"/>
         <source>Gerilme Yükleme :</source>
         <translation type="unfinished"></translation>
@@ -388,7 +388,7 @@
         <source>Kanallar</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="1857"/>
         <location filename="pressapp.ui" line="1877"/>
         <location filename="pressapp.ui" line="2014"/>
@@ -417,7 +417,7 @@
         <source>Kanal 2</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="2084"/>
         <source>Kazanç</source>
         <translation type="unfinished"></translation>
@@ -466,7 +466,7 @@
         <source>Ham Veri :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="2216"/>
         <source>Kazanç :</source>
         <translation type="unfinished"></translation>
@@ -499,12 +499,12 @@
         <source>Kaydet</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="2423"/>
         <source>Kalibrasyon Noktası :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="2447"/>
         <source>Başla</source>
         <translation type="unfinished"></translation>
@@ -519,7 +519,7 @@
         <source>Point</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="2489"/>
         <source>Değer (kN)</source>
         <translation type="unfinished"></translation>
@@ -618,7 +618,7 @@
         <source>Cohen </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="2946"/>
         <source>İkinci
 Hız</source>
@@ -635,7 +635,7 @@ Hız</source>
         <source>Kp :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="2993"/>
         <source>Bekleme
 Süresi</source>
@@ -647,7 +647,7 @@ Süresi</source>
         <source>Ki :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3077"/>
         <source>İlk
 Hız</source>
@@ -658,7 +658,7 @@ Hız</source>
         <source>&gt; Autotuning</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3170"/>
         <source>parametreler editlenirse burada uyarı yazacak - TODO</source>
         <translation type="unfinished"></translation>
@@ -685,7 +685,7 @@ Hız</source>
         <source>Alarm Yok</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3276"/>
         <source>Yük (kN) :</source>
         <translation type="unfinished"></translation>
@@ -721,7 +721,7 @@ Hız</source>
         <source>Ctrl+S</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3366"/>
         <source>  Aç</source>
         <translation type="unfinished"></translation>
@@ -731,7 +731,7 @@ Hız</source>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3408"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Başlat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -741,7 +741,7 @@ Hız</source>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Duraklat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3440"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sonlandır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -756,27 +756,27 @@ Hız</source>
         <source>&lt; Deney Durumu &gt;</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3487"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Grafik Yazdır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Genişlet&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3520"/>
         <source>Bağlantı ve Ayarlar</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3579"/>
         <source>Bağlan</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3599"/>
         <source>Bağlantı Durumu</source>
         <translation type="unfinished"></translation>
@@ -786,17 +786,17 @@ Hız</source>
         <source>IP :    </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3633"/>
         <source>Bağlantı Kes</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3677"/>
         <source> Fabrika Ayarları </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3687"/>
         <source>Hafıza :</source>
         <translation type="unfinished"></translation>
@@ -821,7 +821,7 @@ Hız</source>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3784"/>
         <source>Çözünürlük :</source>
         <translation type="unfinished"></translation>
@@ -836,32 +836,32 @@ Hız</source>
         <source>On</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3841"/>
         <source>Oto Yazdırma :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3852"/>
         <source>Kullanıcı</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3909"/>
         <source>Kullanıcıyı Kaldır</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3953"/>
         <source>Yeni Şifre :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="3966"/>
         <source>Eski Şifre :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4004"/>
         <source>Şifre Yenileme </source>
         <translation type="unfinished"></translation>
@@ -871,7 +871,7 @@ Hız</source>
         <source>about:blank</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4053"/>
         <source>Sonuçlar - Yazdırma</source>
         <translation type="unfinished"></translation>
@@ -908,17 +908,17 @@ Hız</source>
         <source>P/L :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4150"/>
         <source>Deney Baş. Tarihi :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4196"/>
         <source>Deney Bitiş Saati :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4223"/>
         <source>Firma Adı :</source>
         <translation type="unfinished"></translation>
@@ -928,22 +928,22 @@ Hız</source>
         <source>Boyutlar :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4244"/>
         <source>Dosya Adı :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4287"/>
         <source>Deney Baş. Saati :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4294"/>
         <source>Deney Adı :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4301"/>
         <source>Tepe Yük :</source>
         <translation type="unfinished"></translation>
@@ -963,7 +963,7 @@ Hız</source>
         <source>.txt</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4420"/>
         <source>Farklı Dosya Aç</source>
         <translation type="unfinished"></translation>
@@ -978,12 +978,12 @@ Hız</source>
         <source>..</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4455"/>
         <source>Yazdır</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4462"/>
         <source>İşlenen Dosya :</source>
         <translation type="unfinished"></translation>
@@ -993,17 +993,17 @@ Hız</source>
         <source>Format :</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4498"/>
         <source>Gelişmiş Düzenleme</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.ui" line="4521"/>
         <source>Dosyayı Kapat</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="551"/>
         <source>DENEY SONUÇLARI</source>
         <translation type="unfinished"></translation>
@@ -1013,22 +1013,22 @@ Hız</source>
         <source>DENEY NO : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="553"/>
         <source>BAŞLANGIÇ TARİHİ : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="554"/>
         <source>BAŞLANGIÇ SAATİ : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="555"/>
         <source>BİTİŞ TIME : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="556"/>
         <source>SAYAÇ : </source>
         <translation type="unfinished"></translation>
@@ -1038,7 +1038,7 @@ Hız</source>
         <source>DOSYA : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="558"/>
         <source>FİRMA : </source>
         <translation type="unfinished"></translation>
@@ -1053,7 +1053,7 @@ Hız</source>
         <source>KULANICI : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="562"/>
         <source>DENEY TİPİ : </source>
         <translation type="unfinished"></translation>
@@ -1068,7 +1068,7 @@ Hız</source>
         <source>BOYUT (%1) : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="565"/>
         <source>YAŞ : </source>
         <translation type="unfinished"></translation>
@@ -1078,12 +1078,12 @@ Hız</source>
         <source>ALAN (%1%2) : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="567"/>
         <source>TEPE YÜK (%1) : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="568"/>
         <source>TEPE GERİLİM (%1) : </source>
         <translation type="unfinished"></translation>
@@ -1185,27 +1185,27 @@ Hız</source>
         <source>PEAK STRESS (%1) : </source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="761"/>
         <source>Eşik Aşıldı</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="pressapp.cpp" line="857"/>
         <source>Max Yük Hatası</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="2009"/>
-        <source>FarklÄ± Kaydet</source>
-        <oldsource>Farklı Kaydet</oldsource>
+        <source>Farklı Kaydet</source>
+        <oldsource>FarklÄ± Kaydet</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="2016"/>
         <location filename="results.cpp" line="488"/>
-        <source>Dosya AÃ§</source>
-        <oldsource>Dosya Aç</oldsource>
+        <source>Dosya Aç</source>
+        <oldsource>Dosya AÃ§</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>

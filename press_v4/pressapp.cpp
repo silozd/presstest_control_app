@@ -954,7 +954,7 @@ void PressApp::_100_msec_handler(){
         }
     }
 }
-void PressApp::language_switch()
+void PressApp::language_switch()        // TODO
 {
   //  static u8 do_once = 1;
     u8 old_language = lang_index;
