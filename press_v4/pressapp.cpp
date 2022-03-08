@@ -951,6 +951,7 @@ void PressApp::_100_msec_handler(){
         }
     }
 }
+
 // comboboxes :
 void PressApp::on_comboBox_standard_currentIndexChanged(int index)
 {
@@ -2077,10 +2078,8 @@ void PressApp::on_pushButton_startTest_clicked()
         ui->pushButton_printPlot->setStyleSheet("image: url(:/icons/document_chart_dis.png);");
         ui->label_test_start_date->setText(start_date);
         ui->label_test_start_time->setText(start_time);
-        ui->label_pace_rate->setText(QString("Yükleme Hızı : %1 %2/s").arg(ui->doubleSpinBox_pace_rate->value()).arg(load_unit));     // TODO
-        qDebug()<<auxthread->current_pace_rate;
         if(current_test_no > 999) current_test_no = 0;
-        start_date_filename_arg = QString("(%1-%2)").arg(start_date).arg(start_time);// "(" + start_date + " - " + start_time + ")";
+        start_date_filename_arg = QString("(%1-%2)").arg(start_date,start_time);
 
 // ////// GUI'den   ////////////////
         test_status  = TEST_RUNNING;

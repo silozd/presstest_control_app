@@ -136,10 +136,9 @@ void PressApp::contextMenuRequest(QPoint pos)
 
     if (customPlot->legend->selectTest(pos, false) >= 0){
         menu->addAction("Sol üste taşı", this, SLOT(moveLegend()))->setData((int)(Qt::AlignTop|Qt::AlignLeft));
-        menu->addAction("Üste taşı",     this, SLOT(moveLegend()))->setData((int)(Qt::AlignTop|Qt::AlignHCenter));
+        menu->addAction("Sol alta taşı", this, SLOT(moveLegend()))->setData((int)(Qt::AlignBottom|Qt::AlignLeft));
         menu->addAction("Sağ üste taşı", this, SLOT(moveLegend()))->setData((int)(Qt::AlignTop|Qt::AlignRight));
         menu->addAction("Sağ alta taşı", this, SLOT(moveLegend()))->setData((int)(Qt::AlignBottom|Qt::AlignRight));
-        menu->addAction("Sol alta taşı", this, SLOT(moveLegend()))->setData((int)(Qt::AlignBottom|Qt::AlignLeft));
     }
 ////////********  add popup context menu to graph screen :
 //  else{
