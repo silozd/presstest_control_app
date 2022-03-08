@@ -125,9 +125,9 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         else if(editReport->lang_file == 0){
             if(header_report.isEmpty()) header_report = "FİRMA";
             if(testName_report.isEmpty()) testName_report = "Deney Adı";
-            if (material_type == concrete) material_type = "BETON";
-            else if (material_type == concrete_floor) material_type = "BETON DÖŞEME";
-            else if (material_type == cement) material_type = "ÇİMENTO";
+            if (material_type == "CONCRETE") material_type = "BETON";
+            else if (material_type == "CONCRETE FLOOR") material_type = "BETON DÖŞEME";
+            else if (material_type == "CEMENT") material_type = "ÇİMENTO";
         }
         h_label = fontmetric.width(header_report);
         t_label = fontmetric.width(testName_report);
@@ -143,7 +143,7 @@ void PressApp::on_pushButton_saveResults_clicked()      /// Save results
         painter.setFont(QFont(editReport->ui->fontComboBox->currentFont()));    // works
         QImage LOGO ;
         /// TEMPLATE_1
-        if(editReport->templ_type==0){
+        if(editReport->templ_type==0){      //
             painter.drawText(0, 200,      header_report);
             painter.drawText(0, 1.5*y,    testName_report);
             painter.drawImage(0,  0,  QImage(editReport->logo_load), -13*x, 0);

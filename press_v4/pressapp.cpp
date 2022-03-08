@@ -204,7 +204,6 @@ void PressApp::set_declaration()
     ui->combo_scrRes    ->addItem("16:9",0);
     ui->combo_scrRes    ->addItem("16:10",1);
     ui->combo_scrRes    ->setCurrentIndex(0);
-    // spinbox - decimals:      // TODO - ayrı slota eklenecek
     ui->doubleSpinBox_cal_point_value_1->setDecimals(ui->spinBox_dp_load->value());
     ui->doubleSpinBox_cal_point_value_2->setDecimals(ui->spinBox_dp_load->value());
     ui->doubleSpinBox_cal_point_value_3->setDecimals(ui->spinBox_dp_load->value());
@@ -519,7 +518,7 @@ void PressApp::usart_signalmapper(void){
     signalMapper_usart->setMapping(this->ui->pushButton_tare_ch2,           45);
     signalMapper_usart->setMapping(this->ui->pushButton_tare_ch3,           46);
     signalMapper_usart->setMapping(this->ui->pushButton_tare_ch4,           47);
-    signalMapper_usart->setMapping(this->ui->pushButton_save_all_cal_data,  50);// 50 olunca qlist hatası. TODO
+    signalMapper_usart->setMapping(this->ui->pushButton_save_all_cal_data,  50);
 
     connect(this->ui->btn_okGain,                    SIGNAL(clicked()), this, SLOT (usart_gain_signalmapper()));        // sila
     connect(this->ui->btn_okGain,                    SIGNAL(clicked()), signalMapper_usart, SLOT (map()));
@@ -594,7 +593,7 @@ void PressApp::_100_msec_handler(){
         auxthread->to_gui.hit = false;
 
         for(u8 i = 0; i < 4; i++){
-            if(i == 0){  // TODO : exchange with gui items
+            if(i == 0){
                 if(test_status == TEST_JUST_FINISHED){
                     //label_adc_cal_channel[i]->setText(QString::number(auxthread->peak_load,'f',precision[i]));
                     ui->label_load->setText("Yük :" + QString::number(auxthread->peak_load,'f',precision[0]) + load_unit);

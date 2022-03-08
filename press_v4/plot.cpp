@@ -49,7 +49,7 @@ void PressApp::setup_PLOT()
     connect(customPlot, SIGNAL(plottableClick(QCPAbstractPlottable*,int,QMouseEvent*)), this, SLOT(graphClicked(QCPAbstractPlottable*,int)));
     connect(customPlot, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenuRequest(QPoint)));
 }
-void PressApp::plot_graph()     // BURDA : temizleme değil de yeniden start yaptığında 0-0dan başlama olsun ?
+void PressApp::plot_graph()
 {
     graph_index = 1;
     double _zero;
@@ -71,7 +71,7 @@ void PressApp::plot_graph()     // BURDA : temizleme değil de yeniden start yap
             return;
         }
         else if(statu == 3) {
-            customPlot->graph(0)->data().data()->clear();    // TODO ?
+            customPlot->graph(0)->data().data()->clear(); // todo - delete
             //ui->label_breaking_point->setText(QString::number(real_time.load));
         }
         else if (graph_index == 0){
@@ -190,6 +190,7 @@ void PressApp::legendDoubleClick(QCPLegend *legend, QCPAbstractLegendItem *item)
 void PressApp::renderPlot(QPrinter *printer)
 {
     printer->setPageSize(QPrinter::A4);
+    printer->setOutputFileName(QDir::currentPath() + QString("/graph_%1_%2").arg(test_no).arg(start_date_filename_arg));
     QCPPainter painter(printer);
     QRectF pageRect = printer->pageRect(QPrinter::DevicePixel);
 

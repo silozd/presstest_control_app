@@ -63,7 +63,7 @@ void aux_thread::fuzpid_thread_handler(void){
 }
 void aux_thread::read_parameters(void){
     QByteArray data_array;
-    //data_array = serial->readAll();     // unexpectedly finished : TODO
+    data_array = serial->readAll();     // unexpectedly finished : TODO
 
     static u32 missed = 0;
     static u32 unread = 0;
