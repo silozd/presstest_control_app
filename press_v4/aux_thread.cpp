@@ -63,8 +63,7 @@ void aux_thread::fuzpid_thread_handler(void){
 }
 void aux_thread::read_parameters(void){
     QByteArray data_array;
-    data_array = serial->readAll();     // unexpectedly finished : TODO
-
+    data_array = serial->readAll();
     static u32 missed = 0;
     static u32 unread = 0;
     static u32 read = 0;
@@ -157,7 +156,7 @@ void aux_thread::read_parameters(void){
                     dac_value = pressApp->dac_voltage_to_raw((double)0.1 * pressApp->ui->spinBox_start_speed_percentage->value());
             if((pressApp->test_status == TEST_RUNNING)||(pressApp->test_status == TEST_PAUSED)){
                 if(plot_graphics == false){
-                    if(load_value >= pressApp->ui->doubleSpinBox_zero_suppression->value()){      // OPEN
+                    if(load_value >= pressApp->ui->doubleSpinBox_zero_suppression->value()){
                         run_pid = true;
                         pressApp->_time->start();
                         plot_graphics = true;

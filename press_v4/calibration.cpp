@@ -99,7 +99,7 @@ void PressApp::cal_assignment(int index){
         }
     }
 }
-void PressApp::cal_channel_change(int channel){     // sila : int
+void PressApp::cal_channel_change(int channel){
     channel = ui->comboBox_channel_no->currentIndex();
     if(channel == CH_1){
         current_cal_channel = 0;
@@ -145,21 +145,21 @@ void PressApp::cal_channel_change(int channel){     // sila : int
         ui->doubleSpinBox_cal_point_value_7->setDecimals(ui->spinBox_dp_ch4->value());
         ui->doubleSpinBox_cal_point_value_8->setDecimals(ui->spinBox_dp_ch4->value());
     }
-    for(u8 i = 0; i < 8; i++){      // TODO : unexpectedly finished
-//        spinBox_cal_raw_value[i]->setValue(parameters[current_frame].cal[current_cal_channel].real_val[i]);     // TODO : unexpectedly finished
-//        doubleSpinBox_cal_point_value[i]->setValue(parameters[current_frame].cal[current_cal_channel].assigned_val[i]);
+    for(u8 i = 0; i < 8; i++){   // TODO : unexpectedly finished
+        spinBox_cal_raw_value[i]->setValue(parameters[current_frame].cal[current_cal_channel].real_val[i]);
+        doubleSpinBox_cal_point_value[i]->setValue(parameters[current_frame].cal[current_cal_channel].assigned_val[i]);
     }
     ui->comboBox_cal_point_number->setCurrentIndex(parameters[current_frame].cal[current_cal_channel].point_no - 2);
 
 // sila :
-//    ui->doubleSpinBox_cal_point_value_9->setValue(spinBox_cal_raw_value[0]->value());     // TODO : unexpectedly finished
-//    ui->doubleSpinBox_cal_point_value_10->setValue(spinBox_cal_raw_value[1]->value());
-//    ui->doubleSpinBox_cal_point_value_11->setValue(spinBox_cal_raw_value[2]->value());
-//    ui->doubleSpinBox_cal_point_value_12->setValue(spinBox_cal_raw_value[3]->value());
-//    ui->doubleSpinBox_cal_point_value_13->setValue(spinBox_cal_raw_value[4]->value());
-//    ui->doubleSpinBox_cal_point_value_14->setValue(spinBox_cal_raw_value[5]->value());
-//    ui->doubleSpinBox_cal_point_value_15->setValue(spinBox_cal_raw_value[6]->value());
-//    ui->doubleSpinBox_cal_point_value_16->setValue(spinBox_cal_raw_value[7]->value());
+    ui->doubleSpinBox_cal_point_value_9->setValue(spinBox_cal_raw_value[0]->value());     // TODO : unexpectedly finished
+    ui->doubleSpinBox_cal_point_value_10->setValue(spinBox_cal_raw_value[1]->value());
+    ui->doubleSpinBox_cal_point_value_11->setValue(spinBox_cal_raw_value[2]->value());
+    ui->doubleSpinBox_cal_point_value_12->setValue(spinBox_cal_raw_value[3]->value());
+    ui->doubleSpinBox_cal_point_value_13->setValue(spinBox_cal_raw_value[4]->value());
+    ui->doubleSpinBox_cal_point_value_14->setValue(spinBox_cal_raw_value[5]->value());
+    ui->doubleSpinBox_cal_point_value_15->setValue(spinBox_cal_raw_value[6]->value());
+    ui->doubleSpinBox_cal_point_value_16->setValue(spinBox_cal_raw_value[7]->value());
 
 #ifdef CONFIG_x86
     qDebug() << "current cal channel is" << current_cal_channel;pushButton_save_all_cal_data
