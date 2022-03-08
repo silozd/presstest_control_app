@@ -138,6 +138,9 @@ void PressApp::set_declaration()
     cement      = "ÇİMENTO";
     terrazzo    = "TERRAZZO";
     kagir       = "KAGIR";
+    compress = "Basma";
+    flexural = "Eğilme";
+    splittens = "Yarmada Çekme";
 
     compression_list    = (QStringList() << "Küp" << "Silindir" << "Briket");
     flexural_list       = (QStringList() << "Kiriş-3N" << "Kiriş-4N" << "Bordür" << "Karo");
@@ -145,9 +148,9 @@ void PressApp::set_declaration()
 
     format_type = ui->comboBox_formatFile->currentIndex();
 
-    ui->combo_testType  ->addItem("Basma",0);
-    ui->combo_testType  ->addItem("Eğilme",1);
-    ui->combo_testType  ->addItem("Yarmada Çekme",2);
+    ui->combo_testType  ->addItem(compress,0);
+    ui->combo_testType  ->addItem(flexural,1);
+    ui->combo_testType  ->addItem(splittens,2);
     ui->combo_testType  ->setCurrentIndex(0);
     ui->comboBox_graphChoice->addItem("Yük - Zaman"),0;
     ui->comboBox_graphChoice->addItem("Gerilme - Zaman",1);
@@ -172,16 +175,16 @@ void PressApp::set_declaration()
     ui->comboBox_cal_point_number->addItem("6",4);
     ui->comboBox_cal_point_number->addItem("7",5);
     ui->comboBox_cal_point_number->addItem("8",6);
-    ui->comboBox_pid    ->addItem("Küp",0);
-    ui->comboBox_pid    ->addItem("Silindir",1);
-    ui->comboBox_pid    ->addItem("Briket",2);
-    ui->comboBox_pid    ->addItem("Kiriş-3N",3);
-    ui->comboBox_pid    ->addItem("Kiriş-4N",4);
-    ui->comboBox_pid    ->addItem("Bordür",5);
-    ui->comboBox_pid    ->addItem("Karo",6);
-    ui->comboBox_pid    ->addItem("Küp - Yarma",7);
-    ui->comboBox_pid    ->addItem("Silindir - Yarma",8);
-    ui->comboBox_pid    ->addItem("Parke Taşı - Yarma",9);
+    ui->comboBox_pid    ->addItem(cube,0);
+    ui->comboBox_pid    ->addItem(cylinder,1);
+    ui->comboBox_pid    ->addItem(masonry,2);
+    ui->comboBox_pid    ->addItem(beam3,3);
+    ui->comboBox_pid    ->addItem(beam4,4);
+    ui->comboBox_pid    ->addItem(kerb,5);
+    ui->comboBox_pid    ->addItem(flagstone,6);
+    ui->comboBox_pid    ->addItem(cube+splittens,7);
+    ui->comboBox_pid    ->addItem(cylinder+splittens,8);
+    ui->comboBox_pid    ->addItem(pavingstone,9);
     ui->comboBox_pid    ->setCurrentIndex(0);
     ui->combo_voltageSet    ->addItem("+/- 10V" ,0);
     ui->combo_voltageSet    ->addItem("+/- 5V"  ,1);
@@ -933,7 +936,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(cube, 0);
         ui->comboBox_specimen ->addItem(cylinder, 1);
-        if(editReport->lang_file == 0) material_type = concrete;
+        material_type = concrete;
         break;
     case 1:
         test_type = FLEXURAL;
@@ -942,7 +945,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen->addItem(beam3, 0);
         ui->comboBox_specimen->addItem(beam4, 1);
-        if(editReport->lang_file == 0) material_type = concrete;
+        material_type = concrete;
         break;
     case 2:
         test_type = FLEXURAL;
@@ -950,7 +953,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(FLEXURAL);
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(kerb, 0);
-        if(editReport->lang_file == 0) material_type = concrete;
+        material_type = concrete;
         break;
     case 3:
         test_type = SPLIT_TENSILE;
@@ -958,7 +961,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(SPLIT_TENSILE);
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(pavingstone, 0);
-        if(editReport->lang_file == 0) material_type = concrete;
+        material_type = concrete;
         break;
     case 4:
         test_type = SPLIT_TENSILE;
@@ -967,7 +970,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(cube, 0);
         ui->comboBox_specimen ->addItem(cylinder, 1);
-        if(editReport->lang_file == 0) material_type = concrete;
+        material_type = concrete;
         break;
     case 5:
         test_type = COMPRESSION;
@@ -983,7 +986,7 @@ void PressApp::on_comboBox_standard_currentIndexChanged(int index)
         ui->combo_testType->setCurrentIndex(FLEXURAL);
         ui->comboBox_specimen -> clear();
         ui->comboBox_specimen ->addItem(masonry, 0);   // numune dogru mu? TODO
-        if(editReport->lang_file == 0) material_type = concrete_floor;
+        material_type = concrete_floor;
         break;
     case 7:
         test_type = FLEXURAL;

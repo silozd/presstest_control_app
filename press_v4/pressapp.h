@@ -231,6 +231,9 @@ public:
     QString res_fileName;
     QString custom_path;
 
+    QString compress;
+    QString flexural;
+    QString splittens;
     QString cube;
     QString cylinder;
     QString beam3;
