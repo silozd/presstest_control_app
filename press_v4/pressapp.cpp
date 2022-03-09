@@ -93,7 +93,6 @@ PressApp::PressApp(QWidget *parent) :
     connect(ui->pushButton_connect, SIGNAL(clicked(bool)),this,SLOT(start_comm()));
     connect(ui->doubleSpinBox_pace_rate,SIGNAL(valueChanged(double)),this,SLOT(pace_rate_handler_kn()));
     connect(ui->doubleSpinBox_pace_rate_mpa,SIGNAL(valueChanged(double)),this,SLOT(pace_rate_handler_mpa()));
-    connect(ui->btn_saveSet,SIGNAL(clicked()),this,SLOT(language_switch()));
     userDir = ui->lineEdit_user->text();
     setup_PLOT();
     language_switch();
@@ -552,7 +551,7 @@ void PressApp::print_test_results(){
             send_data_order(data.data(),QString((QString("PRINT")+trUtf8("DENEY NO : ")+ ui->label_test_no->text()+QString("                         "))).toLatin1().data(),0,35);
             send_data_order(data.data(),QString((QString("PRINT")+trUtf8("BAŞLANGIÇ TARİHİ : ")+ui->label_test_start_date->text()+QString("                         "))).toLatin1().data(),0,35);
             send_data_order(data.data(),QString((QString("PRINT")+trUtf8("BAŞLANGIÇ SAATİ : ")+ui->label_test_start_time->text()+QString("                         "))).toLatin1().data(),0,35);
-            send_data_order(data.data(),QString((QString("PRINT")+trUtf8("BİTİŞ TIME : ")+ui->label_test_finish_time->text()+QString("                         "))).toLatin1().data(),0,35);
+            send_data_order(data.data(),QString((QString("PRINT")+trUtf8("BİTİŞ SAATİ : ")+ui->label_test_finish_time->text()+QString("                         "))).toLatin1().data(),0,35);
             send_data_order(data.data(),QString((QString("PRINT")+trUtf8("SAYAÇ : ")+(ui->label_test_no->text())+QString("                         "))).toLatin1().data(),0,35);
             send_data_order(data.data(),QString((QString("PRINT")+trUtf8("DOSYA : ")+ui->lineEdit_fileName->text()+QString("                         "))).toLatin1().data(),0,35);
             send_data_order(data.data(),QString((QString("PRINT")+trUtf8("FİRMA : ")+ui->lineEdit_company->text()+QString("                         "))).toLatin1().data(),0,35);
@@ -956,13 +955,13 @@ void PressApp::_100_msec_handler(){
 }
 void PressApp::language_switch()        // TODO
 {
-  //  static u8 do_once = 1;
+    static u8 do_once = 1;
     u8 old_language = lang_index;
 
 #ifdef CONFIG_x86
     QString file_lang = QString(QDir::currentPath() + "/press_%1.qm").arg(lang);
 #else
-    QString file_lang = QString(QDir::currentPath() + "/press_%1.qm").arg(lang);
+    QString file_lang = QString("/home/sila/Desktop/Press_v4/press_v4/press_%1.qm").arg(lang);
 #endif
 
     if (QFile::exists(file_lang)) {
@@ -981,8 +980,8 @@ void PressApp::language_switch()        // TODO
    // QTimer::singleShot(1000,this,SLOT(fill_after_language_change()));     // TODO
 
 //#ifndef CONFIG_x86        // TODO
-//    if(do_once == 1){
-//        do_once = 0;
+    if(do_once == 1)
+        do_once = 0;
 //        this->setStyleSheet(styleSheet);
 //    }
 //    else{
@@ -2205,7 +2204,7 @@ void PressApp::on_btn_saveSet_clicked()
         lang = "en";
         lang_index = _ENG;
     }
-    //language_switch();
+    language_switch();
 }
 void PressApp::on_pushButton_removeUser_clicked()
 {

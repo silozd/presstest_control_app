@@ -30,7 +30,7 @@
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page_main">
        <layout class="QGridLayout" name="gridLayout_2" rowstretch="2,1,1,1,2,1,1,1" columnstretch="1,1,1">
@@ -279,13 +279,6 @@
           </layout>
          </widget>
         </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="pushButton_lang">
-          <property name="text">
-           <string>LANG</string>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="page_app">
@@ -308,7 +301,7 @@
            <string notr="true"/>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_test">
            <attribute name="title">
@@ -397,14 +390,14 @@
                   <number>1</number>
                  </property>
                  <property name="currentIndex">
-                  <number>2</number>
+                  <number>1</number>
                  </property>
                  <widget class="QWidget" name="page_specimen">
                   <property name="geometry">
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>366</width>
+                    <width>370</width>
                     <height>323</height>
                    </rect>
                   </property>
@@ -1354,8 +1347,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>98</width>
-                    <height>70</height>
+                    <width>384</width>
+                    <height>318</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -1387,7 +1380,7 @@
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>339</width>
+                        <width>368</width>
                         <height>595</height>
                        </rect>
                       </property>
@@ -1847,7 +1840,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>221</width>
+                    <width>370</width>
                     <height>440</height>
                    </rect>
                   </property>
@@ -2083,8 +2076,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>311</width>
-                    <height>217</height>
+                    <width>384</width>
+                    <height>318</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -2346,8 +2339,8 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>98</width>
-                    <height>70</height>
+                    <width>384</width>
+                    <height>318</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -2376,7 +2369,7 @@
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>364</width>
+                        <width>368</width>
                         <height>522</height>
                        </rect>
                       </property>
@@ -2854,7 +2847,7 @@
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>291</width>
+                    <width>370</width>
                     <height>478</height>
                    </rect>
                   </property>
@@ -4070,7 +4063,7 @@ QPushButton:pressed {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>177</width>
+                 <width>445</width>
                  <height>678</height>
                 </rect>
                </property>
@@ -4679,9 +4672,9 @@ QPushButton:pressed {
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="frame_buttonGroup"/>
-  <buttongroup name="control_buttonGroup"/>
-  <buttongroup name="settings_buttonGroup"/>
   <buttongroup name="recraw_buttonGroup"/>
+  <buttongroup name="settings_buttonGroup"/>
+  <buttongroup name="control_buttonGroup"/>
+  <buttongroup name="frame_buttonGroup"/>
  </buttongroups>
 </ui>

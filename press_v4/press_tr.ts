@@ -6,38 +6,38 @@
     <message>
         <location filename="editreport.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="editreport.ui" line="56"/>
         <source>Kaydet</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaydet</translation>
     </message>
     <message>
         <location filename="editreport.ui" line="83"/>
         <source>Biçim :</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçim :</translation>
     </message>
     <message>
         <location filename="editreport.ui" line="93"/>
         <source>Logo Yükle</source>
-        <translation type="unfinished"></translation>
+        <translation>Logo Yükle</translation>
     </message>
     <message>
         <location filename="editreport.ui" line="107"/>
         <source>Dil :</source>
-        <translation type="unfinished"></translation>
+        <translation>Dil :</translation>
     </message>
     <message>
         <location filename="editreport.ui" line="121"/>
         <source>Yazı Tipi :</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazı Tipi :</translation>
     </message>
     <message>
         <location filename="editreport.cpp" line="114"/>
         <source>Logo Seç</source>
         <oldsource>Logo SeÃ§</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Logo Seç</translation>
     </message>
 </context>
 <context>
@@ -45,7 +45,7 @@
     <message>
         <location filename="pressapp.ui" line="14"/>
         <source>PressApp</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="56"/>
@@ -69,7 +69,7 @@
     </message>
     <message>
         <location filename="pressapp.ui" line="188"/>
-        <location filename="pressapp.ui" line="3876"/>
+        <location filename="pressapp.ui" line="3883"/>
         <source>Kullanıcı :</source>
         <translation>Kullanıcı :</translation>
     </message>
@@ -129,964 +129,973 @@
         <translation>11. TS EN 12504-1 Beton Karot Basınç Dayanımı</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="308"/>
+        <location filename="pressapp.ui" line="285"/>
+        <source>LANG</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="315"/>
         <source>Deney</source>
         <translation>Deney</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="359"/>
+        <location filename="pressapp.ui" line="366"/>
         <source>Cihazdan Oku</source>
         <translation>Cihazdan Oku</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="369"/>
+        <location filename="pressapp.ui" line="376"/>
         <source>Cihaza Yaz</source>
         <translation>Cihaza Yaz</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="405"/>
+        <location filename="pressapp.ui" line="412"/>
         <source>Deney - Numune Tipi</source>
         <translation>Deney - Numune Tipi</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="459"/>
-        <location filename="pressapp.ui" line="4203"/>
+        <location filename="pressapp.ui" line="466"/>
+        <location filename="pressapp.ui" line="4210"/>
         <source>Deney Tipi :</source>
         <translation>Deney Tipi :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="466"/>
-        <location filename="pressapp.ui" line="4277"/>
+        <location filename="pressapp.ui" line="473"/>
+        <location filename="pressapp.ui" line="4284"/>
         <source>Numune Tipi :</source>
         <translation>Numune Tipi :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="476"/>
-        <location filename="pressapp.ui" line="1927"/>
-        <location filename="pressapp.ui" line="1994"/>
-        <location filename="pressapp.ui" line="2044"/>
-        <location filename="pressapp.ui" line="2832"/>
+        <location filename="pressapp.ui" line="483"/>
+        <location filename="pressapp.ui" line="1934"/>
+        <location filename="pressapp.ui" line="2001"/>
+        <location filename="pressapp.ui" line="2051"/>
+        <location filename="pressapp.ui" line="2839"/>
         <source>Dara</source>
         <translation>Dara</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="535"/>
-        <location filename="pressapp.ui" line="586"/>
-        <location filename="pressapp.ui" line="610"/>
-        <location filename="pressapp.ui" line="661"/>
+        <location filename="pressapp.ui" line="542"/>
+        <location filename="pressapp.ui" line="593"/>
+        <location filename="pressapp.ui" line="617"/>
         <location filename="pressapp.ui" line="668"/>
-        <location filename="pressapp.ui" line="736"/>
+        <location filename="pressapp.ui" line="675"/>
         <location filename="pressapp.ui" line="743"/>
         <location filename="pressapp.ui" line="750"/>
-        <location filename="pressapp.ui" line="777"/>
-        <location filename="pressapp.ui" line="817"/>
+        <location filename="pressapp.ui" line="757"/>
+        <location filename="pressapp.ui" line="784"/>
         <location filename="pressapp.ui" line="824"/>
-        <location filename="pressapp.ui" line="867"/>
-        <location filename="pressapp.ui" line="913"/>
+        <location filename="pressapp.ui" line="831"/>
+        <location filename="pressapp.ui" line="874"/>
         <location filename="pressapp.ui" line="920"/>
-        <location filename="pressapp.ui" line="961"/>
+        <location filename="pressapp.ui" line="927"/>
         <location filename="pressapp.ui" line="968"/>
-        <location filename="pressapp.ui" line="1012"/>
-        <location filename="pressapp.ui" line="1056"/>
+        <location filename="pressapp.ui" line="975"/>
+        <location filename="pressapp.ui" line="1019"/>
         <location filename="pressapp.ui" line="1063"/>
-        <location filename="pressapp.ui" line="1084"/>
+        <location filename="pressapp.ui" line="1070"/>
         <location filename="pressapp.ui" line="1091"/>
-        <location filename="pressapp.ui" line="1192"/>
-        <location filename="pressapp.ui" line="1226"/>
-        <location filename="pressapp.ui" line="1250"/>
-        <location filename="pressapp.ui" line="1284"/>
-        <location filename="pressapp.ui" line="1308"/>
+        <location filename="pressapp.ui" line="1098"/>
+        <location filename="pressapp.ui" line="1199"/>
+        <location filename="pressapp.ui" line="1233"/>
+        <location filename="pressapp.ui" line="1257"/>
+        <location filename="pressapp.ui" line="1291"/>
+        <location filename="pressapp.ui" line="1315"/>
         <source>mm</source>
         <translation>mm</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="552"/>
-        <location filename="pressapp.ui" line="627"/>
-        <location filename="pressapp.ui" line="1175"/>
+        <location filename="pressapp.ui" line="559"/>
+        <location filename="pressapp.ui" line="634"/>
+        <location filename="pressapp.ui" line="1182"/>
         <source>w :</source>
-        <translation type="unfinished">w:</translation>
+        <translation>w:</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="569"/>
-        <location filename="pressapp.ui" line="644"/>
-        <location filename="pressapp.ui" line="729"/>
-        <location filename="pressapp.ui" line="784"/>
-        <location filename="pressapp.ui" line="975"/>
-        <location filename="pressapp.ui" line="1077"/>
-        <location filename="pressapp.ui" line="1233"/>
-        <location filename="pressapp.ui" line="1291"/>
+        <location filename="pressapp.ui" line="576"/>
+        <location filename="pressapp.ui" line="651"/>
+        <location filename="pressapp.ui" line="736"/>
+        <location filename="pressapp.ui" line="791"/>
+        <location filename="pressapp.ui" line="982"/>
+        <location filename="pressapp.ui" line="1084"/>
+        <location filename="pressapp.ui" line="1240"/>
+        <location filename="pressapp.ui" line="1298"/>
         <source>l :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="593"/>
-        <location filename="pressapp.ui" line="695"/>
-        <location filename="pressapp.ui" line="874"/>
-        <location filename="pressapp.ui" line="1019"/>
-        <location filename="pressapp.ui" line="1125"/>
-        <location filename="pressapp.ui" line="1209"/>
-        <location filename="pressapp.ui" line="1267"/>
-        <source>d :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="712"/>
-        <location filename="pressapp.ui" line="844"/>
-        <location filename="pressapp.ui" line="927"/>
-        <location filename="pressapp.ui" line="1118"/>
-        <source>b :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="831"/>
-        <location filename="pressapp.ui" line="1070"/>
-        <source>s :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="954"/>
-        <source>a :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="pressapp.ui" line="600"/>
+        <location filename="pressapp.ui" line="702"/>
+        <location filename="pressapp.ui" line="881"/>
         <location filename="pressapp.ui" line="1026"/>
-        <source>c :</source>
-        <translation type="unfinished"></translation>
+        <location filename="pressapp.ui" line="1132"/>
+        <location filename="pressapp.ui" line="1216"/>
+        <location filename="pressapp.ui" line="1274"/>
+        <source>d :</source>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1336"/>
-        <location filename="pressapp.ui" line="4100"/>
+        <location filename="pressapp.ui" line="719"/>
+        <location filename="pressapp.ui" line="851"/>
+        <location filename="pressapp.ui" line="934"/>
+        <location filename="pressapp.ui" line="1125"/>
+        <source>b :</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="838"/>
+        <location filename="pressapp.ui" line="1077"/>
+        <source>s :</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="961"/>
+        <source>a :</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="1033"/>
+        <source>c :</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="1343"/>
+        <location filename="pressapp.ui" line="4107"/>
         <source>Numune Yaşı :</source>
         <translation>Numune Yaşı :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1355"/>
+        <location filename="pressapp.ui" line="1362"/>
         <source>Parametreler</source>
-        <translation type="unfinished">Parametreler</translation>
+        <translation>Parametreler</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1406"/>
+        <location filename="pressapp.ui" line="1413"/>
         <source>Kontrol Tipi :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrol Tipi :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1416"/>
+        <location filename="pressapp.ui" line="1423"/>
         <source>Yük Ondalık Nok. :</source>
-        <translation type="unfinished"></translation>
+        <translation>Yük Ondalık Nok. :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1426"/>
+        <location filename="pressapp.ui" line="1433"/>
         <source>Ham Veri Kayıt :</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Veri Kayıt :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1443"/>
+        <location filename="pressapp.ui" line="1450"/>
         <source>Başlama Hızı :</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlama Hızı :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1453"/>
+        <location filename="pressapp.ui" line="1460"/>
         <source>Kırılma Yüzdesi :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kırılma Yüzdesi :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1466"/>
+        <location filename="pressapp.ui" line="1473"/>
         <source>ON</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1476"/>
-        <location filename="pressapp.ui" line="3255"/>
+        <location filename="pressapp.ui" line="1483"/>
+        <location filename="pressapp.ui" line="3262"/>
         <source>Gövde :</source>
-        <translation type="unfinished"></translation>
+        <translation>Gövde :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1489"/>
+        <location filename="pressapp.ui" line="1496"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1499"/>
+        <location filename="pressapp.ui" line="1506"/>
         <source>Hata? Eşiği :</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata? Eşiği :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1509"/>
+        <location filename="pressapp.ui" line="1516"/>
         <source>Gerilme Ondalık :</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerilme Ondalık :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1536"/>
-        <location filename="pressapp.ui" line="3234"/>
+        <location filename="pressapp.ui" line="1543"/>
+        <location filename="pressapp.ui" line="3241"/>
         <source>Yükleme Hızı :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="1556"/>
-        <source>Grafik :</source>
-        <translation type="unfinished"></translation>
+        <translation>Yükleme Hızı :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="1563"/>
+        <source>Grafik :</source>
+        <translation>Grafik :</translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="1570"/>
         <source>s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1609"/>
-        <location filename="pressapp.ui" line="1752"/>
+        <location filename="pressapp.ui" line="1616"/>
+        <location filename="pressapp.ui" line="1759"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1659"/>
+        <location filename="pressapp.ui" line="1666"/>
         <source>Kayıt aralığı :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kayıt aralığı :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1682"/>
+        <location filename="pressapp.ui" line="1689"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1702"/>
+        <location filename="pressapp.ui" line="1709"/>
         <source>Otomatik</source>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1715"/>
+        <location filename="pressapp.ui" line="1722"/>
         <source>Manuel</source>
-        <translation type="unfinished"></translation>
+        <translation>Manuel</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1732"/>
+        <location filename="pressapp.ui" line="1739"/>
         <source>Sıfır Baskılama :</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıfır Baskılama :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1772"/>
-        <location filename="pressapp.ui" line="2065"/>
+        <location filename="pressapp.ui" line="1779"/>
+        <location filename="pressapp.ui" line="2072"/>
         <source>Birim :</source>
-        <translation type="unfinished"></translation>
+        <translation>Birim :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1782"/>
+        <location filename="pressapp.ui" line="1789"/>
         <source>OFF</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1792"/>
+        <location filename="pressapp.ui" line="1799"/>
         <source>Maks. Yük :</source>
-        <translation type="unfinished"></translation>
+        <translation>Maks. Yük :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1802"/>
+        <location filename="pressapp.ui" line="1809"/>
         <source>Gerilme Yükleme :</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerilme Yükleme :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1848"/>
+        <location filename="pressapp.ui" line="1855"/>
         <source>Kanallar</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanallar</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1857"/>
-        <location filename="pressapp.ui" line="1877"/>
-        <location filename="pressapp.ui" line="2014"/>
+        <location filename="pressapp.ui" line="1864"/>
+        <location filename="pressapp.ui" line="1884"/>
+        <location filename="pressapp.ui" line="2021"/>
         <source>Ondalık Nok. :</source>
-        <translation type="unfinished"></translation>
+        <translation>Ondalık Nok. :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1904"/>
-        <location filename="pressapp.ui" line="1978"/>
-        <location filename="pressapp.ui" line="2001"/>
+        <location filename="pressapp.ui" line="1911"/>
+        <location filename="pressapp.ui" line="1985"/>
+        <location filename="pressapp.ui" line="2008"/>
         <source>000</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1934"/>
+        <location filename="pressapp.ui" line="1941"/>
         <source>Kanal 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal 4</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="1971"/>
+        <location filename="pressapp.ui" line="1978"/>
         <source>Kanal 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal 3</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2027"/>
+        <location filename="pressapp.ui" line="2034"/>
         <source>Kanal 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal 2</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2084"/>
+        <location filename="pressapp.ui" line="2091"/>
         <source>Kazanç</source>
-        <translation type="unfinished"></translation>
+        <translation>Kazanç</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2090"/>
-        <location filename="pressapp.ui" line="2100"/>
-        <location filename="pressapp.ui" line="2120"/>
-        <location filename="pressapp.ui" line="2130"/>
+        <location filename="pressapp.ui" line="2097"/>
+        <location filename="pressapp.ui" line="2107"/>
+        <location filename="pressapp.ui" line="2127"/>
+        <location filename="pressapp.ui" line="2137"/>
         <source>+</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2110"/>
+        <location filename="pressapp.ui" line="2117"/>
         <source>Kanal 1 :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal 1 :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2140"/>
-        <location filename="pressapp.ui" line="2392"/>
+        <location filename="pressapp.ui" line="2147"/>
+        <location filename="pressapp.ui" line="2399"/>
         <source>Kanal :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2150"/>
+        <location filename="pressapp.ui" line="2157"/>
         <source>Kanal 2 :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal 2 :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2160"/>
-        <location filename="pressapp.ui" line="2180"/>
-        <location filename="pressapp.ui" line="2203"/>
-        <location filename="pressapp.ui" line="2226"/>
-        <location filename="pressapp.ui" line="2249"/>
-        <location filename="pressapp.ui" line="2272"/>
-        <location filename="pressapp.ui" line="2285"/>
-        <location filename="pressapp.ui" line="2305"/>
-        <location filename="pressapp.ui" line="3111"/>
-        <location filename="pressapp.ui" line="3124"/>
-        <location filename="pressapp.ui" line="3137"/>
+        <location filename="pressapp.ui" line="2167"/>
+        <location filename="pressapp.ui" line="2187"/>
+        <location filename="pressapp.ui" line="2210"/>
+        <location filename="pressapp.ui" line="2233"/>
+        <location filename="pressapp.ui" line="2256"/>
+        <location filename="pressapp.ui" line="2279"/>
+        <location filename="pressapp.ui" line="2292"/>
+        <location filename="pressapp.ui" line="2312"/>
+        <location filename="pressapp.ui" line="3118"/>
+        <location filename="pressapp.ui" line="3131"/>
+        <location filename="pressapp.ui" line="3144"/>
         <source>---</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2193"/>
+        <location filename="pressapp.ui" line="2200"/>
         <source>Ham Veri :</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham Veri :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2216"/>
+        <location filename="pressapp.ui" line="2223"/>
         <source>Kazanç :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kazanç :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2239"/>
+        <location filename="pressapp.ui" line="2246"/>
         <source>Voltaj :</source>
-        <translation type="unfinished"></translation>
+        <translation>Voltaj :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2262"/>
+        <location filename="pressapp.ui" line="2269"/>
         <source>Kanal 3 :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal 3 :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2318"/>
+        <location filename="pressapp.ui" line="2325"/>
         <source>Kanal 4 :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal 4 :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2347"/>
+        <location filename="pressapp.ui" line="2354"/>
         <source>Kalibrasyon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="2416"/>
-        <location filename="pressapp.ui" line="2912"/>
-        <location filename="pressapp.ui" line="3794"/>
-        <location filename="pressapp.ui" line="3992"/>
-        <source>Kaydet</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalibrasyon</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="2423"/>
+        <location filename="pressapp.ui" line="2919"/>
+        <location filename="pressapp.ui" line="3801"/>
+        <location filename="pressapp.ui" line="3999"/>
+        <source>Kaydet</source>
+        <translation>Kaydet</translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2430"/>
         <source>Kalibrasyon Noktası :</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalibrasyon Noktası :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2447"/>
+        <location filename="pressapp.ui" line="2454"/>
         <source>Başla</source>
-        <translation type="unfinished"></translation>
+        <translation>Başla</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2457"/>
+        <location filename="pressapp.ui" line="2464"/>
         <source>Bitir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="2482"/>
-        <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitir</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="2489"/>
-        <source>Değer (kN)</source>
-        <translation type="unfinished"></translation>
+        <source>Point</source>
+        <translation>Point</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="2496"/>
-        <source>Ham</source>
-        <translation type="unfinished"></translation>
+        <source>Değer (kN)</source>
+        <translation>Değer (kN)</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="2503"/>
-        <source>P1</source>
-        <translation type="unfinished"></translation>
+        <source>Ham</source>
+        <translation>Ham</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2533"/>
-        <location filename="pressapp.ui" line="2570"/>
-        <location filename="pressapp.ui" line="2607"/>
-        <location filename="pressapp.ui" line="2644"/>
-        <location filename="pressapp.ui" line="2681"/>
-        <location filename="pressapp.ui" line="2718"/>
-        <location filename="pressapp.ui" line="2755"/>
-        <location filename="pressapp.ui" line="2792"/>
-        <source>Oku</source>
-        <translation type="unfinished"></translation>
+        <location filename="pressapp.ui" line="2510"/>
+        <source>P1</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="2540"/>
-        <source>P2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="pressapp.ui" line="2577"/>
-        <source>P3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="pressapp.ui" line="2614"/>
-        <source>P4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="pressapp.ui" line="2651"/>
-        <source>P5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="pressapp.ui" line="2688"/>
-        <source>P6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="pressapp.ui" line="2725"/>
-        <source>P7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="pressapp.ui" line="2762"/>
-        <source>P8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="pressapp.ui" line="2799"/>
+        <source>Oku</source>
+        <translation>Oku</translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2547"/>
+        <source>P2</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2584"/>
+        <source>P3</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2621"/>
+        <source>P4</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2658"/>
+        <source>P5</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2695"/>
+        <source>P6</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2732"/>
+        <source>P7</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2769"/>
+        <source>P8</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="2806"/>
         <source>CANLI</source>
-        <translation type="unfinished"></translation>
+        <translation>CANLI</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2809"/>
-        <location filename="pressapp.ui" line="2819"/>
+        <location filename="pressapp.ui" line="2816"/>
+        <location filename="pressapp.ui" line="2826"/>
         <source>###.##</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2855"/>
+        <location filename="pressapp.ui" line="2862"/>
         <source>Pid</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2879"/>
-        <location filename="pressapp.ui" line="3064"/>
+        <location filename="pressapp.ui" line="2886"/>
+        <location filename="pressapp.ui" line="3071"/>
         <source>Kd :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2892"/>
+        <location filename="pressapp.ui" line="2899"/>
         <source>Coon :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2902"/>
+        <location filename="pressapp.ui" line="2909"/>
         <source>Hepsine Kaydet</source>
-        <translation type="unfinished"></translation>
+        <translation>Hepsine Kaydet</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2926"/>
+        <location filename="pressapp.ui" line="2933"/>
         <source>Cohen </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2946"/>
+        <location filename="pressapp.ui" line="2953"/>
         <source>İkinci
 Hız</source>
-        <translation type="unfinished"></translation>
+        <translation>İkinci
+Hız</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2967"/>
+        <location filename="pressapp.ui" line="2974"/>
         <source>Pid :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2980"/>
-        <location filename="pressapp.ui" line="3051"/>
+        <location filename="pressapp.ui" line="2987"/>
+        <location filename="pressapp.ui" line="3058"/>
         <source>Kp :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="2993"/>
+        <location filename="pressapp.ui" line="3000"/>
         <source>Bekleme
 Süresi</source>
-        <translation type="unfinished"></translation>
+        <translation>Bekleme
+Süresi</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3024"/>
-        <location filename="pressapp.ui" line="3091"/>
+        <location filename="pressapp.ui" line="3031"/>
+        <location filename="pressapp.ui" line="3098"/>
         <source>Ki :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3077"/>
+        <location filename="pressapp.ui" line="3084"/>
         <source>İlk
 Hız</source>
-        <translation type="unfinished"></translation>
+        <translation>İlk
+Hız</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3157"/>
+        <location filename="pressapp.ui" line="3164"/>
         <source>&gt; Autotuning</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3170"/>
+        <location filename="pressapp.ui" line="3177"/>
         <source>parametreler editlenirse burada uyarı yazacak - TODO</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="3241"/>
-        <source>Deney Tarihi :</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="3248"/>
-        <location filename="pressapp.ui" line="4230"/>
-        <source>Alan :</source>
-        <translation type="unfinished"></translation>
+        <source>Deney Tarihi :</source>
+        <translation>Deney Tarihi :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3262"/>
-        <source>Deney : </source>
-        <translation type="unfinished"></translation>
+        <location filename="pressapp.ui" line="3255"/>
+        <location filename="pressapp.ui" line="4237"/>
+        <source>Alan :</source>
+        <translation>Alan :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="3269"/>
-        <location filename="pressapp.cpp" line="863"/>
-        <source>Alarm Yok</source>
-        <translation type="unfinished"></translation>
+        <source>Deney : </source>
+        <translation>Deney : </translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="3276"/>
-        <source>Yük (kN) :</source>
-        <translation type="unfinished"></translation>
+        <location filename="pressapp.cpp" line="863"/>
+        <source>Alarm Yok</source>
+        <translation>Alarm Yok</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="3283"/>
-        <source>Numune :</source>
-        <translation type="unfinished"></translation>
+        <source>Yük (kN) :</source>
+        <translation>Yük (kN) :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="3290"/>
-        <source>Zaman :</source>
-        <translation type="unfinished"></translation>
+        <source>Numune :</source>
+        <translation>Numune :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="3297"/>
-        <location filename="pressapp.ui" line="4367"/>
-        <source>Deney No :</source>
-        <translation type="unfinished"></translation>
+        <source>Zaman :</source>
+        <translation>Zaman :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="3304"/>
+        <location filename="pressapp.ui" line="4374"/>
+        <source>Deney No :</source>
+        <translation>Deney No :</translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="3311"/>
         <source>Gerilme (MPa);</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerilme (MPa);</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3344"/>
+        <location filename="pressapp.ui" line="3351"/>
         <source> Kaydet</source>
-        <translation type="unfinished"></translation>
+        <translation> Kaydet</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3347"/>
+        <location filename="pressapp.ui" line="3354"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3366"/>
+        <location filename="pressapp.ui" line="3373"/>
         <source>  Aç</source>
-        <translation type="unfinished"></translation>
+        <translation>  Aç</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3369"/>
+        <location filename="pressapp.ui" line="3376"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3408"/>
+        <location filename="pressapp.ui" line="3415"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Başlat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Başlat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3424"/>
+        <location filename="pressapp.ui" line="3431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Duraklat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Duraklat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3440"/>
+        <location filename="pressapp.ui" line="3447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sonlandır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sonlandır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3456"/>
+        <location filename="pressapp.ui" line="3463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Yenile&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Yenile&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3474"/>
+        <location filename="pressapp.ui" line="3481"/>
         <source>&lt; Deney Durumu &gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt; Deney Durumu &gt;</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3487"/>
+        <location filename="pressapp.ui" line="3494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Grafik Yazdır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Grafik Yazdır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3500"/>
+        <location filename="pressapp.ui" line="3507"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Genişlet&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Genişlet&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3520"/>
+        <location filename="pressapp.ui" line="3527"/>
         <source>Bağlantı ve Ayarlar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı ve Ayarlar</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3579"/>
+        <location filename="pressapp.ui" line="3586"/>
         <source>Bağlan</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlan</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3599"/>
+        <location filename="pressapp.ui" line="3606"/>
         <source>Bağlantı Durumu</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı Durumu</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3609"/>
+        <location filename="pressapp.ui" line="3616"/>
         <source>IP :    </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3633"/>
+        <location filename="pressapp.ui" line="3640"/>
         <source>Bağlantı Kes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı Kes</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3677"/>
+        <location filename="pressapp.ui" line="3684"/>
         <source> Fabrika Ayarları </source>
-        <translation type="unfinished"></translation>
+        <translation> Fabrika Ayarları </translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3687"/>
+        <location filename="pressapp.ui" line="3694"/>
         <source>Hafıza :</source>
-        <translation type="unfinished"></translation>
+        <translation>Hafıza :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3710"/>
+        <location filename="pressapp.ui" line="3717"/>
         <source>Temizle</source>
-        <translation type="unfinished"></translation>
+        <translation>Temizle</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3723"/>
+        <location filename="pressapp.ui" line="3730"/>
         <source>Yenile</source>
-        <translation type="unfinished"></translation>
+        <translation>Yenile</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3757"/>
+        <location filename="pressapp.ui" line="3764"/>
         <source>Tarih &amp; Saat :</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarih &amp; Saat :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3767"/>
+        <location filename="pressapp.ui" line="3774"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3784"/>
+        <location filename="pressapp.ui" line="3791"/>
         <source>Çözünürlük :</source>
-        <translation type="unfinished"></translation>
+        <translation>Çözünürlük :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3808"/>
+        <location filename="pressapp.ui" line="3815"/>
         <source>Dil :</source>
-        <translation type="unfinished"></translation>
+        <translation>Dil :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3818"/>
+        <location filename="pressapp.ui" line="3825"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3841"/>
+        <location filename="pressapp.ui" line="3848"/>
         <source>Oto Yazdırma :</source>
-        <translation type="unfinished"></translation>
+        <translation>Oto Yazdırma :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3852"/>
+        <location filename="pressapp.ui" line="3859"/>
         <source>Kullanıcı</source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanıcı</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3909"/>
+        <location filename="pressapp.ui" line="3916"/>
         <source>Kullanıcıyı Kaldır</source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanıcıyı Kaldır</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3953"/>
+        <location filename="pressapp.ui" line="3960"/>
         <source>Yeni Şifre :</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni Şifre :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="3966"/>
+        <location filename="pressapp.ui" line="3973"/>
         <source>Eski Şifre :</source>
-        <translation type="unfinished"></translation>
+        <translation>Eski Şifre :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4004"/>
+        <location filename="pressapp.ui" line="4011"/>
         <source>Şifre Yenileme </source>
-        <translation type="unfinished"></translation>
+        <translation>Şifre Yenileme </translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4041"/>
+        <location filename="pressapp.ui" line="4048"/>
         <source>about:blank</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4053"/>
+        <location filename="pressapp.ui" line="4060"/>
         <source>Sonuçlar - Yazdırma</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonuçlar - Yazdırma</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4083"/>
-        <location filename="pressapp.ui" line="4110"/>
-        <location filename="pressapp.ui" line="4133"/>
-        <location filename="pressapp.ui" line="4160"/>
-        <location filename="pressapp.ui" line="4173"/>
-        <location filename="pressapp.ui" line="4183"/>
-        <location filename="pressapp.ui" line="4213"/>
-        <location filename="pressapp.ui" line="4254"/>
-        <location filename="pressapp.ui" line="4264"/>
-        <location filename="pressapp.ui" line="4311"/>
-        <location filename="pressapp.ui" line="4324"/>
-        <location filename="pressapp.ui" line="4337"/>
-        <location filename="pressapp.ui" line="4350"/>
+        <location filename="pressapp.ui" line="4090"/>
+        <location filename="pressapp.ui" line="4117"/>
+        <location filename="pressapp.ui" line="4140"/>
+        <location filename="pressapp.ui" line="4167"/>
+        <location filename="pressapp.ui" line="4180"/>
+        <location filename="pressapp.ui" line="4190"/>
+        <location filename="pressapp.ui" line="4220"/>
+        <location filename="pressapp.ui" line="4261"/>
+        <location filename="pressapp.ui" line="4271"/>
+        <location filename="pressapp.ui" line="4318"/>
+        <location filename="pressapp.ui" line="4331"/>
+        <location filename="pressapp.ui" line="4344"/>
+        <location filename="pressapp.ui" line="4357"/>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4093"/>
+        <location filename="pressapp.ui" line="4100"/>
         <source>Ek bilgi</source>
-        <translation type="unfinished"></translation>
+        <translation>Ek bilgi</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4120"/>
+        <location filename="pressapp.ui" line="4127"/>
         <source>Tepe Gerilim :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="4143"/>
-        <source>P/L :</source>
-        <translation type="unfinished"></translation>
+        <translation>Tepe Gerilim :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="4150"/>
+        <source>P/L :</source>
+        <translation>P/L :</translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="4157"/>
         <source>Deney Baş. Tarihi :</source>
-        <translation type="unfinished"></translation>
+        <translation>Deney Baş. Tarihi :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4196"/>
+        <location filename="pressapp.ui" line="4203"/>
         <source>Deney Bitiş Saati :</source>
-        <translation type="unfinished"></translation>
+        <translation>Deney Bitiş Saati :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4223"/>
+        <location filename="pressapp.ui" line="4230"/>
         <source>Firma Adı :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="4237"/>
-        <source>Boyutlar :</source>
-        <translation type="unfinished"></translation>
+        <translation>Firma Adı :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="4244"/>
-        <source>Dosya Adı :</source>
-        <translation type="unfinished"></translation>
+        <source>Boyutlar :</source>
+        <translation>Boyutlar :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4287"/>
-        <source>Deney Baş. Saati :</source>
-        <translation type="unfinished"></translation>
+        <location filename="pressapp.ui" line="4251"/>
+        <source>Dosya Adı :</source>
+        <translation>Dosya Adı :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="4294"/>
-        <source>Deney Adı :</source>
-        <translation type="unfinished"></translation>
+        <source>Deney Baş. Saati :</source>
+        <translation>Deney Baş. Saati :</translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="4301"/>
+        <source>Deney Adı :</source>
+        <translation>Deney Adı :</translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="4308"/>
         <source>Tepe Yük :</source>
-        <translation type="unfinished"></translation>
+        <translation>Tepe Yük :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4360"/>
+        <location filename="pressapp.ui" line="4367"/>
         <source>Toplam Deney No :</source>
-        <translation type="unfinished"></translation>
+        <translation>Toplam Deney No :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4404"/>
+        <location filename="pressapp.ui" line="4411"/>
         <source>.pdf</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4409"/>
+        <location filename="pressapp.ui" line="4416"/>
         <source>.txt</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4420"/>
+        <location filename="pressapp.ui" line="4427"/>
         <source>Farklı Dosya Aç</source>
-        <translation type="unfinished"></translation>
+        <translation>Farklı Dosya Aç</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4430"/>
+        <location filename="pressapp.ui" line="4437"/>
         <source>Deneyi Kaydet </source>
-        <translation type="unfinished"></translation>
+        <translation>Deneyi Kaydet </translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4442"/>
+        <location filename="pressapp.ui" line="4449"/>
         <source>..</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pressapp.ui" line="4455"/>
-        <source>Yazdır</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.ui" line="4462"/>
+        <source>Yazdır</source>
+        <translation>Yazdır</translation>
+    </message>
+    <message>
+        <location filename="pressapp.ui" line="4469"/>
         <source>İşlenen Dosya :</source>
-        <translation type="unfinished"></translation>
+        <translation>İşlenen Dosya :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4485"/>
+        <location filename="pressapp.ui" line="4492"/>
         <source>Format :</source>
-        <translation type="unfinished"></translation>
+        <translation>Format :</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4498"/>
+        <location filename="pressapp.ui" line="4505"/>
         <source>Gelişmiş Düzenleme</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelişmiş Düzenleme</translation>
     </message>
     <message>
-        <location filename="pressapp.ui" line="4521"/>
+        <location filename="pressapp.ui" line="4528"/>
         <source>Dosyayı Kapat</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyayı Kapat</translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="551"/>
         <source>DENEY SONUÇLARI</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="552"/>
         <source>DENEY NO : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="553"/>
         <source>BAŞLANGIÇ TARİHİ : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="554"/>
         <source>BAŞLANGIÇ SAATİ : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="555"/>
-        <source>BİTİŞ TIME : </source>
+        <source>BİTİŞ SAATİ : </source>
+        <oldsource>BİTİŞ TIME : </oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="556"/>
         <source>SAYAÇ : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="557"/>
         <source>DOSYA : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="558"/>
         <source>FİRMA : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="559"/>
         <source>DENEY ADI : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="561"/>
         <source>KULANICI : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="562"/>
         <source>DENEY TİPİ : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="563"/>
         <source>NUMUNE : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="564"/>
         <source>BOYUT (%1) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="565"/>
         <source>YAŞ : </source>
-        <translation type="unfinished"></translation>
+        <translation>YAŞ : </translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="566"/>
         <source>ALAN (%1%2) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="567"/>
         <source>TEPE YÜK (%1) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="568"/>
         <source>TEPE GERİLİM (%1) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="569"/>
@@ -1098,115 +1107,115 @@ Hız</source>
         <location filename="pressapp.cpp" line="596"/>
         <location filename="pressapp.cpp" line="597"/>
         <source>                   </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="576"/>
         <source>TEST RESULTS</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="577"/>
         <source>TEST NO : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="578"/>
         <source>START DATE : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="579"/>
         <source>START TIME : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="580"/>
         <source>FINISH TIME : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="581"/>
         <source>NUMERATOR : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="582"/>
         <source>FILE : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="583"/>
         <source>COMPANY : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="584"/>
         <source>TEST NAME : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="586"/>
         <source>USER : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="587"/>
         <source>TEST TYPE : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="588"/>
         <source>SPECIMEN : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="589"/>
         <source>DIMENSIONS (%1) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="590"/>
         <source>AGE : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="591"/>
         <source>AREA (%1%2) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="592"/>
         <source>PEAK LOAD (%1) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="593"/>
         <source>PEAK STRESS (%1) : </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="761"/>
         <source>Eşik Aşıldı</source>
-        <translation type="unfinished"></translation>
+        <translation>Eşik Aşıldı</translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="857"/>
         <source>Max Yük Hatası</source>
-        <translation type="unfinished"></translation>
+        <translation>Max Yük Hatası</translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="2009"/>
         <source>Farklı Kaydet</source>
         <oldsource>FarklÄ± Kaydet</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Farklı Kaydet</translation>
     </message>
     <message>
         <location filename="pressapp.cpp" line="2016"/>
         <location filename="results.cpp" line="488"/>
         <source>Dosya Aç</source>
         <oldsource>Dosya AÃ§</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Aç</translation>
     </message>
 </context>
 </TS>

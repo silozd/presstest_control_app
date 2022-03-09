@@ -108,7 +108,7 @@ public:
     int t_label;
     int lang_index;
 
-    QString lang;
+    QString lang = "tr";
     QTranslator *translator;
 
     struct _cal{
