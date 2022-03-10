@@ -111,6 +111,8 @@ public:
     QString lang = "tr";
     QTranslator *translator;
 
+    QString styleSheet;
+
     struct _cal{
         double real_val[8];
         float assigned_val[8];

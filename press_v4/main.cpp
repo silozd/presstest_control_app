@@ -9,11 +9,5 @@ int main(int argc, char *argv[])
     PressApp w;
     w.show();
 
-    QFile file;
-    file.setFileName(":/stylesheet.css");
-    file.open(QFile::ReadOnly);
-    QString styleSheet = QLatin1String(file.readAll());
-
-    w.setStyleSheet(styleSheet);
     return a.exec();
 }

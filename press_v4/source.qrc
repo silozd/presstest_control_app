@@ -36,5 +36,7 @@
         <file>temp_1_eng.png</file>
         <file>temp_2.png</file>
         <file>temp_2_eng.png</file>
+        <file>languages/press_en.qm</file>
+        <file>languages/press_tr.qm</file>
     </qresource>
 </RCC>

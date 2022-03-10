@@ -224,6 +224,14 @@ void PressApp::setup_GUI()
     ui->page_app->hide();
     ui->page_main->show();
 
+    QFile file;
+    file.setFileName(":/stylesheet.css");
+    file.open(QFile::ReadOnly);
+    styleSheet = QLatin1String(file.readAll());
+
+    setStyleSheet(styleSheet);
+
+
     step_response_status = false;
 
     ui->stackedWidget->setStyleSheet(QString("QLabel, QPushButton, QComboBox, QLineEdit, QToolBox, QTabWidget, QRadioButton, QSpinBox, QDoubleSpinBox, QToolButton, QScrollArea, QTimeEdit, QDateEdit, QDialog {font-size: %1pt}").arg(Fontsize));
@@ -955,40 +963,20 @@ void PressApp::_100_msec_handler(){
 }
 void PressApp::language_switch()        // TODO
 {
-    static u8 do_once = 1;
-    u8 old_language = lang_index;
+    translator = new QTranslator(this);
+    QCoreApplication *a = QApplication::instance();
 
-#ifdef CONFIG_x86
-    QString file_lang = QString(QDir::currentPath() + "/press_%1.qm").arg(lang);
-#else
-    QString file_lang = QString("/home/sila/Desktop/Press_v4/press_v4/press_%1.qm").arg(lang);
-#endif
+    if (lang == "tr")
+        translator->load(":/languages/press_tr.qm");
+    else if (lang == "en")
+        translator->load(":/languages/press_en.qm");
+    a->installTranslator(translator);
+    ui->retranslateUi(this);
 
-    if (QFile::exists(file_lang)) {
-        QCoreApplication *a = QApplication::instance();
-        if (translator) {
-            a->removeTranslator(translator);
-            translator->deleteLater();
-        }
-        translator = new QTranslator(this);
-        bool loaded = translator->load(file_lang);
-        qDebug("translating to '%s' %s", qPrintable(lang), loaded ? "succeeded" : "failed");
-        a->installTranslator(translator);
-        ui->retranslateUi(this);
-    }
-    data_changed = true;
-   // QTimer::singleShot(1000,this,SLOT(fill_after_language_change()));     // TODO
+    bool loaded = translator->load(QString(":/languages/press_%1.qm").arg(lang));
+    qDebug("translating to '%s' %s", qPrintable(lang), loaded ? "succeeded" : "failed");
 
-//#ifndef CONFIG_x86        // TODO
-    if(do_once == 1)
-        do_once = 0;
-//        this->setStyleSheet(styleSheet);
-//    }
-//    else{
-//        if(((old_language < 4)&&(language_index == 4))||((old_language == 4)&&(language_index < 4)))
-//            this->setStyleSheet(styleSheet);
-//    }
-//#endif
+    setStyleSheet(styleSheet);
 }
 // comboboxes :
 void PressApp::on_comboBox_standard_currentIndexChanged(int index)
